@@ -16,6 +16,14 @@
     "svelte3"
   ],
   "author": "Bogdan Bledea <bledea.bogdan97@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/specialdoom/proi-ui"
+  },
+  "homepage": "",
+  "bugs": {
+    "url": "https://github.com/specialdoom/proi-ui/issues"
+  },
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.2",
