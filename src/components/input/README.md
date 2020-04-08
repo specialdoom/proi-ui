@@ -1,6 +1,19 @@
 ---
 [proi-ui](https://github.com/specialdoom/proi-ui)
+### Usage
+```javascript
+<script>
+import { Input } from 'proi-ui'
 
+function changed () {
+    console.log('changed');
+}
+</script>
+
+<div>
+    <Input on:change={changed} label="Custom label" value="Custom value"/>
+</div>
+```
 ### Attributes
 | Parameter   | description       | type    | optional value | default value |
 |-------------|-------------------|---------|----------------|---------------|
