@@ -24,7 +24,7 @@ function click () {
 
 <div>
     <Input label="My label" squared />
-    <Button click={click}/>
+    <Button on:click={click}/>
 </div>
 ```
 
