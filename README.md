@@ -9,6 +9,9 @@ All controls
 npm i proi-ui
 ```
 
+## Docs
+Check out the [docs](https://proi-ui.herokuapp.com/). (Still building...)
+
 ## Usage
 ```javascript
 <script>
@@ -21,7 +24,7 @@ function click () {
 
 <div>
     <Input label="My label" squared />
-    <Button on:click={click}/>
+    <Button click={click}/>
 </div>
 ```
 

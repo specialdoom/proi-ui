@@ -1,6 +1,6 @@
 {
   "name": "proi-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -15,7 +15,7 @@
     "components",
     "svelte3"
   ],
-  "author": "Bogdan Bledea <bledea.bogdan97@gmail.com>",
+  "author": "Bogdan Bledea <bledea.bogdan97@gmail.com> (https://proi-ui.herokuapp.com/)",
   "repository": {
     "type": "git",
     "url": "https://github.com/specialdoom/proi-ui"
