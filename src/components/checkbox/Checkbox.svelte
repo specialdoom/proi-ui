@@ -98,7 +98,7 @@
         border-top-color 0.1s linear 0.3s;
     }
 
-    .sd-checkbox-circle:not(:hover) {
+    .sd-checkbox-square:not(:hover) {
         border-left-color: grey;
         border-bottom-color: grey;
         border-right-color: grey;
