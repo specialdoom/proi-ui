@@ -2,7 +2,7 @@ proi-ui
 ---------
 > proi UI Library for Svelte framework.  
 ---
-
+![Logo](https://github.com/specialdoom/proi-ui/tree/master/src/assets/logo.png "proi-ui logo")
 ## Installation
 All controls
 ```bash
