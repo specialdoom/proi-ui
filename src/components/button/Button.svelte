@@ -21,7 +21,7 @@
         width: auto;
         min-width: 100px;
         height: 40px;
-        margin: 0;
+        margin: 3px;
         padding: 12px 0;
         color: #fff;
         text-align: center;
@@ -41,6 +41,16 @@
 
     .sd-button:disabled {
         opacity: 0.5;
+        color: white;
+        border: 1px solid grey;
+        background: grey;
+    }
+
+    .sd-button:disabled:hover {
+        opacity: 0.5;
+        color: white;
+        background: grey;
+        border: 1px solid grey;
     }
 
     .sd-button-outline {
