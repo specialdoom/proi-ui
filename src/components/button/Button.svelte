@@ -39,8 +39,16 @@
         transition: all 0.25s;
     }
 
+    .sd-button:disabled {
+        opacity: 0.5;
+    }
+
     .sd-button-outline {
         background: #ffffff;
+    }
+
+    .sd-button-outline:hover {
+        color: #ffffff;
     }
 
     .sd-outline-primary {
@@ -48,12 +56,25 @@
         color: #2398ab;
     }
 
+    .sd-outline-primary:hover {
+        border: 1px solid #2398ab;
+        background: #2398ab;
+    }
+
     .sd-primary {
         background: #2398ab;
     }
 
+    .sd-primary:hover {
+        background: #2ec1d5;
+    }
+
     .sd-info {
         background: #5199ff;
+    }
+
+    .sd-info:hover {
+        background: #257dff;
     }
 
     .sd-outline-info {
@@ -61,8 +82,16 @@
         color: #5199ff;
     }
 
+    .sd-outline-info:hover {
+        background: #5199ff;
+    }
+
     .sd-danger {
         background: #ee3d48;
+    }
+
+    .sd-danger:hover {
+        background: #f11823;
     }
 
     .sd-outline-danger {
@@ -70,8 +99,16 @@
         color: #ee3d48;
     }
 
+    .sd-outline-danger:hover {
+        background: #ee3d48;
+    }
+
     .sd-warning {
         background: #ffc11e;
+    }
+
+    .sd-warning:hover {
+        background: #fdb300;
     }
 
     .sd-outline-warning {
@@ -79,13 +116,25 @@
         color: #ffc11e;
     }
 
+    .sd-outline-warning:hover {
+        background: #ffc11e;
+    }
+
     .sd-success {
         background: #00dc7d;
+    }
+
+    .sd-success:hover {
+        background: #41eca1;
     }
 
     .sd-outline-success {
         border: 1px solid #00dc7d;
         color: #00dc7d;
+    }
+
+    .sd-outline-success:hover {
+        background: #00dc7d;
     }
 
     .sd-squared {

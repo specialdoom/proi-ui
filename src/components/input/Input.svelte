@@ -10,6 +10,7 @@
     export let error = "";
     export let success = false;
     export let label = "Label";
+    export let disabled = false;
 
     onMount(() => {
         if (type !== "text" && type !== "password") {
@@ -31,6 +32,10 @@
         box-sizing: border-box;
         outline: none;
         caret-color: grey;
+    }
+
+    .sd-input:disabled {
+        border: 0.5px dashed;
     }
 
     .sd-input-squared {
@@ -87,6 +92,6 @@
     {success ? 'sd-input-success' : ''}
     {squared ? 'sd-input-squared' : ''}"
             on:change
-            bind:this={element}/>
+            bind:this={element} {disabled}/>
     <div class="sd-error">{error}</div>
 </div>

@@ -18,3 +18,4 @@ let option = false;
 | --- | --- | --- | --- | --- |
 | Value | display text | String | - | - |
 | Checked | option checked or not | Boolean | - | false |
+| Disabled | disable checkbox | Boolean | - | false |

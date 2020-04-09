@@ -24,7 +24,7 @@ function changed () {
 | Label       | input label       | String  | -              | Label         |
 | Error       | error message     | String  | -              | -             |
 | Success     | success display   | Boolean | -              | false         |
-
+| Disabled     | disable input   | Boolean | -              | false         |
 ### Events
 | Event name | description       | callback parameter |
 |------------|-------------------|--------------------|

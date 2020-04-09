@@ -1,6 +1,7 @@
 <script>
     export let checked = null;
     export let value = "";
+    export let disabled = false;
 </script>
 
 <style>
@@ -13,6 +14,7 @@
         font-size: 15px;
         height: 30px !important;
         -webkit-user-select: none;
+        -khtml-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
@@ -32,7 +34,7 @@
         left: 0;
         height: 20px;
         width: 20px;
-        border-radius: 50px;
+        border-radius: 15px;
         border: 1px solid black;
     }
 
@@ -74,12 +76,18 @@
         }
     }
 
-    .sd-checkbox-circle {
+    .sd-checkbox-square {
         border: 2px solid grey;
         border-radius: 15%;
     }
 
-    .sd-checkbox-circle:hover {
+    .sd-checkbox-square-disabled {
+        border: 2px solid grey;
+        background: grey;
+        border-radius: 15%;
+    }
+
+    .sd-checkbox-square:hover {
         border-left-color: #2398ab;
         border-bottom-color: #2398ab;
         border-right-color: #2398ab;
@@ -103,11 +111,13 @@
 
     .sd-checkbox-label {
         margin-right: 5px;
+        font-size: 16px;
+        font-weight: 100;
     }
 </style>
 
-<label class="sd-checkbox-container">
-    <input type="checkbox" bind:checked/>
-    <span class="sd-checkbox-checkmark sd-checkbox-circle"></span>
+<label class="sd-checkbox-container ">
+    <input type="checkbox" bind:checked {disabled}/>
+    <span class="sd-checkbox-checkmark {disabled ? 'sd-checkbox-square-disabled' : 'sd-checkbox-square'}"></span>
     <span class="sd-checkbox-label">{value}</span>
 </label>
