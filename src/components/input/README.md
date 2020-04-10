@@ -15,7 +15,7 @@ function changed () {
 </div>
 ```
 ### Attributes
-| Parameter   | description       | type    | optional value | default value |
+| Parameter   | Description       | Type    | Optional value | Default value |
 |-------------|-------------------|---------|----------------|---------------|
 | Value       | display text      | String  | -              | -             |
 | Type        | type              | String  | text, password | text          |

@@ -18,7 +18,7 @@ function click () {
 ```
 
 ### Attributes
-| Parameter | description | type | optional value | default value |
+| Parameter | Description | Type | Optional value | Default value |
 | --- | --- | --- | --- | --- |
 | Status | type | String | primary, info, danger, success, warning | primary |
 | Squared | square display | Boolean | - | false |

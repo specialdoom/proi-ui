@@ -13,11 +13,6 @@
         cursor: pointer;
         font-size: 15px;
         height: 30px !important;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
     }
 
     .sd-checkbox-container input {

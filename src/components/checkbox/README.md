@@ -14,7 +14,7 @@ let option = false;
 </div>
 ```
 ### Attributes
-| Parameter | description | type | optional value | default value |
+| Parameter | Description | Type | Optional value | Default value |
 | --- | --- | --- | --- | --- |
 | Value | display text | String | - | - |
 | Checked | option checked or not | Boolean | - | false |
