@@ -18,6 +18,7 @@ import { Alert } from 'proi-ui'
 ### Attributes
 | Parameter | Description | Type | Optional value | Default value |
 | --- | --- | --- | --- | --- |
-| status | type | String | info, error, success, warning | success |
-| squared | square display | Boolean | - | false |
-| closable | closable alert | Boolean | - | false |
+| status | Alert type | String | info, error, success, warning | success |
+| squared | Squared display | Boolean | - | false |
+| closable | Closable alert | Boolean | - | false |
+| outlined | Outlined display | Boolean | - | false |

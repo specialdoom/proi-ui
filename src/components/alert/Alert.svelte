@@ -5,6 +5,7 @@
     export let status = "success";
     export let squared = false;
     export let closable = false;
+    export let outlined = false;
 
     let icons = [
         {
@@ -15,7 +16,7 @@
         {
             type: 'warning',
             path: 'M6,0a6,6,0,1,0,6,6A6,6,0,0,0,6,0ZM6,9a.43.43,0,1,1,.43-.43A.43.43,0,0,1,6,9ZM6.43,7a.43.43,0,0,1-.86,0V3.46a.43.43,0,0,1,.86,0Z',
-            color: '#ffc11e'
+            color: '#fdb300'
         },
         {
             type: 'success',
@@ -29,7 +30,7 @@
         }
     ]
 
-    $: icon = icons.filter(item => item.type == status)[0];
+    $ : icon = icons.filter(item => item.type == status)[0];
 
     function close() {
         closed = true;
@@ -38,17 +39,38 @@
 
 <style>
     .sd-alert {
-        box-sizing: border-box;
+        display: flex;
+        padding: 6px 16px;
+        font-size: 0.875rem;
         border-radius: 50px;
-        margin: 4px;
-        width: 60%;
-        color: #000;
-        font-size: 14px;
-        line-height: 1.5;
-        list-style: none;
-        position: relative;
-        padding: 8px 30px 8px 30px;
-        word-wrap: break-word;
+        font-weight: 100;
+        line-height: 1.43;
+        letter-spacing: 0.01071em;
+    }
+
+    .sd-alert-text {
+        padding: 8px 0;
+    }
+
+    .sd-alert-close-icon {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        padding-left: 16px;
+        opacity: 0.5;
+    }
+
+    .sd-alert-icon {
+        display: flex;
+        opacity: 0.9;
+        align-items: center;
+        font-size: 22px;
+        margin-right: 12px;
+        fill: #007f50;
+    }
+
+    .sd-alert-outline {
+        background: transparent;
     }
 
     .sd-alert-squared {
@@ -60,8 +82,16 @@
         border: 1px solid #007f50;
     }
 
+    .sd-alert-outline-success {
+        border: 1px solid #007f50;
+    }
+
     .sd-alert-error {
         background: #f3737c;
+        border: 1px solid #ee3d48;
+    }
+
+    .sd-alert-outline-error {
         border: 1px solid #ee3d48;
     }
 
@@ -70,18 +100,17 @@
         border: 1px solid #257dff;
     }
 
-    .sd-alert-warning {
-        background: #fadc8d;
-        border: 1px solid #ffc11e;
+    .sd-alert-outline-info {
+        border: 1px solid #257dff;
     }
 
-    .sd-alert-close-icon {
-        position: absolute;
-        right: 13px;
-        top: 13px;
-        opacity: 0.3;
-        cursor: pointer;
+    .sd-alert-warning {
+        background: #fadc8d;
+        border: 1px solid #fdb300;
+    }
 
+    .sd-alert-outline-warning {
+        border: 1px solid #fdb300;
     }
 
     .sd-alert-close-icon:hover {
@@ -104,21 +133,15 @@
         transform: rotate(-45deg);
     }
 
-    .sd-alert-icon {
-        position: absolute;
-        fill: #007f50;
-        top: 10px;
-        left: 8px;
-    }
-
     .sd-alert-icon > svg {
         height: 14px;
     }
 
 </style>
 {#if !closed}
-    <div class="sd-alert sd-alert-{status} {squared ? 'sd-alert-squared' : ''}" transition:fade>
-        <i class="sd-alert-icon" style="fill: {icon.color}">
+    <div class="sd-alert {outlined ? `sd-alert-outline-${status}`: `sd-alert-${status}`} sd-alert-outline {squared ? 'sd-alert-squared' : ''}"
+         transition:fade>
+        <div class="sd-alert-icon" style="fill: {icon.color}">
             <svg id="icon" data-name="{icon.type}" viewBox="0 0 12 12">
                 <title>
                     icon</title>
@@ -126,9 +149,9 @@
                     <path d="{icon.path}"/>
                 </g>
             </svg>
-        </i>
-        <div>
-            <slot class="sd-alert-text">
+        </div>
+        <div class="sd-alert-text">
+            <slot>
                 Default text
             </slot>
         </div>
