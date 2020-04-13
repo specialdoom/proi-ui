@@ -109,9 +109,13 @@
         font-size: 16px;
         font-weight: 100;
     }
+
+    .sd-disabled{
+        cursor: not-allowed;
+    }
 </style>
 
-<label class="sd-checkbox-container ">
+<label class="sd-checkbox-container {disabled ? 'sd-disabled' : ''}">
     <input type="checkbox" bind:checked {disabled}/>
     <span class="sd-checkbox-checkmark {disabled ? 'sd-checkbox-square-disabled' : 'sd-checkbox-square'}"></span>
     <span class="sd-checkbox-label">{value}</span>

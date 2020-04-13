@@ -36,6 +36,7 @@
 
     .sd-input:disabled {
         border: 0.5px dashed;
+        cursor: not-allowed;
     }
 
     .sd-input-squared {

@@ -44,6 +44,7 @@
         color: white;
         border: 1px solid grey;
         background: grey;
+        cursor:not-allowed;
     }
 
     .sd-button:disabled:hover {

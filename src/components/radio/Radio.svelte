@@ -112,9 +112,13 @@
         font-size: 16px;
         font-weight: 100;
     }
+
+    .sd-disabled {
+        cursor: not-allowed;
+    }
 </style>
 
-<label class="sd-radio-container">
+<label class="sd-radio-container {disabled ? 'sd-disabled' : ''}">
     <input type="radio" bind:group {value} {disabled}/>
     <span class="sd-radio-bullet {disabled ? 'sd-radio-circle-disabled' : 'sd-radio-circle'}"></span>
     <span class="sd-radio-label">{label}</span>

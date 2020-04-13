@@ -20,9 +20,9 @@ function click () {
 ### Attributes
 | Parameter | Description | Type | Optional value | Default value |
 | --- | --- | --- | --- | --- |
-| Status | type | String | primary, info, danger, success, warning | primary |
-| Squared | square display | Boolean | - | false |
-| Outlined | outline display | Boolean | - | false |
+| status | type | String | primary, info, danger, success, warning | primary |
+| squared | square display | Boolean | - | false |
+| outlined | outline display | Boolean | - | false |
 
 ### Events
 | Event name | description | callback parameter |
