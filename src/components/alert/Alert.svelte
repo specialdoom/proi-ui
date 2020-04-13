@@ -30,7 +30,7 @@
         }
     ]
 
-    $ : icon = icons.filter(item => item.type == status)[0];
+    $: icon = icons.filter(item => item.type == status)[0];
 
     function close() {
         closed = true;
@@ -58,6 +58,11 @@
         margin-left: auto;
         padding-left: 16px;
         opacity: 0.5;
+    }
+
+    .sd-alert-close-text {
+        cursor: pointer;
+        font-weight: 400;
     }
 
     .sd-alert-icon {
@@ -117,24 +122,12 @@
         opacity: 1;
     }
 
-    .sd-alert-close-icon:before, .sd-alert-close-icon:after {
-        position: absolute;
-        content: ' ';
-        height: 12px;
-        width: 1px;
-        background-color: #333;
-    }
-
-    .sd-alert-close-icon:before {
-        transform: rotate(45deg);
-    }
-
-    .sd-alert-close-icon:after {
-        transform: rotate(-45deg);
-    }
-
     .sd-alert-icon > svg {
         height: 14px;
+    }
+
+    .sd-alert-close-icon > svg{
+        height: 10px;
     }
 
 </style>
@@ -157,7 +150,13 @@
         </div>
 
         {#if closable}
-            <i class="sd-alert-close-icon" on:click={close}></i>
+            <div class="sd-alert-close-icon" on:click={close}>
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 12 12">
+                    <title>exit</title>
+                    <path d="M11.29,10a.8.8,0,0,1,0,1.27.8.8,0,0,1-1.27,0L6.17,7.44a.25.25,0,0,0-.34,0L2,11.29a.8.8,0,0,1-1.27,0A.8.8,0,0,1,.71,10L4.56,6.17a.25.25,0,0,0,0-.34L.71,2A.8.8,0,0,1,.71.71.8.8,0,0,1,2,.71L5.83,4.56a.25.25,0,0,0,.34,0L10,.71a.8.8,0,0,1,1.27,0,.8.8,0,0,1,0,1.27L7.44,5.83a.25.25,0,0,0,0,.34Z"
+                          transform="translate(-0.39 -0.39)"/>
+                </svg>
+            </div>
         {/if}
     </div>
 {/if}
