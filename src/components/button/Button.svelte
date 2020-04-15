@@ -22,7 +22,7 @@
         min-width: 100px;
         height: 40px;
         margin: 3px;
-        padding: 12px 0;
+        padding: 12px;
         color: #fff;
         text-align: center;
         line-height: 1;
