@@ -1,8 +1,8 @@
 proi-ui
 ---------
->![Logo](https://github.com/specialdoom/proi-ui/blob/master/src/assets/logo.png?raw=true "proi-ui logo")
+![Logo](https://github.com/specialdoom/proi-ui/blob/master/src/assets/logo.png?raw=true "proi-ui logo")
 
-> proi UI Library for Svelte/Sapper (beta).  
+> proi UI Library for Svelte/Sapper (beta).
 ## Installation
 All controls
 ```bash
