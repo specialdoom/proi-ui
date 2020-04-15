@@ -23,6 +23,7 @@ function click () {
 | status | type | String | primary, info, danger, success, warning | primary |
 | squared | square display | Boolean | - | false |
 | outlined | outline display | Boolean | - | false |
+| medium | medium display | Boolean | - | false |
 
 ### Events
 | Event name | description | callback parameter |

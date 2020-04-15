@@ -32,6 +32,6 @@
 </style>
 <div class="sd-backdrop {open ? 'sd-backdrop-open' : 'sd-backdrop-closed'}" on:click>
     <div>
-        <slot>Backdrop</slot>
+        <slot />
     </div>
 </div>

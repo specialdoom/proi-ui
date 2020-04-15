@@ -52,13 +52,7 @@
         padding: 8px 0;
     }
 
-    .sd-alert-close-icon {
-        display: flex;
-        align-items: center;
-        margin-left: auto;
-        padding-left: 16px;
-        opacity: 0.5;
-    }
+
 
     .sd-alert-close-text {
         cursor: pointer;

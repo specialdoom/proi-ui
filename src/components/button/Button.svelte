@@ -8,6 +8,7 @@
     export let outlined = false;
     export let squared = false;
     export let disabled = false;
+    export let medium = false;
 
     onMount(() => {
         if (statusValues.indexOf(status) == -1) {
@@ -39,12 +40,19 @@
         transition: all 0.25s;
     }
 
+    .sd-button-medium {
+        min-width: 80px;
+        height: 30px;
+        margin: 3px;
+        padding: 0;
+    }
+
     .sd-button:disabled {
         opacity: 0.5;
         color: white;
         border: 1px solid grey;
         background: grey;
-        cursor:not-allowed;
+        cursor: not-allowed;
     }
 
     .sd-button:disabled:hover {
@@ -154,7 +162,7 @@
 </style>
 
 <button
-        class="sd-button
+        class="sd-button {medium ? 'sd-button-medium' : ''}
   {squared ? 'sd-squared' : ''}
   {outlined ? `sd-button-outline sd-outline-${status} `:`sd-${status}`}
   "

@@ -118,10 +118,6 @@
         -webkit-font-smoothing: antialiased;
     }
 
-    .sd-dropdown-over {
-        z-index: 5;
-    }
-
     .sd-dropdown-last-option {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
