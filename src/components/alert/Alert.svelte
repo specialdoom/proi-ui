@@ -133,7 +133,7 @@
 </style>
 {#if !closed}
     <div class="sd-alert {outlined ? `sd-alert-outline-${status}`: `sd-alert-${status}`} sd-alert-outline {squared ? 'sd-alert-squared' : ''}"
-         transition:fade>
+         out:fade>
         <div class="sd-alert-icon" style="fill: {icon.color}">
             <svg id="icon" data-name="{icon.type}" viewBox="0 0 12 12">
                 <title>
