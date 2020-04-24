@@ -1,6 +1,4 @@
 <script>
-    import {fade} from 'svelte/transition';
-
     let closed = false;
     export let status = "success";
     export let squared = false;
@@ -30,7 +28,7 @@
         }
     ]
 
-    $: icon = icons.filter(item => item.type == status)[0];
+    icon = icons.filter(item => item.type == status)[0];
 
     function close() {
         closed = true;
@@ -126,14 +124,14 @@
         height: 14px;
     }
 
-    .sd-alert-close-icon > svg{
+    .sd-alert-close-icon > svg {
         height: 10px;
     }
 
 </style>
 {#if !closed}
     <div class="sd-alert {outlined ? `sd-alert-outline-${status}`: `sd-alert-${status}`} sd-alert-outline {squared ? 'sd-alert-squared' : ''}"
-         transition:fade>
+    >
         <div class="sd-alert-icon" style="fill: {icon.color}">
             <svg id="icon" data-name="{icon.type}" viewBox="0 0 12 12">
                 <title>
