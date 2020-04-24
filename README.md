@@ -10,7 +10,7 @@ npm i proi-ui
 ```
 
 ## Docs
-Check out the [docs](https://proi-ui.herokuapp.com/). (beta)
+Check out the [docs](http://proi-ui.com/). (beta)
 
 ## Basic Usage
 For more usage check README.md from components!
