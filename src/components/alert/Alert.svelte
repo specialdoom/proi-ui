@@ -28,7 +28,7 @@
         }
     ]
 
-    icon = icons.filter(item => item.type == status)[0];
+    $ : icon = icons.filter(item => item.type == status)[0];
 
     function close() {
         closed = true;
