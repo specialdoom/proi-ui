@@ -94,8 +94,7 @@
 
     svg {
         padding-right: 5px;
-        padding-top: 2px;
-        height: 13px;
+        height: 10px;
         fill: white;
         opacity: 0.7;
     }
