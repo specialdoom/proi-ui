@@ -16,7 +16,6 @@ npm i proi-ui
 Check out the [docs](http://proi-ui.com/). (beta)
 
 ## Basic Usage
-For more usage check README.md from components!
 ```javascript
 <script>
 import { Button, Input } from 'proi-ui'
