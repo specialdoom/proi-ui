@@ -15,6 +15,9 @@ npm i proi-ui
 ## Docs
 Check out the [docs](http://proi-ui.com/). (beta)
 
+## Recent updates
+Chip component.
+
 ## Basic Usage
 ```javascript
 <script>

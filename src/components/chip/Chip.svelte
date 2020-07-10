@@ -16,13 +16,13 @@
     .sd-chip {
         border: none;
         cursor: default;
-        height: 27px;
-        min-width: 27px;
+        height: 20px;
+        min-width: 20px;
         display: inline-flex;
         outline: 0;
         color: white;
         padding: 0;
-        font-size: 0.9rem;
+        font-size: 12px;
         box-sizing: border-box;
         align-items: center;
         white-space: nowrap;
@@ -79,6 +79,11 @@
         text-overflow: ellipsis;
     }
 
+    .sd-chip-label-default{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     .sd-chip-close-icon {
         display: flex;
         align-items: center;
@@ -115,7 +120,7 @@
 </style>
 {#if !closed}
     <div on:click class="sd-chip {disabled ? 'sd-chip-disabled' : '' } {squared ? 'sd-chip-squared' : ''} {outlined ? `sd-chip-outline sd-chip-${type}-outline` : `sd-chip-${type}`}">
-    <span class="sd-chip-label">
+    <span class="sd-chip-label {label==='' ? 'sd-chip-label-default' : ''}">
         {label}
     </span>
         {#if closable && disabled === false}
