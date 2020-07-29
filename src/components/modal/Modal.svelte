@@ -1,4 +1,6 @@
 <script>
+    import {Icon} from 'proi-ui-icons';
+
     export let show = false;
 
     function close() {
@@ -112,18 +114,14 @@
         font-weight: 700;
         line-height: 1;
         color: #000;
+        opacity: 0.5;
         text-shadow: 0 1px 0 #fff;
         opacity: .5;
         padding: 1rem 1rem;
         margin: -1rem -1rem -1rem auto;
     }
 
-    .sd-modal-close svg {
-        height: 18px;
-        opacity: .5;
-    }
-
-    .sd-modal-close svg:hover {
+    .sd-modal-close:hover {
         opacity: 1;
     }
 
@@ -147,13 +145,9 @@
                 <div class="sd-title">
                     <slot name="title"/>
                 </div>
-                <span class="sd-modal-close" on:click={close}><svg id="icon" data-name="error"
-                                                                   viewBox="0 0 12 12"><title>
-                icon</title>
-                <g id="icon-content" data-name="content">
-                    <path d="M6,0a6,6,0,1,0,6,6A6,6,0,0,0,6,0ZM8.51,7.9a.43.43,0,0,1-.61.61L6,6.61,4.1,8.51a.43.43,0,0,1-.61-.61L5.39,6,3.49,4.1a.43.43,0,0,1,.61-.61L6,5.39l1.9-1.9a.43.43,0,0,1,.61.61L6.61,6Z"></path>
-                </g>
-            </svg></span></div>
+                <span class="sd-modal-close" on:click={close}>
+                    <Icon type="circleClose" />
+                </span></div>
             <div class="sd-modal-body">
                 <slot name="body"/>
             </div>

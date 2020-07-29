@@ -1,10 +1,28 @@
 <script>
+    import {Icon} from 'proi-ui-icons';
+
     export let closable = false;
     export let outlined = false;
     export let squared = false;
     export let disabled = false;
     export let type = "default";
     export let label = "";
+
+    let types = [
+        {
+            type: 'default',
+            color: '#2398ab'
+        },
+        {
+            type: 'primary',
+            color: '#79aaf3'
+        },
+        {
+            type: 'secondary',
+            color: '#ff6a61'
+        }];
+
+    $ : _type = types.filter(item => item.type === type)[0];
 
     let closed = false;
 
@@ -79,7 +97,7 @@
         text-overflow: ellipsis;
     }
 
-    .sd-chip-label-default{
+    .sd-chip-label-default {
         padding-left: 0px;
         padding-right: 0px;
     }
@@ -92,11 +110,13 @@
         opacity: 0.5;
     }
 
-    svg {
+    .sd-svg {
+        box-sizing: border-box;
         padding-right: 5px;
-        height: 10px;
-        fill: white;
-        opacity: 0.7;
+    }
+
+    .sd-svg:hover{
+        opacity: 0.8;
     }
 
     .sd-svg-default {
@@ -111,25 +131,18 @@
         fill: #ff6a61;
     }
 
-    svg:hover {
-        opacity: 1;
-    }
-
-
 </style>
 {#if !closed}
-    <div on:click class="sd-chip {disabled ? 'sd-chip-disabled' : '' } {squared ? 'sd-chip-squared' : ''} {outlined ? `sd-chip-outline sd-chip-${type}-outline` : `sd-chip-${type}`}">
+    <div on:click
+         class="sd-chip {disabled ? 'sd-chip-disabled' : '' } {squared ? 'sd-chip-squared' : ''} {outlined ? `sd-chip-outline sd-chip-${type}-outline` : `sd-chip-${type}`}">
     <span class="sd-chip-label {label==='' ? 'sd-chip-label-default' : ''}">
         {label}
     </span>
-        {#if closable && disabled === false}
-            <svg id="icon" data-name="error" viewBox="0 0 12 12" class="{outlined ? `sd-svg-${type}`: ''}"
-                 on:click={close}><title>
-                icon</title>
-                <g id="icon-content" data-name="content">
-                    <path d="M6,0a6,6,0,1,0,6,6A6,6,0,0,0,6,0ZM8.51,7.9a.43.43,0,0,1-.61.61L6,6.61,4.1,8.51a.43.43,0,0,1-.61-.61L5.39,6,3.49,4.1a.43.43,0,0,1,.61-.61L6,5.39l1.9-1.9a.43.43,0,0,1,.61.61L6.61,6Z"></path>
-                </g>
-            </svg>
+        {#if closable &&
+        disabled === false}
+            <span class="sd-svg {outlined ? `sd-svg-${type}`: ''}" style="{label === '' ? 'padding-right: 0' : ''}"
+                  on:click={close}><Icon type="circleClose" scale="10"
+                                         color="{outlined ? _type.color : '#fff'}"/></span>
         {/if}
     </div>
 {/if}

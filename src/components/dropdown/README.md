@@ -20,4 +20,4 @@ let selected = '';
 | selected | Current selected value | String | - | '' |
 | options | Options for select | Array of String | - | [] |
 | title | Title for dropdown | String | - | 'Title' |
-| disabled | Disable dropdown | Boolean | - | false |
+| disabled | Disabled dropdown | Boolean | - | false |

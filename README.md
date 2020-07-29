@@ -15,8 +15,14 @@ npm i proi-ui
 ## Docs
 Check out the [docs](http://proi-ui.com/). (beta)
 
-## Recent updates
-Chip component.
+## Latest updates
+- using proi-ui-icons as a dev dependency for component's icons
+- components updated:
+    - alert component
+    - dropdown component
+    - chip component
+    - modal component
+- dropdown component architecture
 
 ## Basic Usage
 ```javascript

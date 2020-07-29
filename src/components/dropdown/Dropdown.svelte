@@ -1,4 +1,6 @@
 <script>
+    import {Icon} from 'proi-ui-icons';
+
     export let options = [];
 
     let toggle = false;
@@ -14,6 +16,7 @@
         selected = options[index];
         toggleOptions();
     }
+
 </script>
 
 <style>
@@ -39,15 +42,14 @@
         text-align: center;
     }
 
-    .sd-dropdown-buttons-container {
-        font-size: 0;
-        white-space: nowrap;
-        width: 100%;
-    }
-
     .sd-dropdown-button {
         background: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
         margin: 0;
+        width: 100%;
         box-sizing: border-box;
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -57,33 +59,23 @@
         outline: none;
     }
 
+    .sd-dropdown-button-title {
+        white-space: nowrap;
+        overflow: hidden;
+        width: 90%;
+        text-overflow: ellipsis;
+    }
+
+    .sd-dropdown-button-icon {
+        width: 10%;
+        border-left: 1px solid;
+    }
+
+
     .sd-dropdown-button:disabled {
         opacity: 0.7;
         cursor: not-allowed;
     }
-
-    .sd-dropdown-value-button {
-        border: 1px solid grey;
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-        padding: 8px;
-        width: 88%;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-
-    .sd-dropdown-action-button {
-        border-top: 1px solid grey;
-        border-right: 1px solid grey;
-        border-bottom: 1px solid grey;
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
-        padding: 8px;
-        width: 12%;
-        border-left: unset;
-    }
-
 
     .sd-no-display {
         display: none;
@@ -97,6 +89,7 @@
 
     .sd-dropdown-selected-option {
         border-left: 2px solid rgb(35, 152, 171);
+        border-right: 2px solid rgb(35, 152, 171);
     }
 
     .sd-dropdown-first-option {
@@ -107,15 +100,8 @@
 
     }
 
-    .sd-dropdown-icon {
-        color: inherit;
-        font-style: normal;
-        line-height: 0;
-        text-align: center;
-        text-transform: none;
-        vertical-align: -.125em;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
+    .sd-dropdown-single-option {
+        border-radius: 10px;
     }
 
     .sd-dropdown-last-option {
@@ -130,24 +116,16 @@
     }
 </style>
 
-<div class="sd-dropdown" {disabled}>
-    <div class="sd-dropdown-buttons-container">
-        <button class="sd-dropdown-button sd-dropdown-value-button" {disabled}>{selected ? selected : title}</button>
-        <button class="sd-dropdown-button sd-dropdown-action-button" on:click={toggleOptions} {disabled}><i
-                class="sd-dropdown-icon">
-            <svg height="12" viewBox="0 0 512 512" width="12" xmlns="http://www.w3.org/2000/svg">
-                <g id="More">
-                    <path d="m256 192a64 64 0 1 0 64 64 64.072 64.072 0 0 0 -64-64zm0 112a48 48 0 1 1 48-48 48.055 48.055 0 0 1 -48 48z"/>
-                    <path d="m72 192a64 64 0 1 0 64 64 64.072 64.072 0 0 0 -64-64zm0 112a48 48 0 1 1 48-48 48.055 48.055 0 0 1 -48 48z"/>
-                    <path d="m440 192a64 64 0 1 0 64 64 64.072 64.072 0 0 0 -64-64zm0 112a48 48 0 1 1 48-48 48.055 48.055 0 0 1 -48 48z"/>
-                </g>
-            </svg>
-        </i>
-        </button>
-    </div>
+<div class="sd-dropdown">
+    <button {disabled} on:click={toggleOptions} class="sd-dropdown-button">
+        <span class="sd-dropdown-button-title">{selected ? selected : title}</span>
+        <span class="sd-dropdown-button-icon">
+            <Icon type="{toggle ? 'circleArrowUp' : 'circleArrowDown'}" scale="15"/>
+        </span>
+    </button>
     <ul class="sd-dropdown-options-container {toggle ? '' : 'sd-no-display'}">
         {#each options as option, i}
-            <li class="sd-dropdown-option {option === selected ? 'sd-dropdown-selected-option' : ''} {i==0 && options.length > 2? 'sd-dropdown-first-option' : ''} {i==options.length-1 && options.length > 2? 'sd-dropdown-last-option' : ''}"
+            <li class="sd-dropdown-option {option === selected ? 'sd-dropdown-selected-option' : ''} { i==0 && options.length === 1 ? 'sd-dropdown-single-option' : ''} {i==0 && options.length >= 2? 'sd-dropdown-first-option' : ''} {i==options.length-1 && options.length >= 2? 'sd-dropdown-last-option' : ''}"
                 on:click={() => selectOption(i)}>
                 {option}
             </li>
