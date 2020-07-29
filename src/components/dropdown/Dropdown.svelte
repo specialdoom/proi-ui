@@ -30,7 +30,7 @@
 
     .sd-dropdown-options-container {
         position: absolute;
-        top: 18px;
+        top: 13px;
         width: auto;
         border-radius: 10px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, .15);

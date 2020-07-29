@@ -27,6 +27,7 @@ Check out the [docs](http://proi-ui.com/). (beta)
 ## Latest update changes
 - dropdown component leaking style
 - dropdown component type
+- decreased top position for dropdown list
 
 ## Basic Usage
 ```javascript
