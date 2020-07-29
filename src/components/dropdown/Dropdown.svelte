@@ -44,12 +44,14 @@
 
     .sd-dropdown-button {
         background: none;
+        boder: 1px solid black;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 20px;
         margin: 0;
         width: 100%;
+        padding: 5px;
         box-sizing: border-box;
         -webkit-user-select: none;
         -khtml-user-select: none;
@@ -68,6 +70,9 @@
 
     .sd-dropdown-button-icon {
         width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-left: 1px solid;
     }
 
