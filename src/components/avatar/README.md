@@ -3,7 +3,7 @@
 
 ### Usage
 
-```javascript
+```sveltehtml
 <script>
 import { Avatar } from 'proi-ui'
 

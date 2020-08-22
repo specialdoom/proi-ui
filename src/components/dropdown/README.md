@@ -2,7 +2,7 @@
 [proi-ui](https://github.com/specialdoom/proi-ui)
 ### Usage
 You should bind to Dropdown selected attribute.
-```javascript
+```sveltehtml
 <script>
 import { Dropdown } from 'proi-ui'
 let options = ['First option', 'Second option', 'Third option'];

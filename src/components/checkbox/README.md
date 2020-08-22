@@ -2,7 +2,7 @@
 [proi-ui](https://github.com/specialdoom/proi-ui)
 ### Usage
 You should bind to Checkbox checked attribute.
-```javascript
+```sveltehtml
 <script>
 import { Checkbox } from 'proi-ui'
 let option = false;

@@ -1,9 +1,11 @@
 ---
 [proi-ui](https://github.com/specialdoom/proi-ui)
 
+###### Alert component
+
 ### Usage
 
-```javascript
+```sveltehtml
 <script>
 import { Alert } from 'proi-ui'
 

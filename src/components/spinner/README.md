@@ -2,7 +2,7 @@
 [proi-ui](https://github.com/specialdoom/proi-ui)
 ### Usage
 You should bind to Radio group attribute.
-```javascript
+```sveltehtml
 <script>
     import {Spinner} from 'proi-ui';
   </script>

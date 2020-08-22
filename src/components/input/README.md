@@ -1,7 +1,7 @@
 ---
 [proi-ui](https://github.com/specialdoom/proi-ui)
 ### Usage
-```javascript
+```sveltehtml
 <script>
 import { Input } from 'proi-ui'
 

@@ -3,7 +3,7 @@
 
 ### Usage
 
-```javascript
+```sveltehtml
 <script>
 import { Modal, Button } from 'proi-ui'
 

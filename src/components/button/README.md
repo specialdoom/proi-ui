@@ -3,7 +3,7 @@
 
 ### Usage
 Use content to display text on the button. Default text is _status_ text.
-```javascript
+```sveltehtml
 <script>
 import { Button } from 'proi-ui'
 

@@ -1,5 +1,6 @@
 <script>
     import {fade} from 'svelte/transition';
+    import {Icon} from 'proi-ui-icons';
 
     export let percent = 0;
     export let error = false;
@@ -24,6 +25,7 @@
         flex-direction: column;
         -ms-flex-pack: center;
         justify-content: center;
+        align-items: center;
         overflow: hidden;
         color: #fff;
         text-align: center;
@@ -54,11 +56,7 @@
          style="width: {percent}%">
         {#if height >= 15}
             {#if error}
-                <svg id="error-icon" data-name="error" viewBox="0 0 12 12" class="svelte-1yfwcmz"><title>icon</title>
-                    <g id="icon-content" data-name="content">
-                        <path d="M6,0a6,6,0,1,0,6,6A6,6,0,0,0,6,0ZM8.51,7.9a.43.43,0,0,1-.61.61L6,6.61,4.1,8.51a.43.43,0,0,1-.61-.61L5.39,6,3.49,4.1a.43.43,0,0,1,.61-.61L6,5.39l1.9-1.9a.43.43,0,0,1,.61.61L6.61,6Z"></path>
-                    </g>
-                </svg>
+                <Icon type="alert" scale="12" color="white"/>
             {:else}
                 {percent}%
             {/if}

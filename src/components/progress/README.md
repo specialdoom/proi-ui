@@ -3,7 +3,7 @@
 
 ### Usage
 
-```javascript
+```sveltehtml
 <script>
 import { Progress } from 'proi-ui'
 
