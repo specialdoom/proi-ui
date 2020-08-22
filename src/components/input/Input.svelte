@@ -72,16 +72,9 @@
     }
 
     .sd-input-container {
-        width: 50%;
+        width: 100%;
         transition: all ease 0.5s;
     }
-
-    @media screen and (max-width: 600px) {
-        .sd-input-container {
-            width: 70%;
-        }
-    }
-
 </style>
 
 <div class="sd-input-container">
