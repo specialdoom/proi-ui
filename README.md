@@ -15,10 +15,8 @@ npm i proi-ui
 ## Docs
 Check out the [docs](http://proi-ui.com/). (beta)
 
-## Latest update changes
-- bug fix
-    - input bug fix
-- added toasts
+## 0.1.7 update changes
+- fixed warnings
 
 ## Updates for 0.1.0 version
 - using proi-ui-icons as a dev dependency for component's icons
