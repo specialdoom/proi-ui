@@ -1,10 +1,10 @@
 proi-ui
 ---------
-yet another Svelte/Sapper UI library
+yet another Svelte ui library
 
 ![Logo](https://github.com/specialdoom/proi-ui/blob/master/src/assets/logo.png?raw=true "proi-ui logo")
 
-> proi UI Library for Svelte/Sapper (beta).
+> proi-ui Library for Svelte (beta).
 
 ## Installation
 All controls
@@ -13,10 +13,10 @@ npm i proi-ui
 ```
 
 ## Docs
-Check out the [docs](http://proi-ui.com/). (beta)
+Check out the [docs](https://specialdoom.github.io/proi-ui/). (beta)
 
-## 0.1.7 update changes
-- fixed warnings
+## Update for 0.1.8 version
+- input component using span tag as label instead of label tag html despite the association with the form control
 
 ## Updates for 0.1.0 version
 - using proi-ui-icons as a dev dependency for component's icons
