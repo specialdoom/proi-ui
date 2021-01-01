@@ -78,9 +78,8 @@
 </style>
 
 <div class="sd-input-container">
-  <label
-    class="sd-label {error ? 'sd-label-error' : ''}"
-    htmlfor="sd-input">{label}</label>
+  <span
+    class="sd-label {error ? 'sd-label-error' : ''}">{label}</span>
   <input
     id="sd-input"
     {placeholder}
