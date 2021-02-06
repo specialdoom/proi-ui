@@ -32,7 +32,7 @@
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.2",
-    "proi-ui-icons": "0.0.3",
+    "proi-ui-icons": "0.0.4",
     "rollup": "^2.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^5.2.1",

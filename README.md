@@ -15,8 +15,9 @@ npm i proi-ui
 ## Docs
 Check out the [docs](https://specialdoom.github.io/proi-ui/). (beta)
 
-## Update for 0.1.8 version
-- input component using span tag as label instead of label tag html despite the association with the form control
+## Update for 0.1.9 version
+- using latest proi-ui-icons version
+- new logo
 
 ## Updates for 0.1.0 version
 - using proi-ui-icons as a dev dependency for component's icons
