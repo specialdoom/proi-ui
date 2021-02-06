@@ -81,7 +81,6 @@
   <span
     class="sd-label {error ? 'sd-label-error' : ''}">{label}</span>
   <input
-    id="sd-input"
     {placeholder}
     bind:value
     class="sd-input {error ? 'sd-input-error' : ''}
