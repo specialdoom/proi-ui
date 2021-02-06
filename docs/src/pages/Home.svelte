@@ -48,8 +48,8 @@
 </svelte:head>
 <div class="container" style="flex-direction: column">
   <figure>
-    <img alt="logo" src="logo-beta.png" />
-    <figcaption>proi-ui docs ( v0.1.8 )</figcaption>
+    <img alt="logo" src="logo.png" />
+    <figcaption>proi-ui docs ( v0.1.12 )</figcaption>
   </figure>
   <Highlight>{`npm i proi-ui`}</Highlight>
   <div class="social-media-container">

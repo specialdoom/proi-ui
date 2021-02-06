@@ -1,12 +1,10 @@
 <script>
   import {onMount} from 'svelte';
-  import { Alert, Chip, toaster, ToastProvider } from "proi-ui";
+  import { Chip, toaster, ToastProvider } from "proi-ui";
   import Home from "./pages/Home.svelte";
   import Docs from "./pages/Docs.svelte";
-  import Issues from "./pages/Issues.svelte";
   import Icons from "./pages/Icons.svelte";
   import Nav from "./components/Nav.svelte";
-  import { Dropdown } from "proi-ui";
 
   onMount(() => {
     toaster.send({
@@ -16,8 +14,6 @@
   })
 
   let components = { Home: Home, Docs: Docs, Icons: Icons };
-
-  let options = ["Home", "Docs", "Icons"];
 
   let selected = "Home";
 

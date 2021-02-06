@@ -120,7 +120,6 @@
     "plus",
     "pound",
     "power",
-    "proiUi",
     "rain",
     "refresh",
     "rocket",

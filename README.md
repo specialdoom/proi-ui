@@ -15,7 +15,7 @@ npm i proi-ui
 ## Docs
 Check out the [docs](https://specialdoom.github.io/proi-ui/). (beta)
 
-## Update for 0.1.9 version
+## Update for 0.1.12 version
 - using latest proi-ui-icons version
 - new logo
 - solved warnings regarding the uniqueness of the input id
