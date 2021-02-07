@@ -36,12 +36,17 @@
             type: type
         });
     }
+    // or using specific methods
 </script>
         
 <Button on:click={() => notify("success")}>Success notification</Button>
 <Button on:click={() => notify("info")}>Info notification</Button>
 <Button on:click={() => notify("error")}>Error notification</Button>
 <Button on:click={() => notify("warning")}>Warning notification</Button>
+<Button on:click={() => toaster.succss("Notification message")}>Specific success notification specific</Button>
+<Button on:click={() => toaster.info("Notification message")}>Specific info notification</Button>
+<Button on:click={() => toaster.error("Notification message")}>Specific error notification</Button>
+<Button on:click={() => toaster.warning("Notification message")}>Specific warning notification</Button>
     `}
     </Highlight>
     <div class="sub-title">
@@ -53,6 +58,10 @@
         <Button on:click={() => notify("info")}>Info notification</Button>
         <Button on:click={() => notify("error")}>Error notification</Button>
         <Button on:click={() => notify("warning")}>Warning notification</Button>
+        <Button on:click={() => toaster.success("Notification message")}>Specific success notification specific</Button>
+        <Button on:click={() => toaster.info("Notification message")}>Specific info notification</Button>
+        <Button on:click={() => toaster.error("Notification message")}>Specific error notification</Button>
+        <Button on:click={() => toaster.warning("Notification message")}>Specific warning notification</Button>
     </div>
     <div class="sub-title">
       <span class="color">#</span>
@@ -101,6 +110,23 @@
               <div>type</div>
               <div>success, info, warning, error</div>
               <div>Type of toast</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      and the specific methods <b>error</b>,<b>info</b>,<b>warning</b> and <b>success</b> by passing a string message
+      <div style="overflow: auto">
+        <div class="table">
+          <div class="table-header">
+            <div>Property name</div>
+            <div>Value</div>
+            <div>Details</div>
+          </div>
+          <div class="table-data">
+            <div>
+              <div>message</div>
+              <div>String value</div>
+              <div>Message to display inside the toast</div>
             </div>
           </div>
         </div>

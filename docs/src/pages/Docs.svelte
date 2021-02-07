@@ -31,11 +31,9 @@
     { text: "Progress", component: Progress, new: false, updated: false },
     { text: "Spinner", component: Spinner, new: false, updated: false },
     { text: "Avatar", component: Avatar, new: false, updated: false },
-    { text: "Toast", component: Toast, new: false, updated: false },
+    { text: "Toast", component: Toast, new: false, updated: true },
 
   ];
-
-  const dropdownOptions = options.map((item) => item.text);
 
   options.sort((a, b) => {
     if (a.text > b.text) return 1;

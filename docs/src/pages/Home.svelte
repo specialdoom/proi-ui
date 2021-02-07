@@ -49,7 +49,7 @@
 <div class="container" style="flex-direction: column">
   <figure>
     <img alt="logo" src="logo.png" />
-    <figcaption>proi-ui docs ( v0.1.12 )</figcaption>
+    <figcaption>proi-ui docs ( v0.2.0 )</figcaption>
   </figure>
   <Highlight>{`npm i proi-ui`}</Highlight>
   <div class="social-media-container">
@@ -57,10 +57,10 @@
       <img src="github.png" alt="github icon" />
     </a>
     <a href="https://www.facebook.com/proiui/">
-      <img src="facebook.png" alt="github icon" />
+      <img src="facebook.png" alt="facebook icon" />
     </a>
     <a href="https://twitter.com/ProiUi">
-      <img src="twitter.png" alt="github icon" />
+      <img src="twitter.png" alt="twitter icon" />
     </a>
   </div>
 </div>
