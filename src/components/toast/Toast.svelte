@@ -17,6 +17,7 @@
         display: flex;
         margin: 10px;
         padding: 10px;
+        border-radius: 3px;
         background-color: ghostwhite;
         box-sizing: border-box;
         flex-direction: column;
@@ -24,27 +25,29 @@
     }
 
     .sd-toast-error {
-        border-left: 2px solid #ee3d48;
+        border-left: 3px solid #ee3d48;
     }
 
     .sd-toast-warning {
-        border-left: 2px solid #fdb300;
+        border-left: 3px solid #fdb300;
     }
 
     .sd-toast-info {
-        border-left: 2px solid #257dff;
+        border-left: 3px solid #257dff;
     }
 
     .sd-toast-success {
-        border-left: 2px solid #007f50;
+        border-left: 3px solid #007f50;
     }
 
     .sd-toast-title {
+        text-align: left;
         font-size: 14px;
         font-weight: 300;
     }
 
     .sd-toast-content {
+        text-align: left;
         padding-top: 10px;
     }
 

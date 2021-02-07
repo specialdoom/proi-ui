@@ -15,15 +15,10 @@ npm i proi-ui
 ## Docs
 Check out the [docs](https://specialdoom.github.io/proi-ui/). (beta)
 
-## Update for 0.1.12 version
-- using latest proi-ui-icons version
+## Updates for 0.2.0 version
+- toaster specific methods: error, info, warning and success
 - new logo
-- solved warnings regarding the uniqueness of the input id
-
-## Updates for 0.1.0 version
-- using proi-ui-icons as a dev dependency for component's icons
-- dropdown component architecture
-- toasts
+- bug fix
 
 ## Basic Usage
 ```javascript

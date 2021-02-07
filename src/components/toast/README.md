@@ -10,6 +10,12 @@ function notify (type) {
         message: "Notification message",
         type: type
     });
+    // or
+    toaster.error("Notification message");
+    toaster.warning("Notification message");
+    toaster.info("Notification message");
+    toaster.success("Notification message");
+
 }
 </script>
 
@@ -33,3 +39,8 @@ Has the **send** method used to send a toast and takes an object parameter havin
 | --- | --- | --- |
 | message | String value | Message to display inside the toast |
 | type | success, info, warning, error | Type of toast |
+
+Or using the specific methods for error, info, warning or success by passing a message string
+| Property name | Value | Details |
+| --- | --- | --- |
+| message | String value | Message to display inside the toast |
