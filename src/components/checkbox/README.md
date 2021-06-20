@@ -1,7 +1,13 @@
 ---
+
 [proi-ui](https://github.com/specialdoom/proi-ui)
+
+###### Checkbox component
+
 ### Usage
+
 You should bind to Checkbox checked attribute.
+
 ```sveltehtml
 <script>
 import { Checkbox } from 'proi-ui'
@@ -10,12 +16,13 @@ let option = false;
 </script>
 
 <div>
-    <Checkbox value="Check" bind:checked={option}/>
+    <Checkbox bind:checked={option}>Label for checkbox</Checkbox>
 </div>
 ```
-### Attributes
-| Parameter | Description | Type | Optional value | Default value |
-| --- | --- | --- | --- | --- |
-| Value | display text | String | - | - |
-| Checked | option checked or not | Boolean | - | false |
-| Disabled | disable checkbox | Boolean | - | false |
+
+### API
+
+| Property | Description                        | Type    | Default |
+| -------- | ---------------------------------- | ------- | ------- |
+| checked  | Whether the checkbox it's checked  | Boolean | false   |
+| checked  | Whether the checkbox it's disabled | Boolean | false   |

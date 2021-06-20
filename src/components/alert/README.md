@@ -1,4 +1,5 @@
 ---
+
 [proi-ui](https://github.com/specialdoom/proi-ui)
 
 ###### Alert component
@@ -17,8 +18,9 @@
 ```
 
 ### API
-| Property | Description | Type | Default |
-| --- | --- | --- | --- |
-| type | Types of alert. Options: 'success', 'info', 'warning', 'error'. | string | 'success' |
-| outlined | Wheather the alert it's outlined | boolean | false |
-| closable | Wheather the alert can be closed | Boolean | false |
+
+| Property | Description                                                     | Type    | Default   |
+| -------- | --------------------------------------------------------------- | ------- | --------- |
+| type     | Types of alert. Options: 'success', 'info', 'warning', 'error'. | string  | 'success' |
+| outlined | Wheather the alert it's outlined                                | boolean | false     |
+| closable | Wheather the alert can be closed                                | Boolean | false     |

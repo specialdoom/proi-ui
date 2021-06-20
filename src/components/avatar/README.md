@@ -1,4 +1,5 @@
 ---
+
 [proi-ui](https://github.com/specialdoom/proi-ui)
 
 ###### Avatar component
@@ -20,9 +21,9 @@
 ```
 
 ### API
-| Property | Description | Type | Default |
-| --- | --- | --- | --- |
-| title | Title of the avatar | string | '' |
-| description | Short description of the avatar | string | '' |
-| image | Source of avatar image | string | '' |
 
+| Property    | Description                     | Type   | Default |
+| ----------- | ------------------------------- | ------ | ------- |
+| title       | Title of the avatar             | string | ''      |
+| description | Short description of the avatar | string | ''      |
+| image       | Source of avatar image          | string | ''      |
