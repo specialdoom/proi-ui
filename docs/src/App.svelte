@@ -1,21 +1,21 @@
 <script>
-  import {onMount} from 'svelte';
-  import { Chip, toaster, ToastProvider } from "proi-ui";
-  import Home from "./pages/Home.svelte";
-  import Docs from "./pages/Docs.svelte";
-  import Icons from "./pages/Icons.svelte";
-  import Nav from "./components/Nav.svelte";
+  import { onMount } from 'svelte';
+  import { Chip, toaster, ToastProvider } from 'proi-ui';
+  import Home from './pages/Home.svelte';
+  import Docs from './pages/Docs.svelte';
+  import Icons from './pages/Icons.svelte';
+  import Nav from './components/Nav.svelte';
 
   onMount(() => {
     toaster.send({
-      message: "This is the toast component!",
-      type: "info"
-    })
-  })
+      message: 'This is the toast component!',
+      type: 'info'
+    });
+  });
 
   let components = { Home: Home, Docs: Docs, Icons: Icons };
 
-  let selected = "Home";
+  let selected = 'Home';
 
   $: component = components[selected];
 </script>
@@ -34,7 +34,7 @@
     <span>= updated</span>
   </span>
   <span class="copyright">
-    2020 &copy;
+    {new Date().getFullYear()} &copy;
     <a href="https://github.com/specialdoom" alt="creator github link">
       specialdoom
     </a>

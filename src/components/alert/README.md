@@ -7,20 +7,18 @@
 
 ```sveltehtml
 <script>
-import { Alert } from 'proi-ui'
+ import {Alert} from 'proi-ui';
+</script>;
 
-</script>
-
-<div>
-    <Alert>Alert success message</Alert>
-    <Alert status="error" squared>Alert error message</Alert>
-</div>
+<Alert>Success alert message</Alert>
+<Alert type="error">Error alert message</Alert>
+<Alert type="info" outlined>Info alert message</Alert>
+<Alert type="warning" closable>Closable alert warning message</Alert>
 ```
 
-### Attributes
-| Parameter | Description | Type | Optional value | Default value |
-| --- | --- | --- | --- | --- |
-| status | Alert type | String | info, error, success, warning | success |
-| squared | Squared display | Boolean | - | false |
-| closable | Closable alert | Boolean | - | false |
-| outlined | Outlined display | Boolean | - | false |
+### API
+| Property | Description | Type | Default |
+| --- | --- | --- | --- |
+| type | Types of alert. Options: 'success', 'info', 'warning', 'error'. | string | 'success' |
+| outlined | Wheather the alert it's outlined | boolean | false |
+| closable | Wheather the alert can be closed | Boolean | false |

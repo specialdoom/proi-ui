@@ -1,6 +1,6 @@
 <script>
   import { Alert, Spinner } from "proi-ui";
-  import Highlight from "../shared/Highlight.svelte";
+  import Highlight from "../components/shared/Highlight.svelte";
 </script>
 
 <style>

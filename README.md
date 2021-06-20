@@ -2,7 +2,7 @@ proi-ui
 ---------
 yet another Svelte ui library
 
-![DevBadge](https://img.shields.io/badge/development-on%20pause-red)
+![DevBadge](https://img.shields.io/badge/development-in%20progress-green)
 
 
 ![Logo](https://github.com/specialdoom/proi-ui/blob/master/src/assets/logo.png?raw=true "proi-ui logo")

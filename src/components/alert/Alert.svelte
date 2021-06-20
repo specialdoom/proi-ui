@@ -1,51 +1,49 @@
 <script>
   import { Icon } from 'proi-ui-icons';
+  import { icons } from './icons';
 
-  let closed = false;
-  export let status = 'success';
-  export let squared = false;
+  export let type = 'success';
   export let closable = false;
   export let outlined = false;
 
-  let icons = [
-    {
-      type: 'error',
-      iconType: 'no',
-      color: '#ee3d48',
-    },
-    {
-      type: 'warning',
-      iconType: 'alert',
-      color: '#fdb300',
-    },
-    {
-      type: 'success',
-      iconType: 'circleChoose',
-      color: '#007f50',
-    },
-    {
-      type: 'info',
-      iconType: 'hint',
-      color: '#257dff',
-    },
-  ];
+  let closed = false;
+  const outlinedClass = outlined
+    ? `sd-alert-outlined sd-alert-outlined-${type}`
+    : `sd-alert-${type}`;
 
-  $: icon = icons.filter((item) => item.type == status)[0];
+  $: icon = icons.filter((item) => item.type == type)[0];
 
-  function close() {
+  const close = () => {
     closed = true;
-  }
+  };
 </script>
+
+{#if !closed}
+  <div class="sd-alert {outlinedClass}">
+    <div class="sd-alert-icon">
+      <Icon type={icon.iconType} color={icon.color} scale="15" />
+    </div>
+    <div class="sd-alert-text">
+      <slot>Default text</slot>
+    </div>
+
+    {#if closable}
+      <div class="sd-alert-close-icon" on:click={close}>
+        <Icon type="circleClose" scale="15" />
+      </div>
+    {/if}
+  </div>
+{/if}
 
 <style>
   .sd-alert {
     display: flex;
     padding: 6px 16px;
-    font-size: 0.875rem;
+    font-size: 16px;
     border-radius: 50px;
     font-weight: 100;
-    line-height: 1.43;
-    letter-spacing: 0.01071em;
+    line-height: 1;
+    border-radius: 4px;
   }
 
   .sd-alert-text {
@@ -74,12 +72,8 @@
     fill: #007f50;
   }
 
-  .sd-alert-outline {
+  .sd-alert-outlined {
     background: transparent;
-  }
-
-  .sd-alert-squared {
-    border-radius: 4px;
   }
 
   .sd-alert-success {
@@ -87,7 +81,7 @@
     border: 1px solid #007f50;
   }
 
-  .sd-alert-outline-success {
+  .sd-alert-outlined-success {
     border: 1px solid #007f50;
   }
 
@@ -97,8 +91,8 @@
     border: 1px solid #ee3d48;
   }
 
-  .sd-alert-outline-error {
-    color: white;
+  .sd-alert-outlined-error {
+    color: black;
     border: 1px solid #ee3d48;
   }
 
@@ -107,7 +101,7 @@
     border: 1px solid #257dff;
   }
 
-  .sd-alert-outline-info {
+  .sd-alert-outlined-info {
     border: 1px solid #257dff;
   }
 
@@ -116,7 +110,7 @@
     border: 1px solid #fdb300;
   }
 
-  .sd-alert-outline-warning {
+  .sd-alert-outlined-warning {
     border: 1px solid #fdb300;
   }
 
@@ -124,21 +118,3 @@
     opacity: 1;
   }
 </style>
-
-{#if !closed}
-  <div
-    class="sd-alert {outlined ? `sd-alert-outline-${status}` : `sd-alert-${status}`} sd-alert-outline {squared ? 'sd-alert-squared' : ''}">
-    <div class="sd-alert-icon">
-      <Icon type={icon.iconType} color={icon.color} scale="15" />
-    </div>
-    <div class="sd-alert-text">
-      <slot>Default text</slot>
-    </div>
-
-    {#if closable}
-      <div class="sd-alert-close-icon" on:click={close}>
-        <Icon type="circleClose" scale="15" />
-      </div>
-    {/if}
-  </div>
-{/if}
