@@ -9,7 +9,7 @@ export const data = [
   },
   {
     property: 'outlined',
-    description: `Whether the alert it's outlined`,
+    description: 'Whether the alert is outlined',
     type: 'boolean',
     default: 'false'
   },

@@ -9,19 +9,19 @@ export const data = [
   },
   {
     property: 'outlined',
-    description: `Whether the button it's outlined`,
+    description: 'Whether the button is outlined',
     type: 'boolean',
     default: 'false'
   },
   {
     property: 'disabled',
-    description: `Whether the button it's disabled`,
+    description: 'Whether the button is disabled',
     type: 'boolean',
     default: 'false'
   },
   {
     property: 'small',
-    description: `Whether the button it's small`,
+    description: 'Whether the button is small',
     type: 'boolean',
     default: 'false'
   },

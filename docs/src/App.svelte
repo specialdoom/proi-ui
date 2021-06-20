@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { Chip, toaster, ToastProvider } from 'proi-ui';
+  import { toaster, ToastProvider } from 'proi-ui';
   import Home from './pages/Home.svelte';
   import Docs from './pages/Docs.svelte';
   import Icons from './pages/Icons.svelte';
@@ -27,12 +27,7 @@
 <svelte:component this={component} />
 
 <footer>
-  <span class="legend">
-    <Chip type="secondary" />
-    <span>= new component</span>
-    <Chip type="primary" />
-    <span>= updated</span>
-  </span>
+  <span class="legend" />
   <span class="copyright">
     {new Date().getFullYear()} &copy;
     <a href="https://github.com/specialdoom" alt="creator github link">

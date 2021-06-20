@@ -1,5 +1,5 @@
 <script>
-  import { Backdrop, Button, Chip } from 'proi-ui';
+  import { Backdrop, Button, Tag } from 'proi-ui';
   import { config } from '../configs/components/backdrop';
   import Docs from './shared/Docs.svelte';
 
@@ -22,6 +22,6 @@
     Show backdrop with custom content
   </Button>
   <Backdrop visible={isBackdrop2Visible} on:click={toggleBackdropWithContent}>
-    <Chip />
+    <Tag />
   </Backdrop>
 </Docs>

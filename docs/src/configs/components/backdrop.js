@@ -3,7 +3,7 @@ import { columns } from '../shared/columns';
 export const data = [
   {
     property: 'visible',
-    description: 'Whether the backdrop is visible',
+    description: 'Whether the backdrop is visible or not',
     type: 'boolean',
     default: 'false'
   },

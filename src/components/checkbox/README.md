@@ -22,7 +22,7 @@ let option = false;
 
 ### API
 
-| Property | Description                        | Type    | Default |
-| -------- | ---------------------------------- | ------- | ------- |
-| checked  | Whether the checkbox it's checked  | Boolean | false   |
-| checked  | Whether the checkbox it's disabled | Boolean | false   |
+| Property | Description                      | Type    | Default |
+| -------- | -------------------------------- | ------- | ------- |
+| checked  | Whether the checkbox is checked  | Boolean | false   |
+| checked  | Whether the checkbox is disabled | Boolean | false   |
