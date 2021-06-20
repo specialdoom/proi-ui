@@ -50,7 +50,7 @@
     min-height: 50px;
     height: 50px;
     font-weight: 300;
-    border-radius: 10px;
+    border-radius: 50%;
   }
 
   .sd-avatar-alias-image {
