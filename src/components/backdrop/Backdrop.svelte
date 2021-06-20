@@ -1,6 +1,14 @@
 <script>
-  export let open = false;
+  export let visible = false;
+
+  $: visibleClass = visible ? 'sd-backdrop-visible' : 'sd-backdrop-not-visible';
 </script>
+
+<div class="sd-backdrop {visibleClass}" on:click>
+  <div>
+    <slot />
+  </div>
+</div>
 
 <style>
   .sd-backdrop {
@@ -19,22 +27,14 @@
     z-index: 1201;
   }
 
-  .sd-backdrop-open {
+  .sd-backdrop-visible {
     opacity: 1;
     transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
 
-  .sd-backdrop-closed {
+  .sd-backdrop-not-visible {
     opacity: 0;
     transition: opacity 195ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     visibility: hidden;
   }
 </style>
-
-<div
-  class="sd-backdrop {open ? 'sd-backdrop-open' : 'sd-backdrop-closed'}"
-  on:click>
-  <div>
-    <slot />
-  </div>
-</div>

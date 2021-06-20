@@ -44,6 +44,7 @@
     font-weight: 100;
     line-height: 1;
     border-radius: 4px;
+    margin: 5px 0;
   }
 
   .sd-alert-text {

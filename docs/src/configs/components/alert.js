@@ -9,20 +9,20 @@ export const data = [
   },
   {
     property: 'outlined',
-    description: "Wheather the alert it's outlined",
+    description: `Whether the alert it's outlined`,
     type: 'boolean',
     default: 'false'
   },
   {
     property: 'closable',
-    description: 'Wheather the alert can be closed',
+    description: 'Whether the alert can be closed',
     type: 'boolean',
     default: 'false'
   }
 ];
 
 export const usage = `<script>
- import {Alert} from 'proi-ui';
+ import { Alert } from 'proi-ui';
 </script>;
 
 <Alert>Success alert message</Alert>

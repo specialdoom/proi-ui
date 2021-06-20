@@ -43,11 +43,8 @@
     <a href="https://github.com/specialdoom/proi-ui">
       <img src="github.png" alt="github icon" />
     </a>
-    <a href="https://www.facebook.com/proiui/">
-      <img src="facebook.png" alt="github icon" />
-    </a>
     <a href="https://twitter.com/ProiUi">
-      <img src="twitter.png" alt="github icon" />
+      <img src="twitter.png" alt="twitter icon" />
     </a>
   </span>
 </footer>

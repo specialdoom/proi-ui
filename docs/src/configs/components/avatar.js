@@ -22,7 +22,7 @@ export const data = [
 ];
 
 export const usage = `<script>
- import {Avatar} from 'proi-ui';
+ import { Avatar } from 'proi-ui';
 </script>;
 
 <Avatar title="Proi Ui" description="Library" />
