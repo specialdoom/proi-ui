@@ -3,7 +3,7 @@ import { columns } from '../shared/columns';
 export const data = [
   {
     property: 'type',
-    description: `Type of button. Options: 'primary', 'secondary' and 'link'.`,
+    description: `Type of button. Options: 'primary', 'secondary' and 'link'`,
     type: 'string',
     default: `'primary'`
   },
@@ -27,7 +27,7 @@ export const data = [
   },
   {
     property: 'on:click',
-    description: 'Handler of handle click event',
+    description: 'Handler of the click event',
     type: '(event) => void',
     default: '-'
   }

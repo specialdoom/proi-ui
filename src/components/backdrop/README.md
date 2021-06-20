@@ -1,6 +1,8 @@
 ---
 [proi-ui](https://github.com/specialdoom/proi-ui)
 
+###### Backdrop component
+
 ### Usage
 
 ```sveltehtml
@@ -21,7 +23,7 @@ function toggle(){
 </Backdrop>
 ```
 
-### Attributes
+### API
 | Parameter | Description | Type | Default value |
 | --- | --- | --- | --- |
 | visible | Whether the backdrop is visible | boolean | false |

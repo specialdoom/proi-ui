@@ -1,8 +1,9 @@
 ---
 [proi-ui](https://github.com/specialdoom/proi-ui)
 
+###### Button component
+
 ### Usage
-Use content to display text on the button. Default text is _status_ text.
 ```sveltehtml
 <script>
 import { Button } from 'proi-ui'
@@ -12,20 +13,14 @@ function click () {
 }
 </script>
 
-<div>
-    <Button on:click={click}>Click</Button>
-</div>
+<Button on:click={click}>Click</Button>
 ```
 
-### Attributes
-| Parameter | Description | Type | Optional value | Default value |
+### API
+| Parameter | Description | Type | Default |
 | --- | --- | --- | --- | --- |
-| status | type | String | primary, info, danger, success, warning | primary |
-| squared | square display | Boolean | - | false |
-| outlined | outline display | Boolean | - | false |
-| medium | medium display | Boolean | - | false |
-
-### Events
-| Event name | description | callback parameter |
-| --- | --- | --- |
-| on:click | click to trigger | event |
+| type | Type of button. Options: 'primary', 'secondary' and 'link' | string | 'primary' |
+| outlined | Whether the button it's outlined | boolean | false |
+| disabled | Whether the button it's disabled | boolean | false |
+| small | Whether the button it's small | boolean | false |
+| on:click | Handler of the click event | false |
