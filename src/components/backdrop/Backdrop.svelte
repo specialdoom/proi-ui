@@ -1,10 +1,13 @@
 <script>
   export let visible = false;
-
-  $: visibleClass = visible ? 'sd-backdrop-visible' : 'sd-backdrop-not-visible';
 </script>
 
-<div class="sd-backdrop {visibleClass}" on:click>
+<div
+  class="sd-backdrop"
+  class:sd-backdrop-visible={visible}
+  class:sd-backdrop-not-visible={!visible}
+  on:click
+>
   <div>
     <slot />
   </div>
