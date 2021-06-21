@@ -1,30 +1,34 @@
 ---
+
 [proi-ui](https://github.com/specialdoom/proi-ui)
+
+##### Radio component
+
 ### Usage
-You should bind to Radio group attribute.
+
 ```sveltehtml
 <script>
-import { Radio } from 'proi-ui'
-let options=[
-    {text: 'One value', value: 1},
-    {text: 'Two value', value: 2},
-    {text: 'Three value', value: 3}
-]
+import { Radio } from 'proi-ui';
+
+let options = [
+  { text: 'First', value: 1 },
+  { text: 'Second', value: 2 },
+  { text: 'Third', value: 3 }
+];
 let radio = 1;
-
-
 </script>
 
-<div>
-    {#each options as option}
-        <Radio value={option.value} bing:group={radio} label={option.text} />
-    {/each}
-</div>
+{#each options as option}
+  <Radio value={option.value} bind:group={radio}>{option.text}</Radio>
+  <br />
+{/each}
+<Radio value={4} bind:group={radio} disabled>Forth disabled</Radio>
 ```
-### Attributes
-| Parameter | description | type | optional value | default value |
-| --- | --- | --- | --- | --- |
-| value | Value of radio | Integer | - | null |
-| group | To bind to | Integer | - | null |
-| disabled | disable radio | Boolean | - | false |
-| label | Display text| String | - | - |
+
+### API
+
+| Property | Description                   | Type    | Default |
+| -------- | ----------------------------- | ------- | ------- |
+| value    | Value of radio                | any     | null    |
+| group    | Group value                   | any     | null    |
+| disabled | Whether the radio is disabled | boolean | false   |

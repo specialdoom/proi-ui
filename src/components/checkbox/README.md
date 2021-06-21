@@ -25,4 +25,4 @@ let option = false;
 | Property | Description                      | Type    | Default |
 | -------- | -------------------------------- | ------- | ------- |
 | checked  | Whether the checkbox is checked  | Boolean | false   |
-| checked  | Whether the checkbox is disabled | Boolean | false   |
+| disabled | Whether the checkbox is disabled | Boolean | false   |

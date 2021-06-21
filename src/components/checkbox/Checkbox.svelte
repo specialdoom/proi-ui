@@ -21,7 +21,7 @@
     cursor: pointer;
     font-size: 15px;
     width: 50px;
-    height: 30px !important;
+    height: 30px;
   }
 
   .sd-checkbox-container input {
