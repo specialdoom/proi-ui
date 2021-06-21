@@ -46,4 +46,4 @@ export const usage = `<script>
 <Button disabled>Disabled</Button>
 <Button type="link" disabled>Link disabled</Button>`;
 
-export const config = { title: 'Avatar component', columns, data, usage };
+export const config = { title: 'Button component', columns, data, usage };
