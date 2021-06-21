@@ -27,7 +27,7 @@
       Icons
     </li>
     <li class="nav-logo">
-      <img src="logo.png" alt="mini logo" height="40" />
+      <img src="favicon.png" alt="mini logo" height="40" />
     </li>
   </ul>
 </nav>

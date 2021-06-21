@@ -1,17 +1,9 @@
 <script>
-  import { onMount } from 'svelte';
-  import { toaster, ToastProvider } from 'proi-ui';
+  import { ToastProvider } from 'proi-ui';
   import Home from './pages/Home.svelte';
   import Docs from './pages/Docs.svelte';
   import Icons from './pages/Icons.svelte';
   import Nav from './components/Nav.svelte';
-
-  onMount(() => {
-    toaster.send({
-      message: 'This is the toast component!',
-      type: 'info'
-    });
-  });
 
   let components = { Home: Home, Docs: Docs, Icons: Icons };
 
