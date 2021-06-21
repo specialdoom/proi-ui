@@ -1,31 +1,37 @@
 ---
+
 [proi-ui](https://github.com/specialdoom/proi-ui)
+
+##### Input component
+
 ### Usage
+
 ```sveltehtml
 <script>
 import { Input } from 'proi-ui'
 
-function changed () {
+function onChange () {
     console.log('changed');
 }
 </script>
 
-<div>
-    <Input on:change={changed} label="Custom label" value="Custom value"/>
-</div>
+<Input label="Custom label" value="Custom value" on:change={onChange}/>
+<Input
+label="Error label"
+value="Error value"
+error="Something is wrong..."
+/>
+<Input label="Disabled input" value="Disabled" disabled />
 ```
-### Attributes
-| Parameter   | Description       | Type    | Optional value | Default value |
-|-------------|-------------------|---------|----------------|---------------|
-| Value       | display text      | String  | -              | -             |
-| Type        | type              | String  | text, password | text          |
-| Squared     | square display    | Boolean | -              | false         |
-| Placeholder | input placeholder | String  | -              | -             |
-| Label       | input label       | String  | -              | Label         |
-| Error       | error message     | String  | -              | -             |
-| Success     | success display   | Boolean | -              | false         |
-| Disabled     | disable input   | Boolean | -              | false         |
-### Events
-| Event name | description       | callback parameter |
-|------------|-------------------|--------------------|
-| on:change  | change to trigger | event              |
+
+### API
+
+| Property    | Description                                   | Type            | Default |
+| ----------- | --------------------------------------------- | --------------- | ------- |
+| value       | Value of input                                | string          | ''      |
+| Type        | Type of input. Options: 'text' and 'password' | string          | 'text'  |
+| placeholder | Placeholder of input                          | string          | ''      |
+| label       | Label of input                                | string          | ''      |
+| error       | error message                                 | string          | -       |
+| disabled    | Whether the input is disabled                 | boolean         | false   |
+| on:change   | Handler for onChange input event              | (event) => void | -       |

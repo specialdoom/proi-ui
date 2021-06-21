@@ -1,5 +1,8 @@
 ---
+
 [proi-ui](https://github.com/specialdoom/proi-ui)
+
+###### Backdrop component
 
 ### Usage
 
@@ -7,21 +10,23 @@
 <script>
 import { Backdrop } from 'proi-ui'
 
-let backdrop = false;
+let isBackdropVisible = false;
 
 function toggle(){
-    backdrop = !backdrop;
+    isBackdropVisible = !isBackdropVisible;
 }
 
 </script>
 
-<Backdrop open={backdrop} on:click={toggle} />
-<Backdrop open={backdrop} on:click={toggle}>
+<Backdrop visible={isBackdropVisible} on:click={toggle} />
+<Backdrop visible={isBackdropVisible} on:click={toggle}>
     Backdrop with content
 </Backdrop>
 ```
 
-### Attributes
-| Parameter | Description | Type | Optional value | Default value |
-| --- | --- | --- | --- | --- |
-| open | Backdrop open | Boolean | - | false |
+### API
+
+| Property | Description                         | Type            | Default value |
+| --------- | ----------------------------------- | --------------- | ------------- |
+| visible   | Whether the backdrop is visible     | boolean         | false         |
+| on:click  | Handler of the backdrop click event | (event) => void | false         |

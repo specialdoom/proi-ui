@@ -1,5 +1,8 @@
 ---
+
 [proi-ui](https://github.com/specialdoom/proi-ui)
+
+##### Modal component
 
 ### Usage
 
@@ -7,29 +10,39 @@
 <script>
 import { Modal, Button } from 'proi-ui'
 
-let show = false;
+let isModalVisible = false;
 
-function toggleModal(){
-    show = !show;
+function toggle() {
+  isModalVisible = !isModalVisible;
 }
-
 </script>
 
-<div>
-    <Modal bind:show>
-        <span slot="title">Some title.</span>
-        <div slot="body">
-          Some body content.
-        </div>
-        <div slot="actions">
-          Some actions [e.g. buttons]
-          <Button medium on:click={toggleModal}>Close</Button>
-        </div>
-    </Modal>
-</div>
+<Button on:click={toggle}>Show modal</Button>
+
+<Modal bind:visible={isModalVisible} title="Confirm">
+    <ModalBody>Are you sure you want to continue?</ModalBody>
+    <ModalActions>
+      <Button small outlined>Yes</Button>
+      <Button small type="secondary">No</Button>
+    </ModalActions>
+  </Modal>
 ```
 
-### Attributes
-| Parameter | Description | Type | Optional value | Default value |
-| --- | --- | --- | --- | --- |
-| show | Show modal | Boolean | - | false |
+### API
+
+#### Modal
+
+| Property | Description                  | Type    | Default |
+| -------- | ---------------------------- | ------- | ------- |
+| visible  | Whether the modal is visible | boolean | false   |
+| title    | Title of modal               | string  | ''      |
+
+#### ModalBody
+
+- used for modal content
+- optional
+
+#### ModalActions
+
+- used for specific actions for modal
+- optional

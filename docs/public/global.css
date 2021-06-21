@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   color: #333;
   font-weight: 100;
@@ -27,10 +27,6 @@ a {
   color: inherit;
 }
 
-.color {
-  color: rgba(35, 152, 171);
-}
-
 .floating {
   position: fixed;
   width: 375px;
@@ -41,28 +37,6 @@ a {
   z-index: 555;
   top: 0;
   right: 0;
-}
-
-.sub-title {
-  font-weight: 100;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.title {
-  font-weight: 100;
-  font-size: 28px;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.table {
-  width: 900px;
 }
 
 footer {
@@ -88,58 +62,4 @@ footer span.copyright {
 
 footer span.social {
   width: 30%;
-}
-
-.table-header {
-  display: flex;
-  justify-content: space-around;
-  background: rgba(35, 152, 171, 0.5);
-  border-bottom: 2px solid rgba(35, 152, 171);
-}
-
-.table-header > div {
-  box-sizing: border-box;
-  padding: 10px;
-  width: 20%;
-  text-align: center;
-}
-
-.table-data {
-  display: flex;
-  flex-direction: column;
-}
-
-.table-data > div {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  border-bottom: 1px solid rgba(35, 152, 171, 0.5);
-}
-
-.table-data > div > div {
-  box-sizing: border-box;
-  padding: 10px;
-  width: 20%;
-  text-align: center;
-}
-
-.content {
-  padding: 10px;
-  overflow: auto;
-}
-
-.alert-content > * + * {
-  margin-top: 10px;
-}
-
-@media (min-width: 400px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 850px) {
-  footer {
-    display: none;
-  }
 }

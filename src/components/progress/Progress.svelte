@@ -1,28 +1,31 @@
 <script>
-  import { Icon } from 'proi-ui-icons';
-
   export let percent = 0;
   export let error = false;
-  export let height = 15;
 </script>
+
+<div class="sd-progress">
+  <div
+    class="sd-progress-line"
+    style="width: {percent}%"
+    class:sd-progress-success={percent === 100}
+    class:sd-progress-error={error}
+  />
+</div>
 
 <style>
   .sd-progress {
-    margin-top: 5px;
-    display: -ms-flexbox;
+    margin: 5px 0;
     display: flex;
     overflow: hidden;
-    font-size: 0.75rem;
+    font-size: 14px;
     background-color: #e9ecef;
-    border-radius: 5.25rem;
+    border-radius: 4px;
+    height: 5px;
   }
 
   .sd-progress-line {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-pack: center;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -31,7 +34,7 @@
     white-space: nowrap;
     background-color: #2398ab;
     transition: width 0.6s ease;
-    border-radius: 5.25rem;
+    border-radius: 4px;
   }
 
   .sd-progress-success {
@@ -44,15 +47,3 @@
     transition: background-color 1.5s ease, width 0.6s ease;
   }
 </style>
-
-<div class="sd-progress" style="height: {height}px">
-  <div
-    class="sd-progress-line {percent === 100 ? 'sd-progress-success' : ''} {error ? 'sd-progress-error' : ''}"
-    style="width: {percent}%">
-    {#if height >= 15}
-      {#if error}
-        <Icon type="alert" scale="12" color="white" />
-      {:else}{percent}%{/if}
-    {/if}
-  </div>
-</div>

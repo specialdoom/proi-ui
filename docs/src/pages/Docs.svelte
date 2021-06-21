@@ -1,38 +1,34 @@
 <script>
-  import { Icon } from "proi-ui-icons";
+  import { Icon } from 'proi-ui-icons';
 
-  import Button from "../components/Button.svelte";
-  import Input from "../components/Input.svelte";
-  import Checkbox from "../components/Checkbox.svelte";
-  import Radio from "../components/Radio.svelte";
-  import Dropdown from "../components/Dropdown.svelte";
-  import AlertComp from "../components/Alert.svelte";
-  import ChipComp from "../components/Chip.svelte";
-  import Backdrop from "../components/Backdrop.svelte";
-  import Modal from "../components/Modal.svelte";
-  import Progress from "../components/Progress.svelte";
-  import Spinner from "../components/Spinner.svelte";
-  import Avatar from "../components/Avatar.svelte";
-  import Toast from "../components/Toast.svelte";
-
-  import { Alert } from "proi-ui";
-  import { Chip } from "proi-ui";
+  import Button from '../components/Button.svelte';
+  import Input from '../components/Input.svelte';
+  import Checkbox from '../components/Checkbox.svelte';
+  import Radio from '../components/Radio.svelte';
+  import Dropdown from '../components/Dropdown.svelte';
+  import Alert from '../components/Alert.svelte';
+  import Tag from '../components/Tag.svelte';
+  import Backdrop from '../components/Backdrop.svelte';
+  import Modal from '../components/Modal.svelte';
+  import Progress from '../components/Progress.svelte';
+  import Spinner from '../components/Spinner.svelte';
+  import Avatar from '../components/Avatar.svelte';
+  import Toast from '../components/Toast.svelte';
 
   const options = [
-    { text: "Button", component: Button, new: false, updated: false },
-    { text: "Input", component: Input, new: false, updated: false },
-    { text: "Checkbox", component: Checkbox, new: false, updated: false },
-    { text: "Radio", component: Radio, new: false, updated: false },
-    { text: "Dropdown", component: Dropdown, new: false, updated: false },
-    { text: "Alert", component: AlertComp, new: false, updated: false },
-    { text: "Chip", component: ChipComp, new: false, updated: false },
-    { text: "Backdrop", component: Backdrop, new: false, updated: false },
-    { text: "Modal", component: Modal, new: false, updated: false },
-    { text: "Progress", component: Progress, new: false, updated: false },
-    { text: "Spinner", component: Spinner, new: false, updated: false },
-    { text: "Avatar", component: Avatar, new: false, updated: false },
-    { text: "Toast", component: Toast, new: false, updated: true },
-
+    { text: 'Button', component: Button },
+    { text: 'Input', component: Input },
+    { text: 'Checkbox', component: Checkbox },
+    { text: 'Radio', component: Radio },
+    { text: 'Dropdown', component: Dropdown },
+    { text: 'Alert', component: Alert },
+    { text: 'Tag', component: Tag },
+    { text: 'Backdrop', component: Backdrop },
+    { text: 'Modal', component: Modal },
+    { text: 'Progress', component: Progress },
+    { text: 'Spinner', component: Spinner },
+    { text: 'Avatar', component: Avatar },
+    { text: 'Toast', component: Toast }
   ];
 
   options.sort((a, b) => {
@@ -53,9 +49,45 @@
     selected = options[index];
     open = false;
   }
-
-  let status = "warning";
 </script>
+
+<svelte:head>
+  <title>proi-ui | Docs</title>
+</svelte:head>
+
+<div class="docs-container ">
+  <div class="left-side">
+    <div class="select-option" on:click={toggle}>
+      <span class="select-option-title">Components</span>
+      <span class="select-option-icon">
+        <Icon type={open ? 'circleArrowDown' : 'circleArrowUp'} scale="15" />
+      </span>
+    </div>
+    <div class="select" style={open ? '' : 'display:none'}>
+      {#each options as option, index}
+        <div
+          class="option {selected.text == option.text ? 'selected' : ''}"
+          on:click={() => changeSelected(index)}
+        >
+          {option.text}
+        </div>
+      {/each}
+    </div>
+    <div class="unselect">
+      {#each options as option, index}
+        <div
+          class="option {selected.text == option.text ? 'selected' : ''}"
+          on:click={() => changeSelected(index)}
+        >
+          {option.text} &nbsp;
+        </div>
+      {/each}
+    </div>
+  </div>
+  <div class="right-side">
+    <svelte:component this={selected.component} />
+  </div>
+</div>
 
 <style>
   .docs-container {
@@ -98,7 +130,7 @@
 
   .selected:after {
     position: absolute;
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     bottom: 0;
@@ -155,7 +187,7 @@
 
     .selected:after {
       position: unset;
-      content: "";
+      content: '';
       width: unset;
       height: unset;
     }
@@ -172,54 +204,3 @@
     align-items: center;
   }
 </style>
-
-
-<svelte:head>
-  <title>proi-ui | Docs</title>
-</svelte:head>
-
-<div class="docs-container ">
-  <div class="left-side">
-    <div class="select-option" on:click={toggle}>
-      <span class="select-option-title">Components</span>
-      <span class="select-option-icon">
-        <Icon type={open ? 'circleArrowDown' : 'circleArrowUp'} scale="15" />
-      </span>
-    </div>
-    <div class="select" style={open ? '' : 'display:none'}>
-      {#each options as option, index}
-        <div
-          class="option {selected.text == option.text ? 'selected' : ''}"
-          on:click={() => changeSelected(index)}>
-          {option.text}
-          {#if option.new}
-            <Chip type="secondary" />
-          {/if}
-          {#if option.updated}
-            <Chip type="primary" />
-          {/if}
-          &nbsp;
-        </div>
-      {/each}
-    </div>
-    <div class="unselect">
-      {#each options as option, index}
-        <div
-          class="option {selected.text == option.text ? 'selected' : ''}"
-          on:click={() => changeSelected(index)}>
-          {option.text} &nbsp;
-          {#if option.new}
-            <Chip type="secondary" />
-          {/if}
-          &nbsp;
-          {#if option.updated}
-            <Chip type="primary" />
-          {/if}
-        </div>
-      {/each}
-    </div>
-  </div>
-  <div class="right-side">
-    <svelte:component this={selected.component} />
-  </div>
-</div>

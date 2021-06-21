@@ -1,24 +1,34 @@
 <script>
-  export let name = "";
-  export let title = "";
-  export let image = "";
-  export let squared = false;
+  export let title = '';
+  export let description = '';
+  export let image = '';
 
   $: alias = () => {
-    if (name) {
-      const names = name.split(" ");
-      if (names.length > 0) {
-        if (names.length === 2) {
-          return names[0].charAt(0) + names[1].charAt(0);
-        }
-        if (names.length === 1) {
-          return names[0].charAt(0);
-        }
-      }
+    if (title) {
+      return title
+        .split(/\s/)
+        .reduce((response, word) => (response += word.slice(0, 1)), '');
     }
-    return "";
+    return '';
   };
 </script>
+
+<span class="sd-avatar">
+  {#if image}
+    <span
+      class="sd-avatar-alias sd-avatar-alias-image"
+      style="background-image: url({image});"
+    />
+  {:else}
+    <span class="sd-avatar-alias sd-avatar-alias-text">
+      {alias()}
+    </span>
+  {/if}
+  <span class="sd-avatar-title-and-description">
+    <span class="sd-avatar-title">{title}</span>
+    <span class="sd-avatar-description">{description}</span>
+  </span>
+</span>
 
 <style>
   .sd-avatar {
@@ -26,7 +36,7 @@
     margin: 5px 0 5px;
   }
 
-  .sd-avatar-name-and-title {
+  .sd-avatar-title-and-description {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,6 +50,7 @@
     min-height: 50px;
     height: 50px;
     font-weight: 300;
+    border-radius: 50%;
   }
 
   .sd-avatar-alias-image {
@@ -57,36 +68,11 @@
     align-items: center;
   }
 
-  .sd-avatar-name {
-    font-size: 17px;
-  }
-
   .sd-avatar-title {
-    font-size: 13px;
+    font-size: 18px;
   }
 
-  .sd-avatar-alias-rounded {
-    border-radius: 50%;
-  }
-
-  .sd-avatar-alias-squared {
-    border-radius: 10px;
+  .sd-avatar-description {
+    font-size: 14px;
   }
 </style>
-
-<span class="sd-avatar">
-  {#if image}
-    <span
-      class="sd-avatar-alias sd-avatar-alias-image {squared ? 'sd-avatar-alias-squared' : 'sd-avatar-alias-rounded'}"
-      style="background-image: url({image});" />
-  {:else}
-    <span
-      class="sd-avatar-alias sd-avatar-alias-text {squared ? 'sd-avatar-alias-squared' : 'sd-avatar-alias-rounded'}">
-      {alias()}
-    </span>
-  {/if}
-  <span class="sd-avatar-name-and-title">
-    <span class="sd-avatar-name">{name}</span>
-    <span class="sd-avatar-title">{title}</span>
-  </span>
-</span>

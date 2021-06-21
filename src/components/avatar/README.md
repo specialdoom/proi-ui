@@ -1,25 +1,29 @@
 ---
+
 [proi-ui](https://github.com/specialdoom/proi-ui)
+
+###### Avatar component
 
 ### Usage
 
 ```sveltehtml
 <script>
-import { Avatar } from 'proi-ui'
+<script>
+ import {Avatar} from 'proi-ui';
+</script>;
 
-</script>
-
-<Avatar name="Proi Ui" title="Library" squared />
-<Avatar name="Proi Ui" title="Library" />
-<Avatar name="Proi Ui" title="Library" squared image="https://ibb.co/8gR1dHT"/>
-<Avatar name="Proi Ui" title="Library" image="https://ibb.co/8gR1dHT"/>
+<Avatar title="Proi Ui" description="Library" />
+<Avatar
+  title="specialdoom"
+  description="creator"
+  image="https://avatars.githubusercontent.com/u/41910815?v=4"
+/>
 ```
 
-### Attributes
-| Parameter | Description | Type | Optional value | Default value |
-| --- | --- | --- | --- | --- |
-| name | Name, Nickname or something like that | Text | - | - |
-| title | Title | Text | - | - |
-| image | Image url | Text | - | - |
-| squared | Squared display | boolean | - | false |
+### API
 
+| Property    | Description                     | Type   | Default |
+| ----------- | ------------------------------- | ------ | ------- |
+| title       | Title of the avatar             | string | ''      |
+| description | Short description of the avatar | string | ''      |
+| image       | Source of avatar image          | string | ''      |

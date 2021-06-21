@@ -1,11 +1,36 @@
 <script>
-  import { Chip } from "proi-ui";
-  export let selected = "Home";
+  export let selected = 'Home';
 
   function select(value) {
     selected = value;
   }
 </script>
+
+<nav>
+  <ul>
+    <li
+      aria-current={selected === 'Home' ? 'page' : undefined}
+      on:click={() => select('Home')}
+    >
+      Home
+    </li>
+    <li
+      aria-current={selected === 'Docs' ? 'page' : undefined}
+      on:click={() => select('Docs')}
+    >
+      Docs
+    </li>
+    <li
+      aria-current={selected === 'Icons' ? 'page' : undefined}
+      on:click={() => select('Icons')}
+    >
+      Icons
+    </li>
+    <li class="nav-logo">
+      <img src="logo.png" alt="mini logo" height="40" />
+    </li>
+  </ul>
+</nav>
 
 <style>
   nav {
@@ -20,7 +45,7 @@
   }
 
   ul::after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
   }
@@ -37,7 +62,7 @@
 
   [aria-current]::after {
     position: absolute;
-    content: "";
+    content: '';
     width: calc(100% - 1em);
     height: 2px;
     background-color: rgba(35, 152, 171);
@@ -85,26 +110,3 @@
     }
   }
 </style>
-
-<nav>
-  <ul>
-    <li
-      aria-current={selected === 'Home' ? 'page' : undefined}
-      on:click={() => select('Home')}>
-      Home
-    </li>
-    <li
-      aria-current={selected === 'Docs' ? 'page' : undefined}
-      on:click={() => select('Docs')}>
-      Docs
-    </li>
-    <li
-      aria-current={selected === 'Icons' ? 'page' : undefined}
-      on:click={() => select('Icons')}>
-      Icons
-    </li>
-    <li class="nav-logo">
-      <img src="logo.png" alt="mini logo" height="40" />
-    </li>
-  </ul>
-</nav>
