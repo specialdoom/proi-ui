@@ -33,7 +33,7 @@ Check out the [docs](https://specialdoom.github.io/proi-ui/).
   - there is no more `squared` prop, the button is squared by default and only squared
 - Checkbox component
   - there is no more `value` prop for the checkbox label, the label is used as a slot
-- Chip component is now Tag component, see [Tag](https://specialdoom.github.io/proi-ui/src/components/tag) component for more details
+- Chip component is now Tag component, see [Tag](https://github.com/specialdoom/proi-ui/tree/master/src/components/tag) component for more details
 - Dropdown component design changes (does not affect previous versions)
 - Input component
   - there is no more `squared` prop, the input is squared by default and only squared
