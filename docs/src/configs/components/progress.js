@@ -1,11 +1,21 @@
----
+import { columns } from '../shared/columns';
 
-[proi-ui](https://github.com/specialdoom/proi-ui)
+export const data = [
+  {
+    property: 'percent',
+    description: 'Progress percent',
+    type: 'number',
+    default: '0'
+  },
+  {
+    property: 'error',
+    description: 'Whether there is an error during progress',
+    type: 'boolean',
+    default: 'false'
+  }
+];
 
-### Usage
-
-```sveltehtml
-<script>
+export const usage = `<script>
 import { Progress, Button } from 'proi-ui';
 
 let percent = 67;
@@ -30,11 +40,6 @@ function toggleSuccess() {
 <Button small on:click={decrement}>Decrement</Button>
 <Button small type="secondary" on:click={toggleError} outlined>Error</Button>
 <Button small on:click={toggleSuccess}>Success</Button>
-```
+`;
 
-### API
-
-| Property | Description                               | Type    | Default |
-| -------- | ----------------------------------------- | ------- | ------- |
-| percent  | Progress percent                          | number  | 0       |
-| error    | Whether there is an error during progress | boolean | false   |
+export const config = { title: 'Progress component', data, usage, columns };

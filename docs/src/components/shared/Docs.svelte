@@ -10,10 +10,10 @@
 
 <Container>
   <Title>{config.title}</Title>
-  <SubTitle>Usage</SubTitle>
-  <Highlight>{config.usage}</Highlight>
   <SubTitle>Output</SubTitle>
   <slot />
+  <SubTitle>Usage</SubTitle>
+  <Highlight>{config.usage}</Highlight>
   <SubTitle>API</SubTitle>
   <Table columns={config.columns} data={config.data} />
 </Container>
