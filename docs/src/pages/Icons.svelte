@@ -177,11 +177,9 @@
   <div>icons for proi-ui</div>
   <Highlight>{`npm i proi-ui-icons`}</Highlight>
   <Highlight>
-    {`
-<script ✂prettier:content✂="CiAgaW1wb3J0IHtJY29ufSBmcm9tICdwcm9pLXVpLWljb25zJzsK">{}</script>
+    {`import { Icon } from 'proi-ui-icons';
 
-<Icon type="chosenType" />
-    `}
+<Icon type="chosenType" />`}
   </Highlight>
   <div class="search">
     <Input label="Search icon" squared bind:value={searchValue} />
