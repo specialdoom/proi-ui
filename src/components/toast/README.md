@@ -1,6 +1,9 @@
 ---
+
 [proi-ui](https://github.com/specialdoom/proi-ui)
+
 ### Usage
+
 ```sveltehtml
 <script>
 import { ToastProvider, toaster, Button } from 'proi-ui'
@@ -26,21 +29,10 @@ function notify (type) {
 <Button on:click={() => notify("warning")}>Warning notification</Button>
 
 ```
-### Objects
-| Name | Type | Used for |
-| --- | --- | --- |
-| ToastProvider | Component | Providing toasts container|
-| toaster | Object | Providing send method to send a toast | 
 
-### toaster
-Has the **send** method used to send a toast and takes an object parameter having 2 properties
+### API
 
-| Property name | Value | Details |
-| --- | --- | --- |
-| message | String value | Message to display inside the toast |
-| type | success, info, warning, error | Type of toast |
-
-Or using the specific methods for error, info, warning or success by passing a message string
-| Property name | Value | Details |
-| --- | --- | --- |
-| message | String value | Message to display inside the toast |
+| Property      | Description                                                                                                                                                                                                                                                                                                                                                               | Type      | Default |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------- |
+| ToastProvider | Component to add in the main app component                                                                                                                                                                                                                                                                                                                                | component | -       |
+| toaster       | Object to use to be able to notify specific toasts. Has the 'send' method which takes a slice as a param. Slice has the following structure: {message: '', type: ''}. Types are: 'success', 'info', 'warning', 'error'. There are 4 specific methods to create a toast: 'success', 'warning', 'info' and 'error'; which takes a string param for the message of the toast | object    | -       |

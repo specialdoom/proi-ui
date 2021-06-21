@@ -46,7 +46,6 @@
     box-sizing: border-box;
     padding: 10px;
     width: 20%;
-    text-align: center;
   }
 
   .table-data {
@@ -65,6 +64,5 @@
     box-sizing: border-box;
     padding: 10px;
     width: 20%;
-    text-align: center;
   }
 </style>
