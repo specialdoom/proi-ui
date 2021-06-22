@@ -15,6 +15,10 @@ npm i proi-ui
 
 Check out the [docs](https://specialdoom.github.io/proi-ui/).
 
+## Coming next
+- theming for components
+- options to customise some components using `class` or `style` props
+
 ## Migrate to version 1.0.0
 
 - Alert component
