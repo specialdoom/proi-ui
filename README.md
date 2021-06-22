@@ -4,7 +4,7 @@ yet another Svelte ui library
 
 ![DevBadge](https://img.shields.io/badge/development-in%20progress-green)
 
-![Logo](https://github.com/specialdoom/proi-ui/blob/master/src/assets/logo.png?raw=true 'proi-ui logo')
+<img src="https://github.com/specialdoom/proi-ui/blob/master/src/assets/logo.png" alt="drawing" width="40%"/>
 
 ## Installation
 ```bash
