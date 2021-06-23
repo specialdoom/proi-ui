@@ -41,7 +41,7 @@ Check out the [docs](https://specialdoom.github.io/proi-ui/).
 - Dropdown component design changes (does not affect previous versions)
 - Input component
   - there is no more `squared` prop, the input is squared by default and only squared
-  - there is no more `success` props
+  - there is no more `success` prop
 - Modal component
   - coming with two new components `ModalBody` and `ModalActions` instead of the named slots
   - `show` prop changed to `visible` prop in v1.0.0
