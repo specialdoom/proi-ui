@@ -19,4 +19,5 @@ import { Tag } from 'proi-ui'
 
 | Property | Description                 | Type    | Default |
 | -------- | --------------------------- | ------- | ------- |
+| color    | Color of the tag            | string  | #2398ab |
 | outlined | Whether the tag is outlined | boolean | false   |
