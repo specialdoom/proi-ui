@@ -18,6 +18,12 @@ export const data = [
     description: 'Source of avatar image',
     type: 'string',
     default: `''`
+  },
+  {
+    property: 'class',
+    description: 'Class name for avatar container',
+    type: 'string',
+    default: `\'\'`
   }
 ];
 
@@ -26,10 +32,20 @@ export const usage = `<script>
 </script>;
 
 <Avatar title="Proi Ui" description="Library" />
+<Avatar image="https://avatars.githubusercontent.com/u/41910815?v=4" />
+
+<Avatar class="custom-alias-class" title="Proi Ui" description="Library" />
 <Avatar
   title="specialdoom"
   description="creator"
   image="https://avatars.githubusercontent.com/u/41910815?v=4"
-/>`;
+/>
+
+<style>
+  :global(.custom-alias-class .sd-avatar-alias) {
+    border: 2px dashed green;
+  }
+</style>
+`;
 
 export const config = { title: 'Avatar component', columns, data, usage };

@@ -1,4 +1,7 @@
 <script>
+  let className = null;
+  export { className as class };
+
   export let title = '';
   export let description = '';
   export let image = '';
@@ -13,7 +16,7 @@
   };
 </script>
 
-<span class="sd-avatar">
+<span class="sd-avatar {className}">
   {#if image}
     <span
       class="sd-avatar-alias sd-avatar-alias-image"
@@ -24,10 +27,12 @@
       {alias()}
     </span>
   {/if}
-  <span class="sd-avatar-title-and-description">
-    <span class="sd-avatar-title">{title}</span>
-    <span class="sd-avatar-description">{description}</span>
-  </span>
+  {#if title || description}
+    <span class="sd-avatar-title-and-description">
+      <span class="sd-avatar-title">{title}</span>
+      <span class="sd-avatar-description">{description}</span>
+    </span>
+  {/if}
 </span>
 
 <style>
@@ -59,7 +64,7 @@
   }
 
   .sd-avatar-alias-text {
-    border: 1px solid rgba(35, 152, 171);
+    border: 2px solid var(--sd-primary);
     color: black;
     display: flex;
     justify-content: center;

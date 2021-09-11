@@ -1,8 +1,11 @@
 <script>
-  import { Icon } from 'proi-ui-icons';
-  import { icons } from './icons';
+  import { Icon } from "proi-ui-icons";
+  import { icons } from "./icons";
 
-  export let type = 'success';
+  let className = null;
+  export { className as class };
+
+  export let type = "success";
   export let closable = false;
   export let outlined = false;
 
@@ -19,7 +22,7 @@
 </script>
 
 {#if !closed}
-  <div class="sd-alert {outlinedClass}">
+  <div class="sd-alert {outlinedClass} {className}">
     <div class="sd-alert-icon">
       <Icon type={icon.iconType} color={icon.color} scale="15" />
     </div>
@@ -38,10 +41,11 @@
 <style>
   .sd-alert {
     display: flex;
+    align-items: center;
     padding: 6px 16px;
     font-size: 16px;
     border-radius: 50px;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1;
     border-radius: 4px;
     margin: 5px 0;
@@ -66,11 +70,8 @@
 
   .sd-alert-icon {
     display: flex;
-    opacity: 0.9;
     align-items: center;
-    font-size: 22px;
     margin-right: 12px;
-    fill: #007f50;
   }
 
   .sd-alert-outlined {
@@ -78,41 +79,41 @@
   }
 
   .sd-alert-success {
-    background: #9eecba;
-    border: 1px solid #007f50;
+    background: var(--sd-success);
+    border: 1px solid var(--sd-success-dark);
   }
 
   .sd-alert-outlined-success {
-    border: 1px solid #007f50;
+    border: 1px solid var(--sd-success-dark);
   }
 
   .sd-alert-error {
-    background: #f3737c;
+    background: var(--sd-error);
     color: white;
-    border: 1px solid #ee3d48;
+    border: 1px solid var(--sd-error-dark);
   }
 
   .sd-alert-outlined-error {
     color: black;
-    border: 1px solid #ee3d48;
+    border: 1px solid var(--sd-error-dark);
   }
 
   .sd-alert-info {
-    background: #79aaf3;
-    border: 1px solid #257dff;
+    background: var(--sd-info);
+    border: 1px solid var(--sd-info-dark);
   }
 
   .sd-alert-outlined-info {
-    border: 1px solid #257dff;
+    border: 1px solid var(--sd-info-dark);
   }
 
   .sd-alert-warning {
-    background: #fadc8d;
-    border: 1px solid #fdb300;
+    background: var(--sd-warning);
+    border: 1px solid var(--sd-warning-dark);
   }
 
   .sd-alert-outlined-warning {
-    border: 1px solid #fdb300;
+    border: 1px solid var(--sd-warning-dark);
   }
 
   .sd-alert-close-icon:hover {

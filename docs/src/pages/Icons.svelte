@@ -182,7 +182,7 @@
 <Icon type="chosenType" />`}
   </Highlight>
   <div class="search">
-    <Input label="Search icon" squared bind:value={searchValue} />
+    <Input label="Search icon" bind:value={searchValue} />
   </div>
   <div class="icons-container container">
     {#each filteredIcons as icon}

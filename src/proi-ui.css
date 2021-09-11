@@ -1,0 +1,11 @@
+body {
+  --sd-primary: #2398ab;
+  --sd-success: #9eecba;
+  --sd-success-dark: #007f50;
+  --sd-error: #f3737c;
+  --sd-error-dark: #ee3d48;
+  --sd-info: #79aaf3;
+  --sd-info-dark: #257dff;
+  --sd-warning: #fadc8d;
+  --sd-warning-dark: #fdb300;
+}

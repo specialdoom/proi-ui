@@ -27,3 +27,4 @@
 | title       | Title of the avatar             | string | ''      |
 | description | Short description of the avatar | string | ''      |
 | image       | Source of avatar image          | string | ''      |
+| class       | Class name for avatar container | string | ''      |

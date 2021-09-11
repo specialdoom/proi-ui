@@ -18,6 +18,12 @@ export const data = [
     description: 'Whether the alert can be closed',
     type: 'boolean',
     default: 'false'
+  },
+  {
+    property: 'class',
+    description: 'Class name for alert container',
+    type: 'string',
+    default: `\'\'`
   }
 ];
 
@@ -25,9 +31,16 @@ export const usage = `<script>
  import { Alert } from 'proi-ui';
 </script>;
 
-<Alert>Success alert message</Alert>
+<Alert className="custom-class-name">Success alert message</Alert>
 <Alert type="error">Error alert message</Alert>
 <Alert type="info" outlined>Info alert message</Alert>
-<Alert type="warning" closable>Closable alert warning message</Alert>`;
+<Alert type="warning" closable>Closable alert warning message</Alert>
+
+<style>
+  .custom-class-name {
+    height: 20px;
+  }
+</style>
+`;
 
 export const config = { title: 'Alert component', columns, data, usage };
