@@ -2,9 +2,7 @@
   import { Icon } from "proi-ui-icons";
   import { icons } from "./icons";
 
-  let className = null;
-  export { className as class };
-
+  export let className = null;
   export let type = "success";
   export let closable = false;
   export let outlined = false;

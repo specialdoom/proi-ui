@@ -7,8 +7,11 @@
 <Docs {config}>
   <Avatar title="Proi Ui" description="Library" />
   <Avatar image="https://avatars.githubusercontent.com/u/41910815?v=4" />
-
-  <Avatar class="custom-alias-class" title="Proi Ui" description="Library" />
+  <Avatar
+    className="custom-alias-class"
+    title="Proi Ui"
+    description="Library"
+  />
   <Avatar
     title="specialdoom"
     description="creator"
@@ -17,7 +20,7 @@
 </Docs>
 
 <style>
-  :global(.custom-alias-class .sd-avatar-alias) {
+  .custom-alias-class .sd-avatar-alias {
     border: 2px dashed green;
   }
 </style>

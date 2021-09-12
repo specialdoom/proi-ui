@@ -3,25 +3,33 @@
   import { config } from '../configs/components/backdrop';
   import Docs from './shared/Docs.svelte';
 
-  let isBackdropVisible = false;
-  let isBackdrop2Visible = false;
+  let backdrop = false;
+  let customizedBackdrop = false;
 
   function toggleBackdrop() {
-    isBackdropVisible = !isBackdropVisible;
+    backdrop = !backdrop;
   }
 
-  function toggleBackdropWithContent() {
-    isBackdrop2Visible = !isBackdrop2Visible;
+  function toggleCustomizedBackdrop() {
+    customizedBackdrop = !customizedBackdrop;
   }
 </script>
 
 <Docs {config}>
   <Button on:click={toggleBackdrop}>Show backdrop</Button>
-  <Backdrop visible={isBackdropVisible} on:click={toggleBackdrop} />
-  <Button on:click={toggleBackdropWithContent}>
-    Show backdrop with custom content
-  </Button>
-  <Backdrop visible={isBackdrop2Visible} on:click={toggleBackdropWithContent}>
-    <Tag />
+  <Button on:click={toggleCustomizedBackdrop}>Show customized backdrop</Button>
+  <Backdrop visible={backdrop} on:click={toggleBackdrop}>
+    <Tag>Custom optional content</Tag>
   </Backdrop>
+  <Backdrop
+    visible={customizedBackdrop}
+    on:click={toggleCustomizedBackdrop}
+    className="custom-backdrop"
+  />
 </Docs>
+
+<style>
+  .sd-backdrop.custom-backdrop {
+    background-color: rgba(69, 59, 201, 0.411);
+  }
+</style>

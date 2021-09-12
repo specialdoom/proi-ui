@@ -6,7 +6,7 @@
 </script>
 
 <Docs {config}>
-  <Alert class="custom-class-name">Hey. I've been customized</Alert>
+  <Alert className="custom-class-name">Hey. I've been customized</Alert>
   <Alert>Success alert message</Alert>
   <Alert type="error">Error alert message</Alert>
   <Alert type="info" outlined>Info alert message</Alert>
@@ -14,7 +14,7 @@
 </Docs>
 
 <style>
-  :global(.custom-class-name) {
+  .sd-alert.custom-class-name {
     height: 50px;
   }
 </style>

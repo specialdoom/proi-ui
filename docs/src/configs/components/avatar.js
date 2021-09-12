@@ -20,10 +20,10 @@ export const data = [
     default: `''`
   },
   {
-    property: 'class',
+    property: 'className',
     description: 'Class name for avatar container',
     type: 'string',
-    default: `\'\'`
+    default: 'null'
   }
 ];
 
@@ -33,8 +33,7 @@ export const usage = `<script>
 
 <Avatar title="Proi Ui" description="Library" />
 <Avatar image="https://avatars.githubusercontent.com/u/41910815?v=4" />
-
-<Avatar class="custom-alias-class" title="Proi Ui" description="Library" />
+<Avatar className="custom-alias-class" title="Proi Ui" description="Library" />
 <Avatar
   title="specialdoom"
   description="creator"
@@ -42,7 +41,7 @@ export const usage = `<script>
 />
 
 <style>
-  :global(.custom-alias-class .sd-avatar-alias) {
+  .custom-alias-class .sd-avatar-alias {
     border: 2px dashed green;
   }
 </style>

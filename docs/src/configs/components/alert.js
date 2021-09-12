@@ -20,10 +20,10 @@ export const data = [
     default: 'false'
   },
   {
-    property: 'class',
+    property: 'className',
     description: 'Class name for alert container',
     type: 'string',
-    default: `\'\'`
+    default: 'null'
   }
 ];
 
@@ -31,14 +31,15 @@ export const usage = `<script>
  import { Alert } from 'proi-ui';
 </script>;
 
-<Alert className="custom-class-name">Success alert message</Alert>
+<Alert className="custom-class-name">Hey. I've been customized</Alert>
+<Alert>Success alert message</Alert>
 <Alert type="error">Error alert message</Alert>
 <Alert type="info" outlined>Info alert message</Alert>
 <Alert type="warning" closable>Closable alert warning message</Alert>
 
 <style>
-  .custom-class-name {
-    height: 20px;
+  .sd-alert.custom-class-name {
+    height: 50px;
   }
 </style>
 `;

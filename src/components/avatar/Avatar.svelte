@@ -1,7 +1,5 @@
 <script>
-  let className = null;
-  export { className as class };
-
+  export let className = '';
   export let title = '';
   export let description = '';
   export let image = '';

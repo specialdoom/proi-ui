@@ -1,9 +1,10 @@
 <script>
+  export let className = null;
   export let visible = false;
 </script>
 
 <div
-  class="sd-backdrop"
+  class="sd-backdrop {className}"
   class:sd-backdrop-visible={visible}
   class:sd-backdrop-not-visible={!visible}
   on:click
