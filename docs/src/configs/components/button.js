@@ -26,6 +26,12 @@ export const data = [
     default: 'false'
   },
   {
+    property: 'className',
+    description: 'Class name for button',
+    type: 'string',
+    default: 'null'
+  },
+  {
     property: 'on:click',
     description: 'Handler of the click event',
     type: '(event) => void',
@@ -44,6 +50,15 @@ export const usage = `<script>
 <Button small>Primary small</Button>
 <Button type="secondary" outlined small>Secondary small</Button>
 <Button disabled>Disabled</Button>
-<Button type="link" disabled>Link disabled</Button>`;
+<Button type="link" disabled>Link disabled</Button>
+<Button className="custom-button">Customized button</Button>
+
+<style>
+  :global(.sd-button.custom-button) {
+    --sd-primary: rgb(105, 34, 99);
+    --sd-primary-hover: rgb(146, 47, 138);
+    border-radius: 25px;
+  }
+</style>`;
 
 export const config = { title: 'Button component', columns, data, usage };

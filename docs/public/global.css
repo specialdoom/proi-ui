@@ -1,9 +1,5 @@
 @import "fonts.css";
 
-:root * {
-  --sd-success: rgb(115, 202, 115);
-}
-
 body {
   margin: 0;
   font-family: Sora ExtraLight;

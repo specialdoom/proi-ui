@@ -29,7 +29,7 @@
 </Docs>
 
 <style>
-  .sd-backdrop.custom-backdrop {
+  :global(.sd-backdrop.custom-backdrop) {
     background-color: rgba(69, 59, 201, 0.411);
   }
 </style>

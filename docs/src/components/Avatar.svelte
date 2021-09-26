@@ -20,7 +20,7 @@
 </Docs>
 
 <style>
-  .custom-alias-class .sd-avatar-alias {
+  :global(.custom-alias-class .sd-avatar-alias) {
     border: 2px dashed green;
   }
 </style>

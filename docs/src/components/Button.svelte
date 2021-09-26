@@ -13,4 +13,13 @@
   <Button type="secondary" outlined small>Secondary small</Button>
   <Button disabled>Disabled</Button>
   <Button type="link" disabled>Link disabled</Button>
+  <Button className="custom-button">Customized button</Button>
 </Docs>
+
+<style>
+  :global(.sd-button.custom-button) {
+    --sd-primary: rgb(105, 34, 99);
+    --sd-primary-hover: rgb(146, 47, 138);
+    border-radius: 25px;
+  }
+</style>

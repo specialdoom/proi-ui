@@ -45,6 +45,12 @@ function toggleCustomizedBackdrop() {
   on:click={toggleCustomizedBackdrop}
   className="custom-backdrop"
 />
+
+<style>
+  :global(.sd-backdrop.custom-backdrop) {
+    background-color: rgba(69, 59, 201, 0.411);
+  }
+</style>
 `;
 
 export const config = { title: 'Backdrop component', columns, data, usage };

@@ -38,7 +38,7 @@ export const usage = `<script>
 <Alert type="warning" closable>Closable alert warning message</Alert>
 
 <style>
-  .sd-alert.custom-class-name {
+  :global(.sd-alert.custom-class-name) {
     height: 50px;
   }
 </style>

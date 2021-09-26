@@ -14,7 +14,7 @@
 </Docs>
 
 <style>
-  .sd-alert.custom-class-name {
+  :global(.custom-class-name) {
     height: 50px;
   }
 </style>
