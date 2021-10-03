@@ -16,7 +16,11 @@
   <Button on:click={() => toaster.success('Toast message')}>
     Success method
   </Button>
-  <Button on:click={() => toaster.error('Toast message')}>Error method</Button>
+  <Button
+    on:click={() =>
+      toaster.error('Toast message asd asda sadsd asd asd asda sd')}
+    >Error method</Button
+  >
   <Button on:click={() => toaster.info('Toast message')}>Info method</Button>
   <Button on:click={() => toaster.warning('Toast message')}>
     Warning method

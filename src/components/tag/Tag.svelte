@@ -1,25 +1,22 @@
 <script>
-  export let color = '#2398ab';
   export let outlined = false;
-
-  $: style = outlined
-    ? `border: 1px solid ${color}; color: ${color};`
-    : `background-color: ${color};`;
+  export let className = null;
 </script>
 
-<span class="sd-tag" {style}>
+<span class="sd-tag {className}" class:outlined>
   <slot />
 </span>
 
 <style>
   .sd-tag {
+    background-color: var(--sd-primary);
     border: none;
     cursor: default;
     height: 25px;
     min-width: 25px;
     display: inline-flex;
     outline: 0;
-    color: white;
+    color: var(--sd-white);
     padding: 4px 8px;
     font-size: 14px;
     box-sizing: border-box;
@@ -27,5 +24,11 @@
     white-space: nowrap;
     border-radius: 4px;
     justify-content: center;
+  }
+
+  .sd-tag.outlined {
+    background-color: transparent;
+    color: var(--sd-primary);
+    border: 1px solid var(--sd-primary);
   }
 </style>

@@ -17,10 +17,10 @@
 <style>
   .sd-checkbox-container {
     position: relative;
-    padding-left: 30px;
+    padding-left: 24px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
     width: 50px;
     height: 30px;
   }
