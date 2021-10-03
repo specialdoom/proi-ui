@@ -1,6 +1,8 @@
-<script></script>
+<script>
+  export let className = null;
+</script>
 
-<div class="sd-modal-body">
+<div class="sd-modal-body {className}">
   <slot />
 </div>
 

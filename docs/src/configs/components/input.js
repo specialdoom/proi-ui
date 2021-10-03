@@ -38,6 +38,18 @@ export const data = [
     default: 'false'
   },
   {
+    property: 'className',
+    description: 'Class name of input container',
+    type: 'boolean',
+    default: 'false'
+  },
+  {
+    property: '----------',
+    description: '----------',
+    type: '----------',
+    default: '----------'
+  },
+  {
     property: 'on:change',
     description: 'Handler for onChange input event',
     type: '(event) => void',
@@ -49,15 +61,20 @@ export const usage = `<script>
 import { Input } from 'proi-ui'
 </script>
 
-<Input label="Custom label" value="Custom value" />
+<Input label="Custom label" value="Custom value" on:change={onChange} />
 <Input
   label="Error label"
   value="Error value"
-  error="Something is wrong..." />
-<Input 
-  label="Disabled input" 
-  value="Disabled" 
-  disabled />
+  error="Something is wrong..."
+/>
+<Input label="Disabled input" value="Disabled" disabled />
+<Input label="Customized label" value="Disabled" className="custom-input" />
+
+<style>
+  :global(.custom-input .sd-input) {
+    color: purple;
+  }
+</style>
 `;
 
 export const config = { title: 'Input component', data, usage, columns };

@@ -32,17 +32,26 @@ function toggle() {
 
 #### Modal
 
-| Property | Description                  | Type    | Default |
-| -------- | ---------------------------- | ------- | ------- |
-| visible  | Whether the modal is visible | boolean | false   |
-| title    | Title of modal               | string  | ''      |
+| Property  | Description                  | Type    | Default |
+| --------- | ---------------------------- | ------- | ------- |
+| visible   | Whether the modal is visible | boolean | false   |
+| title     | Title of modal               | string  | ''      |
+| className | Class name of modal dialog   | string  | null    |
+
+#### ModalTitle
+
+- `className` prop for class name of title container
+- used for modal title
+- optional
 
 #### ModalBody
 
+- `className` prop for class name of body container
 - used for modal content
 - optional
 
 #### ModalActions
 
+- `className` prop for class name of actions container
 - used for specific actions for modal
 - optional

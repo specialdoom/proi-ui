@@ -34,4 +34,6 @@ error="Something is wrong..."
 | label       | Label of input                                | string          | ''      |
 | error       | error message                                 | string          | -       |
 | disabled    | Whether the input is disabled                 | boolean         | false   |
+| disabled    | Whether the input is disabled                 | boolean         | false   |
+| ----------- | --------------------------------------------- | --------------- | ------- |
 | on:change   | Handler for onChange input event              | (event) => void | -       |

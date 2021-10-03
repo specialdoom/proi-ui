@@ -32,6 +32,12 @@ export const data = [
     default: 'null'
   },
   {
+    property: '----------',
+    description: '----------',
+    type: '----------',
+    default: '----------'
+  },
+  {
     property: 'on:click',
     description: 'Handler of the click event',
     type: '(event) => void',

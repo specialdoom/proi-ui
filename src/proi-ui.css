@@ -13,4 +13,10 @@ body {
   --sd-info-dark: #257dff;
   --sd-warning: #fadc8d;
   --sd-warning-dark: #fdb300;
+
+  /* colors */
+  --sd-grey: #808080;
+  --sd-light-grey: #dee2e6;
+  --sd-black: #000000;
+  --sd-white: #ffffff;
 }

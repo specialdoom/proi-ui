@@ -1,6 +1,8 @@
-<script></script>
+<script>
+  export let className = null;
+</script>
 
-<div class="sd-modal-actions">
+<div class="sd-modal-actions {className}">
   <slot />
 </div>
 
@@ -10,6 +12,6 @@
     align-items: center;
     justify-content: flex-end;
     padding: 16px;
-    border-top: 1px solid #dee2e6;
+    border-top: 1px solid var(--sd-light-grey);
   }
 </style>
