@@ -21,7 +21,13 @@ import { Tag } from 'proi-ui';
 
 <Tag>Tag</Tag>
 <Tag outlined>Tag</Tag>
-<Tag color="#1C3144">Tag</Tag>
-<Tag color="#1C3144" outlined>Tag</Tag>`;
+<Tag className="custom-tag">Customized Tag</Tag>
+
+<style>
+  :global(.sd-tag.custom-tag) {
+    background-color: purple;
+  }
+</style>
+`;
 
 export const config = { title: 'Tag component', usage, data, columns };

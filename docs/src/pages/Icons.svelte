@@ -1,7 +1,10 @@
 <script>
+  import { metatags } from '@roxi/routify';
   import { Icon } from 'proi-ui-icons';
-  import { Alert, Input, Button, toaster } from 'proi-ui';
+  import { Input, toaster } from 'proi-ui';
   import Highlight from '../shared/Highlight.svelte';
+
+  metatags.title = 'proi-ui | Icons';
 
   let searchValue = '';
 

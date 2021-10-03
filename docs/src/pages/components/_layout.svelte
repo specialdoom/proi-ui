@@ -1,6 +1,9 @@
 <script>
+  import { metatags } from '@roxi/routify';
   import { Icon } from 'proi-ui-icons';
   import { url, isActive } from '@roxi/routify';
+
+  metatags.title = 'proi-ui | Components';
 
   const options = [
     { text: 'Button', path: './button' },

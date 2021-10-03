@@ -1,5 +1,8 @@
 <script>
+  import { metatags } from '@roxi/routify';
   import Highlight from '../components/Highlight.svelte';
+
+  metatags.title = 'proi-ui';
 </script>
 
 <div class="container" style="flex-direction: column">
