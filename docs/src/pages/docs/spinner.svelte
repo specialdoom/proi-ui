@@ -1,6 +1,6 @@
 <script>
-  import { config } from '../configs/components/spinner';
-  import Docs from './shared/Docs.svelte';
+  import { config } from '../../configs/components/spinner';
+  import Docs from '../../components/Docs.svelte';
   import { Spinner } from 'proi-ui';
 </script>
 

@@ -1,7 +1,7 @@
 <script>
   import { Checkbox } from 'proi-ui';
-  import Docs from './shared/Docs.svelte';
-  import { config } from '../configs/components/checkbox';
+  import Docs from '../../components/Docs.svelte';
+  import { config } from '../../configs/components/checkbox';
 
   let checked = true;
 </script>

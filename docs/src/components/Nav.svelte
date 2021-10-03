@@ -1,33 +1,21 @@
 <script>
-  export let selected = 'Home';
-
-  function select(value) {
-    selected = value;
-  }
+  import { url, isActive } from '@roxi/routify';
 </script>
 
 <nav>
   <ul>
-    <li
-      aria-current={selected === 'Home' ? 'page' : undefined}
-      on:click={() => select('Home')}
-    >
-      Home
+    <li aria-current={$isActive('/index') ? 'page' : undefined}>
+      <a href={$url('/')}>Home</a>
     </li>
-    <li
-      aria-current={selected === 'Docs' ? 'page' : undefined}
-      on:click={() => select('Docs')}
-    >
-      Docs
+    <li aria-current={$isActive('/docs') ? 'page' : undefined}>
+      <a href={$url('/docs')}>Docs</a>
     </li>
-    <li
-      aria-current={selected === 'Icons' ? 'page' : undefined}
-      on:click={() => select('Icons')}
-    >
-      Icons
+    <li aria-current={$isActive('/icons') ? 'page' : undefined}>
+      <a href={$url('/icons')}>Icon</a>
     </li>
+
     <li class="nav-logo">
-      <img src="favicon.png" alt="mini logo" height="40" />
+      <img src="/favicon.png" alt="mini logo" height="40" />
     </li>
   </ul>
 </nav>
@@ -55,6 +43,12 @@
     float: left;
   }
 
+  li a {
+    text-decoration: unset;
+    height: 100%;
+    cursor: poitner;
+  }
+
   [aria-current] {
     position: relative;
     display: inline-block;
@@ -74,7 +68,6 @@
     text-decoration: none;
     padding: 1em 0.5em;
     display: block;
-    cursor: pointer;
   }
 
   li:hover {

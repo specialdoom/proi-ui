@@ -24,6 +24,18 @@ export const data = [
     description: 'Whether the dropdown is disabled',
     type: 'boolean',
     default: 'false'
+  },
+  {
+    property: 'className',
+    description: 'Class name for dropdown container',
+    type: 'string',
+    default: 'null'
+  },
+  {
+    property: 'listClassName',
+    description: 'Class name for options list container',
+    type: 'string',
+    default: 'null'
   }
 ];
 
@@ -42,6 +54,14 @@ let defaultSelectedOption = 'First option';
   {options}
   title="No option selected"
 />
-<Dropdown title="Disabled" disabled />`;
+<Dropdown title="Disabled" disabled />
+<Dropdown title="Customized dropdown" {options} className="custom-dropdown" />
+
+<style>
+  :global(.sd-dropdown.custom-dropdown) {
+    border: 1px solid red;
+  }
+</style>
+`;
 
 export const config = { title: 'Dropdown component', usage, data, columns };

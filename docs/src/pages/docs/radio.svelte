@@ -1,6 +1,6 @@
 <script>
-  import { config } from '../configs/components/radio';
-  import Docs from './shared/Docs.svelte';
+  import { config } from '../../configs/components/radio';
+  import Docs from '../../components/Docs.svelte';
   import { Radio } from 'proi-ui';
 
   let options = [

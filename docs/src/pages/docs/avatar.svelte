@@ -1,7 +1,7 @@
 <script>
   import { Avatar } from 'proi-ui';
-  import { config } from '../configs/components/avatar';
-  import Docs from './shared/Docs.svelte';
+  import { config } from '../../configs/components/avatar';
+  import Docs from '../../components/Docs.svelte';
 </script>
 
 <Docs {config}>

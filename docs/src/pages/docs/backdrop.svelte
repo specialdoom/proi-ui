@@ -1,7 +1,7 @@
 <script>
   import { Backdrop, Button, Tag } from 'proi-ui';
-  import { config } from '../configs/components/backdrop';
-  import Docs from './shared/Docs.svelte';
+  import { config } from '../../configs/components/backdrop';
+  import Docs from '../../components/Docs.svelte';
 
   let backdrop = false;
   let customizedBackdrop = false;

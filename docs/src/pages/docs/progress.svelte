@@ -1,7 +1,7 @@
 <script>
   import { Progress, Button } from 'proi-ui';
-  import Docs from './shared/Docs.svelte';
-  import { config } from '../configs/components/progress';
+  import Docs from '../../components/Docs.svelte';
+  import { config } from '../../configs/components/progress';
 
   let percent = 67;
   let error = false;

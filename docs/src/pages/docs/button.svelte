@@ -1,7 +1,7 @@
 <script>
   import { Button } from 'proi-ui';
-  import Docs from './shared/Docs.svelte';
-  import { config } from '../configs/components/button';
+  import Docs from '../../components/Docs.svelte';
+  import { config } from '../../configs/components/button';
 </script>
 
 <Docs {config}>

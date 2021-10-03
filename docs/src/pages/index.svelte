@@ -1,10 +1,7 @@
 <script>
-  import Highlight from '../components/shared/Highlight.svelte';
+  import Highlight from '../components/Highlight.svelte';
 </script>
 
-<svelte:head>
-  <title>proi-ui</title>
-</svelte:head>
 <div class="container" style="flex-direction: column">
   <figure>
     <img alt="logo" src="logo.png" />

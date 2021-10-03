@@ -1,34 +1,21 @@
 <script>
   import { Icon } from 'proi-ui-icons';
-
-  import Button from '../components/Button.svelte';
-  import Input from '../components/Input.svelte';
-  import Checkbox from '../components/Checkbox.svelte';
-  import Radio from '../components/Radio.svelte';
-  import Dropdown from '../components/Dropdown.svelte';
-  import Alert from '../components/Alert.svelte';
-  import Tag from '../components/Tag.svelte';
-  import Backdrop from '../components/Backdrop.svelte';
-  import Modal from '../components/Modal.svelte';
-  import Progress from '../components/Progress.svelte';
-  import Spinner from '../components/Spinner.svelte';
-  import Avatar from '../components/Avatar.svelte';
-  import Toast from '../components/Toast.svelte';
+  import { url, isActive } from '@roxi/routify';
 
   const options = [
-    { text: 'Button', component: Button },
-    { text: 'Input', component: Input },
-    { text: 'Checkbox', component: Checkbox },
-    { text: 'Radio', component: Radio },
-    { text: 'Dropdown', component: Dropdown },
-    { text: 'Alert', component: Alert },
-    { text: 'Tag', component: Tag },
-    { text: 'Backdrop', component: Backdrop },
-    { text: 'Modal', component: Modal },
-    { text: 'Progress', component: Progress },
-    { text: 'Spinner', component: Spinner },
-    { text: 'Avatar', component: Avatar },
-    { text: 'Toast', component: Toast }
+    { text: 'Button', path: './button' },
+    { text: 'Input', path: './input' },
+    { text: 'Checkbox', path: './checkbox' },
+    { text: 'Radio', path: './radio' },
+    { text: 'Dropdown', path: './dropdown' },
+    { text: 'Alert', path: './alert' },
+    { text: 'Tag', path: './tag' },
+    { text: 'Backdrop', path: './backdrop' },
+    { text: 'Modal', path: './modal' },
+    { text: 'Progress', path: './progress' },
+    { text: 'Spinner', path: './spinner' },
+    { text: 'Avatar', path: './avatar' },
+    { text: 'Toast', path: './toast' }
   ];
 
   options.sort((a, b) => {
@@ -36,8 +23,6 @@
     if (a.text < b.text) return -1;
     return 0;
   });
-
-  let selected = options[0];
 
   let open = false;
 
@@ -51,10 +36,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>proi-ui | Docs</title>
-</svelte:head>
-
 <div class="docs-container ">
   <div class="left-side">
     <div class="select-option" on:click={toggle}>
@@ -64,28 +45,26 @@
       </span>
     </div>
     <div class="select" style={open ? '' : 'display:none'}>
-      {#each options as option, index}
-        <div
-          class="option {selected.text == option.text ? 'selected' : ''}"
-          on:click={() => changeSelected(index)}
-        >
-          {option.text}
-        </div>
+      {#each options as option}
+        <a href={$url(option.path)}>
+          <div class="option" class:selected={$isActive(option.path)}>
+            {option.text}
+          </div>
+        </a>
       {/each}
     </div>
     <div class="unselect">
-      {#each options as option, index}
-        <div
-          class="option {selected.text == option.text ? 'selected' : ''}"
-          on:click={() => changeSelected(index)}
-        >
-          {option.text} &nbsp;
-        </div>
+      {#each options as option}
+        <a href={$url(option.path)}>
+          <div class="option" class:selected={$isActive(option.path)}>
+            {option.text} &nbsp;
+          </div>
+        </a>
       {/each}
     </div>
   </div>
   <div class="right-side">
-    <svelte:component this={selected.component} />
+    <slot />
   </div>
 </div>
 
@@ -96,6 +75,7 @@
     height: calc(100vh - 108px);
     box-sizing: border-box;
   }
+
   .left-side {
     width: 15%;
     height: 100%;
@@ -119,10 +99,16 @@
     font-weight: 100;
   }
 
+  .select a,
+  .unselect a {
+    text-decoration: unset;
+  }
+
   .option:hover,
   .selected:hover {
     background: rgba(35, 152, 171, 0.5);
   }
+
   .selected {
     position: relative;
     background: rgba(35, 152, 171, 0.3);

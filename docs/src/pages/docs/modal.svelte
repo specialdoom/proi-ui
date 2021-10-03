@@ -1,7 +1,7 @@
 <script>
   import { Modal, ModalBody, ModalActions, Button } from 'proi-ui';
-  import { config } from '../configs/components/modal';
-  import Docs from './shared/Docs.svelte';
+  import { config } from '../../configs/components/modal';
+  import Docs from '../../components/Docs.svelte';
 
   let isModalVisible = false;
 

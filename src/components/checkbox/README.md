@@ -26,4 +26,4 @@ let option = false;
 | --------- | -------------------------------- | ------- | ------- |
 | checked   | Whether the checkbox is checked  | boolean | false   |
 | disabled  | Whether the checkbox is disabled | boolean | false   |
-| className | Class name for checbox container | string  | null    |
+| className | Class name for checkbox container | string  | null    |

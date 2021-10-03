@@ -1,6 +1,6 @@
 <script>
-  import { config } from '../configs/components/toast';
-  import Docs from './shared/Docs.svelte';
+  import { config } from '../../configs/components/toast';
+  import Docs from '../../components/Docs.svelte';
   import { toaster, Button } from 'proi-ui';
 
   function notify(type) {

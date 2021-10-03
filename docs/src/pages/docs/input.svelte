@@ -1,7 +1,7 @@
 <script>
   import { Input } from 'proi-ui';
-  import { config } from '../configs/components/input';
-  import Docs from './shared/Docs.svelte';
+  import { config } from '../../configs/components/input';
+  import Docs from '../../components/Docs.svelte';
 
   function onChange() {
     console.log('changed');

@@ -2,14 +2,18 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public"
+    "dev": "run-p dev:*",
+    "dev:rollup": "rollup -c -w",
+    "dev:routify": "routify",
+    "build": "routify -b --&& rollup -c",
+    "start": "sirv public --single"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
+    "@roxi/routify": "^2.18.3",
     "highlight.js": "^10.4.1",
+    "npm-run-all": "^4.1.5",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
@@ -22,5 +26,8 @@
     "proi-ui-icons": "0.0.7",
     "sirv-cli": "^1.0.0",
     "svelte-highlight": "^0.6.2"
+  },
+  "routify": {
+    "dynamicImports": false
   }
 }
