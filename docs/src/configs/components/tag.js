@@ -4,14 +4,20 @@ export const data = [
   {
     property: 'color',
     description: 'Color of the tag',
-    type: 'string',
-    default: '#2398ab'
+    type: '<code>string</code>',
+    default: '<code>#2398ab</code>'
   },
   {
     property: 'outlined',
     description: 'Whether the tag is outlined',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
+  },
+  {
+    property: 'className',
+    description: 'Class name of tag container. <br /> Tag component uses <code>.sd-tag</code> class',
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   }
 ];
 
@@ -21,13 +27,6 @@ import { Tag } from 'proi-ui';
 
 <Tag>Tag</Tag>
 <Tag outlined>Tag</Tag>
-<Tag className="custom-tag">Customized Tag</Tag>
-
-<style>
-  :global(.sd-tag.custom-tag) {
-    background-color: purple;
-  }
-</style>
 `;
 
 export const config = { title: 'Tag component', usage, data, columns };

@@ -1,9 +1,9 @@
 <script>
-  import { Icon } from "proi-ui-icons";
-  import { icons } from "./icons";
+  import { Icon } from '../../../icons/src';
+  import { icons } from './icons';
 
   export let className = null;
-  export let type = "success";
+  export let type = 'success';
   export let closable = false;
   export let outlined = false;
 

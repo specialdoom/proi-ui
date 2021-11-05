@@ -3,33 +3,33 @@ import { columns } from '../shared/columns';
 export const data = [
   {
     property: 'type',
-    description: `Type of button. Options: 'primary', 'secondary' and 'link'`,
-    type: 'string',
-    default: `'primary'`
+    description: `Type of button. <br /> Options: <code>primary</code>, <code>secondary</code>, <code>link</code>`,
+    type: '<code>string</code>',
+    default: `<code>'primary'</code>`
   },
   {
     property: 'outlined',
     description: 'Whether the button is outlined',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: 'disabled',
     description: 'Whether the button is disabled',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: 'small',
     description: 'Whether the button is small',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: 'className',
-    description: 'Class name for button',
-    type: 'string',
-    default: 'null'
+    description: 'Class name for button. <br /> Button component uses <code>.sd-button</code>',
+    type: '<code>string</code>',
+    default: '<code>null</code>'
   },
   {
     property: '----------',
@@ -40,8 +40,8 @@ export const data = [
   {
     property: 'on:click',
     description: 'Handler of the click event',
-    type: '(event) => void',
-    default: '-'
+    type: '<code>(event) => void</code>',
+    default: '<code>-</code>'
   }
 ];
 
@@ -57,14 +57,6 @@ export const usage = `<script>
 <Button type="secondary" outlined small>Secondary small</Button>
 <Button disabled>Disabled</Button>
 <Button type="link" disabled>Link disabled</Button>
-<Button className="custom-button">Customized button</Button>
-
-<style>
-  :global(.sd-button.custom-button) {
-    --sd-primary: rgb(105, 34, 99);
-    --sd-primary-hover: rgb(146, 47, 138);
-    border-radius: 25px;
-  }
-</style>`;
+`;
 
 export const config = { title: 'Button component', columns, data, usage };

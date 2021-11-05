@@ -16,11 +16,4 @@
     error="Something is wrong..."
   />
   <Input label="Disabled input" value="Disabled" disabled />
-  <Input label="Customized label" value="Disabled" className="custom-input" />
 </Docs>
-
-<style>
-  :global(.custom-input .sd-input) {
-    color: purple;
-  }
-</style>

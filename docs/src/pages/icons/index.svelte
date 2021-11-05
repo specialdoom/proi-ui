@@ -2,7 +2,7 @@
   import { metatags } from '@roxi/routify';
   import { Icon } from 'proi-ui-icons';
   import { Input, toaster } from 'proi-ui';
-  import Highlight from '../shared/Highlight.svelte';
+  import Highlight from '../../shared/Highlight.svelte';
 
   metatags.title = 'proi-ui | Icons';
 
@@ -177,7 +177,7 @@
 </svelte:head>
 
 <div class="container">
-  <div>icons for proi-ui</div>
+  <div>proi-ui icons</div>
   <Highlight>{`npm i proi-ui-icons`}</Highlight>
   <Highlight>
     {`import { Icon } from 'proi-ui-icons';

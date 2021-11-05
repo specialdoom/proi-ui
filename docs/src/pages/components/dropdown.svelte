@@ -17,11 +17,4 @@
     title="No option selected"
   />
   <Dropdown title="Disabled" disabled />
-  <Dropdown title="Customized dropdown" className="custom-dropdown" />
 </Docs>
-
-<style>
-  :global(.sd-dropdown.custom-dropdown) {
-    border: 1px solid red;
-  }
-</style>

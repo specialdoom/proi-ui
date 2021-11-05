@@ -4,44 +4,44 @@ export const data = [
   {
     property: 'value',
     description: 'Value of input',
-    type: 'string',
-    default: `''`
+    type: '<code>string</code>',
+    default: `<code>''</code>`
   },
   {
     property: 'type',
-    description: `Type of input. Options: 'text' and 'password'`,
-    type: 'string',
-    default: `'text'`
+    description: `Type of input. <br /> Options: <code>text</code>, <code>password</code>`,
+    type: '<code>string</code>',
+    default: `<code>'text</code>'`
   },
   {
     property: 'placeholder',
     description: 'Placeholder of input',
-    type: 'string',
-    default: `''`
+    type: '<code>string</code>',
+    default: `<code>''</code>`
   },
   {
     property: 'label',
     description: 'Label of input',
-    type: 'string',
-    default: `''`
+    type: '<code>string</code>',
+    default: `<code>''</code>`
   },
   {
     property: 'error',
     description: 'Error message for input',
-    type: 'string',
-    default: `''`
+    type: '<code>string</code>',
+    default: `<code>''</code>`
   },
   {
     property: 'disabled',
     description: 'Whether the input is disabled',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: 'className',
-    description: 'Class name of input container',
-    type: 'boolean',
-    default: 'false'
+    description: 'Class name of input container. <br /> Input component uses <code>.sd-input</code> class',
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: '----------',
@@ -52,8 +52,8 @@ export const data = [
   {
     property: 'on:change',
     description: 'Handler for onChange input event',
-    type: '(event) => void',
-    default: '-'
+    type: '<code>(event) => void</code>',
+    default: '<code>-</code>'
   }
 ];
 
@@ -68,13 +68,6 @@ import { Input } from 'proi-ui'
   error="Something is wrong..."
 />
 <Input label="Disabled input" value="Disabled" disabled />
-<Input label="Customized label" value="Disabled" className="custom-input" />
-
-<style>
-  :global(.custom-input .sd-input) {
-    color: purple;
-  }
-</style>
 `;
 
 export const config = { title: 'Input component', data, usage, columns };

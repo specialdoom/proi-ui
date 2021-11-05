@@ -4,26 +4,26 @@ export const data = [
   {
     property: 'percent',
     description: 'Progress percent',
-    type: 'number',
-    default: '0'
+    type: '<code>number</code>',
+    default: '<code>0</code>'
   },
   {
     property: 'error',
     description: 'Whether there is an error during progress',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: 'className',
-    description: 'Class name of progress container',
-    type: 'string',
-    default: 'null'
+    description: 'Class name of progress container. <br /> Progress component uses <code>.sd-progress</code class',
+    type: '<code>string</code>',
+    default: '<code>null</code>'
   },
   {
     property: 'lineClassName',
-    description: 'Class name of line container',
-    type: 'string',
-    default: 'null'
+    description: 'Class name of progress line container. <br /> Progress line component uses <code>.sd-progress-line</code class',
+    type: '<code>string</code>',
+    default: '<code>null</code>'
   }
 ];
 
@@ -48,28 +48,10 @@ function toggleSuccess() {
 </script>
 
 <Progress {percent} {error} />
-Customized progress <br />
-<Progress
-  {percent}
-  {error}
-  className="custom-progress"
-  lineClassName="custom-line"
-/>
 <Button small on:click={increment}>Increment</Button>
 <Button small on:click={decrement}>Decrement</Button>
 <Button small type="secondary" on:click={toggleError} outlined>Error</Button>
 <Button small on:click={toggleSuccess}>Success</Button>
-
-<style>
-  :global(.sd-progress.custom-progress) {
-    height: 10px;
-    border-radius: 0px;
-  }
-  :global(.sd-progress .custom-line) {
-    background-color: purple;
-    border-radius: 0px;
-  }
-</style>
 `;
 
 export const config = { title: 'Progress component', data, usage, columns };

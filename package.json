@@ -21,7 +21,7 @@
   "author": "Bogdan Bledea <bledea.bogdan97@gmail.com> (https://specialdoom.github.io/proi-ui/)",
   "repository": "git://github.com/specialdoom/proi-ui",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "homepage": "",
   "bugs": {
@@ -37,7 +37,5 @@
     "rollup-plugin-svelte": "^7.1.0",
     "svelte": "^3.42.5"
   },
-  "dependencies": {
-    "proi-ui-icons": "0.0.7"
-  }
+  "dependencies": {}
 }

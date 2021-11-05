@@ -10,13 +10,4 @@
   <Checkbox bind:checked>{checked ? 'Checked' : 'Unchecked'}</Checkbox>
   <Checkbox checked={true} disabled>Checked disabled</Checkbox>
   <Checkbox checked={false} disabled>Unchecked disabled</Checkbox>
-  <Checkbox checked={false} className="custom-checkbox">
-    Customized checkbox
-  </Checkbox>
 </Docs>
-
-<style>
-  :global(.custom-checkbox) {
-    color: red;
-  }
-</style>

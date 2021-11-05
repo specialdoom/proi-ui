@@ -10,7 +10,7 @@
     <img alt="logo" src="logo.png" />
     <figcaption>proi-ui docs ( v1.0.0 )</figcaption>
   </figure>
-  <Highlight>{`npm i proi-ui proi-ui-icons`}</Highlight>
+  <Highlight>{`npm i @specialdoom/proi-ui proi-ui-icons`}</Highlight>
   <div class="social-media-container">
     <a href="https://github.com/specialdoom/proi-ui">
       <img src="github.png" alt="github icon" />

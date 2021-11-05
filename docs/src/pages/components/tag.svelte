@@ -7,11 +7,4 @@
 <Docs {config}>
   <Tag>Tag</Tag>
   <Tag outlined>Tag</Tag>
-  <Tag className="custom-tag">Customized Tag</Tag>
 </Docs>
-
-<style>
-  :global(.sd-tag.custom-tag) {
-    background-color: purple;
-  }
-</style>

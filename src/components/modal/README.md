@@ -36,7 +36,6 @@ function toggle() {
 | --------- | ---------------------------- | ------- | ------- |
 | visible   | Whether the modal is visible | boolean | false   |
 | title     | Title of modal               | string  | ''      |
-| className | Class name of modal dialog   | string  | null    |
 
 #### ModalTitle
 

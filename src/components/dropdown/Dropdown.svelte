@@ -1,5 +1,5 @@
 <script>
-  import { Icon } from 'proi-ui-icons';
+  import { Icon } from '../../../icons/src';
   import { clickOutside } from '../../utils/clickOutside';
 
   export let options = [];
@@ -43,7 +43,7 @@
     </span>
   </div>
   <ul
-    class="sd-dropdown-options-container {listClassName}"
+    class="sd-dropdown-options {listClassName}"
     class:sd-no-display={!toggle}
   >
     {#each options as option, i}
@@ -68,7 +68,7 @@
     height: 30px;
   }
 
-  .sd-dropdown-options-container {
+  .sd-dropdown-options {
     position: absolute;
     top: 14px;
     width: auto;

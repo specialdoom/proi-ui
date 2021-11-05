@@ -1,5 +1,5 @@
 <script>
-  import { Icon } from 'proi-ui-icons';
+  import { Icon } from '../../../icons/src';
 
   export let close;
   export let className = null;

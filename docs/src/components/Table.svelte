@@ -17,7 +17,7 @@
         <div>
           {#each Object.values(item) as value}
             <div>
-              {value}
+              {@html value}
             </div>
           {/each}
         </div>

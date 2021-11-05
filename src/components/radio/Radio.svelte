@@ -69,9 +69,9 @@
   .sd-radio-container .sd-radio-bullet:after {
     left: 3px;
     top: 3px;
-    width: 9px;
-    height: 9px;
-    border-radius: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 4px;
     background: var(--sd-white);
   }
 

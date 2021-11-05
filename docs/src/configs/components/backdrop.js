@@ -4,52 +4,42 @@ export const data = [
   {
     property: 'visible',
     description: 'Whether the backdrop is visible or not',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: 'className',
-    description: 'Class name for the backdrop container',
-    type: 'string',
-    default: 'null'
+    description: 'Class name for the backdrop container. <br /> Backdrop component uses <code>.sd-backdrop</code> class',
+    type: '<code>string</code>',
+    default: '<code>null</code>'
+  },
+  {
+    property: '----------',
+    description: '----------',
+    type: '----------',
+    default: '----------'
   },
   {
     property: 'on:click',
     description: 'Handler of the backdrop click event',
-    type: '(event) => void',
-    default: '-'
+    type: '<code>(event) => void</code>',
+    default: '<code>-</code>'
   }
 ];
 
 export const usage = `<script>
 import { Backdrop, Button, Tag } from 'proi-ui';
 let backdrop = false;
-let customizedBackdrop = false;
 
 function toggleBackdrop() {
   backdrop = !backdrop;
 }
-
-function toggleCustomizedBackdrop() {
-  customizedBackdrop = !customizedBackdrop;
-}
 </script>
 
 <Button on:click={toggleBackdrop}>Show backdrop</Button>
-<Button on:click={toggleCustomizedBackdrop}>Show customized backdrop</Button>
 <Backdrop visible={backdrop} on:click={toggleBackdrop}>
   <Tag>Custom optional content</Tag>
 </Backdrop>
-<Backdrop
-  visible={customizedBackdrop}
-  on:click={toggleCustomizedBackdrop}
-  className="custom-backdrop"
-/>
-
-<style>
-  :global(.sd-backdrop.custom-backdrop) {
-    background-color: rgba(69, 59, 201, 0.411);
-  }
 </style>
 `;
 

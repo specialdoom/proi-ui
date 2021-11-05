@@ -4,20 +4,20 @@ export const data = [
   {
     property: 'checked',
     description: `Whether the checkbox it's checked`,
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: 'disabled',
     description: `Whether the checkbox it's disabled`,
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: 'className',
-    description: 'Class for checkbox container',
-    type: 'string',
-    default: 'null'
+    description: 'Class for checkbox container. <br /> Checkbox component uses <code>.sd-checkbox</code> class',
+    type: '<code>string</code>',
+    default: '<code>null</code>'
   }
 ];
 
@@ -30,15 +30,6 @@ let checked = false;
 <Checkbox bind:checked>{checked ? 'Checked' : 'Unchecked'}</Checkbox>
 <Checkbox checked={true} disabled>Checked disabled</Checkbox>
 <Checkbox checked={false} disabled>Unchecked disabled</Checkbox>
-<Checkbox checked={false} className="custom-checkbox">
-  Customized checkbox
-</Checkbox>
-
-<style>
-  :global(.custom-checkbox) {
-    color: red;
-  }
-</style>
 `;
 
 export const config = { title: 'Checkbox component', usage, data, columns };

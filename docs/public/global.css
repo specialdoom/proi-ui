@@ -1,8 +1,6 @@
-@import 'fonts.css';
-
 body {
   margin: 0;
-  font-family: Sora ExtraLight;
+  font-family: 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
