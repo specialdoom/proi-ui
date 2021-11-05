@@ -10,7 +10,7 @@
     <img alt="logo" src="logo.png" />
     <figcaption>proi-ui docs ( v1.0.0 )</figcaption>
   </figure>
-  <Highlight>{`npm i @specialdoom/proi-ui proi-ui-icons`}</Highlight>
+  <Highlight>{`npm i @specialdoom/proi-ui`}</Highlight>
   <div class="social-media-container">
     <a href="https://github.com/specialdoom/proi-ui">
       <img src="github.png" alt="github icon" />
@@ -29,6 +29,7 @@
     width: 100%;
     height: calc(100vh - 108px);
   }
+
   figure {
     text-align: center;
     margin: 0 auto;

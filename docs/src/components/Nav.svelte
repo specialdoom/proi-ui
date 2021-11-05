@@ -7,6 +7,9 @@
     <li aria-current={$isActive('/index') ? 'page' : undefined}>
       <a href={$url('/')}>Home</a>
     </li>
+    <li aria-current={$isActive('/getting-started') ? 'page' : undefined}>
+      <a href={$url('/getting-started')}>Getting started</a>
+    </li>
     <li aria-current={$isActive('/components') ? 'page' : undefined}>
       <a href={$url('/components')}>Components</a>
     </li>
