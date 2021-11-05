@@ -52,9 +52,9 @@ Customized progress <br />
 
 ### API
 
-| Property      | Description                               | Type    | Default |
-| ------------- | ----------------------------------------- | ------- | ------- |
-| percent       | Progress percent                          | number  | 0       |
-| error         | Whether there is an error during progress | boolean | false   |
-| className     | Class name of progress container          | string  | null    |
-| lineClassName | Class name of line container              | string  | null    |
+| Property      | Description                                                                          | Type    | Default |
+| ------------- | ------------------------------------------------------------------------------------ | ------- | ------- |
+| percent       | Progress percent                                                                     | number  | 0       |
+| error         | Whether there is an error during progress                                            | boolean | false   |
+| className     | Class name of progress container. Progress component uses `.sd-progress` class       | string  | null    |
+| lineClassName | Class name of line container. Progress line component uses `.sd-progress-line` class | string  | null    |

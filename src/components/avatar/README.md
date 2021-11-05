@@ -22,9 +22,9 @@
 
 ### API
 
-| Property    | Description                     | Type   | Default |
-| ----------- | ------------------------------- | ------ | ------- |
-| title       | Title of the avatar             | string | ''      |
-| description | Short description of the avatar | string | ''      |
-| image       | Source of avatar image          | string | ''      |
-| className   | Class name for avatar container | string | `null`  |
+| Property    | Description                                                           | Type   | Default |
+| ----------- | --------------------------------------------------------------------- | ------ | ------- |
+| title       | Title of the avatar                                                   | string | ''      |
+| description | Short description of the avatar                                       | string | ''      |
+| image       | Source of avatar image                                                | string | ''      |
+| className   | Class name for avatar container. Avatar component uses the `.sd-avatar` | string | `null`  |

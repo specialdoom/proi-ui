@@ -45,5 +45,6 @@ function toggleCustomizedBackdrop() {
 | Property  | Description                         | Type            | Default value |
 | --------- | ----------------------------------- | --------------- | ------------- |
 | visible   | Whether the backdrop is visible     | boolean         | false         |
-| className | Class name of backdrop container    | string          | `null`        |
+| className | Class name of backdrop container. Backdrop component uses `.sd-backdrop` class    | string          | `null`        |
+| --------- | ----------------------------------- | --------------- | ------------- |
 | on:click  | Handler of the backdrop click event | (event) => void | false         |

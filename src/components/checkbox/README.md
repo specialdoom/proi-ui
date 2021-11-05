@@ -22,8 +22,8 @@ let option = false;
 
 ### API
 
-| Property  | Description                      | Type    | Default |
-| --------- | -------------------------------- | ------- | ------- |
-| checked   | Whether the checkbox is checked  | boolean | false   |
-| disabled  | Whether the checkbox is disabled | boolean | false   |
-| className | Class name for checkbox container | string  | null    |
+| Property  | Description                                                                     | Type    | Default |
+| --------- | ------------------------------------------------------------------------------- | ------- | ------- |
+| checked   | Whether the checkbox is checked                                                 | boolean | false   |
+| disabled  | Whether the checkbox is disabled                                                | boolean | false   |
+| className | Class name for checkbox container. Checkbox component uses `.sd-checkbox` class | string  | null    |

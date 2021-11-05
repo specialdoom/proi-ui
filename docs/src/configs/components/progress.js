@@ -15,13 +15,13 @@ export const data = [
   },
   {
     property: 'className',
-    description: 'Class name of progress container. <br /> Progress component uses <code>.sd-progress</code class',
+    description: 'Class name of progress container. <br /> Progress component uses <code>.sd-progress</code> class',
     type: '<code>string</code>',
     default: '<code>null</code>'
   },
   {
     property: 'lineClassName',
-    description: 'Class name of progress line container. <br /> Progress line component uses <code>.sd-progress-line</code class',
+    description: 'Class name of progress line container. <br /> Progress line component uses <code>.sd-progress-line</code> class',
     type: '<code>string</code>',
     default: '<code>null</code>'
   }
