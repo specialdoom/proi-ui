@@ -1,5 +1,5 @@
 {
-  "name": "proi-ui",
+  "name": "@specialdoom/proi-ui",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -12,8 +12,6 @@
   "keywords": [
     "svelte",
     "ui",
-    "sapper ui",
-    "sapper components",
     "web components",
     "svelte ui library",
     "components",
@@ -21,9 +19,9 @@
     "svelte3"
   ],
   "author": "Bogdan Bledea <bledea.bogdan97@gmail.com> (https://specialdoom.github.io/proi-ui/)",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/specialdoom/proi-ui"
+  "repository": "git://github.com/specialdoom/proi-ui",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "homepage": "",
   "bugs": {
