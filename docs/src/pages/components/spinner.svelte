@@ -1,7 +1,7 @@
 <script>
   import { config } from '../../configs/components/spinner';
   import Docs from '../../components/Docs.svelte';
-  import { Spinner } from 'proi-ui';
+  import { Spinner } from '../../../../src';
 </script>
 
 <Docs {config}>

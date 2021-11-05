@@ -1,5 +1,5 @@
 <script>
-  import { Icon } from '../../../icons/src';
+  import { Icon } from '@specialdoom/proi-ui-icons';
 
   export let close;
   export let className = null;

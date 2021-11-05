@@ -1,7 +1,7 @@
 <script>
   import Docs from '../../components/Docs.svelte';
   import { config } from '../../configs/components/dropdown';
-  import { Dropdown } from 'proi-ui';
+  import { Dropdown } from '../../../../src';
 
   let options = ['First option', 'Second option', 'Third option'];
 

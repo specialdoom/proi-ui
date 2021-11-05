@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "@specialdoom/proi-ui-docs",
   "version": "1.0.0",
   "scripts": {
     "dev": "run-p dev:*",
@@ -22,8 +22,6 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "proi-ui": "^1.0.0",
-    "proi-ui-icons": "0.0.7",
     "sirv-cli": "^1.0.0",
     "svelte-highlight": "^0.6.2"
   },

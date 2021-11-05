@@ -1,6 +1,6 @@
 <script>
   import { metatags } from '@roxi/routify';
-  import { Icon } from 'proi-ui-icons';
+  import { Icon } from '../../../../icons/src';
   import { url, isActive } from '@roxi/routify';
 
   metatags.title = 'proi-ui | Components';
@@ -31,11 +31,6 @@
 
   function toggle() {
     open = !open;
-  }
-
-  function changeSelected(index) {
-    selected = options[index];
-    open = false;
   }
 </script>
 

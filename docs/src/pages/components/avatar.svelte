@@ -1,5 +1,5 @@
 <script>
-  import { Avatar } from 'proi-ui';
+  import { Avatar } from '.../../../../src';
   import { config } from '../../configs/components/avatar';
   import Docs from '../../components/Docs.svelte';
 </script>

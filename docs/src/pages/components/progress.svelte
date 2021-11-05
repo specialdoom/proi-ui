@@ -1,5 +1,5 @@
 <script>
-  import { Progress, Button } from 'proi-ui';
+  import { Progress, Button } from '../../../../src';
   import Docs from '../../components/Docs.svelte';
   import { config } from '../../configs/components/progress';
 

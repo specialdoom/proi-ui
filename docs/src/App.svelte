@@ -1,5 +1,5 @@
 <script>
-  import { ToastProvider } from 'proi-ui';
+  import { ToastProvider } from '../../src';
   import { Router } from '@roxi/routify';
   import { routes } from '../.routify/routes';
 </script>

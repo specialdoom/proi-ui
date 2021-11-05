@@ -1,5 +1,5 @@
 <script>
-  import { Button } from 'proi-ui';
+  import { Button } from '.../../../../src';
   import Docs from '../../components/Docs.svelte';
   import { config } from '../../configs/components/button';
 </script>

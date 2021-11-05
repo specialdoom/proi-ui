@@ -18,9 +18,9 @@
     "svelte icons",
     "icons"
   ],
-  "author": "Bogdan Bledea <bledea.bogdan97@gmail.com> (https://proi-ui.com/)",
+  "author": "Bogdan Bledea <bledea.bogdan97@gmail.com> (https://specialdoom.github.io/proi-ui/)",
   "license": "MIT",
-  "repository": "git://github.com/specialdoom/proi-ui/icons",
+  "repository": "git://github.com/specialdoom/proi-ui",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },

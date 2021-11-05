@@ -1,5 +1,5 @@
 <script>
-  import { Checkbox } from 'proi-ui';
+  import { Checkbox } from '.../../../../src';
   import Docs from '../../components/Docs.svelte';
   import { config } from '../../configs/components/checkbox';
 

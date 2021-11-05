@@ -1,5 +1,5 @@
 <script>
-  import { Backdrop, Button, Tag } from 'proi-ui';
+  import { Backdrop, Button, Tag } from '.../../../../src';
   import { config } from '../../configs/components/backdrop';
   import Docs from '../../components/Docs.svelte';
 

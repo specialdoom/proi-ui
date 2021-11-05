@@ -1,7 +1,7 @@
 <script>
   import { config } from '../../configs/components/toast';
   import Docs from '../../components/Docs.svelte';
-  import { toaster, Button } from 'proi-ui';
+  import { toaster, Button } from '../../../../src';
 
   function notify(type) {
     toaster.send({ message: 'Toast message', type });

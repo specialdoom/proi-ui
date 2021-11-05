@@ -1,5 +1,5 @@
 <script>
-  import { Alert } from 'proi-ui';
+  import { Alert } from '.../../../../src';
 
   import { config } from '../../configs/components/alert';
   import Docs from '../../components/Docs.svelte';

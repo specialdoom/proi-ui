@@ -1,7 +1,7 @@
 <script>
   import { metatags } from '@roxi/routify';
-  import { Icon } from 'proi-ui-icons';
-  import { Input, toaster } from 'proi-ui';
+  import { Icon } from '@specialdoom/proi-ui-icons';
+  import { Input, toaster } from '../../../../src';
   import Highlight from '../../shared/Highlight.svelte';
 
   metatags.title = 'proi-ui | Icons';

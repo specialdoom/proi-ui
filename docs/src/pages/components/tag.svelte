@@ -1,5 +1,5 @@
 <script>
-  import { Tag } from 'proi-ui';
+  import { Tag } from '../../../../src';
   import { config } from '../../configs/components/tag';
   import Docs from '../../components/Docs.svelte';
 </script>

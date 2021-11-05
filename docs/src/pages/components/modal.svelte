@@ -1,5 +1,5 @@
 <script>
-  import { Modal, ModalBody, ModalActions, Button } from 'proi-ui';
+  import { Modal, ModalBody, ModalActions, Button } from '../../../../src';
   import { config } from '../../configs/components/modal';
   import Docs from '../../components/Docs.svelte';
 

@@ -1,7 +1,7 @@
 <script>
   import { config } from '../../configs/components/radio';
   import Docs from '../../components/Docs.svelte';
-  import { Radio } from 'proi-ui';
+  import { Radio } from '../../../../src';
 
   let options = [
     { text: 'First', value: 1 },
