@@ -1,41 +1,52 @@
 <script>
   import { metatags } from '@roxi/routify';
-  import Highlight from '../../components/Highlight.svelte';
+  import Steps from '../../components/wizard/Steps.svelte';
+  import Step from '../../components/wizard/Step.svelte';
+  import {
+    Installation,
+    Styling,
+    Theming,
+    Enjoy
+  } from '../../components/getting-started';
 
   metatags.title = 'proi-ui | Getting started';
 </script>
 
 <div class="container" style="flex-direction: column">
-	<h1>Getting started</h1>
-  <ol>
-    <li><code>npm i @specialdoom/proi-ui</code></li>
-    <li>
-      Import <code>proi-ui.css</code> to your main app file
-      <Highlight>
-        {`// main app file import
-
-import '@specialdoom/proi-ui/dist/proi-ui.css'; 
-				
-...`}
-      </Highlight>
-    </li>
-    <li>Use a component anywhere
-			<Highlight>
-        {`<script>
-import { Button } from '@specialdoom/proi-ui';
-</script>
-
-<Button>New button</Button>`}
-      </Highlight>
-		</li>
-  </ol>
+  <Steps
+    stepsDetails={[
+      {
+        title: 'Installation'
+      },
+      {
+        title: 'Use styling'
+      },
+      {
+        title: 'Theming (optional)'
+      },
+      {
+        title: 'Enjoy'
+      }
+    ]}
+  >
+    <Step index={0}>
+      <Installation />
+    </Step>
+    <Step index={1}>
+      <Styling />
+    </Step>
+    <Step index={2}>
+      <Theming />
+    </Step>
+    <Step index={3}>
+      <Enjoy />
+    </Step>
+  </Steps>
 </div>
 
 <style>
   .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: calc(100vh - 108px);
   }

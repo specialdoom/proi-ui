@@ -172,15 +172,11 @@
   $: filteredIcons = icons.filter((item) => item.includes(searchValue));
 </script>
 
-<svelte:head>
-  <title>proi-ui | Icons</title>
-</svelte:head>
-
 <div class="container">
-  <div>proi-ui icons</div>
-  <Highlight>{`npm i proi-ui-icons`}</Highlight>
+  <Highlight>{`npm i @specialdoom/proi-ui-icons`}</Highlight>
   <Highlight>
-    {`import { Icon } from 'proi-ui-icons';
+    {`
+import { Icon } from '@specialdoom/proi-ui-icons';
 
 <Icon type="chosenType" />`}
   </Highlight>
