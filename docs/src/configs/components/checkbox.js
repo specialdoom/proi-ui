@@ -4,14 +4,20 @@ export const data = [
   {
     property: 'checked',
     description: `Whether the checkbox it's checked`,
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: 'disabled',
     description: `Whether the checkbox it's disabled`,
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
+  },
+  {
+    property: 'className',
+    description: 'Class for checkbox container. <br /> Checkbox component uses <code>.sd-checkbox</code> class',
+    type: '<code>string</code>',
+    default: '<code>null</code>'
   }
 ];
 

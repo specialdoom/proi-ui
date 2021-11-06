@@ -20,10 +20,12 @@ function click () {
 
 ### API
 
-| Property | Description                                                | Type    | Default   |
-| -------- | ---------------------------------------------------------- | ------- | --------- |
-| type     | Type of button. Options: 'primary', 'secondary' and 'link' | string  | 'primary' |
-| outlined | Whether the button is outlined                             | boolean | false     |
-| disabled | Whether the button is disabled                             | boolean | false     |
-| small    | Whether the button is small                                | boolean | false     |
-| on:click | Handler of the click event                                 | false   |
+| Property  | Description                                                | Type       | Default   |
+| --------- | ---------------------------------------------------------- | ---------- | --------- |
+| type      | Type of button. Options: 'primary', 'secondary' and 'link' | string     | 'primary' |
+| outlined  | Whether the button is outlined                             | boolean    | false     |
+| disabled  | Whether the button is disabled                             | boolean    | false     |
+| small     | Whether the button is small                                | boolean    | false     |
+| className | Class name for button. Button component uses `.sd-button`  | string     | null      |
+| --------- | ---------------------------------------------------------- | -------    | --------- |
+| on:click  | Handler of the click event                                 | () => void | -         |

@@ -4,14 +4,26 @@ export const data = [
   {
     property: 'percent',
     description: 'Progress percent',
-    type: 'number',
-    default: '0'
+    type: '<code>number</code>',
+    default: '<code>0</code>'
   },
   {
     property: 'error',
     description: 'Whether there is an error during progress',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
+  },
+  {
+    property: 'className',
+    description: 'Class name of progress container. <br /> Progress component uses <code>.sd-progress</code> class',
+    type: '<code>string</code>',
+    default: '<code>null</code>'
+  },
+  {
+    property: 'lineClassName',
+    description: 'Class name of progress line container. <br /> Progress line component uses <code>.sd-progress-line</code> class',
+    type: '<code>string</code>',
+    default: '<code>null</code>'
   }
 ];
 

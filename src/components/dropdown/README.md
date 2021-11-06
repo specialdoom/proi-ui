@@ -29,9 +29,11 @@ let defaultSelectedOption = 'First option';
 
 ### API
 
-| Property | Description                      | Type    | Default |
-| -------- | -------------------------------- | ------- | ------- |
-| selected | Current selected value           | option  | ''      |
-| options  | Options for select               | array   | []      |
-| title    | Title for dropdown               | string  | ''      |
-| disabled | Whether the dropdown is disabled | boolean | false   |
+| Property      | Description                                                                                      | Type    | Default |
+| ------------- | ------------------------------------------------------------------------------------------------ | ------- | ------- |
+| selected      | Current selected value                                                                           | option  | ''      |
+| options       | Options for select                                                                               | array   | []      |
+| title         | Title of dropdown                                                                                | string  | ''      |
+| disabled      | Whether the dropdown is disabled                                                                 | boolean | false   |
+| className     | Class name for dropdown container. Dropdown component uses `.sd-dropdown` class                  | string  | null    |
+| listClassName | Class name for options list container. Dropdown list component uses `.sd-dropdown-options` class | string  | null    |

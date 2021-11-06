@@ -37,8 +37,8 @@
 
   .sd-modal-dialog {
     box-sizing: border-box;
-    background: #fff;
-    color: #000;
+    background: var(--sd-white);
+    color: var(--sd-black);
     font-size: 14px;
     line-height: 1.5;
     position: relative;

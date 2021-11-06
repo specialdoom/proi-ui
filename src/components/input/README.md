@@ -26,12 +26,14 @@ error="Something is wrong..."
 
 ### API
 
-| Property    | Description                                   | Type            | Default |
-| ----------- | --------------------------------------------- | --------------- | ------- |
-| value       | Value of input                                | string          | ''      |
-| Type        | Type of input. Options: 'text' and 'password' | string          | 'text'  |
-| placeholder | Placeholder of input                          | string          | ''      |
-| label       | Label of input                                | string          | ''      |
-| error       | error message                                 | string          | -       |
-| disabled    | Whether the input is disabled                 | boolean         | false   |
-| on:change   | Handler for onChange input event              | (event) => void | -       |
+| Property    | Description                                                                     | Type            | Default |
+| ----------- | ------------------------------------------------------------------------------- | --------------- | ------- |
+| value       | Value of input                                                                  | string          | ''      |
+| Type        | Type of input. Options: 'text' and 'password'                                   | string          | 'text'  |
+| placeholder | Placeholder of input                                                            | string          | ''      |
+| label       | Label of input                                                                  | string          | ''      |
+| error       | error message                                                                   | string          | -       |
+| disabled    | Whether the input is disabled                                                   | boolean         | false   |
+| className   | Class name of input container. Input component uses `.sd-input-container` class | string          | null    |
+| ----------- | ---------------------------------------------                                   | --------------- | ------- |
+| on:change   | Handler for onChange input event                                                | (event) => void | -       |

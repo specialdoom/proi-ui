@@ -17,7 +17,8 @@ import { Tag } from 'proi-ui'
 
 ### API
 
-| Property | Description                 | Type    | Default |
-| -------- | --------------------------- | ------- | ------- |
-| color    | Color of the tag            | string  | #2398ab |
-| outlined | Whether the tag is outlined | boolean | false   |
+| Property  | Description                                                     | Type    | Default |
+| --------- | --------------------------------------------------------------- | ------- | ------- |
+| color     | Color of the tag                                                | string  | #2398ab |
+| outlined  | Whether the tag is outlined                                     | boolean | false   |
+| className | Class name of tag container. Tag component uses `.sd-tag` class | string  | null    |

@@ -4,14 +4,14 @@ export const data = [
   {
     property: 'visible',
     description: 'Whether the modal is visible',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: 'title',
     description: 'Title of modal',
-    type: 'string',
-    default: `''`
+    type: '<code>string</code>',
+    default: `<code>''</code>`
   }
 ];
 
@@ -33,6 +33,7 @@ function toggle() {
   <Button small outlined>Yes</Button>
   <Button small type="secondary">No</Button>
 </ModalActions>
-</Modal>`;
+</Modal>
+`;
 
 export const config = { title: 'Modal component', data, usage, columns };

@@ -1,5 +1,5 @@
 <script>
-  import { Icon } from 'proi-ui-icons';
+  import { Icon } from '@specialdoom/proi-ui-icons';
 
   export let toast;
   let closed = false;
@@ -29,12 +29,12 @@
 <style>
   .sd-toast {
     position: relative;
-    width: 250px;
+    width: 300px;
     display: flex;
     margin: 10px;
     padding: 10px;
     border-radius: 4px;
-    background-color: ghostwhite;
+    background-color: var(--sd-ghost-white);
     box-sizing: border-box;
     flex-direction: column;
     box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
@@ -42,19 +42,19 @@
   }
 
   .sd-toast-error {
-    border-left: 4px solid #ee3d48;
+    border-left: 4px solid var(--sd-error);
   }
 
   .sd-toast-warning {
-    border-left: 4px solid #fdb300;
+    border-left: 4px solid var(--sd-warning);
   }
 
   .sd-toast-info {
-    border-left: 4px solid #257dff;
+    border-left: 4px solid var(--sd-info);
   }
 
   .sd-toast-success {
-    border-left: 4px solid #007f50;
+    border-left: 4px solid var(--sd-success);
   }
 
   .sd-toast-title {

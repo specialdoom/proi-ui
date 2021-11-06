@@ -1,13 +1,14 @@
 <script>
   export let checked = null;
   export let disabled = false;
+  export let className = null;
 
   $: checkboxDisabledClass = disabled
     ? 'sd-checkbox-square-disabled'
     : 'sd-checkbox-square';
 </script>
 
-<label class="sd-checkbox-container" class:sd-disabled={disabled}>
+<label class="sd-checkbox-container {className}" class:sd-disabled={disabled}>
   <input type="checkbox" bind:checked {disabled} />
   <span class="sd-checkbox-checkmark {checkboxDisabledClass}" />
   <span class="sd-checkbox-label"><slot /></span>
@@ -16,10 +17,10 @@
 <style>
   .sd-checkbox-container {
     position: relative;
-    padding-left: 30px;
+    padding-left: 24px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
     width: 50px;
     height: 30px;
   }
@@ -43,8 +44,8 @@
   }
 
   .sd-checkbox-container input:checked ~ .sd-checkbox-checkmark {
-    background-color: #2398ab;
-    border-color: #2398ab;
+    background-color: var(--sd-primary);
+    border-color: var(--sd-primary);
     animation: border 1s;
   }
 
@@ -78,7 +79,7 @@
 
   @keyframes pulse {
     0% {
-      border-color: #2398ab;
+      border-color: var(--sd-primary);
     }
     100% {
       border-color: white;
@@ -90,10 +91,10 @@
   }
 
   .sd-checkbox-square:hover {
-    border-left-color: #2398ab;
-    border-bottom-color: #2398ab;
-    border-right-color: #2398ab;
-    border-top-color: #2398ab;
+    border-left-color: var(--sd-primary);
+    border-bottom-color: var(--sd-primary);
+    border-right-color: var(--sd-primary);
+    border-top-color: var(--sd-primary);
 
     transition: border-left-color 0.1s linear,
       border-bottom-color 0.1s linear 0.1s, border-right-color 0.1s linear 0.2s,
@@ -115,9 +116,5 @@
     margin-right: 5px;
     font-size: 16px;
     font-weight: 100;
-  }
-
-  .sd-disabled {
-    cursor: not-allowed;
   }
 </style>

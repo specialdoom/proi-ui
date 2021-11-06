@@ -8,6 +8,7 @@
   export let label = '';
   export let error = '';
   export let disabled = false;
+  export let className = null;
 
   let element;
 
@@ -17,8 +18,10 @@
   });
 </script>
 
-<div class="sd-input-container">
-  <span class="sd-label" class:sd-label-error={error}>{label}</span>
+<div class="sd-input-container {className}">
+  <span class="sd-label" class:sd-label-error={error} {disabled}>
+    {label}
+  </span>
   <input
     {placeholder}
     bind:value
@@ -28,7 +31,9 @@
     bind:this={element}
     {disabled}
   />
-  <div class="sd-error">{error}</div>
+  {#if error}
+    <div class="sd-error">{error}</div>
+  {/if}
 </div>
 
 <style>
@@ -48,15 +53,16 @@
   .sd-input:disabled {
     border: 0.5px dashed;
     cursor: not-allowed;
+    color: grey;
   }
 
   .sd-input-error {
-    border-color: #ff6a61;
-    color: #ff6a61;
+    border-color: var(--sd-error);
+    color: var(--sd-error);
   }
 
   .sd-error {
-    color: #ff6a61;
+    color: var(--sd-error);
     display: inline-block;
     font-size: 12px;
     line-height: 15px;
@@ -67,6 +73,10 @@
     display: block;
     margin: 5px;
     font-weight: 100;
+  }
+
+  .sd-label:disabled {
+    color: grey;
   }
 
   .sd-label-error {

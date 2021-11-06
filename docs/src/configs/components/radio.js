@@ -4,20 +4,20 @@ export const data = [
   {
     property: 'value',
     description: 'Value of radio',
-    type: 'any',
-    default: 'null'
+    type: '<code>any</code>',
+    default: '<code>null</code>'
   },
   {
     property: 'group',
     description: 'Group value',
-    type: 'any',
-    default: 'null'
+    type: '<code>any</code>',
+    default: '<code>null</code>'
   },
   {
     property: 'disabled',
     description: 'Whether the radio is disabled',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   }
 ];
 

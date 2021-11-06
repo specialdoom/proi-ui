@@ -4,14 +4,14 @@ export const data = [
   {
     property: 'small',
     description: 'Whether the spinner is small',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
   },
   {
     property: 'label',
     description: `Label of the spinner. Can't be used with small spinner`,
-    type: 'string',
-    default: `''`
+    type: '<code>string</code>',
+    default: `<code>''</code>`
   }
 ];
 

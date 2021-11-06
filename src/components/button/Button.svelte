@@ -3,6 +3,7 @@
   export let outlined = false;
   export let disabled = false;
   export let small = false;
+  export let className = null;
 
   $: outlinedClass = outlined
     ? `sd-button-outline sd-outline-${type}`
@@ -10,7 +11,7 @@
 </script>
 
 <button
-  class="sd-button {outlinedClass}"
+  class="sd-button {outlinedClass} {className}"
   class:sd-button-small={small}
   {disabled}
   on:click
@@ -72,43 +73,43 @@
   }
 
   .sd-outline-primary {
-    border: 1px solid #2398ab;
-    color: #2398ab;
+    border: 1px solid var(--sd-primary);
+    color: var(--sd-primary);
   }
 
   .sd-outline-primary:hover {
-    border: 1px solid #2398ab;
-    background: #2398ab;
+    border: 1px solid var(--sd-primary);
+    background: var(--sd-primary);
   }
 
   .sd-primary {
-    background: #2398ab;
+    background: var(--sd-primary);
   }
 
   .sd-primary:hover {
-    background: #2ec1d5;
+    background: var(--sd-primary-hover);
   }
 
   .sd-secondary {
-    background: #ee3d48;
+    background: var(--sd-secondary);
   }
 
   .sd-secondary:hover {
-    background: #f11823;
+    background: var(--sd-secondary-hover);
   }
 
   .sd-outline-secondary {
-    border: 1px solid #ee3d48;
-    color: #ee3d48;
+    border: 1px solid var(--sd-secondary);
+    color: var(--sd-secondary);
   }
 
   .sd-outline-secondary:hover {
-    background: #ee3d48;
+    background: var(--sd-secondary);
   }
 
   .sd-link {
     background: #fff;
-    color: #5199ff;
+    color: var(--sd-link);
   }
 
   .sd-link:hover {

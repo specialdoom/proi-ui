@@ -4,27 +4,43 @@ export const data = [
   {
     property: 'visible',
     description: 'Whether the backdrop is visible or not',
-    type: 'boolean',
-    default: 'false'
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
+  },
+  {
+    property: 'className',
+    description: 'Class name for the backdrop container. <br /> Backdrop component uses <code>.sd-backdrop</code> class',
+    type: '<code>string</code>',
+    default: '<code>null</code>'
+  },
+  {
+    property: '----------',
+    description: '----------',
+    type: '----------',
+    default: '----------'
   },
   {
     property: 'on:click',
     description: 'Handler of the backdrop click event',
-    type: '(event) => void',
-    default: '-'
+    type: '<code>(event) => void</code>',
+    default: '<code>-</code>'
   }
 ];
 
 export const usage = `<script>
-import { Backdrop } from 'proi-ui';
+import { Backdrop, Button, Tag } from 'proi-ui';
+let backdrop = false;
+
+function toggleBackdrop() {
+  backdrop = !backdrop;
+}
 </script>
 
-<Backdrop
-  visible={true}
-  on:click={toggleFunction}
->
-  <Chip />
+<Button on:click={toggleBackdrop}>Show backdrop</Button>
+<Backdrop visible={backdrop} on:click={toggleBackdrop}>
+  <Tag>Custom optional content</Tag>
 </Backdrop>
+</style>
 `;
 
 export const config = { title: 'Backdrop component', columns, data, usage };

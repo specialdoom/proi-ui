@@ -1,17 +1,30 @@
-import svelte from 'rollup-plugin-svelte';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+import svelte from "rollup-plugin-svelte";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import postcss from "rollup-plugin-postcss";
 
-const pkg = require('./package.json');
+const pkg = require("./package.json");
 
-export default {
-    input: 'src/index.js',
-    output:
-        {file: pkg.main, format: 'umd', name: 'proi-ui'}
-    ,
+export default [
+  {
+    input: "src/index.js",
+    output: { file: pkg.main, format: "umd", name: "proi-ui" },
     plugins: [
-        svelte(),
-        resolve(),
-        commonjs()
+      svelte({
+        emitCss: false,
+      }),
+      resolve(),
+      commonjs(),
     ],
-};
+  },
+  {
+    input: "src/proi-ui.css",
+    output: { file: "dist/proi-ui.css", format: "es" },
+    plugins: [
+      postcss({
+        modules: true,
+        extract: true,
+      }),
+    ],
+  },
+];

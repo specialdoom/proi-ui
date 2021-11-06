@@ -1,11 +1,12 @@
 <script>
-  import { Icon } from 'proi-ui-icons';
+  import { Icon } from '@specialdoom/proi-ui-icons';
 
   export let close;
+  export let className = null;
 </script>
 
 <div class="sd-modal-title">
-  <div class="sd-title">
+  <div class="sd-title {className}">
     <slot />
   </div>
   <span class="sd-modal-close" on:click={close}>
@@ -22,7 +23,7 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 1rem 1rem;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid var(--sd-light-grey);
     border-top-left-radius: 0.3rem;
     border-top-right-radius: 0.3rem;
   }
@@ -37,9 +38,9 @@
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1;
-    color: #000;
+    color: var(--sd-black);
     opacity: 0.5;
-    text-shadow: 0 1px 0 #fff;
+    text-shadow: 0 1px 0 var(--sd-white);
     opacity: 0.5;
     padding: 1rem 1rem;
     margin: -1rem -1rem -1rem auto;

@@ -1,0 +1,34 @@
+{
+  "name": "@specialdoom/proi-ui-icons",
+  "version": "0.0.7",
+  "description": "icons for proi-ui",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "svelte": "src/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  },
+  "keywords": [
+    "svelte",
+    "ui",
+    "svelte ui icons",
+    "svelte ui",
+    "svelte3",
+    "svelte icons",
+    "icons"
+  ],
+  "author": "Bogdan Bledea <bledea.bogdan97@gmail.com> (https://specialdoom.github.io/proi-ui/)",
+  "license": "MIT",
+  "repository": "git://github.com/specialdoom/proi-ui",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "rollup": "^2.38.5",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-svelte": "^5.2.3",
+    "svelte": "^3.24.0"
+  }
+}
