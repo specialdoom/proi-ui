@@ -1,5 +1,5 @@
 <script>
-  import { Icon } from '@specialdoom/proi-ui-icons';
+  import { Icon } from '../../../icons/src';
 
   export let toast;
   let closed = false;

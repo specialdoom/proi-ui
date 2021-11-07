@@ -1,5 +1,5 @@
 <script>
-  import { Icon } from '@specialdoom/proi-ui-icons';
+  import { Icon } from '../../../icons/src';
   import { clickOutside } from '../../utils/clickOutside';
 
   export let options = [];
