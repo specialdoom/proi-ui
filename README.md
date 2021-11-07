@@ -16,42 +16,13 @@ npm i proi-ui
 Check out the [docs](https://specialdoom.github.io/proi-ui/).
 
 ## Coming next
-- theming for components
-- options to customise some components using `class` or `style` props
+- other components
+- using a styling preprocessor for styling components
+- include components style in main styling file
 
-## Migrate to version 1.0.0
+## Migrate to version 2.0.0
 
-- Alert component
-  - `status` prop changed to `type` prop in v1.0.0
-  - there is no more `squared` prop, the alert is squared by default and only squared
-- Avatar component
-  - `name` prop changed to `title` prop in v1.0.0
-  - `title` prop changed to `description` prop in v1.0.0
-  - there is no more `squared` prop, the avatar is rounded only
-- Backdrop component
-  - `open` prop changed to `visible` prop in v1.0.0
-- Button component
-  - `status` prop chaned to `type` prop in v1.0.0
-    - types are: 'primary', 'secondary' and 'link'
-  - `medium` prop changed to `small` prop in v1.0.0
-  - there is no more `squared` prop, the button is squared by default and only squared
-- Checkbox component
-  - there is no more `value` prop for the checkbox label, the label is used as a slot
-- Chip component is now Tag component, see [Tag](https://github.com/specialdoom/proi-ui/tree/master/src/components/tag) component for more details
-- Dropdown component design changes (does not affect previous versions)
-- Input component
-  - there is no more `squared` prop, the input is squared by default and only squared
-  - there is no more `success` prop
-- Modal component
-  - coming with two new components `ModalBody` and `ModalActions` instead of the named slots
-  - `show` prop changed to `visible` prop in v1.0.0
-  - new `title` prop for title of the modal
-- Progress component
-  - there is no more `height` prop, the progress component has a fixed height in v1.0.0
-- Radio
-  - there is no more `label` prop to display the label for the radio component, label is displayed using slot in v1.0.0
-- Spinner
-  - there is no more `labeled` prop, using existing `label` prop automatically decides the labeled state of the spinner component
+- you have to import `@specialdoom/proi-ui/dist/proi-ui.css` for styling
 
 ## Basic Usage
 
