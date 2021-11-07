@@ -7,7 +7,7 @@
 <div class="small">
   <Highlight>
     {`<script>
-	import { Button } from '@specialdoom/proi-ui';
+ import { Button } from '@specialdoom/proi-ui';
 </script>
 
 <Button>proi-ui button</Button>

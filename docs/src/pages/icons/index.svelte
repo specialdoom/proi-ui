@@ -1,6 +1,6 @@
 <script>
   import { metatags } from '@roxi/routify';
-  import { Icon } from '@specialdoom/proi-ui-icons';
+  import { Icon } from '../../../../icons/src';
   import { Input, toaster } from '../../../../src';
   import Highlight from '../../shared/Highlight.svelte';
 
