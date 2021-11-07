@@ -1,5 +1,5 @@
 <script>
-  import { metatags } from '@roxi/routify';
+  import { metatags, url } from '@roxi/routify';
   import Highlight from '../components/Highlight.svelte';
 
   metatags.title = 'proi-ui';
@@ -7,16 +7,16 @@
 
 <div class="container" style="flex-direction: column">
   <figure>
-    <img alt="logo" src="/logo.png" />
-    <figcaption>proi-ui docs ( v2.0.0-alpha.0 )</figcaption>
+    <img alt="logo" src={$url('/logo.png')} />
+    <figcaption>proi-ui docs ( v2.0.0 )</figcaption>
   </figure>
   <Highlight>{`npm i @specialdoom/proi-ui`}</Highlight>
   <div class="social-media-container">
     <a href="https://github.com/specialdoom/proi-ui">
-      <img src="/github.png" alt="github icon" />
+      <img src={$url('/github.png')} alt="github icon" />
     </a>
     <a href="https://twitter.com/ProiUi">
-      <img src="/twitter.png" alt="twitter icon" />
+      <img src={$url('/twitter.png')} alt="twitter icon" />
     </a>
   </div>
 </div>
