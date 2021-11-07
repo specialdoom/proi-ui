@@ -21,7 +21,7 @@ import 'override-variables.css';
 <Highlight>
 	{`/* variables */
 --sd-primary: #2398ab;
----sd-primary-hover: #2ec1d5;
+--sd-primary-hover: #2ec1d5;
 --sd-primary-selected: #91cbd5;
 --sd-secondary: #ee3d48;
 --sd-secondary-hover: #f11823;
