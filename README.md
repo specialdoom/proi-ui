@@ -8,7 +8,7 @@ yet another Svelte ui library
 
 ## Installation
 ```bash
-npm i proi-ui
+npm i @specialdomm/proi-ui
 ```
 
 ## Docs
