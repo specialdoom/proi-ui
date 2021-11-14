@@ -1,4 +1,4 @@
-import { columns } from '../shared/columns';
+import { columns } from '../shared/columns.js';
 
 export const data = [
   {
