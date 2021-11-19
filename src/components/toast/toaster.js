@@ -1,4 +1,4 @@
-import { toast } from './store/toast';
+import { toast } from './store/toast.js';
 
 export function send(slice) {
   toast.set(slice);
