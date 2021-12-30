@@ -1,6 +1,6 @@
 {
   "name": "@specialdoom/proi-ui",
-  "version": "2.0.1",
+  "version": "2.0.4",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -39,6 +39,8 @@
   },
   "dependencies": {},
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "icons"
   ]
 }
