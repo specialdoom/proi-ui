@@ -8,7 +8,7 @@ export { default as Dropdown } from './components/dropdown/Dropdown.svelte';
 export { default as Alert } from './components/alert/Alert.svelte';
 export { default as Tag } from './components/tag/Tag.svelte';
 export { default as Backdrop } from './components/backdrop/Backdrop.svelte';
-export { Modal, ModalBody, ModalActions } from './components/modal.js';
+export { Modal, ModalBody, ModalActions } from './components/modal';
 export { default as Progress } from './components/progress/Progress.svelte';
 export { default as Spinner } from './components/spinner/Spinner.svelte';
 export { default as Avatar } from './components/avatar/Avatar.svelte';

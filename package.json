@@ -37,5 +37,8 @@
     "rollup-plugin-svelte": "^7.1.0",
     "svelte": "^3.42.5"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": [
+    "dist"
+  ]
 }
