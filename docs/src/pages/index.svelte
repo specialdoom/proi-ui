@@ -8,7 +8,7 @@
 <div class="container" style="flex-direction: column">
   <figure>
     <img alt="logo" src={$url('/logo.png')} />
-    <figcaption>proi-ui docs ( v2.0.0 )</figcaption>
+    <figcaption>proi-ui docs ( v2.2.0 )</figcaption>
   </figure>
   <Highlight>{`npm i @specialdoom/proi-ui`}</Highlight>
   <div class="social-media-container">
