@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "sirv-cli": "^1.0.0",
-    "svelte-highlight": "^0.6.2"
+    "svelte-highlight": "^6.0.1"
   },
   "routify": {
     "dynamicImports": false

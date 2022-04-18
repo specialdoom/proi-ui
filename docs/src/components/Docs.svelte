@@ -13,7 +13,7 @@
   <SubTitle>Output</SubTitle>
   <slot />
   <SubTitle>Usage</SubTitle>
-  <Highlight>{config.usage}</Highlight>
+  <Highlight code={config.usage} />
   <SubTitle>API</SubTitle>
   <Table columns={config.columns} data={config.data} />
 </Container>
