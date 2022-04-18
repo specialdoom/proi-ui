@@ -5,21 +5,25 @@
 <h1>Theming (optional)</h1>
 <p>proi-ui allows you to customize our design tokens to satisfy UI diversity</p>
 <h3>Customize in css file</h3>
-<p>The approach to customize theme is creating a css file within variables to override <code>proi-ui.css</code></p>
+<p>
+  The approach to customize theme is creating a css file within variables to
+  override <code>proi-ui.css</code>
+</p>
 
 <div class="small">
-  <Highlight>
-    {`// main.js
+  <Highlight
+    code={`// main.js
 import '@specialdoom/proi-ui/dist/proi-ui.css';
 import 'override-variables.css';
-
+    
 ...`}
-  </Highlight>
+  />
 </div>
 
 <h3>Variables</h3>
-<Highlight>
-	{`/* variables */
+<Highlight
+  lang="css"
+  code={`/* variables */
 --sd-primary: #2398ab;
 --sd-primary-hover: #2ec1d5;
 --sd-primary-selected: #91cbd5;
@@ -41,8 +45,7 @@ import 'override-variables.css';
 --sd-black: #000000;
 --sd-white: #ffffff;
 --sd-ghost-white: #f8f8ff;`}
-</Highlight>
-
+/>
 
 <style>
   .small {

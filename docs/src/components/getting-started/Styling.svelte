@@ -8,12 +8,12 @@
 </p>
 
 <div class="small">
-  <Highlight>
-		{`// main.js
+  <Highlight
+    code={`// main.js
 import '@specialdoom/proi-ui/dist/proi-ui.css';
 
 ...`}
-  </Highlight>
+  />
 </div>
 
 <style>

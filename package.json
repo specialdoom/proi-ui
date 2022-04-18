@@ -1,6 +1,6 @@
 {
   "name": "@specialdoom/proi-ui",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -21,7 +21,7 @@
   "author": "Bogdan Bledea <bledea.bogdan97@gmail.com> (https://specialdoom.github.io/proi-ui/)",
   "repository": "git://github.com/specialdoom/proi-ui",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org"
   },
   "homepage": "",
   "bugs": {

@@ -11,12 +11,8 @@
 </p>
 
 <div class="small">
-  <Highlight>
-    {'npm i @specialdoom/proi-ui'}
-  </Highlight>
-  <Highlight>
-    {'yarn add @specialdoom/proi-ui'}
-  </Highlight>
+  <Highlight code='npm i @specialdoom/proi-ui' />
+  <Highlight code='yarn add @specialdoom/proi-ui' />
 </div>
 
 <style>
