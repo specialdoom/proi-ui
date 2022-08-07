@@ -11,7 +11,7 @@
     <img alt="logo" src={$url('/logo.png')} />
     <figcaption>proi-ui docs ( v{pkg.version} )</figcaption>
   </figure>
-  <Highlight>{`npm i @specialdoom/proi-ui`}</Highlight>
+  <Highlight code="{`npm i @specialdoom/proi-ui`}" />
   <div class="social-media-container">
     <a href="https://github.com/specialdoom/proi-ui">
       <img src={$url('/github.png')} alt="github icon" />
