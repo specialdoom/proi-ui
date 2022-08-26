@@ -3,3 +3,4 @@
 *.idea
 .prettierrc
 .routify
+.vscode

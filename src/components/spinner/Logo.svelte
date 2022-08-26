@@ -1,5 +1,5 @@
-<script>
-  export let small = false;
+<script lang="ts">
+  export let small: boolean = false;
 </script>
 
 <svg

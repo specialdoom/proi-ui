@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
   import { toast } from './store/toast';
   import Toast from './Toast.svelte';
+  import type { Slice } from './toast.types';
 
-  let toasts = [];
+  let toasts: Slice[] = [];
 
-  function add(slice) {
+  function add(slice: Slice) {
     toasts = [slice, ...toasts];
 
     timeout();

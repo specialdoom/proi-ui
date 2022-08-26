@@ -1,5 +1,5 @@
-<script>
-  export let className = null;
+<script lang="ts">
+  export let className: string = null;
 </script>
 
 <div class="sd-modal-actions {className}">

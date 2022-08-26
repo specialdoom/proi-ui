@@ -1,4 +1,4 @@
-import * as toaster from './components/toast/toaster.js';
+import * as toaster from './components/toast/toaster';
 
 export { default as Button } from './components/button/Button.svelte';
 export { default as Input } from './components/input/Input.svelte';

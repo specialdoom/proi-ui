@@ -1,20 +1,19 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
-  import { inputTypes } from './types';
+  import type { InputVariant } from './input.types';
 
-  export let type = 'text';
-  export let placeholder = '';
-  export let value = '';
-  export let label = '';
-  export let error = '';
-  export let disabled = false;
-  export let className = null;
+  export let variant: InputVariant = 'text';
+  export let placeholder: string = '';
+  export let value: string = '';
+  export let label: string = '';
+  export let error: string = '';
+  export let disabled: boolean = false;
+  export let className: string = null;
 
-  let element;
+  let element: HTMLInputElement;
 
   onMount(() => {
-    if (!inputTypes.includes(type)) type = 'text';
-    element.type = type;
+    element.type = variant;
   });
 </script>
 

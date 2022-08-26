@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import Logo from './Logo.svelte';
 
-  export let label = '';
-  export let small = false;
+  export let label: string = '';
+  export let small: boolean = false;
 </script>
 
 <span class="sd-spinner-container">

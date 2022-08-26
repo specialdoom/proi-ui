@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
   import Backdrop from '../backdrop/Backdrop.svelte';
   import ModalTitle from './ModalTitle.svelte';
 
-  export let title = '';
-  export let visible = false;
+  export let title: string = '';
+  export let visible: boolean = false;
 
-  function close() {
+  function onClose() {
     visible = false;
   }
 </script>
@@ -17,7 +17,7 @@
     class:sd-modal-not-show={!visible}
   >
     <div class="sd-modal-dialog">
-      <ModalTitle {close}>{title}</ModalTitle>
+      <ModalTitle {onClose}>{title}</ModalTitle>
       <slot />
     </div>
   </div>

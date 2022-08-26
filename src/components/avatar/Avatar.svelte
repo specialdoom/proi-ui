@@ -1,10 +1,10 @@
-<script>
-  export let className = '';
-  export let title = '';
-  export let description = '';
-  export let image = '';
+<script lang="ts">
+  export let className: string = '';
+  export let title: string = '';
+  export let description: string = '';
+  export let image: string = '';
 
-  $: alias = () => {
+  $: alias = (): string => {
     if (title) {
       return title
         .split(/\s/)

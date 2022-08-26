@@ -1,6 +1,6 @@
-<script>
-  export let outlined = false;
-  export let className = null;
+<script lang="ts">
+  export let outlined: boolean = false;
+  export let className: string = null;
 </script>
 
 <span class="sd-tag {className}" class:outlined>

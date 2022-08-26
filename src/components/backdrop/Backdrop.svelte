@@ -1,6 +1,6 @@
-<script>
-  export let className = null;
-  export let visible = false;
+<script lang="ts">
+  export let className: string = null;
+  export let visible: boolean = false;
 </script>
 
 <div

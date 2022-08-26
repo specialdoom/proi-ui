@@ -1,8 +1,8 @@
-<script>
-  export let percent = 0;
-  export let error = false;
-  export let className = null;
-  export let lineClassName = null;
+<script lang="ts">
+  export let percent: number = 0;
+  export let error: boolean = false;
+  export let className: string = null;
+  export let lineClassName: string = null;
 </script>
 
 <div class="sd-progress {className}">

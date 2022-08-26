@@ -7,7 +7,8 @@
   "svelte": "src/index.js",
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "keywords": [
     "svelte",
@@ -35,7 +36,13 @@
     "rollup": "^2.56.3",
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-svelte": "^7.1.0",
-    "svelte": "^3.49.0"
+    "svelte": "^3.49.0",
+    "svelte-check": "^2.0.0",
+    "svelte-preprocess": "^4.0.0",
+    "@rollup/plugin-typescript": "^8.0.0",
+    "typescript": "^4.0.0",
+    "tslib": "^2.0.0",
+    "@tsconfig/svelte": "^2.0.0"
   },
   "dependencies": {},
   "files": [

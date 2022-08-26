@@ -29,7 +29,7 @@ error="Something is wrong..."
 | Property    | Description                                                                     | Type            | Default |
 | ----------- | ------------------------------------------------------------------------------- | --------------- | ------- |
 | value       | Value of input                                                                  | string          | ''      |
-| Type        | Type of input. Options: 'text' and 'password'                                   | string          | 'text'  |
+| variant        | Variant of input. Options: 'text' and 'password'                                   | string          | 'text'  |
 | placeholder | Placeholder of input                                                            | string          | ''      |
 | label       | Label of input                                                                  | string          | ''      |
 | error       | error message                                                                   | string          | -       |

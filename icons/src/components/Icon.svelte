@@ -1,17 +1,23 @@
-<script>
-    import {icons} from '../icons';
+<script lang="ts">
+  import { icons } from '../icons';
+  import type { IconVariant } from '../icon.types';
 
-    export let type = 'proiUi';
-    export let color = '#000';
-    export let scale = 20;
+  export let variant: IconVariant = 'proiUi';
+  export let color: string = '#000';
+  export let scale: number = 20;
 </script>
-{#if icons[type]}
-    <svg data-name="{icons[type].name}" viewBox="0 0 12 12" style="width: {scale}px; height: {scale}px;">
-        <title>{icons[type].name}-icon</title>
-        <g data-name="content">
-            {#each icons[type].paths as path}
-                <path d="{path}" style="fill:{color}"/>
-            {/each}
-        </g>
-    </svg>
+
+{#if icons[variant]}
+  <svg
+    data-name={icons[variant].name}
+    viewBox="0 0 12 12"
+    style="width: {scale}px; height: {scale}px;"
+  >
+    <title>{icons[variant].name}-icon</title>
+    <g data-name="content">
+      {#each icons[variant].paths as path}
+        <path d={path} style="fill:{color}" />
+      {/each}
+    </g>
+  </svg>
 {/if}

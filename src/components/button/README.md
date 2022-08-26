@@ -22,7 +22,7 @@ function click () {
 
 | Property  | Description                                                | Type       | Default   |
 | --------- | ---------------------------------------------------------- | ---------- | --------- |
-| type      | Type of button. Options: 'primary', 'secondary' and 'link' | string     | 'primary' |
+| variant      | Variant of button. Options: 'primary', 'secondary' and 'link' | string     | 'primary' |
 | outlined  | Whether the button is outlined                             | boolean    | false     |
 | disabled  | Whether the button is disabled                             | boolean    | false     |
 | small     | Whether the button is small                                | boolean    | false     |

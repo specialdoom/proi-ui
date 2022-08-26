@@ -1,36 +1,37 @@
-<script>
+<script lang="ts">
   import { Icon } from '../../../icons/src';
   import { icons } from './icons';
+  import type { AlertVariant } from './alert.types';
 
-  export let className = null;
-  export let type = 'success';
-  export let closable = false;
-  export let outlined = false;
+  export let className: string = null;
+  export let variant: AlertVariant = 'success';
+  export let closable: boolean = false;
+  export let outlined: boolean = false;
 
   let closed = false;
   const outlinedClass = outlined
-    ? `sd-alert-outlined sd-alert-outlined-${type}`
-    : `sd-alert-${type}`;
+    ? `sd-alert-outlined sd-alert-outlined-${variant}`
+    : `sd-alert-${variant}`;
 
-  $: icon = icons.filter((item) => item.type == type)[0];
+  $: icon = icons.filter((item) => item.variant == variant)[0];
 
   const close = () => {
     closed = true;
-  };
+  };variant
 </script>
 
 {#if !closed}
   <div class="sd-alert {outlinedClass} {className}">
     <div class="sd-alert-icon">
-      <Icon type={icon.iconType} color={icon.color} scale="15" />
+      <Icon variant={icon.iconVariant} color={icon.color} scale={15} />
     </div>
     <div class="sd-alert-text">
       <slot>Default text</slot>
     </div>
 
-    {#if closable}
+    {#if closable}iconVariant
       <div class="sd-alert-close-icon" on:click={close}>
-        <Icon type="circleClose" scale="15" />
+        <Icon variant="circleClose" scale={15} />
       </div>
     {/if}
   </div>

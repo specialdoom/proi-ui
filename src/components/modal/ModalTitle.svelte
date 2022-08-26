@@ -1,16 +1,16 @@
-<script>
+<script lang="ts">
   import { Icon } from '../../../icons/src';
 
-  export let close;
-  export let className = null;
+  export let onClose: () => void;
+  export let className: string = null;
 </script>
 
 <div class="sd-modal-title">
   <div class="sd-title {className}">
     <slot />
   </div>
-  <span class="sd-modal-close" on:click={close}>
-    <Icon type="circleClose" />
+  <span class="sd-modal-close" on:click={onClose}>
+    <Icon variant="circleClose" />
   </span>
 </div>
 

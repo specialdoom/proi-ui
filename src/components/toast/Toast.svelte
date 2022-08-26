@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import { Icon } from '../../../icons/src';
 
   export let toast;
-  let closed = false;
+  let closed: boolean = false;
 
   const close = () => {
     closed = true;
@@ -17,7 +17,7 @@
     <div class="sd-toast-title">
       {toast.type ? toast.type : ''}
       <span class="sd-toast-close" on:click={close}>
-        <Icon type="circleClose" scale="12" />
+        <Icon variant="circleClose" scale={12} />
       </span>
     </div>
     <div class="sd-toast-content">

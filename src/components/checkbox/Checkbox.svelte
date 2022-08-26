@@ -1,7 +1,7 @@
-<script>
-  export let checked = null;
-  export let disabled = false;
-  export let className = null;
+<script lang="ts">
+  export let checked: boolean = null;
+  export let disabled: boolean = false;
+  export let className: string = null;
 
   $: checkboxDisabledClass = disabled
     ? 'sd-checkbox-square-disabled'

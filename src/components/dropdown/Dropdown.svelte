@@ -1,15 +1,15 @@
-<script>
+<script lang="ts">
   import { Icon } from '../../../icons/src';
   import { clickOutside } from '../../utils/clickOutside';
 
-  export let options = [];
-  export let title = '';
-  export let selected = options[0];
-  export let disabled = false;
-  export let className = null;
-  export let listClassName = null;
+  export let options: string[] = [];
+  export let title: string = '';
+  export let selected: string = options[0];
+  export let disabled: boolean = false;
+  export let className: string = null;
+  export let listClassName: string = null;
 
-  let toggle = false;
+  let toggle: boolean = false;
 
   const toggleOptions = () => {
     if (disabled) return;
@@ -36,8 +36,8 @@
     <span class="sd-dropdown-title">{selected ? selected : title}</span>
     <span class="sd-dropdown-icon">
       <Icon
-        type={toggle ? 'arrowUp' : 'arrowDown'}
-        scale="15"
+        variant={toggle ? 'arrowUp' : 'arrowDown'}
+        scale={15}
         color={disabled ? 'grey' : null}
       />
     </span>
