@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
   import { Checkbox } from '.../../../../src';
   import Docs from '../../components/Docs.svelte';
   import { config } from '../../configs/components/checkbox';
 
-  let checked = true;
+  let checked: boolean = true;
 </script>
 
 <Docs {config}>

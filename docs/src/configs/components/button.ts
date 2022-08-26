@@ -1,9 +1,10 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
-    property: 'type',
-    description: `Type of button. <br /> Options: <code>primary</code>, <code>secondary</code>, <code>link</code>`,
+    property: 'variant',
+    description: `Variant of button. <br /> Options: <code>primary</code>, <code>secondary</code>, <code>link</code>`,
     type: '<code>string</code>',
     default: `<code>'primary'</code>`
   },
@@ -45,18 +46,18 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
  import { Button } from 'proi-ui';
 </script>;
 
 <Button>Primary</Button>
-<Button type="secondary">Secondary</Button>
-<Button type="link">Link</Button>
+<Button variant="secondary">Secondary</Button>
+<Button variant="link">Link</Button>
 <Button outlined>Primary outlined</Button>
 <Button small>Primary small</Button>
-<Button type="secondary" outlined small>Secondary small</Button>
+<Button variant="secondary" outlined small>Secondary small</Button>
 <Button disabled>Disabled</Button>
-<Button type="link" disabled>Link disabled</Button>
+<Button variant="link" disabled>Link disabled</Button>
 `;
 
-export const config = { title: 'Button component', columns, data, usage };
+export const config = { title: 'Button component', columns, tableData, usage };

@@ -1,6 +1,7 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
     property: 'small',
     description: 'Whether the spinner is small',
@@ -15,7 +16,7 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
 import { Spinner } from 'proi-ui';
 </script>
 
@@ -23,4 +24,4 @@ import { Spinner } from 'proi-ui';
 <Spinner />
 <Spinner label="Loading..." />`;
 
-export const config = { title: 'Spinner component', data, usage, columns };
+export const config = { title: 'Spinner component', tableData, usage, columns };

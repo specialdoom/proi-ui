@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
   import Docs from '../../components/Docs.svelte';
   import { config } from '../../configs/components/dropdown';
   import { Dropdown } from '../../../../src';
 
-  let options = ['First option', 'Second option', 'Third option'];
+  let options: string[] = ['First option', 'Second option', 'Third option'];
 
-  let option = '';
-  let defaultSelectedOption = 'First option';
+  let option: string = '';
+  let defaultSelectedOption: string = 'First option';
 </script>
 
 <Docs {config}>

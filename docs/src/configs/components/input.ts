@@ -1,6 +1,7 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
     property: 'value',
     description: 'Value of input',
@@ -57,7 +58,7 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
 import { Input } from 'proi-ui'
 </script>
 
@@ -70,4 +71,4 @@ import { Input } from 'proi-ui'
 <Input label="Disabled input" value="Disabled" disabled />
 `;
 
-export const config = { title: 'Input component', data, usage, columns };
+export const config = { title: 'Input component', tableData, usage, columns };

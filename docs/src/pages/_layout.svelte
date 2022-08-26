@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { metatags } from '@roxi/routify';
   import Nav from '../components/Nav.svelte';
 

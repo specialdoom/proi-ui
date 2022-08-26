@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
   import { metatags } from '@roxi/routify';
   import { Icon } from '../../../../icons/src';
   import { url, isActive } from '@roxi/routify';
+  import type { Option } from './components.types';
 
   metatags.title = 'proi-ui | Components';
 
-  const options = [
+  const options: Option[] = [
     { text: 'Button', path: './button' },
     { text: 'Input', path: './input' },
     { text: 'Checkbox', path: './checkbox' },
@@ -21,13 +22,13 @@
     { text: 'Toast', path: './toast' }
   ];
 
-  options.sort((a, b) => {
+  options.sort((a: Option, b: Option) => {
     if (a.text > b.text) return 1;
     if (a.text < b.text) return -1;
     return 0;
   });
 
-  let open = false;
+  let open: boolean = false;
 
   function toggle() {
     open = !open;
@@ -39,7 +40,7 @@
     <div class="select-option" on:click={toggle}>
       <span class="select-option-title">Components</span>
       <span class="select-option-icon">
-        <Icon type={open ? 'circleArrowDown' : 'circleArrowUp'} scale="15" />
+        <Icon variant={open ? 'circleArrowDown' : 'circleArrowUp'} scale={15} />
       </span>
     </div>
     <div class="select" style={open ? '' : 'display:none'}>

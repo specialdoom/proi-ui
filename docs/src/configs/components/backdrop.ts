@@ -1,6 +1,7 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
     property: 'visible',
     description: 'Whether the backdrop is visible or not',
@@ -27,7 +28,7 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
 import { Backdrop, Button, Tag } from 'proi-ui';
 let backdrop = false;
 
@@ -43,4 +44,4 @@ function toggleBackdrop() {
 </style>
 `;
 
-export const config = { title: 'Backdrop component', columns, data, usage };
+export const config = { title: 'Backdrop component', columns, tableData, usage };

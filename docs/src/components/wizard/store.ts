@@ -1,3 +1,3 @@
 import { writable } from 'svelte/store';
 
-export const step = writable(0);
+export const step = writable<number>(0);

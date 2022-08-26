@@ -1,4 +1,4 @@
-<script>
+<script ;lang="ts">
   import Highlight from '../Highlight.svelte';
 </script>
 

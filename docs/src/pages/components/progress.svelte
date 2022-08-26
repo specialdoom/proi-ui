@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
   import { Progress, Button } from '../../../../src';
   import Docs from '../../components/Docs.svelte';
   import { config } from '../../configs/components/progress';
 
-  let percent = Math.floor(Math.random() * 100);
-  let error = false;
+  let percent: number = Math.floor(Math.random() * 100);
+  let error: boolean = false;
 
   function decrement() {
     percent--;
@@ -24,6 +24,6 @@
   <Progress {percent} {error} />
   <Button small on:click={increment}>Increment</Button>
   <Button small on:click={decrement}>Decrement</Button>
-  <Button small type="secondary" on:click={toggleError} outlined>Error</Button>
+  <Button small variant="secondary" on:click={toggleError} outlined>Error</Button>
   <Button small on:click={toggleSuccess}>Success</Button>
 </Docs>

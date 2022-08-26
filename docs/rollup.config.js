@@ -3,6 +3,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+import sveltePreprocess from 'svelte-preprocess';
+import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 import json from '@rollup/plugin-json';
 
@@ -34,7 +36,7 @@ function serve() {
 }
 
 export default {
-  input: 'src/main.js',
+  input: 'src/main.ts',
   output: {
     sourcemap: true,
     format: 'iife',
@@ -43,7 +45,8 @@ export default {
   },
   plugins: [
     svelte({
-      compilerOptions: {
+      preprocess: sveltePreprocess(),
+			compilerOptions: {
         // enable run-time checks when not in production
         dev: !production
       }
@@ -62,6 +65,10 @@ export default {
       dedupe: ['svelte']
     }),
     commonjs(),
+		typescript({
+			sourceMap: !production,
+			inlineSources: !production
+		}),
     json(),
 
     // In dev mode, call `npm run start` once

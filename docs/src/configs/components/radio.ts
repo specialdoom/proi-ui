@@ -1,6 +1,7 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
     property: 'value',
     description: 'Value of radio',
@@ -21,7 +22,7 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
 import { Radio } from 'proi-ui';
 
 let options = [
@@ -38,4 +39,4 @@ let radio = 1;
 {/each}
 <Radio value={4} bind:group={radio} disabled>Forth disabled</Radio>`;
 
-export const config = { title: 'Radio component', data, usage, columns };
+export const config = { title: 'Radio component', tableData, usage, columns };

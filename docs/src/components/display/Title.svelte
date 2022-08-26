@@ -1,5 +1,3 @@
-<script></script>
-
 <div class="title">
   <slot />
 </div>

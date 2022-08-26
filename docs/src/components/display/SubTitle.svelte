@@ -1,5 +1,3 @@
-<script></script>
-
 <div class="sub-title">
   <span>#</span>
   <slot />

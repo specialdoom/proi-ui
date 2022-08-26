@@ -6,7 +6,8 @@
     "dev:rollup": "rollup -c -w",
     "dev:routify": "routify",
     "build": "routify -b --&& rollup -c",
-    "start": "sirv public --single"
+    "start": "sirv public --single",
+    "validate": "svelte-check"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^16.0.0",
@@ -20,7 +21,13 @@
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
-    "svelte": "^3.49.0"
+    "svelte": "^3.49.0",
+    "svelte-check": "^1.0.0",
+    "svelte-preprocess": "^4.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "typescript": "^3.9.3",
+    "tslib": "^2.0.0",
+    "@tsconfig/svelte": "^1.0.0"
   },
   "dependencies": {
     "sirv-cli": "^1.0.0",

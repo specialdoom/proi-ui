@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Avatar } from '.../../../../src';
   import { config } from '../../configs/components/avatar';
   import Docs from '../../components/Docs.svelte';

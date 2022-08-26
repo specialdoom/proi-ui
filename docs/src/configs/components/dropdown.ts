@@ -1,6 +1,7 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
     property: 'selected',
     description: 'Current selected value',
@@ -39,7 +40,7 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
 import {Dropdown} from 'proi-ui';
 
 let options = ["First option", "Second option", "Third option"];
@@ -57,4 +58,4 @@ let defaultSelectedOption = 'First option';
 <Dropdown title="Disabled" disabled />
 `;
 
-export const config = { title: 'Dropdown component', usage, data, columns };
+export const config = { title: 'Dropdown component', usage, tableData, columns };

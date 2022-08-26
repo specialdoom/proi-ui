@@ -1,7 +1,7 @@
 <script lang="ts">
-  export let value: string = null;
+  export let value: number = null;
   export let disabled: boolean = false;
-  export let group: string = null;
+  export let group: number = null;
 </script>
 
 <label class="sd-radio-container" class:sd-disabled={disabled}>

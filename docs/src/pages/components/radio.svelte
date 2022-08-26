@@ -1,14 +1,15 @@
-<script>
+<script lang="ts">
   import { config } from '../../configs/components/radio';
   import Docs from '../../components/Docs.svelte';
   import { Radio } from '../../../../src';
+  import type { RadioOption } from './components.types';
 
-  let options = [
+  let options: RadioOption[] = [
     { text: 'First', value: 1 },
     { text: 'Second', value: 2 },
     { text: 'Third', value: 3 }
   ];
-  let radio = 4;
+  let radio: number = 4;
 </script>
 
 <Docs {config}>

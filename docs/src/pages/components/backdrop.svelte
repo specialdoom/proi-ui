@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
   import { Backdrop, Button, Tag } from '.../../../../src';
   import { config } from '../../configs/components/backdrop';
   import Docs from '../../components/Docs.svelte';
 
-  let backdrop = false;
+  let backdrop: boolean = false;
 
   function toggleBackdrop() {
     backdrop = !backdrop;

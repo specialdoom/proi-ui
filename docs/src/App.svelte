@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { ToastProvider } from '../../src';
   import { Router } from '@roxi/routify';
   import { routes } from '../.routify/routes';

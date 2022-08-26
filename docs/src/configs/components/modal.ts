@@ -1,6 +1,7 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
     property: 'visible',
     description: 'Whether the modal is visible',
@@ -36,4 +37,4 @@ function toggle() {
 </Modal>
 `;
 
-export const config = { title: 'Modal component', data, usage, columns };
+export const config = { title: 'Modal component', tableData, usage, columns };

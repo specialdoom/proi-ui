@@ -1,6 +1,7 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
     property: 'title',
     description: 'Title of the avatar',
@@ -27,7 +28,7 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
  import { Avatar } from 'proi-ui';
 </script>;
 
@@ -39,4 +40,4 @@ export const usage = `<script>
 />
 `;
 
-export const config = { title: 'Avatar component', columns, data, usage };
+export const config = { title: 'Avatar component', columns, tableData, usage };

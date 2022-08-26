@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { metatags, url } from '@roxi/routify';
   import Highlight from '../components/Highlight.svelte';
   import pkg from '../../../package.json';
@@ -11,7 +11,7 @@
     <img alt="logo" src={$url('/logo.png')} />
     <figcaption>proi-ui docs ( v{pkg.version} )</figcaption>
   </figure>
-  <Highlight code="{`npm i @specialdoom/proi-ui`}" />
+  <Highlight code={`npm i @specialdoom/proi-ui`} />
   <div class="social-media-container">
     <a href="https://github.com/specialdoom/proi-ui">
       <img src={$url('/github.png')} alt="github icon" />

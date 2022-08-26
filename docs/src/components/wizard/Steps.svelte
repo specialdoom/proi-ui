@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
   import { step } from './store';
   import { Icon } from '../../../../icons/src';
+  import type { StepDetail } from './step.types';
 
-  export let stepsDetails = [];
+  export let stepsDetails: StepDetail[] = [];
 
   const nextStep = () => {
     if ($step !== stepsDetails.length - 1) $step += 1;
@@ -17,7 +18,7 @@
 
 <div class="steps">
   <div class="center action" on:click={prevStep}>
-    <Icon type="arrowLeft" color="var(--sd-primary)" />
+    <Icon variant="arrowLeft" color="var(--sd-primary)" />
   </div>
   {#each stepsDetails as detail, index}
     <div class="step center">
@@ -32,11 +33,11 @@
     </div>
   {/each}
   <div class="center action" on:click={nextStep}>
-    <Icon type="arrowRight" color="var(--sd-primary)" />
+    <Icon variant="arrowRight" color="var(--sd-primary)" />
   </div>
 </div>
 <div class="slot">
-	<slot />
+  <slot />
 </div>
 
 <style>
@@ -47,9 +48,9 @@
     min-width: 200px;
   }
 
-	.slot {
-		padding: 10px 20px;
-	}
+  .slot {
+    padding: 10px 20px;
+  }
 
   .center {
     display: flex;

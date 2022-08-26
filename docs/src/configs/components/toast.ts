@@ -1,6 +1,7 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
     property: 'ToastProvider',
     description: 'Component to add in the main app component',
@@ -18,7 +19,7 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
 import { toaster, Button } from 'proi-ui';
 
 // assuming you added ToasterProvider to main app component
@@ -37,4 +38,4 @@ function notify(type) {
 <Button on:click={() => toaster.info('Toast message')}>Info method</Button>
 <Button on:click={() => toaster.warning('Toast message')}>Warning method</Button>`;
 
-export const config = { title: 'Toast component', data, usage, columns };
+export const config = { title: 'Toast component', tableData, usage, columns };

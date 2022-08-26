@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Input } from '../../../../src';
   import { config } from '../../configs/components/input';
   import Docs from '../../components/Docs.svelte';

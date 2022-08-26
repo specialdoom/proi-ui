@@ -1,6 +1,7 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
     property: 'color',
     description: 'Color of the tag',
@@ -21,7 +22,7 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
 import { Tag } from 'proi-ui';
 </script>
 
@@ -29,4 +30,4 @@ import { Tag } from 'proi-ui';
 <Tag outlined>Tag</Tag>
 `;
 
-export const config = { title: 'Tag component', usage, data, columns };
+export const config = { title: 'Tag component', usage, tableData, columns };

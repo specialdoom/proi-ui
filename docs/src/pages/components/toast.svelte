@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
   import { config } from '../../configs/components/toast';
   import Docs from '../../components/Docs.svelte';
   import { toaster, Button } from '../../../../src';
+  import type { SliceVariant } from '../../../../src/components/toast/toast.types';
 
-  function notify(type) {
-    toaster.send({ message: 'Toast message', type });
+  function notify(variant: SliceVariant) {
+    toaster.send({ message: 'Toast message', variant });
   }
 </script>
 

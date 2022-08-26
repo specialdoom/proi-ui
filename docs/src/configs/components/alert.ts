@@ -1,9 +1,10 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
-    property: 'type',
-    description: `Types of alert. <br />
+    property: 'variant',
+    description: `Variant of alert. <br />
     Options: <code>success</code>, <code>info</code>, <code>warning</code>, <code>error</code>`,
     type: '<code>string</code>',
     default: `<code>success</code>`
@@ -28,14 +29,14 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
  import { Alert } from 'proi-ui';
 </script>;
 
 <Alert>Success alert message</Alert>
-<Alert type="error">Error alert message</Alert>
-<Alert type="info" outlined>Info alert message</Alert>
-<Alert type="warning" closable>Closable alert warning message</Alert>
+<Alert variant="error">Error alert message</Alert>
+<Alert variant="info" outlined>Info alert message</Alert>
+<Alert variant="warning" closable>Closable alert warning message</Alert>
 `;
 
-export const config = { title: 'Alert component', columns, data, usage };
+export const config = { title: 'Alert component', columns, tableData, usage };

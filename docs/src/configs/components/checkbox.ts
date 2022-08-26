@@ -1,6 +1,7 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
     property: 'checked',
     description: `Whether the checkbox it's checked`,
@@ -21,7 +22,7 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
 import { Checkbox } from 'proi-ui'
 
 let checked = false;
@@ -32,4 +33,4 @@ let checked = false;
 <Checkbox checked={false} disabled>Unchecked disabled</Checkbox>
 `;
 
-export const config = { title: 'Checkbox component', usage, data, columns };
+export const config = { title: 'Checkbox component', usage, tableData, columns };

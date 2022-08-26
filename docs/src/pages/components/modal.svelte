@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
   import { Modal, ModalBody, ModalActions, Button } from '../../../../src';
   import { config } from '../../configs/components/modal';
   import Docs from '../../components/Docs.svelte';
 
-  let isModalVisible = false;
+  let isModalVisible: boolean = false;
 
   function toggle() {
     isModalVisible = !isModalVisible;
@@ -16,7 +16,7 @@
     <ModalBody>Are you sure you want to continue?</ModalBody>
     <ModalActions>
       <Button small outlined>Yes</Button>
-      <Button small type="secondary">No</Button>
+      <Button small variant="secondary">No</Button>
     </ModalActions>
   </Modal>
 </Docs>

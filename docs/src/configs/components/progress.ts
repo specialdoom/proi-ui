@@ -1,6 +1,7 @@
+import type { TableData } from '../config.types.js';
 import { columns } from '../shared/columns.js';
 
-export const data = [
+export const tableData: TableData[] = [
   {
     property: 'percent',
     description: 'Progress percent',
@@ -27,7 +28,7 @@ export const data = [
   }
 ];
 
-export const usage = `<script>
+export const usage: string = `<script>
 import { Progress, Button } from 'proi-ui';
 
 let percent = 67;
@@ -54,4 +55,4 @@ function toggleSuccess() {
 <Button small on:click={toggleSuccess}>Success</Button>
 `;
 
-export const config = { title: 'Progress component', data, usage, columns };
+export const config = { title: 'Progress component', tableData, usage, columns };

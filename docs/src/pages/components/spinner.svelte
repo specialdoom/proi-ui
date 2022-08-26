@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { config } from '../../configs/components/spinner';
   import Docs from '../../components/Docs.svelte';
   import { Spinner } from '../../../../src';
