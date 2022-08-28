@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let className: string = null;
+  export let className: string = "";
 </script>
 
 <div class="sd-modal-body {className}">

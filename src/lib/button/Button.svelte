@@ -1,10 +1,10 @@
 <script lang="ts">
-  import type { ButtonVariant } from './button.types';
-  export let variant: ButtonVariant = 'primary';
+  import type { ButtonVariant } from "./button.types.js";
+  export let variant: ButtonVariant = "primary";
   export let outlined: boolean = false;
   export let disabled: boolean = false;
   export let small: boolean = false;
-  export let className: string = null;
+  export let className: string = "";
 
   $: outlinedClass = outlined
     ? `sd-button-outline sd-outline-${variant}`

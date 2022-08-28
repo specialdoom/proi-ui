@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import type { InputVariant } from './input.types';
+  import { onMount } from "svelte";
+  import type { InputVariant } from "./input.types.js";
 
-  export let variant: InputVariant = 'text';
-  export let placeholder: string = '';
-  export let value: string = '';
-  export let label: string = '';
-  export let error: string = '';
+  export let variant: InputVariant = "text";
+  export let placeholder: string = "";
+  export let value: string = "";
+  export let label: string = "";
+  export let error: string = "";
   export let disabled: boolean = false;
-  export let className: string = null;
+  export let className: string = "";
 
   let element: HTMLInputElement;
 

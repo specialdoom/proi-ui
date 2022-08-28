@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Icon from "../icons/Icon.svelte";
   import { clickOutside } from "../utils/clickOutside.js";
 
   export let options: string[] = [];
@@ -33,7 +34,13 @@
 >
   <div on:click={toggleOptions} class="sd-dropdown {className}" class:disabled>
     <span class="sd-dropdown-title">{selected ? selected : title}</span>
-    <span class="sd-dropdown-icon"> ^ </span>
+    <span class="sd-dropdown-icon">
+      <Icon
+        variant={toggle ? "arrowUp" : "arrowDown"}
+        scale={15}
+        color={disabled ? "grey" : ""}
+      />
+    </span>
   </div>
   <ul class="sd-dropdown-options {listClassName}" class:sd-no-display={!toggle}>
     {#each options as option, i}

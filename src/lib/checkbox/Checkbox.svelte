@@ -1,11 +1,11 @@
 <script lang="ts">
-  export let checked: boolean = null;
+  export let checked: boolean = false;
   export let disabled: boolean = false;
-  export let className: string = null;
+  export let className: string = "";
 
   $: checkboxDisabledClass = disabled
-    ? 'sd-checkbox-square-disabled'
-    : 'sd-checkbox-square';
+    ? "sd-checkbox-square-disabled"
+    : "sd-checkbox-square";
 </script>
 
 <label class="sd-checkbox-container {className}" class:sd-disabled={disabled}>
@@ -55,7 +55,7 @@
   }
 
   .sd-checkbox-checkmark:after {
-    content: '';
+    content: "";
     position: absolute;
     display: none;
   }

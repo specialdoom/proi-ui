@@ -1,7 +1,7 @@
 <script lang="ts">
-  export let value: number = null;
+  export let value: number;
   export let disabled: boolean = false;
-  export let group: number = null;
+  export let group: number;
 </script>
 
 <label class="sd-radio-container" class:sd-disabled={disabled}>
@@ -57,7 +57,7 @@
   }
 
   .sd-radio-bullet:after {
-    content: '';
+    content: "";
     position: absolute;
     display: none;
   }
