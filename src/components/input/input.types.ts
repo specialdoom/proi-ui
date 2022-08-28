@@ -1,1 +1,0 @@
-export type InputVariant = 'text' | 'password';
