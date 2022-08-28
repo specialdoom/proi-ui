@@ -8,7 +8,7 @@
     closed = true;
   };
 
-  $: toastTypeClass = `sd-toast-${toast.type ? toast.type : "info"}`;
+  $: toastTypeClass = `sd-toast-${toast.variant ? toast.variant : "info"}`;
   $: toastPositionClass = `sd-toast-${toast.position}`;
 </script>
 
