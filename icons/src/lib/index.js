@@ -1,1 +1,1 @@
-export { default as Icon } from './components/Icon.svelte';
+export { default as Icon } from './Icon.svelte';
