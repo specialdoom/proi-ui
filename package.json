@@ -1,0 +1,45 @@
+{
+	"name": "@specialdoom/proi-ui",
+	"version": "0.0.0",
+	"description": "yet another Svelte UI lib",
+	"keywords": [
+		"svelte",
+		"ui",
+		"svelte ui library",
+		"components",
+		"svelte3"
+	],
+	"author": "Bogdan Bledea <bledea.bogdan97@gmail.com> (https://github.com/specialdoom)",
+	"repository": "git://github.com/specialdoom/proi-ui",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org"
+	},
+	"homepage": "https://specialdoom.github.io/proi-ui/",
+	"bugs": {
+		"url": "https://github.com/specialdoom/proi-ui/issues"
+	},
+	"scripts": {
+		"dev": "vite dev",
+		"build": "svelte-kit sync && svelte-package",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "eslint .",
+		"dev:pack": "npm run build && cd package && npm pack"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"@sveltejs/package": "next",
+		"@typescript-eslint/eslint-plugin": "^5.27.0",
+		"@typescript-eslint/parser": "^5.27.0",
+		"eslint": "^8.16.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.7.1",
+		"svelte-preprocess": "^4.10.6",
+		"tslib": "^2.3.1",
+		"typescript": "^4.7.4",
+		"vite": "^3.0.0"
+	},
+	"type": "module"
+}
