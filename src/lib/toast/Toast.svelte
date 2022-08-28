@@ -15,7 +15,7 @@
 {#if !closed}
   <div class="sd-toast {toastTypeClass} {toastPositionClass}">
     <div class="sd-toast-title">
-      {toast.type ? toast.type.name : ""}
+      New toast
       <span class="sd-toast-close" on:click={close}>
         <Icon variant="circleClose" scale={15} />
       </span>
