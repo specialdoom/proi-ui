@@ -28,7 +28,7 @@ export const data = [
 ];
 
 export const usage = `<script>
-import { Backdrop, Button, Tag } from 'proi-ui';
+import { Backdrop } from '@specialdoom/proi-ui';
 let backdrop = false;
 
 function toggleBackdrop() {

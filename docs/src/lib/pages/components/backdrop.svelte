@@ -1,6 +1,6 @@
 <script>
   import { Backdrop, Button, Tag } from '@specialdoom/proi-ui';
-  import { config } from '../../configs/components/backdrop';
+  import { config } from '../../configs/components/backdrop.js';
   import Docs from '../../components/Docs.svelte';
 
   let backdrop = false;

@@ -11,9 +11,9 @@
 <Container>
   <Title>{config.title}</Title>
   <SubTitle href="#output">Output</SubTitle>
-  <div>
-    <slot />
-  </div>
+  <br />
+  <slot />
+  <br />
   <SubTitle href="#usage">Usage</SubTitle>
   <Highlight code={config.usage} />
   <SubTitle href="#api">API</SubTitle>

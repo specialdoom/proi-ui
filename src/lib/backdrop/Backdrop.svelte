@@ -1,12 +1,12 @@
 <script lang="ts">
-  export let className: string = "";
+  export let className: string = '';
   export let visible: boolean = false;
 </script>
 
 <div
-  class="sd-backdrop {className}"
-  class:sd-backdrop-visible={visible}
-  class:sd-backdrop-not-visible={!visible}
+  class="proi-backdrop {className}"
+  class:proi-backdrop-visible={visible}
+  class:proi-backdrop-not-visible={!visible}
   on:click
 >
   <div>
@@ -15,7 +15,7 @@
 </div>
 
 <style>
-  .sd-backdrop {
+  .proi-backdrop {
     top: 0;
     left: 0;
     right: 0;
@@ -29,16 +29,15 @@
     -webkit-tap-highlight-color: transparent;
     color: #fff;
     z-index: 1201;
-  }
-
-  .sd-backdrop-visible {
-    opacity: 1;
     transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
 
-  .sd-backdrop-not-visible {
+  .proi-backdrop-visible {
+    opacity: 1;
+  }
+
+  .proi-backdrop-not-visible {
     opacity: 0;
-    transition: opacity 195ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     visibility: hidden;
   }
 </style>

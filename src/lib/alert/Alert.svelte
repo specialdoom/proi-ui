@@ -49,11 +49,13 @@
 
 <style>
   .proi-alert-container {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 8px;
     border-radius: 8px;
     padding: 14px;
+    width: 100%;
   }
 
   .proi-alert {
@@ -65,7 +67,6 @@
 
   .proi-alert-description {
     color: var(--n800);
-    padding: 0 0 0 30px;
   }
 
   .proi-alert-text {

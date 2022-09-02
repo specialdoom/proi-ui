@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
-import { Backdrop, Tag, Button } from 'proi-ui';
+import { Backdrop, Tag, Button } from '@specialdoom/proi-ui';
 
 let backdrop = false;
 let customizedBackdrop = false;
