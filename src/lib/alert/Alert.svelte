@@ -1,38 +1,29 @@
 <script lang="ts">
-  import Icon from "../icons/Icon.svelte";
-  import type { AlertVariant } from "./alert.types.js";
-  import { icons } from "./icons.js";
+  import CheckIcon from '$lib/icons/CheckIcon.svelte';
+  import CloseIcon from '$lib/icons/CloseIcon.svelte';
+  import type { AlertVariant } from './alert.types.js';
 
-  export let className: string = "";
-  export let variant: AlertVariant = "success";
+  export let className: string = '';
+  export let variant: AlertVariant = 'success';
+  console.log(variant);
   export let closable: boolean = false;
-  export let outlined: boolean = false;
 
   let closed = false;
-  const outlinedClass = outlined
-    ? `sd-alert-outlined sd-alert-outlined-${variant}`
-    : `sd-alert-${variant}`;
 
-  $: icon = icons.filter((item) => item.variant == variant)[0];
-
-  const close = () => {
-    closed = true;
-  };
-  variant;
+  const close = () => (closed = true);
 </script>
 
 {#if !closed}
-  <div class="sd-alert {outlinedClass} {className}">
+  <div class="sd-alert {variant} {className}">
     <div class="sd-alert-icon">
-      <Icon variant={icon.iconType} color={icon.color} scale={15} />
+      <CheckIcon />
     </div>
     <div class="sd-alert-text">
       <slot>Default text</slot>
     </div>
-
-    {#if closable}iconVariant
+    {#if closable}
       <div class="sd-alert-close-icon" on:click={close}>
-        <Icon variant="circleClose" scale={15} />
+        <CloseIcon />
       </div>
     {/if}
   </div>
@@ -42,78 +33,50 @@
   .sd-alert {
     display: flex;
     align-items: center;
-    padding: 6px 16px;
-    font-size: 16px;
-    border-radius: 50px;
-    font-weight: 300;
-    line-height: 1;
-    border-radius: 4px;
-    margin: 5px 0;
+    padding: 14px;
+    gap: 10px;
+    border-radius: 8px;
+    height: 48px;
+    box-sizing: border-box;
   }
 
   .sd-alert-text {
-    padding: 8px 0;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 300;
   }
 
   .sd-alert-close-icon {
+    cursor: pointer;
     display: flex;
     align-items: center;
     margin-left: auto;
-    padding-left: 16px;
     opacity: 0.5;
-  }
-
-  .sd-alert-close-text {
-    cursor: pointer;
-    font-weight: 400;
   }
 
   .sd-alert-icon {
     display: flex;
     align-items: center;
-    margin-right: 12px;
   }
 
-  .sd-alert-outlined {
-    background: transparent;
+  .success {
+    background: var(--g200);
+    color: var(--g800);
   }
 
-  .sd-alert-success {
-    background: var(--sd-success);
-    border: 1px solid var(--sd-success-dark);
+  .error {
+    background: var(--r0);
+    color: var(--r800);
   }
 
-  .sd-alert-outlined-success {
-    border: 1px solid var(--sd-success-dark);
+  .info {
+    background: var(--b0);
+    color: var(--b800);
   }
 
-  .sd-alert-error {
-    background: var(--sd-error);
-    color: white;
-    border: 1px solid var(--sd-error-dark);
-  }
-
-  .sd-alert-outlined-error {
-    color: black;
-    border: 1px solid var(--sd-error-dark);
-  }
-
-  .sd-alert-info {
-    background: var(--sd-info);
-    border: 1px solid var(--sd-info-dark);
-  }
-
-  .sd-alert-outlined-info {
-    border: 1px solid var(--sd-info-dark);
-  }
-
-  .sd-alert-warning {
-    background: var(--sd-warning);
-    border: 1px solid var(--sd-warning-dark);
-  }
-
-  .sd-alert-outlined-warning {
-    border: 1px solid var(--sd-warning-dark);
+  .warning {
+    background: var(--y0);
+    color: var(--y800);
   }
 
   .sd-alert-close-icon:hover {

@@ -6,5 +6,10 @@ export default defineConfig({
   plugins: [svelte()],
   optimizeDeps: {
     include: ["highlight.js", "highlight.js/lib/core"],
+  },
+  server: {
+    fs: {
+      allow: ['..']
+    }
   }
 })
