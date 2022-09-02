@@ -13,7 +13,10 @@
 		"outDir": "package",
 	},
 	"exclude": [
-		"packages"
+		"package",
+		"docs",
+		"node_modules",
+		"icons"
 	],
 	"include": [
 		".d.ts"

@@ -8,23 +8,19 @@
 
 ```sveltehtml
 <script>
-<script>
- import {Avatar} from 'proi-ui';
+ import {Avatar} from '@specialdoom/proi-ui';
 </script>;
 
-<Avatar title="Proi Ui" description="Library" />
-<Avatar
-  title="specialdoom"
-  description="creator"
-  image="https://avatars.githubusercontent.com/u/41910815?v=4"
-/>
+<Avatar initials="PI" />
+<Avatar image="https://avatars.githubusercontent.com/u/41910815?v=4" />
+<Avatar.Leo />
 ```
 
 ### API
 
 | Property    | Description                                                           | Type   | Default |
 | ----------- | --------------------------------------------------------------------- | ------ | ------- |
-| title       | Title of the avatar                                                   | string | ''      |
-| description | Short description of the avatar                                       | string | ''      |
-| image       | Source of avatar image                                                | string | ''      |
-| className   | Class name for avatar container. Avatar component uses the `.sd-avatar` | string | `null`  |
+| initials       | Initials to display                                                   | string | ''      |
+| color | Text color of avatar. Available when `initials` not empty                                       | string | #EFF1F3      |
+| background       | Background color of avatar. Available when `initials` not empty                                                | string | '#357266'      |
+| image   | Image source of avatar | string | ``  |

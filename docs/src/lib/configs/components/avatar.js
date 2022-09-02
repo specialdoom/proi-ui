@@ -2,41 +2,38 @@ import { columns } from '../shared/columns.js';
 
 export const data = [
   {
-    property: 'title',
-    description: 'Title of the avatar',
+    property: 'initials',
+    description: 'Initials to display',
     type: '<code>string</code>',
     default: `<code>''</code>`
   },
   {
-    property: 'description',
-    description: 'Short description of the avatar',
+    property: 'color',
+    description: 'Text color of avatar. Available when <code>initials</code> not empty',
     type: '<code>string</code>',
-    default: `<code>''</code>`
+    default: `<code>'#EFF1F3'</code>`
+  },
+  {
+    property: 'background',
+    description: 'Background color of avatar. Available when <code>initials</code> not empty',
+    type: '<code>string</code>',
+    default: `<code>'#357266'</code>`
   },
   {
     property: 'image',
-    description: 'Source of avatar image',
+    description: 'Image source of avatar',
     type: '<code>string</code>',
     default: `<code>''</code>`
-  },
-  {
-    property: 'className',
-    description: `Class name for avatar container. <br /> Avatar component uses the <code>.sd-avatar</code>`,
-    type: '<code>string</code>',
-    default: '<code>null</code>'
   }
 ];
 
 export const usage = `<script>
- import { Avatar } from 'proi-ui';
+ import { Avatar } from '@specialdoom/proi-ui';
 </script>;
 
-<Avatar title="Proi Ui" description="Library" />
+<Avatar initials="PI" />
 <Avatar image="https://avatars.githubusercontent.com/u/41910815?v=4" />
-<Avatar
-  title="specialdoom"
-  image="https://avatars.githubusercontent.com/u/41910815?v=4"
-/>
+<Avatar.Leo />
 `;
 
 export const config = { title: 'Avatar component', columns, data, usage };

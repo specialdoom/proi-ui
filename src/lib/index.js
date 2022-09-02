@@ -1,4 +1,5 @@
-import Avatar from './avatar/Avatar.svelte';
+import AvatarComponent from './avatar/Avatar.svelte';
+import Leo from './avatar/Leo.svelte';
 import Alert from './alert/Alert.svelte';
 import Backdrop from './backdrop/Backdrop.svelte';
 import Checkbox from './checkbox/Checkbox.svelte';
@@ -12,6 +13,10 @@ import Spinner from './spinner/Spinner.svelte';
 import Tag from './tag/Tag.svelte';
 import * as toaster from './toast/toaster';
 import ToastProvider from './toast/ToastProvider.svelte';
+
+const Avatar = Object.assign(AvatarComponent, {
+    Leo
+});
 
 export {
     Avatar,

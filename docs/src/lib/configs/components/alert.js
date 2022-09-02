@@ -9,12 +9,6 @@ export const data = [
     default: `<code>success</code>`
   },
   {
-    property: 'outlined',
-    description: 'Whether the alert is outlined',
-    type: '<code>boolean</code>',
-    default: '<code>false</code>'
-  },
-  {
     property: 'closable',
     description: 'Whether the alert can be closed',
     type: '<code>boolean</code>',
@@ -22,7 +16,7 @@ export const data = [
   },
   {
     property: 'className',
-    description: `Class name for alert container. <br />Alert component uses the <code>.sd-alert</code> class`,
+    description: `Class name for alert container. <br />Alert component uses the <code>.proi-alert-container</code> class`,
     type: '<code>boolean</code>',
     default: '<code>null</code>'
   }
@@ -32,10 +26,9 @@ export const usage = `<script>
  import { Alert } from 'proi-ui';
 </script>;
 
-<Alert>Success alert message</Alert>
-<Alert type="error">Error alert message</Alert>
-<Alert type="info" outlined>Info alert message</Alert>
-<Alert type="warning" closable>Closable alert warning message</Alert>
+<Alert title="Alert title">Default variant alert description</Alert>
+<Alert type="error">Error variant alert with default title</Alert>
+<Alert type="warning" closable>Closable warning variant alert with default title</Alert>
 `;
 
 export const config = { title: 'Alert component', columns, data, usage };

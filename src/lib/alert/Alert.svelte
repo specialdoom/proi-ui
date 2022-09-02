@@ -8,7 +8,7 @@
 
   export let className: string = '';
   export let variant: AlertVariant = 'success';
-  console.log(variant);
+  export let title: string = 'Alert';
   export let closable: boolean = false;
 
   const icons = {
@@ -19,44 +19,62 @@
   };
 
   let closed = false;
+  console.log($$slots);
 
   const close = () => (closed = true);
 </script>
 
 {#if !closed}
-  <div class="sd-alert {variant} {className}">
-    <div class="sd-alert-icon">
-      <svelte:component this={icons[variant]} />
+  <div class="proi-alert-container {variant}">
+    <div class="proi-alert {className}">
+      <div class="proi-alert-icon">
+        <svelte:component this={icons[variant]} />
+      </div>
+      <div class="proi-alert-text">
+        {title}
+      </div>
+      {#if closable}
+        <div class="proi-alert-close-icon" on:click={close}>
+          <CloseIcon />
+        </div>
+      {/if}
     </div>
-    <div class="sd-alert-text">
-      <slot>Default text</slot>
-    </div>
-    {#if closable}
-      <div class="sd-alert-close-icon" on:click={close}>
-        <CloseIcon />
+    {#if $$slots.default}
+      <div class="proi-alert-description">
+        <slot />
       </div>
     {/if}
   </div>
 {/if}
 
 <style>
-  .sd-alert {
+  .proi-alert-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 8px;
+    padding: 14px;
+  }
+
+  .proi-alert {
     display: flex;
     align-items: center;
-    padding: 14px;
     gap: 10px;
-    border-radius: 8px;
-    height: 48px;
     box-sizing: border-box;
   }
 
-  .sd-alert-text {
+  .proi-alert-description {
+    color: var(--n800);
+    padding: 0 0 0 30px;
+  }
+
+  .proi-alert-text {
     line-height: 20px;
     font-size: 14px;
     font-weight: 300;
   }
 
-  .sd-alert-close-icon {
+  .proi-alert-close-icon {
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -64,7 +82,7 @@
     opacity: 0.5;
   }
 
-  .sd-alert-icon {
+  .proi-alert-icon {
     display: flex;
     align-items: center;
   }
@@ -89,7 +107,7 @@
     color: var(--y800);
   }
 
-  .sd-alert-close-icon:hover {
+  .proi-alert-close-icon:hover {
     opacity: 1;
   }
 </style>

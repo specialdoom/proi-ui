@@ -1,13 +1,15 @@
-<script></script>
+<script>
+  export let href = '';
+</script>
 
-<div class="sub-title">
-  <span>#</span>
+<a class="sub-title" {href}>
+  <span id={href.slice(1)}>#</span>
   <slot />
-</div>
+</a>
 
 <style>
   .sub-title {
-    font-weight: 100;
+    text-decoration: none;
     font-size: 18px;
     margin: 10px 0px;
   }

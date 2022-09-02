@@ -8,13 +8,12 @@
 
 ```sveltehtml
 <script>
- import {Alert} from 'proi-ui';
+ import { Alert } from '@specialdoom/proi-ui';
 </script>;
 
-<Alert>Success alert message</Alert>
-<Alert variant="error">Error alert message</Alert>
-<Alert variant="info" outlined>Info alert message</Alert>
-<Alert variant="warning" closable>Closable alert warning message</Alert>
+<Alert title="Alert title">Default variant alert description</Alert>
+<Alert type="error">Error variant alert with default title</Alert>
+<Alert type="warning" closable>Closable warning variant alert with default title</Alert>
 ```
 
 ### API
