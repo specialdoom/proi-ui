@@ -1,12 +1,22 @@
 <script lang="ts">
   import CheckIcon from '$lib/icons/CheckIcon.svelte';
   import CloseIcon from '$lib/icons/CloseIcon.svelte';
+  import InfoIcon from '$lib/icons/InfoIcon.svelte';
+  import WarningIcon from '$lib/icons/WarningIcon.svelte';
+  import StopIcon from '$lib/icons/StopIcon.svelte';
   import type { AlertVariant } from './alert.types.js';
 
   export let className: string = '';
   export let variant: AlertVariant = 'success';
   console.log(variant);
   export let closable: boolean = false;
+
+  const icons = {
+    success: CheckIcon,
+    error: StopIcon,
+    info: InfoIcon,
+    warning: WarningIcon
+  };
 
   let closed = false;
 
@@ -16,7 +26,7 @@
 {#if !closed}
   <div class="sd-alert {variant} {className}">
     <div class="sd-alert-icon">
-      <CheckIcon />
+      <svelte:component this={icons[variant]} />
     </div>
     <div class="sd-alert-text">
       <slot>Default text</slot>
