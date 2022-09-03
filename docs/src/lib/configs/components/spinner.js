@@ -16,11 +16,11 @@ export const data = [
 ];
 
 export const usage = `<script>
-import { Spinner } from 'proi-ui';
+import { Spinner } from '@specialdoom/proi-ui';
 </script>
 
-<Spinner small />
 <Spinner />
-<Spinner label="Loading..." />`;
+<Spinner label="Custom label..."/>
+<Spinner label="A quite long label for this spinner, but who cares?"/>`;
 
 export const config = { title: 'Spinner component', data, usage, columns };

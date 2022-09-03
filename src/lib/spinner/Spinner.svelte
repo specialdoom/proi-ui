@@ -1,27 +1,27 @@
 <script lang="ts">
-  import Logo from './Logo.svelte';
+  import Logo from "./Logo.svelte";
 
-  export let label: string = '';
-  export let small: boolean = false;
+  export let label: string = "";
 </script>
 
-<span class="sd-spinner-container">
-  <Logo {small} />
-  {#if label && !small}
+<div class="sd-spinner-container">
+  <Logo />
+  {#if label}
     {label}
   {/if}
-</span>
+</div>
 
 <style>
   .sd-spinner-container {
     display: flex;
+    height: fit-content;
     max-width: 150px;
     word-wrap: break-word;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-weight: 100;
-    font-size: 12px;
+    font-size: 14px;
+    gap: 4px;
   }
 </style>

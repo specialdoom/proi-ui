@@ -14,7 +14,7 @@
     { text: 'Alert', path: './alert' },
     { text: 'Tag', path: './tag' },
     { text: 'Backdrop', path: './backdrop' },
-    { text: 'Modal', path: './modal' },
+    { text: 'Dialog', path: './dialog' },
     { text: 'Progress', path: './progress' },
     { text: 'Spinner', path: './spinner' },
     { text: 'Avatar', path: './avatar' },

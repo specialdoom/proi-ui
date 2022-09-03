@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Fri Sep 02 2022 10:17:08 GMT+0300 (Eastern European Summer Time)
+ * File generated Sat Sep 03 2022 13:21:57 GMT+0300 (Eastern European Summer Time)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2022-09-02T07:17:08.830Z"
+export const __timestamp = "2022-09-03T10:21:57.345Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -16,10 +16,10 @@ import _components_avatar from '../src/lib/pages/components/avatar.svelte'
 import _components_backdrop from '../src/lib/pages/components/backdrop.svelte'
 import _components_button from '../src/lib/pages/components/button.svelte'
 import _components_checkbox from '../src/lib/pages/components/checkbox.svelte'
+import _components_dialog from '../src/lib/pages/components/dialog.svelte'
 import _components_dropdown from '../src/lib/pages/components/dropdown.svelte'
 import _components_index from '../src/lib/pages/components/index.svelte'
 import _components_input from '../src/lib/pages/components/input.svelte'
-import _components_modal from '../src/lib/pages/components/modal.svelte'
 import _components_progress from '../src/lib/pages/components/progress.svelte'
 import _components_radio from '../src/lib/pages/components/radio.svelte'
 import _components_spinner from '../src/lib/pages/components/spinner.svelte'
@@ -40,7 +40,7 @@ export const _tree = {
   "filepath": "/_layout.svelte",
   "root": true,
   "ownMeta": {},
-  "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/_layout.svelte",
+  "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/_layout.svelte",
   "children": [
     {
       "isFile": true,
@@ -50,7 +50,7 @@ export const _tree = {
       "name": "_layout",
       "ext": "svelte",
       "badExt": false,
-      "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/_layout.svelte",
+      "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/_layout.svelte",
       "children": [
         {
           "isFile": true,
@@ -60,7 +60,7 @@ export const _tree = {
           "name": "alert",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/alert.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/alert.svelte",
           "importPath": "../src/lib/pages/components/alert.svelte",
           "isLayout": false,
           "isReset": false,
@@ -85,7 +85,7 @@ export const _tree = {
           "name": "avatar",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/avatar.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/avatar.svelte",
           "importPath": "../src/lib/pages/components/avatar.svelte",
           "isLayout": false,
           "isReset": false,
@@ -110,7 +110,7 @@ export const _tree = {
           "name": "backdrop",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/backdrop.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/backdrop.svelte",
           "importPath": "../src/lib/pages/components/backdrop.svelte",
           "isLayout": false,
           "isReset": false,
@@ -135,7 +135,7 @@ export const _tree = {
           "name": "button",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/button.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/button.svelte",
           "importPath": "../src/lib/pages/components/button.svelte",
           "isLayout": false,
           "isReset": false,
@@ -160,7 +160,7 @@ export const _tree = {
           "name": "checkbox",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/checkbox.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/checkbox.svelte",
           "importPath": "../src/lib/pages/components/checkbox.svelte",
           "isLayout": false,
           "isReset": false,
@@ -180,12 +180,37 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
+          "file": "dialog.svelte",
+          "filepath": "/components/dialog.svelte",
+          "name": "dialog",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/dialog.svelte",
+          "importPath": "../src/lib/pages/components/dialog.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/components/dialog",
+          "id": "_components_dialog",
+          "component": () => _components_dialog
+        },
+        {
+          "isFile": true,
+          "isDir": false,
           "file": "dropdown.svelte",
           "filepath": "/components/dropdown.svelte",
           "name": "dropdown",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/dropdown.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/dropdown.svelte",
           "importPath": "../src/lib/pages/components/dropdown.svelte",
           "isLayout": false,
           "isReset": false,
@@ -210,7 +235,7 @@ export const _tree = {
           "name": "index",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/index.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/index.svelte",
           "importPath": "../src/lib/pages/components/index.svelte",
           "isLayout": false,
           "isReset": false,
@@ -235,7 +260,7 @@ export const _tree = {
           "name": "input",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/input.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/input.svelte",
           "importPath": "../src/lib/pages/components/input.svelte",
           "isLayout": false,
           "isReset": false,
@@ -255,37 +280,12 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
-          "file": "modal.svelte",
-          "filepath": "/components/modal.svelte",
-          "name": "modal",
-          "ext": "svelte",
-          "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/modal.svelte",
-          "importPath": "../src/lib/pages/components/modal.svelte",
-          "isLayout": false,
-          "isReset": false,
-          "isIndex": false,
-          "isFallback": false,
-          "isPage": true,
-          "ownMeta": {},
-          "meta": {
-            "recursive": true,
-            "preload": false,
-            "prerender": true
-          },
-          "path": "/components/modal",
-          "id": "_components_modal",
-          "component": () => _components_modal
-        },
-        {
-          "isFile": true,
-          "isDir": false,
           "file": "progress.svelte",
           "filepath": "/components/progress.svelte",
           "name": "progress",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/progress.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/progress.svelte",
           "importPath": "../src/lib/pages/components/progress.svelte",
           "isLayout": false,
           "isReset": false,
@@ -310,7 +310,7 @@ export const _tree = {
           "name": "radio",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/radio.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/radio.svelte",
           "importPath": "../src/lib/pages/components/radio.svelte",
           "isLayout": false,
           "isReset": false,
@@ -335,7 +335,7 @@ export const _tree = {
           "name": "spinner",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/spinner.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/spinner.svelte",
           "importPath": "../src/lib/pages/components/spinner.svelte",
           "isLayout": false,
           "isReset": false,
@@ -360,7 +360,7 @@ export const _tree = {
           "name": "tag",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/tag.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/tag.svelte",
           "importPath": "../src/lib/pages/components/tag.svelte",
           "isLayout": false,
           "isReset": false,
@@ -385,7 +385,7 @@ export const _tree = {
           "name": "toast",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/components/toast.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/toast.svelte",
           "importPath": "../src/lib/pages/components/toast.svelte",
           "isLayout": false,
           "isReset": false,
@@ -427,7 +427,7 @@ export const _tree = {
       "name": "getting-started",
       "ext": "",
       "badExt": false,
-      "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/getting-started",
+      "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/getting-started",
       "children": [
         {
           "isFile": true,
@@ -437,7 +437,7 @@ export const _tree = {
           "name": "index",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/getting-started/index.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/getting-started/index.svelte",
           "importPath": "../src/lib/pages/getting-started/index.svelte",
           "isLayout": false,
           "isReset": false,
@@ -476,7 +476,7 @@ export const _tree = {
       "name": "icons",
       "ext": "",
       "badExt": false,
-      "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/icons",
+      "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/icons",
       "children": [
         {
           "isFile": true,
@@ -486,7 +486,7 @@ export const _tree = {
           "name": "index",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/icons/index.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/icons/index.svelte",
           "importPath": "../src/lib/pages/icons/index.svelte",
           "isLayout": false,
           "isReset": false,
@@ -525,7 +525,7 @@ export const _tree = {
       "name": "index",
       "ext": "svelte",
       "badExt": false,
-      "absolutePath": "C:/code/proi-ui/docs/src/lib/pages/index.svelte",
+      "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/index.svelte",
       "importPath": "../src/lib/pages/index.svelte",
       "isLayout": false,
       "isReset": false,
