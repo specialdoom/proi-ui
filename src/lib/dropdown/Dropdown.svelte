@@ -27,7 +27,12 @@
 </script>
 
 <div class="proi-dropdown-container">
-  <div class="dropdown" on:click={() => (toggle = !toggle)} class:error class:toggle>
+  <div
+    class="dropdown"
+    on:click={() => (toggle = !toggle)}
+    class:error
+    class:toggle
+  >
     {currentValue ? currentValue : placeholder}
     {#if toggle}
       <CarretUp />
@@ -88,7 +93,8 @@
     outline: unset;
   }
 
-  div.dropdown:active {
+  div.dropdown:active,
+  div.dropdown:focus {
     outline: 2px solid var(--g200);
   }
 

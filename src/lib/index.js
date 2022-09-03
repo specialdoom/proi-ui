@@ -1,6 +1,9 @@
 import AvatarComponent from './avatar/Avatar.svelte';
 import Dialog from './dialog/Dialog.svelte';
 import Leo from './avatar/Leo.svelte';
+import Lauren from './avatar/Lauren.svelte';
+import Tim from './avatar/Tim.svelte';
+import Nikita from './avatar/Nikita.svelte';
 import Alert from './alert/Alert.svelte';
 import Backdrop from './backdrop/Backdrop.svelte';
 import Checkbox from './checkbox/Checkbox.svelte';
@@ -16,7 +19,10 @@ import ToastProvider from './toast/ToastProvider.svelte';
 import FormItem from './form-item/FormItem.svelte';
 
 const Avatar = Object.assign(AvatarComponent, {
-    Leo
+    Leo,
+    Nikita,
+    Lauren,
+    Tim
 });
 
 export {

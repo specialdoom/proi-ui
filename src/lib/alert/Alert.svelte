@@ -89,7 +89,7 @@
   }
 
   .success {
-    background: var(--g200);
+    background: var(--g0);
     color: var(--g800);
   }
 

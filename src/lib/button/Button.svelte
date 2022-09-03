@@ -69,18 +69,19 @@
 
   .secondary {
     color: var(--n0);
-    background: var(--r600);
+    background: var(--p600);
   }
 
   .secondary:hover {
-    background: var(--r800);
+    background: var(--p800);
   }
 
   .secondary:active {
-    background: var(--r400);
+    background: var(--p400);
   }
 
   .secondary:disabled {
-    background: var(--r200);
+    color: var(--p0);
+    background: var(--p200);
   }
 </style>

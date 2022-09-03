@@ -10,5 +10,8 @@
     <Avatar initials="PI" />
     <Avatar image="https://avatars.githubusercontent.com/u/41910815?v=4" />
     <Avatar.Leo />
+    <Avatar.Nikita />
+    <Avatar.Tim />
+    <Avatar.Lauren />
   </FlexContainer>
 </Docs>
