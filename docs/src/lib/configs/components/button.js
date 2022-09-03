@@ -3,15 +3,9 @@ import { columns } from '../shared/columns.js';
 export const data = [
   {
     property: 'type',
-    description: `Type of button. <br /> Options: <code>primary</code>, <code>secondary</code>, <code>link</code>`,
+    description: `Type of button. <br /> Options: <code>primary</code>, <code>secondary</code>, <code>ghost</code>`,
     type: '<code>string</code>',
     default: `<code>'primary'</code>`
-  },
-  {
-    property: 'outlined',
-    description: 'Whether the button is outlined',
-    type: '<code>boolean</code>',
-    default: '<code>false</code>'
   },
   {
     property: 'disabled',
@@ -20,14 +14,8 @@ export const data = [
     default: '<code>false</code>'
   },
   {
-    property: 'small',
-    description: 'Whether the button is small',
-    type: '<code>boolean</code>',
-    default: '<code>false</code>'
-  },
-  {
     property: 'className',
-    description: 'Class name for button. <br /> Button component uses <code>.sd-button</code>',
+    description: 'Class name for button. <br /> Button component uses <code>.proi-button</code>',
     type: '<code>string</code>',
     default: '<code>null</code>'
   },
@@ -46,17 +34,15 @@ export const data = [
 ];
 
 export const usage = `<script>
- import { Button } from 'proi-ui';
+ import { Button } from '@specialdoom/proi-ui';
 </script>;
 
 <Button>Primary</Button>
-<Button type="secondary">Secondary</Button>
-<Button type="link">Link</Button>
-<Button outlined>Primary outlined</Button>
-<Button small>Primary small</Button>
-<Button type="secondary" outlined small>Secondary small</Button>
-<Button disabled>Disabled</Button>
-<Button type="link" disabled>Link disabled</Button>
+<Button variant="ghost">Ghost</Button>
+<Button variant="secondary">Secondary</Button>
+<Button disabled>Primary</Button>
+<Button variant="ghost" disabled>Ghost</Button>
+<Button variant="secondary" disabled>Secondary</Button>
 `;
 
 export const config = { title: 'Button component', columns, data, usage };

@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
-import { Button } from 'proi-ui'
+import { Button } from '@specialdoom/proi-ui'
 
 function click () {
     console.log('clicked');
@@ -22,10 +22,8 @@ function click () {
 
 | Property  | Description                                                | Type       | Default   |
 | --------- | ---------------------------------------------------------- | ---------- | --------- |
-| variant      | Variant of button. Options: 'primary', 'secondary' and 'link' | string     | 'primary' |
-| outlined  | Whether the button is outlined                             | boolean    | false     |
+| variant      | Variant of button. Options: 'primary', 'secondary' and 'ghost' | string     | 'primary' |
 | disabled  | Whether the button is disabled                             | boolean    | false     |
-| small     | Whether the button is small                                | boolean    | false     |
-| className | Class name for button. Button component uses `.sd-button`  | string     | null      |
+| className | Class name for button. Button component uses `.proi-button`  | string     | null      |
 | --------- | ---------------------------------------------------------- | -------    | --------- |
 | on:click  | Handler of the click event                                 | () => void | -         |

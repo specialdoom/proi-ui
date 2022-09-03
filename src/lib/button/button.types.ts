@@ -1,1 +1,1 @@
-export type ButtonVariant = 'primary' | 'secondary' | 'link';
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost';
