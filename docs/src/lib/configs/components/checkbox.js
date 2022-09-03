@@ -22,7 +22,7 @@ export const data = [
 ];
 
 export const usage = `<script>
-import { Checkbox } from 'proi-ui'
+import { Checkbox } from '@specialdoom/proi-ui'
 
 let checked = false;
 </script>

@@ -10,7 +10,7 @@ You should bind to Checkbox checked attribute.
 
 ```sveltehtml
 <script>
-import { Checkbox } from 'proi-ui'
+import { Checkbox } from '@specialdoom/proi-ui'
 let option = false;
 
 </script>
