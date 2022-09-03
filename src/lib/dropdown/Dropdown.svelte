@@ -1,145 +1,157 @@
 <script lang="ts">
-  import Icon from "../icons/Icon.svelte";
+  import type { DropdownOption } from "./dropdown.types.js";
   import { clickOutside } from "../utils/clickOutside.js";
+  import CarretDown from "../icons/CarretDown.svelte";
+  import CarretUp from "../icons/CarretUp.svelte";
+  import Search from "../icons/Search.svelte";
 
-  export let options: string[] = [];
-  export let title: string = "";
-  export let selected: string = options[0];
-  export let disabled: boolean = false;
-  export let className: string = "";
-  export let listClassName: string = "";
+  export let options: DropdownOption[];
+  export let placeholder: string;
+  export let value: string | number = "";
+  export let error: boolean = false;
 
   let toggle: boolean = false;
+  let allOptions: DropdownOption[] = options;
 
-  const toggleOptions = () => {
-    if (disabled) return;
+  $: currentValue = options.find((o) => o.value === value)?.label;
 
-    toggle = !toggle;
-  };
+  function handleSearch(e: Event) {
+    const searchValue = (e.target as HTMLInputElement).value;
+    options = allOptions.filter((o) => o.label.includes(searchValue));
+  }
 
-  const selectOption = (index: number) => {
-    selected = options[index];
-    toggleOptions();
-  };
-
-  const handleClickOustside = () => {
+  function handleSelectOption(selectedValue: string | number) {
+    value = selectedValue;
     toggle = false;
-  };
+  }
 </script>
 
-<div
-  use:clickOutside
-  on:click_outside={handleClickOustside}
-  class="sd-dropdown-container"
->
-  <div on:click={toggleOptions} class="sd-dropdown {className}" class:disabled>
-    <span class="sd-dropdown-title">{selected ? selected : title}</span>
-    <span class="sd-dropdown-icon">
-      <Icon
-        variant={toggle ? "arrowUp" : "arrowDown"}
-        scale={15}
-        color={disabled ? "grey" : ""}
-      />
-    </span>
+<div class="proi-dropdown-container">
+  <div class="dropdown" on:click={() => (toggle = !toggle)} class:error class:toggle>
+    {currentValue ? currentValue : placeholder}
+    {#if toggle}
+      <CarretUp />
+    {:else}
+      <CarretDown />
+    {/if}
   </div>
-  <ul class="sd-dropdown-options {listClassName}" class:sd-no-display={!toggle}>
-    {#each options as option, i}
-      <li
-        class="sd-dropdown-option"
-        class:sd-dropdown-selected-option={option === selected}
-        on:click={() => selectOption(i)}
-      >
-        {option}
-      </li>
-    {/each}
-  </ul>
+  {#if toggle}
+    <div
+      class="dropdown-options"
+      use:clickOutside
+      on:click_outside={() => (toggle = false)}
+    >
+      <div class="search-option">
+        <Search />
+        <input placeholder="Search option" on:input={handleSearch} />
+      </div>
+      <div class="options">
+        {#each options as option}
+          <div
+            class="option"
+            class:selected={option.value === value}
+            on:click={() => handleSelectOption(option.value)}
+          >
+            {option.label}
+          </div>
+        {/each}
+      </div>
+    </div>
+  {/if}
 </div>
 
 <style>
-  .sd-dropdown-container {
+  .proi-dropdown-container {
     position: relative;
-    user-select: none;
-    outline: none;
-    margin: 5px;
-    width: 300px;
-    height: 30px;
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
   }
 
-  .sd-dropdown-options {
+  .dropdown {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--n800);
+    width: 240px;
+    height: 32px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 2px solid var(--n200);
+    cursor: pointer;
+  }
+
+  div.dropdown.error {
+    border: 2px solid var(--r200);
+    outline: unset;
+  }
+
+  div.dropdown:active {
+    outline: 2px solid var(--g200);
+  }
+
+  div.dropdown-options {
+    box-sizing: border-box;
     position: absolute;
-    top: 14px;
-    width: auto;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    list-style-type: none;
-    background: white;
-    padding-inline-start: unset;
-    z-index: 5;
-    min-width: 300px;
-    text-align: center;
-  }
-
-  .sd-dropdown {
-    background: none;
-    border: unset;
-    border-bottom: 1px solid #000;
+    top: 36px;
+    left: 0;
+    width: 240px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    width: 100%;
-    height: 30px;
-    padding: 5px;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    outline: none;
+    flex-direction: column;
+    border-radius: 4px;
+    border: 1px solid var(--n200);
+    background: var(--w);
+    box-shadow: 0px 4px 8px 0px rgba(16, 24, 64, 0.16);
+    z-index: 15;
   }
 
-  .sd-dropdown-title {
-    white-space: nowrap;
-    overflow: hidden;
+  .search-option {
+    box-sizing: border-box;
+    padding: 10px 12px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--n800);
+    gap: 8px;
+    height: 32px;
+  }
+
+  .search-option input {
+    background: transparent;
     width: 90%;
-    text-overflow: ellipsis;
+    font-size: 13px;
+    outline: unset;
+    border: unset;
+    color: inherit;
   }
 
-  .sd-dropdown-icon {
-    width: 10%;
-    display: flex;
-    justify-content: center;
+  div.options {
+    max-height: 160px;
+    width: 240px;
+    overflow: auto;
+  }
+
+  div.options .option {
+    display: inline-flex;
     align-items: center;
-  }
-
-  .sd-dropdown.disabled {
-    color: grey;
-    border-color: grey;
-    border-bottom-style: dashed;
-  }
-
-  .sd-no-display {
-    display: none;
-  }
-
-  .sd-dropdown-option {
+    width: 240px;
+    height: 32px;
+    padding: 10px 12px;
     box-sizing: border-box;
-    padding: 5px;
-    z-index: 5;
+    border-top: 2px solid var(--n0);
+    cursor: pointer;
   }
 
-  .sd-dropdown-selected-option {
-    background: var(--sd-primary-selected);
+  div.options .option :last-child {
+    border: unset;
   }
 
-  .sd-dropdown-option:hover {
-    background: var(--sd-primary-hover);
+  div.options .option :hover {
+    background: var(--n800);
   }
 
-  .sd-dropdown-option:last-child {
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+  div.options .option .selected {
+    color: var(--n800);
   }
 </style>

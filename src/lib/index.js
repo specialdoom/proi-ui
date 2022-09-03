@@ -13,6 +13,7 @@ import Spinner from './spinner/Spinner.svelte';
 import Tag from './tag/Tag.svelte';
 import * as toaster from './toast/toaster';
 import ToastProvider from './toast/ToastProvider.svelte';
+import FormItem from './form-item/FormItem.svelte';
 
 const Avatar = Object.assign(AvatarComponent, {
     Leo
@@ -32,5 +33,6 @@ export {
     Spinner,
     Tag,
     toaster,
-    ToastProvider
+    ToastProvider,
+    FormItem
 };

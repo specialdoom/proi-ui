@@ -1,20 +1,26 @@
 <script>
-  import Docs from '../../components/Docs.svelte';
-  import { config } from '../../configs/components/dropdown';
-  import { Dropdown } from '@specialdoom/proi-ui';
-
-  let options = ['First option', 'Second option', 'Third option'];
-
-  let option = '';
-  let defaultSelectedOption = 'First option';
+  import Docs from "../../components/Docs.svelte";
+  import { config } from "../../configs/components/dropdown.js";
+  import { Dropdown } from "@specialdoom/proi-ui";
+  import FlexContainer from "../../components/display/FlexContainer.svelte";
 </script>
 
 <Docs {config}>
-  <Dropdown bind:selected={option} {options} title="No option selected" />
-  <Dropdown
-    bind:selected={defaultSelectedOption}
-    {options}
-    title="No option selected"
-  />
-  <Dropdown title="Disabled" disabled />
+  <FlexContainer direction="row">
+    <Dropdown
+      options={[
+        { label: "Label 1", value: "1" },
+        { label: "Label 2", value: "2" },
+      ]}
+      placeholder="Placeholder"
+    />
+    <Dropdown
+      options={[
+        { label: "Label 1", value: "1" },
+        { label: "Label 2", value: "2" },
+      ]}
+      placeholder="Placeholder"
+      error
+    />
+  </FlexContainer>
 </Docs>

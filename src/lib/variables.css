@@ -32,6 +32,9 @@
     --mango: var(--y800);
     --french-blue: var(--b800);
 
+    /* bright */
+    --w: #ffffff;
+
     /* extended neutral */
     --n800: #223843;
     --n600: #55666F;

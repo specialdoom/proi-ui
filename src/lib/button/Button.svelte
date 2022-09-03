@@ -16,7 +16,7 @@
     min-width: 100px;
     height: 32px;
     font-size: 14px;
-    padding: 4px;
+    padding: 4px 12px;
     border-radius: 4px;
     font-weight: 300;
     border: none;

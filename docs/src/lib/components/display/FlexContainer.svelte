@@ -13,6 +13,3 @@
 <div style={getStyle()}>
   <slot />
 </div>
-
-<style>
-</style>
