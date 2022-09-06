@@ -1,9 +1,9 @@
 <script>
-  import Highlight from './Highlight.svelte';
-  import Container from './display/Container.svelte';
-  import SubTitle from './display/SubTitle.svelte';
-  import Title from './display/Title.svelte';
-  import Table from './Table.svelte';
+  import Highlight from "./Highlight.svelte";
+  import Container from "./display/Container.svelte";
+  import SubTitle from "./display/SubTitle.svelte";
+  import Title from "./display/Title.svelte";
+  import Table from "./Table.svelte";
 
   export let config;
 </script>
@@ -19,11 +19,3 @@
   <SubTitle href="#api">API</SubTitle>
   <Table columns={config.columns} data={config.data} />
 </Container>
-
-<style>
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-</style>

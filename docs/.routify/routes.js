@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Sat Sep 03 2022 13:21:57 GMT+0300 (Eastern European Summer Time)
+ * File generated Tue Sep 06 2022 18:56:52 GMT+0300 (Eastern European Summer Time)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2022-09-03T10:21:57.345Z"
+export const __timestamp = "2022-09-06T15:56:52.690Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -23,7 +23,7 @@ import _components_input from '../src/lib/pages/components/input.svelte'
 import _components_progress from '../src/lib/pages/components/progress.svelte'
 import _components_radio from '../src/lib/pages/components/radio.svelte'
 import _components_spinner from '../src/lib/pages/components/spinner.svelte'
-import _components_tag from '../src/lib/pages/components/tag.svelte'
+import _components_tags from '../src/lib/pages/components/tags.svelte'
 import _components_toast from '../src/lib/pages/components/toast.svelte'
 import _components__layout from '../src/lib/pages/components/_layout.svelte'
 import _gettingStarted_index from '../src/lib/pages/getting-started/index.svelte'
@@ -355,13 +355,13 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
-          "file": "tag.svelte",
-          "filepath": "/components/tag.svelte",
-          "name": "tag",
+          "file": "tags.svelte",
+          "filepath": "/components/tags.svelte",
+          "name": "tags",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/tag.svelte",
-          "importPath": "../src/lib/pages/components/tag.svelte",
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/tags.svelte",
+          "importPath": "../src/lib/pages/components/tags.svelte",
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
@@ -373,9 +373,9 @@ export const _tree = {
             "preload": false,
             "prerender": true
           },
-          "path": "/components/tag",
-          "id": "_components_tag",
-          "component": () => _components_tag
+          "path": "/components/tags",
+          "id": "_components_tags",
+          "component": () => _components_tags
         },
         {
           "isFile": true,

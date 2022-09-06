@@ -7,7 +7,7 @@
   export let gap = "8px";
 
   const getStyle = () =>
-    `display: flex; flex-direction: ${direction}; align-items: ${alignItems}; justify-content: ${justifyContent}; gap: ${gap}; width: ${width}; height: ${height};`;
+    `display: flex; flex-direction: ${direction}; align-items: ${alignItems}; justify-content: ${justifyContent}; gap: ${gap}; width: ${width}; height: ${height}; margin: 6px 0;`;
 </script>
 
 <div style={getStyle()}>

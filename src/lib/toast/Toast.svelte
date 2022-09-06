@@ -1,6 +1,4 @@
 <script lang="ts">
-  import Icon from "../icons/Icon.svelte";
-
   export let toast: any;
   let closed: boolean = false;
 
@@ -16,9 +14,7 @@
   <div class="sd-toast {toastTypeClass} {toastPositionClass}">
     <div class="sd-toast-title">
       New toast
-      <span class="sd-toast-close" on:click={close}>
-        <Icon variant="circleClose" scale={15} />
-      </span>
+      <span class="sd-toast-close" on:click={close}> X </span>
     </div>
     <div class="sd-toast-content">
       {toast.message}

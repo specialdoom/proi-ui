@@ -1,7 +1,7 @@
 <script>
-  import { Backdrop, Button, Tag } from '@specialdoom/proi-ui';
-  import { config } from '../../configs/components/backdrop.js';
-  import Docs from '../../components/Docs.svelte';
+  import { Backdrop, Button, Badge } from "@specialdoom/proi-ui";
+  import { config } from "../../configs/components/backdrop.js";
+  import Docs from "../../components/Docs.svelte";
 
   let backdrop = false;
 
@@ -13,6 +13,6 @@
 <Docs {config}>
   <Button on:click={toggleBackdrop}>Show backdrop</Button>
   <Backdrop visible={backdrop} on:click={toggleBackdrop}>
-    <Tag>Custom optional content</Tag>
+    <Badge>Custom optional content</Badge>
   </Backdrop>
 </Docs>

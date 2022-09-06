@@ -1,5 +1,5 @@
 <script>
-  import { config } from '../../configs/components/radio';
+  import { config } from '../../configs/components/radio.js';
   import Docs from '../../components/Docs.svelte';
   import { Radio } from '@specialdoom/proi-ui';
 

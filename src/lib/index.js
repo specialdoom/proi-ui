@@ -13,10 +13,11 @@ import Input from './input/Input.svelte';
 import Progress from './progress/Progress.svelte';
 import Radio from './radio/Radio.svelte';
 import Spinner from './spinner/Spinner.svelte';
-import Tag from './tag/Tag.svelte';
 import * as toaster from './toast/toaster';
 import ToastProvider from './toast/ToastProvider.svelte';
-import FormItem from './form-item/FormItem.svelte';
+
+import Badge from './tags/Badge.svelte';
+import Pill from './tags/Pill.svelte';
 
 const Avatar = Object.assign(AvatarComponent, {
     Leo,
@@ -37,8 +38,8 @@ export {
     Progress,
     Radio,
     Spinner,
-    Tag,
     toaster,
     ToastProvider,
-    FormItem
+    Badge,
+    Pill
 };

@@ -19,8 +19,16 @@
         { label: "Label 1", value: "1" },
         { label: "Label 2", value: "2" },
       ]}
-      placeholder="Placeholder"
+      placeholder="Dropdown with error"
       error
+    />
+    <Dropdown
+      disabled
+      options={[
+        { label: "Label 1", value: "1" },
+        { label: "Label 2", value: "2" },
+      ]}
+      placeholder="Disabled dropdown"
     />
   </FlexContainer>
 </Docs>

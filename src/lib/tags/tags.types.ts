@@ -1,0 +1,1 @@
+export type TagVariant = 'pine' | 'flame' | 'neutral' | 'mikado' | 'tufts' | 'vivid';

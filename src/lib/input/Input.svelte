@@ -22,7 +22,7 @@
     width: 240px;
     height: 32px;
     font-size: 14px;
-    padding: 7px 10px;
+    padding: 8px 10px;
     box-sizing: border-box;
     outline: none;
   }
