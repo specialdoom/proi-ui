@@ -1,24 +1,25 @@
 <script>
-  import { metatags } from '@roxi/routify';
-  import { Icon } from '@specialdoom/proi-ui-icons';
-  import { url, isActive } from '@roxi/routify';
+  import { metatags } from "@roxi/routify";
+  import { Icon } from "@specialdoom/proi-ui-icons";
+  import { url, isActive } from "@roxi/routify";
 
-  metatags.title = 'proi-ui | Components';
+  metatags.title = "proi-ui | Components";
 
   const options = [
-    { text: 'Button', path: './button' },
-    { text: 'Input', path: './input' },
-    { text: 'Checkbox', path: './checkbox' },
-    { text: 'Radio', path: './radio' },
-    { text: 'Dropdown', path: './dropdown' },
-    { text: 'Alert', path: './alert' },
-    { text: 'Tag', path: './tags' },
-    { text: 'Backdrop', path: './backdrop' },
-    { text: 'Dialog', path: './dialog' },
-    { text: 'Progress', path: './progress' },
-    { text: 'Spinner', path: './spinner' },
-    { text: 'Avatar', path: './avatar' },
-    { text: 'Toast', path: './toast' }
+    { text: "Alert", path: "./alert" },
+    { text: "Avatar", path: "./avatar" },
+    { text: "Backdrop", path: "./backdrop" },
+    { text: "Button", path: "./button" },
+    { text: "Checkbox", path: "./checkbox" },
+    { text: "Dialog", path: "./dialog" },
+    { text: "Dropdown", path: "./dropdown" },
+    { text: "FormItem", path: "./formitem" },
+    { text: "Input", path: "./input" },
+    { text: "Radio", path: "./radio" },
+    { text: "Progress", path: "./progress" },
+    { text: "Spinner", path: "./spinner" },
+    { text: "Tags", path: "./tags" },
+    { text: "Toast", path: "./toast" },
   ];
 
   options.sort((a, b) => {
@@ -39,10 +40,10 @@
     <div class="select-option" on:click={toggle}>
       <span class="select-option-title">Components</span>
       <span class="select-option-icon">
-        <Icon variant={open ? 'circleArrowDown' : 'circleArrowUp'} scale={15} />
+        <Icon variant={open ? "circleArrowDown" : "circleArrowUp"} scale={15} />
       </span>
     </div>
-    <div class="select" style={open ? '' : 'display:none'}>
+    <div class="select" style={open ? "" : "display:none"}>
       {#each options as option}
         <a href={$url(option.path)}>
           <div class="option" class:selected={$isActive(option.path)}>
@@ -114,7 +115,7 @@
 
   .selected:after {
     position: absolute;
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     bottom: 0;
@@ -171,7 +172,7 @@
 
     .selected:after {
       position: unset;
-      content: '';
+      content: "";
       width: unset;
       height: unset;
     }

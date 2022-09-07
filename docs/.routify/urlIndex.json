@@ -6,6 +6,7 @@
   "/components/checkbox",
   "/components/dialog",
   "/components/dropdown",
+  "/components/formitem",
   "/components/index",
   "/components/input",
   "/components/progress",

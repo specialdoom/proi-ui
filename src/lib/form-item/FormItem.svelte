@@ -1,7 +1,7 @@
 <script lang="ts">
-  export let label: string = '';
-  export let description: string = '';
-  export let error: string = '';
+  export let label: string = "";
+  export let description: string = "";
+  export let error: string = "";
 </script>
 
 <div class="proi-form-item">
@@ -12,7 +12,7 @@
     {description}
   </span>
   <slot />
-  {#if error}
+  {#if error !== ""}
     <span class="proi-error">
       {error}
     </span>
@@ -23,20 +23,22 @@
   .proi-form-item {
     display: flex;
     flex-direction: column;
-    gap: 6px;
     justify-content: flex-start;
+    gap: 4px;
+    margin: 6px 0;
+  }
+
+  .proi-label {
+    font-size: 14px;
+    font-weight: 500;
   }
 
   .proi-description {
     font-size: 12px;
   }
 
-  .proi-label {
-    font-size: 14px;
-  }
-
   .proi-error {
-    color: var(--r200);
-    font-size: 12px;
+    color: var(--r400);
+    font-size: 13px;
   }
 </style>

@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Tue Sep 06 2022 18:56:52 GMT+0300 (Eastern European Summer Time)
+ * File generated Wed Sep 07 2022 16:56:41 GMT+0300 (Eastern European Summer Time)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2022-09-06T15:56:52.690Z"
+export const __timestamp = "2022-09-07T13:56:41.605Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -18,6 +18,7 @@ import _components_button from '../src/lib/pages/components/button.svelte'
 import _components_checkbox from '../src/lib/pages/components/checkbox.svelte'
 import _components_dialog from '../src/lib/pages/components/dialog.svelte'
 import _components_dropdown from '../src/lib/pages/components/dropdown.svelte'
+import _components_formitem from '../src/lib/pages/components/formitem.svelte'
 import _components_index from '../src/lib/pages/components/index.svelte'
 import _components_input from '../src/lib/pages/components/input.svelte'
 import _components_progress from '../src/lib/pages/components/progress.svelte'
@@ -226,6 +227,31 @@ export const _tree = {
           "path": "/components/dropdown",
           "id": "_components_dropdown",
           "component": () => _components_dropdown
+        },
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "formitem.svelte",
+          "filepath": "/components/formitem.svelte",
+          "name": "formitem",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/formitem.svelte",
+          "importPath": "../src/lib/pages/components/formitem.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/components/formitem",
+          "id": "_components_formitem",
+          "component": () => _components_formitem
         },
         {
           "isFile": true,
