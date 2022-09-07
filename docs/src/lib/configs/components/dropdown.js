@@ -24,37 +24,25 @@ export const data = [
     description: 'Whether the dropdown is disabled',
     type: '<code>boolean</code>',
     default: '<code>false</code>'
-  },
-  {
-    property: 'className',
-    description: 'Class name for dropdown container. <br /> Dropdown component uses <code>.sd-dropdown</code> class',
-    type: '<code>string</code>',
-    default: '<code>null</code>'
-  },
-  {
-    property: 'listClassName',
-    description: 'Class name for options list container. <br /> Dropdown list component uses <code>.sd-dropdown-options</code> class',
-    type: '<code>string</code>',
-    default: '<code>null</code>'
   }
 ];
 
 export const usage = `<script>
-import {Dropdown} from 'proi-ui';
+import { Dropdown } from '@specialdoom/proi-ui';
 
-let options = ["First option", "Second option", "Third option"];
+let options = [
+  { label: "Label 1", value: "1" },
+  { label: "Label 2", value: "2" },
+];
 
-let option = '';
-let defaultSelectedOption = 'First option';
+let value;
 </script>
 
-<Dropdown bind:selected={option} {options} title="No option selected" />
 <Dropdown
-  bind:selected={defaultSelectedOption}
+  bind:value
   {options}
-  title="No option selected"
+  placeholder="Placeholder"
 />
-<Dropdown title="Disabled" disabled />
 `;
 
 export const config = { title: 'Dropdown component', usage, data, columns };

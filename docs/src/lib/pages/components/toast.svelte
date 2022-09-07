@@ -1,29 +1,55 @@
 <script>
   import { config } from '../../configs/components/toast';
   import Docs from '../../components/Docs.svelte';
-  import { toaster, Button } from '@specialdoom/proi-ui';
+  import { toaster, Button, Dropdown, Input } from '@specialdoom/proi-ui';
+  import FlexContainer from '../../components/display/FlexContainer.svelte';
 
-  function notify(variant) {
-    toaster.send({ message: 'Toast message', variant });
+  const variants = [
+    {
+      value: 'error',
+      label: 'Error toast'
+    },
+    {
+      value: 'success',
+      label: 'Success toast'
+    },
+    {
+      value: 'info',
+      label: 'Info toast'
+    },
+    {
+      value: 'warning',
+      label: 'Warning toast'
+    }
+  ];
+  let variant;
+  let title;
+  let message;
+
+  function notify(variant = 'success', title = 'Default title', message) {
+    toaster.send({
+      variant,
+      title,
+      message
+    });
   }
 </script>
 
 <Docs {config}>
-  <Button on:click={() => notify('success')}>Success</Button>
-  <Button on:click={() => notify('error')}>Error</Button>
-  <Button on:click={() => notify('info')}>Info</Button>
-  <Button on:click={() => notify('warning')}>Warning</Button>
-  <Button on:click={() => toaster.success('Toast message')}>
-    Success method
-  </Button>
-  <Button
-    on:click={() =>
-      toaster.error('Toast message asd asda sadsd asd asd asda sd')}
-  >
-    Error method
-  </Button>
-  <Button on:click={() => toaster.info('Toast message')}>Info method</Button>
-  <Button on:click={() => toaster.warning('Toast message')}>
-    Warning method
-  </Button>
+  <FlexContainer alignItems="flex-start" width="240px">
+    <Dropdown
+      bind:value={variant}
+      options={variants}
+      placeholder="Select toast variant"
+    />
+    <Input bind:value={title} placeholder="Toast title" />
+    <Input bind:value={message} placeholder="Toast message (optional)" />
+    <Button
+      variant="secondary"
+      on:click={() => notify(variant, title, message)}
+      block
+    >
+      Toast a slice
+    </Button>
+  </FlexContainer>
 </Docs>

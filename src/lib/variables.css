@@ -1,27 +1,4 @@
 * {
-    /* variables */
-    --sd-primary: #2398ab;
-    --sd-primary-hover: #2ec1d5;
-    --sd-primary-selected: #91cbd5;
-    --sd-secondary: #ee3d48;
-    --sd-secondary-hover: #f11823;
-    --sd-link: #5199ff;
-    --sd-success: #9eecba;
-    --sd-success-dark: #007f50;
-    --sd-error: #f3737c;
-    --sd-error-dark: #ee3d48;
-    --sd-info: #79aaf3;
-    --sd-info-dark: #257dff;
-    --sd-warning: #fadc8d;
-    --sd-warning-dark: #fdb300;
-
-    /* colors */
-    --sd-grey: #808080;
-    --sd-light-grey: #dee2e6;
-    --sd-black: #000000;
-    --sd-white: #ffffff;
-    --sd-ghost-white: #f8f8ff;
-
     /* primary palette */
     --myrtle-green: var(--g800);
     --gunmetal: var(--n800);
@@ -33,7 +10,7 @@
     --french-blue: var(--b800);
 
     /* bright */
-    --w: #ffffff;
+    --bright: #ffffff;
 
     /* extended neutral */
     --n800: #223843;
@@ -57,7 +34,7 @@
     --r0: #F1A993;
 
     /* extended yellow */
-    --y800: #C19102;
+    --y800: #E8AD00;
     --y600: #FFC71F;
     --y400: #FFD147;
     --y200: #FFDB70;

@@ -70,13 +70,13 @@
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    border: 1px solid var(--sd-primary);
+    border: 1px solid var(--g400);
   }
 
   .step-number.current,
   .step-number:hover {
-    background: var(--sd-primary);
-    color: var(--sd-white);
+    background: var(--g400);
+    color: var(--n0);
     cursor: pointer;
   }
 </style>

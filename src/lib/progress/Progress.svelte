@@ -1,51 +1,46 @@
 <script lang="ts">
   export let percent: number = 0;
   export let error: boolean = false;
-  export let className: string = "";
-  export let lineClassName: string = "";
 </script>
 
-<div class="sd-progress {className}">
+<div class="proi-progress">
   <div
-    class="sd-progress-line {lineClassName}"
+    class="proi-progress-line"
     style="width: {percent}%"
-    class:sd-progress-success={percent === 100}
-    class:sd-progress-error={error}
+    class:success={percent === 100}
+    class:error
   />
 </div>
 
 <style>
-  .sd-progress {
+  .proi-progress {
     margin: 5px 0;
     display: flex;
     overflow: hidden;
     font-size: 14px;
-    background-color: var(--sd-light-grey);
+    background-color: var(--n0);
     border-radius: 4px;
     height: 8px;
   }
 
-  .sd-progress-line {
+  .proi-progress-line {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    color: var(--sd-white);
-    text-align: center;
-    white-space: nowrap;
-    background-color: var(--sd-primary);
+    background-color: var(--b400);
     transition: width 0.6s ease;
     border-radius: 4px;
   }
 
-  .sd-progress-success {
-    background-color: var(--sd-success);
+  .success {
+    background-color: var(--g400);
     transition: background-color 1s ease, width 0.6s ease;
   }
 
-  .sd-progress-error {
-    background-color: var(--sd-error);
+  .error {
+    background-color: var(--r400);
     transition: background-color 1s ease, width 0.6s ease;
   }
 </style>

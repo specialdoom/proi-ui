@@ -58,7 +58,7 @@ export const data = [
 ];
 
 export const usage = `<script>
-import { Input } from 'proi-ui'
+import { Input } from '@specialdoom/proi-ui'
 </script>
 
 <Input label="Custom label" value="Custom value" on:change={onChange} />

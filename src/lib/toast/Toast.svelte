@@ -1,74 +1,112 @@
 <script lang="ts">
-  export let toast: any;
-  let closed: boolean = false;
+  import CheckIcon from '$lib/icons/CheckIcon.svelte';
+  import CloseIcon from '$lib/icons/CloseIcon.svelte';
+  import InfoIcon from '$lib/icons/InfoIcon.svelte';
+  import WarningIcon from '$lib/icons/WarningIcon.svelte';
+  import StopIcon from '$lib/icons/StopIcon.svelte';
+  import type { Slice } from './toast.types.js';
 
-  const close = () => {
-    closed = true;
+  export let toast: Slice;
+
+  const icons = {
+    success: CheckIcon,
+    error: StopIcon,
+    info: InfoIcon,
+    warning: WarningIcon
   };
 
-  $: toastTypeClass = `sd-toast-${toast.variant ? toast.variant : "info"}`;
-  $: toastPositionClass = `sd-toast-${toast.position}`;
+  let closed = false;
+
+  const close = () => (closed = true);
 </script>
 
 {#if !closed}
-  <div class="sd-toast {toastTypeClass} {toastPositionClass}">
-    <div class="sd-toast-title">
-      New toast
-      <span class="sd-toast-close" on:click={close}> X </span>
+  <div class="proi-toast-container {toast.variant}">
+    <div class="proi-toast">
+      <div class="proi-toast-icon">
+        <svelte:component this={icons[toast.variant]} />
+      </div>
+      <div class="proi-toast-text">
+        {toast.title}
+      </div>
+      <div class="proi-toast-close-icon" on:click={close}>
+        <CloseIcon />
+      </div>
     </div>
-    <div class="sd-toast-content">
-      {toast.message}
-    </div>
+    {#if toast?.message}
+      <div class="proi-toast-description">
+        {toast?.message}
+      </div>
+    {/if}
   </div>
 {/if}
 
 <style>
-  .sd-toast {
-    position: relative;
-    width: 300px;
-    display: flex;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 4px;
-    background-color: var(--sd-ghost-white);
+  .proi-toast-container {
     box-sizing: border-box;
+    display: flex;
     flex-direction: column;
-    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
-      0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    gap: 8px;
+    border-radius: 8px;
+    margin: 12px;
+    padding: 14px;
+    width: 300px;
+    border-left: 4px solid var(--g800);
+    background: var(--bright);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
   }
 
-  .sd-toast-error {
-    border-left: 4px solid var(--sd-error);
+  .proi-toast {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
   }
 
-  .sd-toast-warning {
-    border-left: 4px solid var(--sd-warning);
+  .proi-toast-description {
+    color: var(--n800);
   }
 
-  .sd-toast-info {
-    border-left: 4px solid var(--sd-info);
-  }
-
-  .sd-toast-success {
-    border-left: 4px solid var(--sd-success);
-  }
-
-  .sd-toast-title {
-    text-align: left;
-    font-size: 14px;
+  .proi-toast-text {
+    line-height: 20px;
+    font-size: 16px;
     font-weight: 300;
   }
 
-  .sd-toast-content {
-    text-align: left;
-    padding-top: 10px;
+  .proi-toast-close-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    opacity: 0.5;
   }
 
-  .sd-toast-close {
-    float: right;
+  .proi-toast-icon {
+    display: flex;
+    align-items: center;
   }
 
-  .sd-toast-close:hover {
-    opacity: 0.6;
+  .success {
+    color: var(--g800);
+    border-color: var(--g800);
+  }
+
+  .error {
+    color: var(--r800);
+    border-color: var(--r800);
+  }
+
+  .info {
+    color: var(--b800);
+    border-color: var(--b800);
+  }
+
+  .warning {
+    color: var(--y800);
+    border-color: var(--y800);
+  }
+
+  .proi-toast-close-icon:hover {
+    opacity: 1;
   }
 </style>

@@ -1,25 +1,18 @@
 <script lang="ts">
-  import type { DropdownOption } from "./dropdown.types.js";
-  import { clickOutside } from "../utils/clickOutside.js";
-  import CarretDown from "../icons/CarretDown.svelte";
-  import CarretUp from "../icons/CarretUp.svelte";
-  import Search from "../icons/Search.svelte";
+  import type { DropdownOption } from './dropdown.types.js';
+  import { clickOutside } from '../utils/clickOutside.js';
+  import CarretDown from '../icons/CarretDown.svelte';
+  import CarretUp from '../icons/CarretUp.svelte';
 
   export let options: DropdownOption[];
   export let placeholder: string;
-  export let value: string | number = "";
+  export let value: string | number = '';
   export let error: boolean = false;
   export let disabled: boolean = false;
 
   let toggle: boolean = false;
-  let allOptions: DropdownOption[] = options;
-
+  
   $: currentValue = options.find((o) => o.value === value)?.label;
-
-  function handleSearch(e: Event) {
-    const searchValue = (e.target as HTMLInputElement).value;
-    options = allOptions.filter((o) => o.label.includes(searchValue));
-  }
 
   function handleSelectOption(selectedValue: string | number) {
     value = selectedValue;
@@ -38,12 +31,13 @@
     class:error
     class:focus={toggle}
     class:disabled
+    class:placeholder={!currentValue}
   >
     {currentValue ? currentValue : placeholder}
     {#if toggle}
       <CarretUp />
     {:else}
-      <CarretDown fillColor={disabled ? "#89959B" : "#223843"} />
+      <CarretDown fillColor={disabled ? '#89959B' : '#223843'} />
     {/if}
   </div>
   {#if toggle}
@@ -52,10 +46,6 @@
       use:clickOutside
       on:click_outside={() => (toggle = false)}
     >
-      <div class="proi-search-option">
-        <Search />
-        <input placeholder="Search option" on:input={handleSearch} />
-      </div>
       <div class="proi-options">
         {#each options as option}
           <div
@@ -87,8 +77,13 @@
     padding: 8px 10px;
     border-radius: 4px;
     line-height: 24px;
-    font-size: 13px;
+    font-size: 14px;
     cursor: pointer;
+    font-weight: 500;
+  }
+
+  .proi-dropdown.placeholder {
+    color: var(--n400);
   }
 
   .proi-dropdown.error {
@@ -114,23 +109,7 @@
     width: 240px;
     box-sizing: border-box;
     border-radius: 4px;
-    background: var(--w);
-  }
-
-  .proi-search-option {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-    height: 32px;
-  }
-
-  .proi-search-option input {
-    border: unset;
-    outline: unset;
-    font-size: 12px;
-    width: 190px;
+    background: var(--bright);
   }
 
   .proi-options {
@@ -145,8 +124,9 @@
     align-items: center;
     padding: 0 10px;
     height: 32px;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
+    font-weight: 500;
     border-top: 1px solid var(--n0);
   }
 

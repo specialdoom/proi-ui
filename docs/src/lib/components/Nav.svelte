@@ -25,7 +25,7 @@
 
 <style>
   nav {
-    border-bottom: 1px solid rgba(35, 152, 171, 0.1);
+    border-bottom: 1px solid var(--g400);
     font-weight: 300;
     padding: 0 1em;
   }
@@ -61,8 +61,8 @@
     position: absolute;
     content: '';
     width: calc(100% - 1em);
-    height: 2px;
-    background-color: rgba(35, 152, 171);
+    height: 3px;
+    background-color: var(--g800);
     display: block;
     bottom: -1px;
   }
@@ -74,7 +74,7 @@
   }
 
   li:hover {
-    background: rgba(35, 152, 171, 0.3);
+    background: var(--g200);
   }
 
   .nav-logo {

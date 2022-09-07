@@ -6,33 +6,58 @@
 
 ```sveltehtml
 <script>
-import { ToastProvider, toaster, Button } from 'proi-ui'
+import { ToastProvider, toaster, Button } from '@specialdoom/proi-ui'
 
-function notify (type) {
+function notify () {
     toaster.send({
-        message: "Notification message",
-        type: type
+        title: "Title",
+        variant: "info"
     });
-    // or
-    toaster.error("Notification message");
-    toaster.warning("Notification message");
-    toaster.info("Notification message");
-    toaster.success("Notification message");
-
 }
 </script>
 
 <ToastProvider />
-<Button on:click={() => notify("success")}>Success notification</Button>
-<Button on:click={() => notify("info")}>Info notification</Button>
-<Button on:click={() => notify("error")}>Error notification</Button>
-<Button on:click={() => notify("warning")}>Warning notification</Button>
+<Button on:click={() => toaster.success("Title", "Message")}>Success notification</Button>
+<Button on:click={notify}>Info notification</Button>
 
+```
+
+
+### toaster object
+```typescript
+type SliceVariant = 'success' | 'error' | 'info' | 'warning';
+
+type Slice = {
+    // slice variant
+    variant: SliceVariant;
+    // toast message (optional)
+    message: string;
+    // toast title
+    title: string;
+}
+
+// available methods
+
+/**
+ * Creates a new toast
+ * @param {Slice} slice - Toast details
+ */
+send(slice: Slice);
+
+/**
+ * Creates a new [info, warning, error, success] toast
+ * @param {string} title - Toast title
+ * @param {string} message - Toast message (optional)
+ */
+info(title: string, message: string)
+warning(title: string, message: string)
+success(title: string, message: string)
+error(title: string, message: string)
 ```
 
 ### API
 
-| Property      | Description                                                                                                                                                                                                                                                                                                                                                               | Type      | Default |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------- |
-| ToastProvider | Component to add in the main app component                                                                                                                                                                                                                                                                                                                                | component | -       |
-| toaster       | Object to use to be able to notify specific toasts. Has the 'send' method which takes a slice as a param. Slice has the following structure: {message: '', type: ''}. Types are: 'success', 'info', 'warning', 'error'. There are 4 specific methods to create a toast: 'success', 'warning', 'info' and 'error'; which takes a string param for the message of the toast | object    | -       |
+| Property      | Description                                         | Type             |
+| ------------- | --------------------------------------------------- | ---------------- |
+| ToastProvider | Component to add in the main app component          | Svelte component |
+| toaster       | Object containing the methods to create a new toast | object           |

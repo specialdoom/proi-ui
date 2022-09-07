@@ -1,11 +1,17 @@
 <script lang="ts">
-  import type { ButtonVariant } from "./button.types.js";
-  export let variant: ButtonVariant = "primary";
+  import type { ButtonVariant } from './button.types.js';
+  export let variant: ButtonVariant = 'primary';
   export let disabled: boolean = false;
-  export let className: string = "";
+  export let className: string = '';
+  export let block: boolean = false;
 </script>
 
-<button class="proi-button {variant} {className}" {disabled} on:click>
+<button
+  class="proi-button {variant} {className}"
+  class:block
+  {disabled}
+  on:click
+>
   <slot />
 </button>
 
@@ -26,6 +32,10 @@
     outline: none;
     user-select: none;
     cursor: pointer;
+  }
+
+  .block {
+    width: 100%;
   }
 
   .primary {

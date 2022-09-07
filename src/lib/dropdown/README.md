@@ -10,30 +10,28 @@ You should bind to Dropdown selected attribute.
 
 ```sveltehtml
 <script>
-import {Dropdown} from 'proi-ui';
+import {Dropdown} from '@specialdoom/proi-ui';
 
-let options = ["First option", "Second option", "Third option"];
+let options = [
+  { label: "Label 1", value: "1" },
+  { label: "Label 2", value: "2" },
+];
 
-let option = '';
-let defaultSelectedOption = 'First option';
+let value;
 </script>
 
-<Dropdown bind:selected={option} {options} title="No option selected" />
 <Dropdown
-  bind:selected={defaultSelectedOption}
+  bind:value
   {options}
-  title="No option selected"
+  placeholder="Placeholder"
 />
-<Dropdown title="Disabled" disabled />
 ```
 
 ### API
 
-| Property      | Description                                                                                      | Type    | Default |
-| ------------- | ------------------------------------------------------------------------------------------------ | ------- | ------- |
-| selected      | Current selected value                                                                           | option  | ''      |
-| options       | Options for select                                                                               | array   | []      |
-| title         | Title of dropdown                                                                                | string  | ''      |
-| disabled      | Whether the dropdown is disabled                                                                 | boolean | false   |
-| className     | Class name for dropdown container. Dropdown component uses `.sd-dropdown` class                  | string  | null    |
-| listClassName | Class name for options list container. Dropdown list component uses `.sd-dropdown-options` class | string  | null    |
+| Property | Description                      | Type    | Default |
+| -------- | -------------------------------- | ------- | ------- |
+| selected | Current selected value           | option  | ''      |
+| options  | Options for select               | array   | []      |
+| title    | Title of dropdown                | string  | ''      |
+| disabled | Whether the dropdown is disabled | boolean | false   |

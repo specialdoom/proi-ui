@@ -7,6 +7,6 @@
 <style>
   .title {
     font-size: 28px;
-    color: rgba(35, 152, 171);
+    color: var(--g800);
   }
 </style>

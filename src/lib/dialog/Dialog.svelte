@@ -1,9 +1,9 @@
 <script lang="ts">
-  import CloseIcon from "../icons/CloseIcon.svelte";
-  import Backdrop from "../backdrop/Backdrop.svelte";
-  import Button from "../button/Button.svelte";
+  import CloseIcon from '../icons/CloseIcon.svelte';
+  import Backdrop from '../backdrop/Backdrop.svelte';
+  import Button from '../button/Button.svelte';
 
-  export let title: string = "";
+  export let title: string = '';
   export let visible: boolean = false;
   export let showActions: boolean = true;
   export let onOk: (e: Event) => void = () => {};
@@ -22,7 +22,7 @@
       <div class="dialog">
         <div
           class="header"
-          style={`justify-content: ${title ? "space-between" : "flex-end"};`}
+          style={`justify-content: ${title ? 'space-between' : 'flex-end'};`}
         >
           {title}
           <span on:click={handleCancel}>
@@ -60,7 +60,7 @@
     flex-direction: column;
     max-height: 80%;
     gap: 32px;
-    background: var(--n0);
+    background: var(--bright);
     min-width: 400px;
     max-width: 600px;
     padding: 32px;
@@ -81,6 +81,7 @@
   div.dialog div.body {
     font-size: 14px;
     color: var(--n600);
+    overflow: auto;
   }
 
   div.dialog div.footer {

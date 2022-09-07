@@ -22,7 +22,7 @@ export const data = [
 ];
 
 export const usage = `<script>
-import { Radio } from 'proi-ui';
+import { Radio } from '@specialdoom/proi-ui';
 
 let options = [
   { text: 'First', value: 1 },

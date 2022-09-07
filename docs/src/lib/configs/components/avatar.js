@@ -29,11 +29,14 @@ export const data = [
 
 export const usage = `<script>
  import { Avatar } from '@specialdoom/proi-ui';
-</script>;
+</script>
 
 <Avatar initials="PI" />
 <Avatar image="https://avatars.githubusercontent.com/u/41910815?v=4" />
 <Avatar.Leo />
+<Avatar.Lauren />
+<Avatar.Nikita />
+<Avatar.Tim />
 `;
 
 export const config = { title: 'Avatar component', columns, data, usage };

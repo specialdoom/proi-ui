@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
-import { Input } from 'proi-ui'
+import { Input } from '@specialdoom/proi-ui'
 
 function onChange () {
     console.log('changed');

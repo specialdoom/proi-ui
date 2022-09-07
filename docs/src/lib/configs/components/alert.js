@@ -23,8 +23,8 @@ export const data = [
 ];
 
 export const usage = `<script>
- import { Alert } from 'proi-ui';
-</script>;
+ import { Alert } from '@specialdoom/proi-ui';
+</script>
 
 <Alert title="Alert title">Default variant alert description</Alert>
 <Alert type="error">Error variant alert with default title</Alert>

@@ -1,24 +1,24 @@
 <script>
-  import { metatags } from "@roxi/routify";
-  import { Icon } from "@specialdoom/proi-ui-icons";
-  import { url, isActive } from "@roxi/routify";
+  import { metatags } from '@roxi/routify';
+  import { Icon } from '@specialdoom/proi-ui-icons';
+  import { url, isActive } from '@roxi/routify';
 
-  metatags.title = "proi-ui | Components";
+  metatags.title = 'proi-ui | Components';
 
   const options = [
-    { text: "Button", path: "./button" },
-    { text: "Input", path: "./input" },
-    { text: "Checkbox", path: "./checkbox" },
-    { text: "Radio", path: "./radio" },
-    { text: "Dropdown", path: "./dropdown" },
-    { text: "Alert", path: "./alert" },
-    { text: "Tag", path: "./tags" },
-    { text: "Backdrop", path: "./backdrop" },
-    { text: "Dialog", path: "./dialog" },
-    { text: "Progress", path: "./progress" },
-    { text: "Spinner", path: "./spinner" },
-    { text: "Avatar", path: "./avatar" },
-    { text: "Toast", path: "./toast" },
+    { text: 'Button', path: './button' },
+    { text: 'Input', path: './input' },
+    { text: 'Checkbox', path: './checkbox' },
+    { text: 'Radio', path: './radio' },
+    { text: 'Dropdown', path: './dropdown' },
+    { text: 'Alert', path: './alert' },
+    { text: 'Tag', path: './tags' },
+    { text: 'Backdrop', path: './backdrop' },
+    { text: 'Dialog', path: './dialog' },
+    { text: 'Progress', path: './progress' },
+    { text: 'Spinner', path: './spinner' },
+    { text: 'Avatar', path: './avatar' },
+    { text: 'Toast', path: './toast' }
   ];
 
   options.sort((a, b) => {
@@ -39,10 +39,10 @@
     <div class="select-option" on:click={toggle}>
       <span class="select-option-title">Components</span>
       <span class="select-option-icon">
-        <Icon variant={open ? "circleArrowDown" : "circleArrowUp"} scale={15} />
+        <Icon variant={open ? 'circleArrowDown' : 'circleArrowUp'} scale={15} />
       </span>
     </div>
-    <div class="select" style={open ? "" : "display:none"}>
+    <div class="select" style={open ? '' : 'display:none'}>
       {#each options as option}
         <a href={$url(option.path)}>
           <div class="option" class:selected={$isActive(option.path)}>
@@ -77,7 +77,7 @@
   .left-side {
     width: 15%;
     height: 100%;
-    border-right: 1px solid rgba(35, 152, 171, 0.1);
+    border-right: 1px solid var(--g600);
     transition: all 1s ease;
   }
   .right-side {
@@ -104,21 +104,21 @@
 
   .option:hover,
   .selected:hover {
-    background: rgba(35, 152, 171, 0.5);
+    background: var(--g200);
   }
 
   .selected {
     position: relative;
-    background: rgba(35, 152, 171, 0.3);
+    background: var(--g200);
   }
 
   .selected:after {
     position: absolute;
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     bottom: 0;
-    border-right: 2px solid rgba(35, 152, 171);
+    border-right: 3px solid var(--g800);
     display: block;
   }
 
@@ -149,7 +149,7 @@
       top: 41px;
       z-index: 999;
       background-color: #fff;
-      border-bottom: 2px solid rgba(35, 152, 171);
+      border-bottom: 2px solid var(--g600);
     }
 
     .unselect {
@@ -162,7 +162,7 @@
       justify-content: center;
       align-items: center;
       height: 40px;
-      border-bottom: 2px solid rgba(35, 152, 171);
+      border-bottom: 2px solid var(--g600);
     }
 
     .option {
@@ -171,7 +171,7 @@
 
     .selected:after {
       position: unset;
-      content: "";
+      content: '';
       width: unset;
       height: unset;
     }

@@ -15,6 +15,6 @@
   }
 
   .sub-title span {
-    color: rgba(35, 152, 171);
+    color: var(--g600);
   }
 </style>

@@ -5,18 +5,18 @@ export function send(slice: Slice) {
   toast.set(slice);
 }
 
-export function error(message: string) {
-  send({ variant: 'error', message });
+export function error(title: string, message: string = '') {
+  send({ variant: 'error', title, message });
 }
 
-export function success(message: string) {
-  send({ variant: 'success', message });
+export function success(title: string, message: string = '') {
+  send({ variant: 'success', title, message });
 }
 
-export function info(message: string) {
-  send({ variant: 'info', message });
+export function info(title: string, message: string = '') {
+  send({ variant: 'info', title, message });
 }
 
-export function warning(message: string) {
-  send({ variant: 'warning', message });
+export function warning(title: string, message: string = '') {
+  send({ variant: 'warning', title, message });
 }

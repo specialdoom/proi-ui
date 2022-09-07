@@ -19,7 +19,6 @@
   };
 
   let closed = false;
-  console.log($$slots);
 
   const close = () => (closed = true);
 </script>

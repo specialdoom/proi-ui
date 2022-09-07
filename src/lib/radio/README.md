@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
-import { Radio } from 'proi-ui';
+import { Radio } from '@specialdoom/proi-ui';
 
 let options = [
   { text: 'First', value: 1 },

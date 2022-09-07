@@ -1,0 +1,1 @@
+export type BaseVariant = 'success' | 'info' | 'warning' | 'error';

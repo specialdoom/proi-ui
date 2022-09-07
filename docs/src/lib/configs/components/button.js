@@ -35,7 +35,7 @@ export const data = [
 
 export const usage = `<script>
  import { Button } from '@specialdoom/proi-ui';
-</script>;
+</script>
 
 <Button>Primary</Button>
 <Button variant="ghost">Ghost</Button>

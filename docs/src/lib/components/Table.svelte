@@ -38,8 +38,8 @@
   .table-header {
     display: flex;
     justify-content: space-around;
-    background: rgba(35, 152, 171, 0.5);
-    border-bottom: 2px solid rgba(35, 152, 171);
+    background: var(--g200);
+    border-bottom: 2px solid var(--g400);
   }
 
   .table-header > div {
@@ -57,7 +57,7 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    border-bottom: 1px solid rgba(35, 152, 171, 0.5);
+    border-bottom: 1px solid var(--g400);
   }
 
   .table-data > div > div {
