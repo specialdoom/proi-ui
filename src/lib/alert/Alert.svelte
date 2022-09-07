@@ -1,21 +1,21 @@
 <script lang="ts">
-  import CheckIcon from '$lib/icons/CheckIcon.svelte';
-  import CloseIcon from '$lib/icons/CloseIcon.svelte';
-  import InfoIcon from '$lib/icons/InfoIcon.svelte';
-  import WarningIcon from '$lib/icons/WarningIcon.svelte';
-  import StopIcon from '$lib/icons/StopIcon.svelte';
-  import type { AlertVariant } from './alert.types.js';
+  import CheckIcon from "../icons/CheckIcon.svelte";
+  import CloseIcon from "../icons/CloseIcon.svelte";
+  import InfoIcon from "../icons/InfoIcon.svelte";
+  import WarningIcon from "../icons/WarningIcon.svelte";
+  import StopIcon from "../icons/StopIcon.svelte";
+  import type { AlertVariant } from "./alert.types.js";
 
-  export let className: string = '';
-  export let variant: AlertVariant = 'success';
-  export let title: string = 'Alert';
+  export let className: string = "";
+  export let variant: AlertVariant = "success";
+  export let title: string = "Alert";
   export let closable: boolean = false;
 
-  const icons = {
+  const icons: any = {
     success: CheckIcon,
     error: StopIcon,
     info: InfoIcon,
-    warning: WarningIcon
+    warning: WarningIcon,
   };
 
   let closed = false;
@@ -24,12 +24,12 @@
 </script>
 
 {#if !closed}
-  <div class="proi-alert-container {variant}">
+  <div class="proi-alert-container {variant}" data-testid="proi-alert">
     <div class="proi-alert {className}">
       <div class="proi-alert-icon">
         <svelte:component this={icons[variant]} />
       </div>
-      <div class="proi-alert-text">
+      <div class="proi-alert-title" data-testid="proi-alert-title">
         {title}
       </div>
       {#if closable}
@@ -39,7 +39,7 @@
       {/if}
     </div>
     {#if $$slots.default}
-      <div class="proi-alert-description">
+      <div class="proi-alert-description" data-testid="proi-alert-description">
         <slot />
       </div>
     {/if}
@@ -68,7 +68,7 @@
     color: var(--n800);
   }
 
-  .proi-alert-text {
+  .proi-alert-title {
     line-height: 20px;
     font-size: 14px;
     font-weight: 300;
