@@ -1,0 +1,29 @@
+.pine {
+  background: var(--g600);
+  color: var(--n0);
+}
+
+.flame {
+  background: var(--r600);
+  color: var(--n0);
+}
+
+.neutral {
+  background: var(--n0);
+  color: var(--n800);
+}
+
+.mikado {
+  background: var(--y600);
+  color: var(--n800);
+}
+
+.tufts {
+  background: var(--b600);
+  color: var(--n0);
+}
+
+.vivid {
+  background: var(--p600);
+  color: var(--n0);
+}

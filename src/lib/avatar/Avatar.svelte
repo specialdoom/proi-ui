@@ -1,21 +1,22 @@
 <script lang="ts">
-  import { getStyle } from './get-style.js';
+  import type { AvatarVariant } from "./avatar.types.js";
 
-  export let initials: string = '';
-  export let color: string = '#EFF1F3';
-  export let background: string = '#357266';
-  export let image: string = '';
+  export let initials: string = "";
+  export let variant: AvatarVariant = "pine";
+  export let image: string = "";
 
-  const style = getStyle(background, color, image);
+  $: style = image !== "" ? `background: url(${image});` : "";
 </script>
 
-<div class="proi-avatar" {style}>
-  {#if initials !== ''}
+<div class="proi-avatar {variant}" {style}>
+  {#if initials !== "" && image === ""}
     {initials}
   {/if}
 </div>
 
 <style>
+  @import "../shared/css/data-display-variants.css";
+
   .proi-avatar {
     height: 50px;
     width: 50px;

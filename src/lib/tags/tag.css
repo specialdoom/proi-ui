@@ -1,3 +1,5 @@
+@import '../shared/css/data-display-variants.css';
+
 .tag {
   display: inline-flex;
   align-items: center;
@@ -6,30 +8,4 @@
   font-size: 12px;
   color: var(--n0);
   padding: 4px 8px;
-}
-
-.tag.pine {
-  background: var(--g600);
-}
-
-.tag.flame {
-  background: var(--r600);
-}
-
-.tag.neutral {
-  background: var(--n0);
-  color: var(--n800);
-}
-
-.tag.mikado {
-  background: var(--y600);
-  color: var(--n800);
-}
-
-.tag.tufts {
-  background: var(--b600);
-}
-
-.tag.vivid {
-  background: var(--p600);
 }

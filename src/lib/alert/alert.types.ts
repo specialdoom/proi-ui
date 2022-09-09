@@ -1,3 +1,3 @@
-import type { BaseVariant } from '../shared/types/base-variant.types';
+import type { FeedbackVariant } from '../shared/types/base-variant.types';
 
-export type AlertVariant = BaseVariant;
+export type AlertVariant = FeedbackVariant;
