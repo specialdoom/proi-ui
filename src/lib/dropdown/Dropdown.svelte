@@ -11,7 +11,7 @@
   export let disabled: boolean = false;
 
   let toggle: boolean = false;
-  
+
   $: currentValue = options.find((o) => o.value === value)?.label;
 
   function handleSelectOption(selectedValue: string | number) {
@@ -32,6 +32,7 @@
     class:focus={toggle}
     class:disabled
     class:placeholder={!currentValue}
+    data-testid="proi-dropdown"
   >
     {currentValue ? currentValue : placeholder}
     {#if toggle}

@@ -1,21 +1,20 @@
 <script lang="ts">
-  import CheckIcon from "../icons/CheckIcon.svelte";
-  import CloseIcon from "../icons/CloseIcon.svelte";
-  import InfoIcon from "../icons/InfoIcon.svelte";
-  import WarningIcon from "../icons/WarningIcon.svelte";
-  import StopIcon from "../icons/StopIcon.svelte";
-  import type { AlertVariant } from "./alert.types.js";
+  import CheckIcon from '../icons/CheckIcon.svelte';
+  import CloseIcon from '../icons/CloseIcon.svelte';
+  import InfoIcon from '../icons/InfoIcon.svelte';
+  import WarningIcon from '../icons/WarningIcon.svelte';
+  import StopIcon from '../icons/StopIcon.svelte';
+  import type { AlertVariant } from './alert.types.js';
 
-  export let className: string = "";
-  export let variant: AlertVariant = "success";
-  export let title: string = "Alert";
+  export let variant: AlertVariant = 'success';
+  export let title: string;
   export let closable: boolean = false;
 
   const icons: any = {
     success: CheckIcon,
     error: StopIcon,
     info: InfoIcon,
-    warning: WarningIcon,
+    warning: WarningIcon
   };
 
   let closed = false;
@@ -25,7 +24,7 @@
 
 {#if !closed}
   <div class="proi-alert-container {variant}" data-testid="proi-alert">
-    <div class="proi-alert {className}">
+    <div class="proi-alert">
       <div class="proi-alert-icon">
         <svelte:component this={icons[variant]} />
       </div>

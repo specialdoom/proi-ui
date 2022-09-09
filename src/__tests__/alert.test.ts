@@ -1,37 +1,53 @@
 import { render } from '@testing-library/svelte';
-import { create_slot } from 'svelte/internal';
-import type { AlertVariant } from '../lib/alert/alert.types.js';
-//@ts-ignore
-import Alert from '$lib/alert/Alert.svelte';
+import Alert from '../lib/alert/Alert.svelte';
+import SlotWrapper from './SlotWrapper.svelte';
 
 describe('Alert component', () => {
-  it('should render default alert with default title', () => {
-    const { getByTestId } = render(Alert);
-    const alertTitle = getByTestId('proi-alert-title').innerHTML;
+  const title = 'Custom title';
+  const description = 'Custom description';
+  const alertTestId = 'proi-alert';
+  const alertTitleTestId = 'proi-alert-title';
+  const alertDescriptionId = 'proi-alert-description';
 
-    expect(alertTitle).toBe('Alert');
+  it('should render success alert with custom title', () => {
+    const { getByTestId } = render(Alert, { props: { title } });
+    const alertTitleElement = getByTestId(alertTitleTestId);
+    const alertElement = getByTestId(alertTestId);
+
+    expect(alertElement.className).toContain('success');
+    expect(alertTitleElement.innerHTML).toBe('Custom title');
   });
 
-  const variants: AlertVariant[] = ['success', 'error', 'info', 'warning'];
-
-  variants.forEach(variant => {
-    it(`it should render ${variant} alert with default title`, () => {
+  ['success', 'error', 'info', 'warning'].forEach(variant => {
+    it(`it should render ${variant} alert with custom title`, () => {
       const { getByTestId } = render(Alert, {
         props: {
-          variant
+          variant,
+          title
         }
       })
-      const alertElementClass = getByTestId('proi-alert').className;
+      const alertElementClass = getByTestId(alertTestId).className;
 
       expect(alertElementClass).toContain(variant);
     });
   });
 
-  it('should render success alert with custom title', () => {
-    const title = "Custom title";
-    const { getByTestId } = render(Alert, { props: { title } });
-    const alertTitle = getByTestId('proi-alert-title').innerHTML;
+  it('should render success alert with custom title and custom description', () => {
+    const { getByTestId } = render(SlotWrapper, {
+      props: {
+        componentProps: {
+          title
+        },
+        component: Alert,
+        slot: description
+      }
+    });
+    const alertDescriptionElement = getByTestId(alertDescriptionId);
+    const alertTitleElement = getByTestId(alertTitleTestId);
+    const alertElement = getByTestId(alertTestId);
 
-    expect(alertTitle).toBe(title);
+    expect(alertElement.className).toContain('success');
+    expect(alertTitleElement.innerHTML).toBe(title);
+    expect(alertDescriptionElement.innerHTML).toBe(description);
   });
 });

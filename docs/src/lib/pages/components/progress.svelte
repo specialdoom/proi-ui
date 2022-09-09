@@ -22,8 +22,8 @@
 
 <Docs {config}>
   <Progress {percent} {error} />
-  <Button small on:click={increment}>Increment</Button>
-  <Button small on:click={decrement}>Decrement</Button>
-  <Button small variant="secondary" on:click={toggleError} outlined>Error</Button>
-  <Button small on:click={toggleSuccess}>Success</Button>
+  <Button on:click={increment}>Increment</Button>
+  <Button on:click={decrement}>Decrement</Button>
+  <Button on:click={toggleError} outlined>Error</Button>
+  <Button on:click={toggleSuccess}>Success</Button>
 </Docs>

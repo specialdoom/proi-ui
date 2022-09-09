@@ -2,26 +2,20 @@
 
 [proi-ui](https://github.com/specialdoom/proi-ui)
 
-##### Input component
+##### Input components
 
 ### Usage
 
 ```sveltehtml
 <script>
-import { Input } from '@specialdoom/proi-ui'
+import { TextInput } from '@specialdoom/proi-ui'
 
 function onChange () {
     console.log('changed');
 }
 </script>
 
-<Input label="Custom label" value="Custom value" on:change={onChange}/>
-<Input
-label="Error label"
-value="Error value"
-error="Something is wrong..."
-/>
-<Input label="Disabled input" value="Disabled" disabled />
+<TextInput value="Value" placeholder="Text input" disabled on:change={onChange}/>
 ```
 
 ### API
@@ -29,7 +23,6 @@ error="Something is wrong..."
 | Property    | Description                                                                     | Type            | Default |
 | ----------- | ------------------------------------------------------------------------------- | --------------- | ------- |
 | value       | Value of input                                                                  | string          | ''      |
-| variant        | Variant of input. Options: 'text' and 'password'                                   | string          | 'text'  |
 | placeholder | Placeholder of input                                                            | string          | ''      |
 | label       | Label of input                                                                  | string          | ''      |
 | error       | error message                                                                   | string          | -       |

@@ -4,7 +4,7 @@
 </script>
 
 {#if visible}
-  <div class="proi-backdrop {className}" on:click>
+  <div class="proi-backdrop {className}" on:click data-testid="proi-backdrop">
     <div>
       <slot />
     </div>

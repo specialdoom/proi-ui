@@ -11,14 +11,20 @@
 		"strict": true,
 		"moduleResolution": "NodeNext",
 		"outDir": "package",
+		"types": [
+			"jest",
+			"svelte"
+		]
 	},
 	"exclude": [
 		"package",
 		"docs",
 		"node_modules",
-		"icons"
+		"icons",
+		"lib/utils"
 	],
 	"include": [
-		".d.ts"
+		".d.ts",
+		"__tests__"
 	]
 }

@@ -11,6 +11,7 @@
   class:block
   {disabled}
   on:click
+  data-testid="proi-button"
 >
   <slot />
 </button>

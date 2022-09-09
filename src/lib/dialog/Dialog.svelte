@@ -19,13 +19,13 @@
 {#if visible}
   <Backdrop {visible}>
     <div class="container">
-      <div class="dialog">
+      <div class="dialog" data-testid="proi-dialog">
         <div
           class="header"
           style={`justify-content: ${title ? 'space-between' : 'flex-end'};`}
         >
           {title}
-          <span on:click={handleCancel}>
+          <span on:click={handleCancel} data-testid="proi-dialog-close-icon">
             <CloseIcon />
           </span>
         </div>
@@ -33,7 +33,7 @@
           <slot />
         </div>
         {#if showActions}
-          <div class="footer">
+          <div class="footer" data-testid="proi-dialog-actions">
             <Button variant="ghost" on:click={handleCancel}>Cancel</Button>
             <Button variant="primary" on:click={onOk}>Ok</Button>
           </div>

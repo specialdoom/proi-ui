@@ -1,7 +1,9 @@
 <script>
-  import { Input } from '@specialdoom/proi-ui';
-  import { config } from '../../configs/components/input';
+  import { TextInput } from '@specialdoom/proi-ui';
+  import { config } from '../../configs/components/input.js';
   import Docs from '../../components/Docs.svelte';
+
+  let value = '';
 
   function onChange() {
     console.log('changed');
@@ -9,11 +11,7 @@
 </script>
 
 <Docs {config}>
-  <Input label="Custom label" value="Custom value" on:change={onChange} />
-  <Input
-    label="Error label"
-    value="Error value"
-    error="Something is wrong..."
-  />
-  <Input label="Disabled input" value="Disabled" disabled />
+  <TextInput bind:value placeholder="Input something" />
+  <TextInput bind:value placeholder="Error state input" error/>
+  <TextInput bind:value placeholder="Disabled input" disabled />
 </Docs>

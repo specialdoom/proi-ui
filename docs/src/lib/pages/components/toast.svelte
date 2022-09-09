@@ -1,7 +1,7 @@
 <script>
   import { config } from '../../configs/components/toast';
   import Docs from '../../components/Docs.svelte';
-  import { toaster, Button, Dropdown, Input } from '@specialdoom/proi-ui';
+  import { toaster, Button, Dropdown, TextInput } from '@specialdoom/proi-ui';
   import FlexContainer from '../../components/display/FlexContainer.svelte';
 
   const variants = [
@@ -42,8 +42,8 @@
       options={variants}
       placeholder="Select toast variant"
     />
-    <Input bind:value={title} placeholder="Toast title" />
-    <Input bind:value={message} placeholder="Toast message (optional)" />
+    <TextInput bind:value={title} placeholder="Toast title" />
+    <TextInput bind:value={message} placeholder="Toast message (optional)" />
     <Button
       variant="secondary"
       on:click={() => notify(variant, title, message)}

@@ -4,6 +4,8 @@
   viewBox="0 0 60 60"
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
+  data-testid="proi-default-avatar"
+  data-name="nikita"
 >
   <path
     d="M38.28 50.16L21.48 45.48L16.56 38.52L11.5344 35.04V16.2H48.4656V41.88L38.28 50.16Z"

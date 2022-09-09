@@ -1,7 +1,7 @@
 <script>
   import { metatags } from '@roxi/routify';
   import { Icon } from '@specialdoom/proi-ui-icons';
-  import { Input, toaster } from '@specialdoom/proi-ui';
+  import { TextInput, toaster } from '@specialdoom/proi-ui';
   import Highlight from '../../components/Highlight.svelte';
 
   metatags.title = 'proi-ui | Icons';
@@ -176,7 +176,7 @@
   <Highlight code="npm i @specialdoom/proi-ui-icons" />
   <Highlight code={`<Icon variant="chosenType" />`} />
   <div class="search">
-    <Input label="Search icon" bind:value={searchValue} />
+    <TextInput bind:value={searchValue} />
   </div>
   <div class="icons-container container">
     {#each filteredIcons as icon}

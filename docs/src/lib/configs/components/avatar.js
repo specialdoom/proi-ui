@@ -8,16 +8,10 @@ export const data = [
     default: `<code>''</code>`
   },
   {
-    property: 'color',
-    description: 'Text color of avatar. Available when <code>initials</code> not empty',
+    property: 'variant',
+    description: 'Variant of avatar component. Options: <code>pine, neutral, makido, vivid, flame, tufts</code>',
     type: '<code>string</code>',
-    default: `<code>'#EFF1F3'</code>`
-  },
-  {
-    property: 'background',
-    description: 'Background color of avatar. Available when <code>initials</code> not empty',
-    type: '<code>string</code>',
-    default: `<code>'#357266'</code>`
+    default: `<code>'pine'</code>`
   },
   {
     property: 'image',

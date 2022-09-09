@@ -1,0 +1,1 @@
+export const dataDisplayVariants = ["pine", "mikado", "flame", "tufts", "vivid", "neutral"];
