@@ -18,6 +18,7 @@
     { text: "Radio", path: "./radio" },
     { text: "Progress", path: "./progress" },
     { text: "Spinner", path: "./spinner" },
+    { text: "Switch", path: "./switch" },
     { text: "Tabs", path: "./tabs" },
     { text: "Tags", path: "./tags" },
     { text: "Toast", path: "./toast" },

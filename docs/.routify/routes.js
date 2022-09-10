@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Sat Sep 10 2022 19:16:52 GMT+0300 (Eastern European Summer Time)
+ * File generated Sat Sep 10 2022 19:51:21 GMT+0300 (Eastern European Summer Time)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2022-09-10T16:16:52.730Z"
+export const __timestamp = "2022-09-10T16:51:21.347Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -24,6 +24,7 @@ import _components_input from '../src/lib/pages/components/input.svelte'
 import _components_progress from '../src/lib/pages/components/progress.svelte'
 import _components_radio from '../src/lib/pages/components/radio.svelte'
 import _components_spinner from '../src/lib/pages/components/spinner.svelte'
+import _components_switch from '../src/lib/pages/components/switch.svelte'
 import _components_tabs from '../src/lib/pages/components/tabs.svelte'
 import _components_tags from '../src/lib/pages/components/tags.svelte'
 import _components_toast from '../src/lib/pages/components/toast.svelte'
@@ -378,6 +379,31 @@ export const _tree = {
           "path": "/components/spinner",
           "id": "_components_spinner",
           "component": () => _components_spinner
+        },
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "switch.svelte",
+          "filepath": "/components/switch.svelte",
+          "name": "switch",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/switch.svelte",
+          "importPath": "../src/lib/pages/components/switch.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/components/switch",
+          "id": "_components_switch",
+          "component": () => _components_switch
         },
         {
           "isFile": true,
