@@ -1,29 +1,29 @@
-.pine {
+.data-display.pine {
   background: var(--g600);
   color: var(--n0);
 }
 
-.flame {
+.data-display.flame {
   background: var(--r600);
   color: var(--n0);
 }
 
-.neutral {
+.data-display.neutral {
   background: var(--n0);
   color: var(--n800);
 }
 
-.mikado {
+.data-display.mikado {
   background: var(--y600);
   color: var(--n800);
 }
 
-.tufts {
+.data-display.tufts {
   background: var(--b600);
   color: var(--n0);
 }
 
-.vivid {
+.data-display.vivid {
   background: var(--p600);
   color: var(--n0);
 }

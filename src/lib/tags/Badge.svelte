@@ -4,10 +4,11 @@
   export let variant: TagVariant = "pine";
 </script>
 
-<span class="proi-badge tag {variant}"><slot /></span>
+<span class="proi-badge tag data-display {variant}"><slot /></span>
 
 <style>
   @import "./tag.css";
+  @import "../shared/css/data-display-variants.css";
 
   .proi-badge {
     border-radius: 4px;

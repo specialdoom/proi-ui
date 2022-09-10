@@ -4,11 +4,11 @@
   export let variant: TagVariant = "pine";
 </script>
 
-<span class="proi-pill tag {variant}"><slot /></span>
+<span class="proi-pill tag data-display {variant}"><slot /></span>
 
 <style>
-  @import "../shared/css/data-display-variants.css";
   @import "./tag.css";
+  @import "../shared/css/data-display-variants.css";
 
   .proi-pill {
     border-radius: 30px;

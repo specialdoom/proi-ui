@@ -26,6 +26,7 @@
 .proi-dropdown.error {
   border-color: var(--r200);
   color: var(--r600);
+  background: var(--bright);
 }
 
 .proi-dropdown.error.focus {

@@ -2,6 +2,8 @@
 
 [proi-ui](https://github.com/specialdoom/proi-ui)
 
+###### Tabs component
+
 ### Usage
 
 ```sveltehtml

@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { SvelteComponent } from 'svelte';
+  import type { SvelteComponent } from "svelte";
 
   export let componentProps: any = {};
   export let component: SvelteComponent;
-  export let slot;
+  export let slot: any;
 </script>
 
 <svelte:component this={component} {...componentProps}>

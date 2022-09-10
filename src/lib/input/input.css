@@ -33,6 +33,7 @@
 
 .proi-input.error {
   border: 2px solid var(--r200);
+  background: var(--bright);
   color: var(--r600);
   outline: none;
 }

@@ -13,10 +13,7 @@
     <li aria-current={$isActive('/components') ? 'page' : undefined}>
       <a href={$url('/components')}>Components</a>
     </li>
-    <li aria-current={$isActive('/icons') ? 'page' : undefined}>
-      <a href={$url('/icons')}>Icon</a>
-    </li>
-
+    
     <li class="nav-logo">
       <img src={$url('/logotype.png')} alt="mini logo" height="40" />
     </li>

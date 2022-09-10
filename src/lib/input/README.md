@@ -2,7 +2,7 @@
 
 [proi-ui](https://github.com/specialdoom/proi-ui)
 
-##### Input components
+##### TextInput component
 
 ### Usage
 
@@ -20,13 +20,12 @@ function onChange () {
 
 ### API
 
-| Property    | Description                                                                     | Type            | Default |
-| ----------- | ------------------------------------------------------------------------------- | --------------- | ------- |
-| value       | Value of input                                                                  | string          | ''      |
-| placeholder | Placeholder of input                                                            | string          | ''      |
-| label       | Label of input                                                                  | string          | ''      |
-| error       | error message                                                                   | string          | -       |
-| disabled    | Whether the input is disabled                                                   | boolean         | false   |
-| className   | Class name of input container. Input component uses `.sd-input-container` class | string          | null    |
-| ----------- | ---------------------------------------------                                   | --------------- | ------- |
-| on:change   | Handler for onChange input event                                                | (event) => void | -       |
+| Property    | Description                                                             | Type            | Default |
+| ----------- | ----------------------------------------------------------------------- | --------------- | ------- |
+| value       | Value of input                                                          | string          | ''      |
+| placeholder | Placeholder of input                                                    | string          | ''      |
+| error       | Whether the input is in error state                                     | boolean         | -       |
+| disabled    | Whether the input is disabled                                           | boolean         | false   |
+| className   | Class name of input container. Input component uses `.proi-input` class | string          | null    |
+| ----------- | ---------------------------------------------                           | --------------- | ------- |
+| on:change   | Handler for onChange input event                                        | (event) => void | -       |

@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Sat Sep 10 2022 19:51:21 GMT+0300 (Eastern European Summer Time)
+ * File generated Sat Sep 10 2022 20:17:51 GMT+0300 (Eastern European Summer Time)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2022-09-10T16:51:21.347Z"
+export const __timestamp = "2022-09-10T17:17:51.731Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -30,7 +30,6 @@ import _components_tags from '../src/lib/pages/components/tags.svelte'
 import _components_toast from '../src/lib/pages/components/toast.svelte'
 import _components__layout from '../src/lib/pages/components/_layout.svelte'
 import _gettingStarted_index from '../src/lib/pages/getting-started/index.svelte'
-import _icons_index from '../src/lib/pages/icons/index.svelte'
 import _index from '../src/lib/pages/index.svelte'
 import __layout from '../src/lib/pages/_layout.svelte'
 
@@ -545,55 +544,6 @@ export const _tree = {
         "prerender": true
       },
       "path": "/getting-started"
-    },
-    {
-      "isFile": false,
-      "isDir": true,
-      "file": "icons",
-      "filepath": "/icons",
-      "name": "icons",
-      "ext": "",
-      "badExt": false,
-      "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/icons",
-      "children": [
-        {
-          "isFile": true,
-          "isDir": false,
-          "file": "index.svelte",
-          "filepath": "/icons/index.svelte",
-          "name": "index",
-          "ext": "svelte",
-          "badExt": false,
-          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/icons/index.svelte",
-          "importPath": "../src/lib/pages/icons/index.svelte",
-          "isLayout": false,
-          "isReset": false,
-          "isIndex": true,
-          "isFallback": false,
-          "isPage": true,
-          "ownMeta": {},
-          "meta": {
-            "recursive": true,
-            "preload": false,
-            "prerender": true
-          },
-          "path": "/icons/index",
-          "id": "_icons_index",
-          "component": () => _icons_index
-        }
-      ],
-      "isLayout": false,
-      "isReset": false,
-      "isIndex": false,
-      "isFallback": false,
-      "isPage": false,
-      "ownMeta": {},
-      "meta": {
-        "recursive": true,
-        "preload": false,
-        "prerender": true
-      },
-      "path": "/icons"
     },
     {
       "isFile": true,

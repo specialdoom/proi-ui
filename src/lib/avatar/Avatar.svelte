@@ -11,7 +11,11 @@
       : "";
 </script>
 
-<div class="proi-avatar {variant}" {style} data-testid="proi-avatar">
+<div
+  class="proi-avatar data-display {variant}"
+  {style}
+  data-testid="proi-avatar"
+>
   {#if initials !== "" && image === ""}
     {initials}
   {/if}

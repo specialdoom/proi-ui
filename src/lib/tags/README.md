@@ -2,7 +2,7 @@
 
 [proi-ui](https://github.com/specialdoom/proi-ui)
 
-###### Badge component
+###### Tags components: Badge, Pill
 
 ### Usage
 

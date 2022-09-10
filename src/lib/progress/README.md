@@ -2,6 +2,8 @@
 
 [proi-ui](https://github.com/specialdoom/proi-ui)
 
+###### Switch component
+
 ### Usage
 
 ```sveltehtml

@@ -1,5 +1,8 @@
 ---
 [proi-ui](https://github.com/specialdoom/proi-ui)
+
+###### Spinner component
+
 ### Usage
 ```sveltehtml
 <script>

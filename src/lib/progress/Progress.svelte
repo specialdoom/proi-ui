@@ -14,5 +14,4 @@
 
 <style>
   @import "./progress.css";
-  @import "../shared/css/data-display-variants.css";
 </style>

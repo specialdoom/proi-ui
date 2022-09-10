@@ -1,6 +1,5 @@
 <script>
-  import { step } from './store';
-  import { Icon } from '@specialdoom/proi-ui-icons';
+  import { step } from "./store";
 
   export let stepsDetails = [];
 
@@ -16,9 +15,6 @@
 </script>
 
 <div class="steps">
-  <div class="center action" on:click={prevStep}>
-    <Icon variant="arrowLeft" color="var(--sd-primary)" />
-  </div>
   {#each stepsDetails as detail, index}
     <div class="step center">
       <div
@@ -31,9 +27,6 @@
       <div>{detail.title}</div>
     </div>
   {/each}
-  <div class="center action" on:click={nextStep}>
-    <Icon variant="arrowRight" color="var(--sd-primary)" />
-  </div>
 </div>
 <div class="slot">
   <slot />
@@ -42,7 +35,7 @@
 <style>
   .steps {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 10px 0;
     min-width: 200px;
   }
