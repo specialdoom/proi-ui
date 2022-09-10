@@ -2,12 +2,6 @@ import { columns } from '../shared/columns.js';
 
 export const data = [
   {
-    property: 'small',
-    description: 'Whether the spinner is small',
-    type: '<code>boolean</code>',
-    default: '<code>false</code>'
-  },
-  {
     property: 'label',
     description: `Label of the spinner. Can't be used with small spinner`,
     type: '<code>string</code>',

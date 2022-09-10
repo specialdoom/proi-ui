@@ -20,10 +20,10 @@ function click () {
 
 ### API
 
-| Property  | Description                                                | Type       | Default   |
-| --------- | ---------------------------------------------------------- | ---------- | --------- |
-| variant      | Variant of button. Options: 'primary', 'secondary' and 'ghost' | string     | 'primary' |
-| disabled  | Whether the button is disabled                             | boolean    | false     |
-| className | Class name for button. Button component uses `.proi-button`  | string     | null      |
-| --------- | ---------------------------------------------------------- | -------    | --------- |
-| on:click  | Handler of the click event                                 | () => void | -         |
+| Property  | Description                                                    | Type       | Default   |
+| --------- | -------------------------------------------------------------- | ---------- | --------- |
+| variant   | Variant of button. Options: 'primary', 'secondary' and 'ghost' | string     | 'primary' |
+| disabled  | Whether the button is disabled                                 | boolean    | false     |
+| className | Class name for button. Button component uses `.proi-button`    | string     | null      |
+| --------- | ----------------------------------------------------------     | -------    | --------- |
+| on:click  | Handler of the click event                                     | () => void | -         |

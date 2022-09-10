@@ -2,8 +2,8 @@ import { columns } from '../shared/columns.js';
 
 export const data = [
   {
-    property: 'type',
-    description: `Type of button. <br /> Options: <code>primary</code>, <code>secondary</code>, <code>ghost</code>`,
+    property: 'variant',
+    description: `Variant of button. <br /> Options: <code>primary</code>, <code>secondary</code>, <code>ghost</code>`,
     type: '<code>string</code>',
     default: `<code>'primary'</code>`
   },

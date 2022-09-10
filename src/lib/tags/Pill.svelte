@@ -7,6 +7,7 @@
 <span class="proi-pill tag {variant}"><slot /></span>
 
 <style>
+  @import "../shared/css/data-display-variants.css";
   @import "./tag.css";
 
   .proi-pill {

@@ -1,14 +1,4 @@
 * {
-    /* primary palette */
-    --myrtle-green: var(--g800);
-    --gunmetal: var(--n800);
-    --cultured: var(--n0);
-
-    /* secondary palette */
-    --flame: var(--r600);
-    --mango: var(--y800);
-    --french-blue: var(--b800);
-
     /* bright */
     --bright: #ffffff;
 
@@ -30,18 +20,18 @@
     --r800: #B53C17;
     --r600: #E35226;
     --r400: #E86F4A;
-    --r200: #EC8C6F;
-    --r0: #F1A993;
+    --r200: #F99C80;
+    --r0: #FFC1AE;
 
     /* extended yellow */
-    --y800: #E8AD00;
+    --y800: #CD9400;
     --y600: #FFC71F;
     --y400: #FFD147;
     --y200: #FFDB70;
     --y0: #FFE699;
 
     /* extended blue */
-    --b800: #2178C0;
+    --b800: #1A6FB6;
     --b600: #3993DD;
     --b400: #62AAE4;
     --b200: #85BDEA;

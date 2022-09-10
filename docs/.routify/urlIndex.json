@@ -12,6 +12,7 @@
   "/components/progress",
   "/components/radio",
   "/components/spinner",
+  "/components/tabs",
   "/components/tags",
   "/components/toast",
   "/getting-started/index",

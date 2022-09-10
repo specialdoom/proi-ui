@@ -13,6 +13,7 @@ import Pill from './tags/Pill.svelte';
 import Progress from './progress/Progress.svelte';
 import Radio from './radio/Radio.svelte';
 import Spinner from './spinner/Spinner.svelte';
+import Tabs from './tabs/index.js';
 import TextInput from './input/TextInput.svelte';
 import ToastProvider from './toast/ToastProvider.svelte';
 
@@ -30,6 +31,7 @@ export {
     Progress,
     Radio,
     Spinner,
+    Tabs,
     TextInput,
     toaster,
     ToastProvider

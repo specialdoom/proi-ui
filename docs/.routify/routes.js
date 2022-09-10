@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Wed Sep 07 2022 16:56:41 GMT+0300 (Eastern European Summer Time)
+ * File generated Sat Sep 10 2022 19:16:52 GMT+0300 (Eastern European Summer Time)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2022-09-07T13:56:41.605Z"
+export const __timestamp = "2022-09-10T16:16:52.730Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -24,6 +24,7 @@ import _components_input from '../src/lib/pages/components/input.svelte'
 import _components_progress from '../src/lib/pages/components/progress.svelte'
 import _components_radio from '../src/lib/pages/components/radio.svelte'
 import _components_spinner from '../src/lib/pages/components/spinner.svelte'
+import _components_tabs from '../src/lib/pages/components/tabs.svelte'
 import _components_tags from '../src/lib/pages/components/tags.svelte'
 import _components_toast from '../src/lib/pages/components/toast.svelte'
 import _components__layout from '../src/lib/pages/components/_layout.svelte'
@@ -377,6 +378,31 @@ export const _tree = {
           "path": "/components/spinner",
           "id": "_components_spinner",
           "component": () => _components_spinner
+        },
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "tabs.svelte",
+          "filepath": "/components/tabs.svelte",
+          "name": "tabs",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "D:/code/proi-ui/docs/src/lib/pages/components/tabs.svelte",
+          "importPath": "../src/lib/pages/components/tabs.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/components/tabs",
+          "id": "_components_tabs",
+          "component": () => _components_tabs
         },
         {
           "isFile": true,

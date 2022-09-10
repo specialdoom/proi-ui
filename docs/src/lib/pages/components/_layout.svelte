@@ -18,6 +18,7 @@
     { text: "Radio", path: "./radio" },
     { text: "Progress", path: "./progress" },
     { text: "Spinner", path: "./spinner" },
+    { text: "Tabs", path: "./tabs" },
     { text: "Tags", path: "./tags" },
     { text: "Toast", path: "./toast" },
   ];
@@ -71,7 +72,7 @@
   .docs-container {
     display: flex;
     width: 100%;
-    height: calc(100vh - 108px);
+    height: calc(100vh - 57px);
     box-sizing: border-box;
   }
 
