@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --base=/proi-ui/",
-    "build": "vite build",
+    "build": "vite build --base=/proi-ui/",
     "preview": "vite preview",
     "dev:routify": "routify"
   },
