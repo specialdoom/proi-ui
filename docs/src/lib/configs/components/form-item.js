@@ -22,11 +22,11 @@ export const data = [
 ];
 
 export const usage = `<script>
-import { FormItem } from '@specialdoom/proi-ui';
+  import { FormItem, TextInput } from '@specialdoom/proi-ui';
 </script>
 
 <FormItem label="Label" description="description">
-  <Input value="Test" placeholder="Placeholder />
+  <TextInput value="Test" placeholder="Placeholder" />
 </FormItem>
 `;
 

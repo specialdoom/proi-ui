@@ -12,6 +12,8 @@
 
 <style>
   .proi-tag {
+    font-family: "Iosevka Web";
+    font-weight: 400;
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;

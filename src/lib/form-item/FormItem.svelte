@@ -23,6 +23,8 @@
 
 <style>
   .proi-form-item {
+    font-family: "Iosevka Web";
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

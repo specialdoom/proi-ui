@@ -10,7 +10,7 @@
 <div class="small">
   <Highlight
     code={`// main.js
-import '@specialdoom/proi-ui/variables.css';
+import '@specialdoom/proi-ui/proi-ui.css';
 
 ...`}
   />

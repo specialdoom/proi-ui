@@ -18,6 +18,8 @@
 
 <style>
   .proi-radio-container {
+    font-family: "Iosevka Web";
+    font-weight: 400;
     display: inline-flex;
     align-items: center;
     cursor: pointer;

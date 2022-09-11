@@ -30,6 +30,8 @@
 
 <style>
   button {
+    font-family: 'Iosevka Web';
+    font-weight: 400;
     position: relative;
     box-sizing: border-box;
     display: inline-flex;

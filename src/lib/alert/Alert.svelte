@@ -1,12 +1,12 @@
 <script lang="ts">
-  import CheckIcon from '../icons/CheckIcon.svelte';
-  import CloseIcon from '../icons/CloseIcon.svelte';
-  import InfoIcon from '../icons/InfoIcon.svelte';
-  import WarningIcon from '../icons/WarningIcon.svelte';
-  import StopIcon from '../icons/StopIcon.svelte';
-  import type { AlertVariant } from './alert.types.js';
+  import CheckIcon from "../icons/CheckIcon.svelte";
+  import CloseIcon from "../icons/CloseIcon.svelte";
+  import InfoIcon from "../icons/InfoIcon.svelte";
+  import WarningIcon from "../icons/WarningIcon.svelte";
+  import StopIcon from "../icons/StopIcon.svelte";
+  import type { AlertVariant } from "./alert.types.js";
 
-  export let variant: AlertVariant = 'success';
+  export let variant: AlertVariant = "success";
   export let title: string;
   export let closable: boolean = false;
 
@@ -14,7 +14,7 @@
     success: CheckIcon,
     error: StopIcon,
     info: InfoIcon,
-    warning: WarningIcon
+    warning: WarningIcon,
   };
 
   let closed = false;
@@ -47,6 +47,8 @@
 
 <style>
   .proi-alert-container {
+    font-family: "Iosevka Web";
+    font-weight: 400;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -70,7 +72,6 @@
   .proi-alert-title {
     line-height: 20px;
     font-size: 14px;
-    font-weight: 300;
   }
 
   .proi-alert-close-icon {

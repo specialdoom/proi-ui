@@ -34,13 +34,13 @@ export const data = [
 ];
 
 export const usage = `<script>
-import { Dialog } from '@specialdoom/proi-ui';
+  import { Dialog, Button } from '@specialdoom/proi-ui';
 
-let showDialog = false;
+  let showDialog = false;
 
-function toggle() {
-  showDialog = !showDialog;
-}
+  function toggle() {
+    showDialog = !showDialog;
+  }
 </script>
 
 <Button on:click={toggle}>Show dialog</Button>

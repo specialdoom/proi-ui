@@ -1,18 +1,18 @@
 <script lang="ts">
-  import CheckIcon from '$lib/icons/CheckIcon.svelte';
-  import CloseIcon from '$lib/icons/CloseIcon.svelte';
-  import InfoIcon from '$lib/icons/InfoIcon.svelte';
-  import WarningIcon from '$lib/icons/WarningIcon.svelte';
-  import StopIcon from '$lib/icons/StopIcon.svelte';
-  import type { Slice } from './toast.types.js';
+  import CheckIcon from "../icons/CheckIcon.svelte";
+  import CloseIcon from "../icons/CloseIcon.svelte";
+  import InfoIcon from "../icons/InfoIcon.svelte";
+  import WarningIcon from "../icons/WarningIcon.svelte";
+  import StopIcon from "../icons/StopIcon.svelte";
+  import type { Slice } from "./toast.types.js";
 
   export let toast: Slice;
 
-  const icons = {
+  const icons: any = {
     success: CheckIcon,
     error: StopIcon,
     info: InfoIcon,
-    warning: WarningIcon
+    warning: WarningIcon,
   };
 
   let closed = false;
@@ -43,6 +43,8 @@
 
 <style>
   .proi-toast-container {
+    font-family: "Iosevka Web";
+    font-weight: 400;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

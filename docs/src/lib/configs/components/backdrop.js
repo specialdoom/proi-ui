@@ -28,7 +28,7 @@ export const data = [
 ];
 
 export const usage = `<script>
-import { Backdrop } from '@specialdoom/proi-ui';
+import { Backdrop, Badge, Button } from '@specialdoom/proi-ui';
 let backdrop = false;
 
 function toggleBackdrop() {
@@ -38,9 +38,8 @@ function toggleBackdrop() {
 
 <Button on:click={toggleBackdrop}>Show backdrop</Button>
 <Backdrop visible={backdrop} on:click={toggleBackdrop}>
-  <Tag>Custom optional content</Tag>
+  <Badge>Custom optional content</Badge>
 </Backdrop>
-</style>
 `;
 
 export const config = { title: 'Backdrop component', columns, data, usage };

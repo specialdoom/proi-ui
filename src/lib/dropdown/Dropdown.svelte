@@ -65,6 +65,8 @@
 
 <style>
   .proi-dropdown-container {
+    font-family: 'Iosevka Web';
+    font-weight: 400;
     position: relative;
   }
 
@@ -81,7 +83,6 @@
     line-height: 20px;
     font-size: 14px;
     cursor: pointer;
-    font-weight: 500;
     color: var(--n800);
   }
 

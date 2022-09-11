@@ -45,6 +45,8 @@
 
 <style>
   div.container {
+    font-family: 'Iosevka Web';
+    font-weight: 400;
     display: none;
     height: 100vh;
     width: 100vw;

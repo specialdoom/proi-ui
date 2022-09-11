@@ -29,7 +29,7 @@ export const usage = `<script>
   <Tabs.Pane index={0} title="Tab 1">
     Pane 1 content
   </Tabs.Pane>
-  <Tabs.Pane index={2} title="Tab 2">
+  <Tabs.Pane index={1} title="Tab 2">
     Pane 2 content
   </Tabs.Pane>
 </Tabs>`;

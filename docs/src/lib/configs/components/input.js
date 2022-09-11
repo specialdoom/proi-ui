@@ -46,11 +46,15 @@ export const data = [
 ];
 
 export const usage = `<script>
-import { TextInput } from '@specialdoom/proi-ui'
+  import { TextInput } from '@specialdoom/proi-ui'
+
+  function onChange(){
+    console.log('changed');
+  }
 </script>
 
-<TextInput value="Value" placeholder="Text input" disabled on:change={onChange}/>
+<TextInput value="Value" placeholder="Text input" on:change={onChange}/>
 <TextInput placeholder="Disabled input" disabled/>
 `;
 
-export const config = { title: 'Input component', data, usage, columns };
+export const config = { title: 'TextInput component', data, usage, columns };

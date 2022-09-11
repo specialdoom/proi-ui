@@ -17,6 +17,8 @@
 
 <style>
   .proi-switch-wrapper {
+    font-family: "Iosevka Web";
+    font-weight: 400;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -69,8 +71,8 @@
   }
 
   .proi-switch-bullet {
-    height: 12px;
-    width: 12px;
+    height: 11px;
+    width: 11px;
     background: var(--n200);
     border-radius: 6px;
     transition: 0.4s;

@@ -16,10 +16,10 @@ export const data = [
 ];
 
 export const usage = `<script>
-import { Progress, Button } from '@specialdoom/proi-ui';
+  import { Progress } from '@specialdoom/proi-ui';
 
-let percent = 67;
-let error = true;
+  let percent = 67;
+  let error = true;
 </script>
 
 <Progress {percent} />

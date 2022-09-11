@@ -18,6 +18,8 @@
 
 <style>
   .proi-input {
+    font-family: 'Iosevka Web';
+    font-weight: 400;
     border: 2px solid var(--n200);
     border-radius: 4px;
     width: 240px;
