@@ -2,26 +2,32 @@ import { columns } from '../shared/columns.js';
 
 export const data = [
   {
-    property: 'selected',
-    description: 'Current selected value',
-    type: '<code>option</code>',
-    default: '<code>-</code>'
+    property: 'value',
+    description: 'Value of dropdown',
+    type: '<code>string</code>',
+    default: '<code>\'\'</code>'
   },
   {
     property: 'options',
     description: 'Options of dropdown',
-    type: '<code>array</code>',
+    type: '<code>DropdownOption[]</code>',
     default: '<code>[]</code>'
   },
   {
-    property: 'title',
-    description: 'Title of dropdown',
+    property: 'placeholder',
+    description: 'Placeholder of dropdown',
     type: '<code>string</code>',
     default: `<code>''</code>`
   },
   {
     property: 'disabled',
     description: 'Whether the dropdown is disabled',
+    type: '<code>boolean</code>',
+    default: '<code>false</code>'
+  },
+  {
+    property: 'error',
+    description: 'Whether the dropdown is in error state',
     type: '<code>boolean</code>',
     default: '<code>false</code>'
   }

@@ -29,9 +29,10 @@ let value;
 
 ### API
 
-| Property | Description                      | Type    | Default |
-| -------- | -------------------------------- | ------- | ------- |
-| selected | Current selected value           | option  | ''      |
-| options  | Options for select               | array   | []      |
-| title    | Title of dropdown                | string  | ''      |
-| disabled | Whether the dropdown is disabled | boolean | false   |
+| Property    | Description                            | Type                                    | Default |
+| ----------- | -------------------------------------- | --------------------------------------- | ------- |
+| value       | Value of dropdown                      | string                                  | ''      |
+| options     | Options for select                     | [DropdownOption](./dropdown.types.ts)[] | []      |
+| placeholder | Placeholder of dropdown                | string                                  | ''      |
+| disabled    | Whether the dropdown is disabled       | boolean                                 | false   |
+| error       | Whether the dropdown is in error state | boolean                                 | false   |

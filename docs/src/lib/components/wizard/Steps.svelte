@@ -3,12 +3,6 @@
 
   export let stepsDetails = [];
 
-  const nextStep = () => {
-    if ($step !== stepsDetails.length - 1) $step += 1;
-  };
-  const prevStep = () => {
-    if ($step !== 0) $step -= 1;
-  };
   const setStep = (index) => {
     if ($step !== index) $step = index;
   };
@@ -48,11 +42,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .action {
-    cursor: pointer;
-    padding: 0 5px;
   }
 
   .step {
