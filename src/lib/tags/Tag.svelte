@@ -12,6 +12,7 @@
 
 <style>
   .proi-tag {
+    box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     height: 15px;
