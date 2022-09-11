@@ -1,10 +1,9 @@
-import App from "./App.svelte";
-
-import "../../src/proi-ui.css";
-import "svelte-highlight/styles"
+import App from './App.svelte'
+import './global.css';
+import '@specialdoom/proi-ui/proi-ui.css';
 
 const app = new App({
-  target: document.body
-});
+  target: document.getElementById('app')
+})
 
-export default app;
+export default app

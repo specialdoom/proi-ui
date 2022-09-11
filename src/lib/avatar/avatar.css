@@ -1,0 +1,12 @@
+@import '../shared/css/data-display-variants.css';
+
+.proi-avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+}

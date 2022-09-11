@@ -1,0 +1,46 @@
+* {
+    /* bright */
+    --bright: #ffffff;
+
+    /* extended neutral */
+    --n800: #223843;
+    --n600: #55666F;
+    --n400: #89959B;
+    --n200: #BCC3C7;
+    --n0: #EFF1F3;
+
+    /* extended green */
+    --g800: #357266;
+    --g600: #479A89;
+    --g400: #73BFB0;
+    --g200: #9DD2C7;
+    --g0: #D5ECE7;
+
+    /* extended red */
+    --r800: #B53C17;
+    --r600: #E35226;
+    --r400: #E86F4A;
+    --r200: #F99C80;
+    --r0: #FFC1AE;
+
+    /* extended yellow */
+    --y800: #CD9400;
+    --y600: #FFC71F;
+    --y400: #FFD147;
+    --y200: #FFDB70;
+    --y0: #FFE699;
+
+    /* extended blue */
+    --b800: #1A6FB6;
+    --b600: #3993DD;
+    --b400: #62AAE4;
+    --b200: #85BDEA;
+    --b0: #A8D0F0;
+
+    /* extended purple */
+    --p800: #690375;
+    --p600: #873591;
+    --p400: #A568AC;
+    --p200: #C39AC8;
+    --p0: #E1CDE3;
+}

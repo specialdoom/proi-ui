@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+}
+
+.floating {
+  position: fixed;
+  width: 375px;
+  height: 40px;
+  bottom: 50px;
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 555;
+  top: 0;
+  right: 0;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid rgba(35, 152, 171, 0.1);
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+footer>span {
+  text-align: center;
+}
+
+footer span.legend {
+  width: 30%;
+}
+
+footer span.copyright {
+  width: 40%;
+}
+
+footer span.social {
+  width: 30%;
+}
