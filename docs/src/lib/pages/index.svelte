@@ -1,10 +1,10 @@
 <script>
-  import { metatags } from '@roxi/routify';
-  import Highlight from '../components/Highlight.svelte';
-  import pkg from '../../../package.json';
-  import AnimatedLogo from '../components/AnimatedLogo.svelte';
+  import { metatags, url } from "@roxi/routify";
+  import Highlight from "../components/Highlight.svelte";
+  import pkg from "../../../package.json";
+  import AnimatedLogo from "../components/AnimatedLogo.svelte";
 
-  metatags.title = 'proi-ui';
+  metatags.title = "proi-ui";
 </script>
 
 <div class="container" style="flex-direction: column">
@@ -15,10 +15,10 @@
   <Highlight code={`npm i @specialdoom/proi-ui`} />
   <div class="social-media-container">
     <a href="https://github.com/specialdoom/proi-ui">
-      <img src="/github.png" alt="github icon" />
+      <img src={$url("/github.png")} alt="github icon" />
     </a>
     <a href="https://twitter.com/ProiUi">
-      <img src="/twitter.png" alt="twitter icon" />
+      <img src={$url("/twitter.png")} alt="twitter icon" />
     </a>
   </div>
 </div>
