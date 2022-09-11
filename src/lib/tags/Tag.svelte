@@ -11,7 +11,7 @@
 </span>
 
 <style>
-  .tag {
+  .proi-tag {
     display: inline-flex;
     align-items: center;
     height: 15px;
