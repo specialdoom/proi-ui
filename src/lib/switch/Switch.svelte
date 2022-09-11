@@ -17,8 +17,6 @@
 
 <style>
   .proi-switch-wrapper {
-    font-family: "Iosevka Web";
-    font-weight: 400;
     display: flex;
     justify-content: flex-start;
     align-items: center;

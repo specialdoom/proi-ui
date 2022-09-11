@@ -43,8 +43,6 @@
 
 <style>
   .proi-toast-container {
-    font-family: "Iosevka Web";
-    font-weight: 400;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

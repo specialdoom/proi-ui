@@ -13,8 +13,6 @@
 
 <style>
   .sd-spinner-container {
-    font-family: "Iosevka Web";
-    font-weight: 400;
     display: flex;
     height: fit-content;
     max-width: 150px;

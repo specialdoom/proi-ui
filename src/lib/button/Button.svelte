@@ -18,8 +18,6 @@
 
 <style>
   .proi-button {
-    font-family: 'Iosevka Web';
-    font-weight: 400;
     box-sizing: border-box;
     width: fit-content;
     height: 32px;

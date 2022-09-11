@@ -65,8 +65,6 @@
 
 <style>
   .proi-dropdown-container {
-    font-family: 'Iosevka Web';
-    font-weight: 400;
     position: relative;
   }
 

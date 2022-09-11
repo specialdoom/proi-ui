@@ -23,8 +23,6 @@
 
 <style>
   .proi-avatar {
-    font-family: 'Iosevka Web';
-    font-weight: 400;
     height: 50px;
     width: 50px;
     border-radius: 50%;
