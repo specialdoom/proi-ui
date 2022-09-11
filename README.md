@@ -19,9 +19,9 @@ yarn add @specialdoom/proi-ui
 - update existing components
 
 ## v3.0.0 changes
-- new components: Tabs, FormItem, Switch, TextInput (replacing Input), Badges & Pills (replacing Tag)
+- new components: Tabs, FormItem, Switch, TextInput (replacing Input), Badges & Pills (replacing Tag), 4 default Avatars (Lauren, Tim, Nikita, Leo)
 - typescript support
-- using sveltekit library mode
+- using sveltekit library mode`
 
 ## Migrate to version 3.0.0
 - import `@specialdoom/proi-ui/variables.css` for styling
