@@ -9,7 +9,7 @@
 		"components",
 		"svelte3"
 	],
-	"author": "Bogdan Bledea <bledea.bogdan97@gmail.com> (https://github.com/specialdoom)",
+	"author": "specialdoom (https://github.com/specialdoom)",
 	"repository": "git://github.com/specialdoom/proi-ui",
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org"
