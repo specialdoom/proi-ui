@@ -22,5 +22,25 @@
 </div>
 
 <style>
-  @import "./form-item.css";
+  .proi-form-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4px;
+    margin: 6px 0;
+  }
+
+  .proi-label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .proi-description {
+    font-size: 12px;
+  }
+
+  .proi-error {
+    color: var(--r400);
+    font-size: 13px;
+  }
 </style>

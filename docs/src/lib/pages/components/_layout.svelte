@@ -1,6 +1,5 @@
 <script>
   import { metatags } from "@roxi/routify";
-  import { Icon } from "@specialdoom/proi-ui-icons";
   import { url, isActive } from "@roxi/routify";
 
   metatags.title = "proi-ui | Components";
@@ -41,9 +40,6 @@
   <div class="left-side">
     <div class="select-option" on:click={toggle}>
       <span class="select-option-title">Components</span>
-      <span class="select-option-icon">
-        <Icon variant={open ? "circleArrowDown" : "circleArrowUp"} scale={15} />
-      </span>
     </div>
     <div class="select" style={open ? "" : "display:none"}>
       {#each options as option}
@@ -183,11 +179,5 @@
   .select-option-title {
     width: 90%;
     text-align: center;
-  }
-
-  .select-option-icon {
-    width: 10%;
-    display: flex;
-    align-items: center;
   }
 </style>
