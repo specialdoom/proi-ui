@@ -1,4 +1,4 @@
-import type { FeedbackVariant } from "../shared/types/base-variant.types";
+import type { FeedbackVariant } from "../shared/types/base-variant.types.js";
 
 export type Slice = {
   variant: SliceVariant;

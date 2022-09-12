@@ -1,5 +1,5 @@
-import { toast } from './store/toast';
-import type { Slice } from './toast.types';
+import { toast } from './store/toast.js';
+import type { Slice } from './toast.types.js';
 
 export function send(slice: Slice) {
   toast.set(slice);
