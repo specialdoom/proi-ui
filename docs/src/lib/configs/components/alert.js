@@ -2,6 +2,12 @@ import { columns } from '../shared/columns.js';
 
 export const data = [
   {
+    property: 'title',
+    description: `Title of alert`,
+    type: '<code>string</code>',
+    default: `<code>undefined</code>`
+  },
+  {
     property: 'variant',
     description: `Variant of alert. <br />
     Options: <code>success</code>, <code>info</code>, <code>warning</code>, <code>error</code>`,
@@ -13,6 +19,12 @@ export const data = [
     description: 'Whether the alert can be closed',
     type: '<code>boolean</code>',
     default: '<code>false</code>'
+  },
+  {
+    property: '<code>slot</code>',
+    description: 'Description of alert. Additional message for alert',
+    type: '<code>string</code>',
+    default: '<code>\'\'</code>'
   }
 ];
 

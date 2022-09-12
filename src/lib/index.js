@@ -1,7 +1,7 @@
-import * as toaster from './toast/toaster';
+import * as toaster from './toast/toaster.js';
 
 import Alert from './alert/Alert.svelte';
-import Avatar from './avatar';
+import Avatar from './avatar/index.js';
 import Badge from './tags/Badge.svelte';
 import Backdrop from './backdrop/Backdrop.svelte';
 import Button from './button/Button.svelte';
