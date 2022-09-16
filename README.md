@@ -12,6 +12,8 @@ npm i @specialdoom/proi-ui
 yarn add @specialdoom/proi-ui
 ```
 
+## Figma design resource [here](https://www.figma.com/community/file/1150697835816146933)
+
 ## Check out docs [here](https://specialdoom.github.io/proi-ui/)
 
 ## Coming next
