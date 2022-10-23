@@ -18,14 +18,9 @@
 	},
 	"exclude": [
 		"package",
-		"docs",
-		"node_modules",
-		"icons",
-		"lib/utils",
-		"**/*.story.svelte"
+		"node_modules"
 	],
 	"include": [
-		".d.ts",
-		"__tests__"
+		".d.ts"
 	]
 }

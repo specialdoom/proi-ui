@@ -1,5 +1,7 @@
 import { render } from '@testing-library/svelte';
+// @ts-ignore
 import Alert from '../lib/alert/Alert.svelte';
+// @ts-ignore
 import SlotWrapper from './SlotWrapper.svelte';
 
 describe('Alert component', () => {

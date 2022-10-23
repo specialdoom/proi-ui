@@ -4,12 +4,12 @@ import preprocess from 'svelte-preprocess';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	package: {
-		source: 'lib'
+		source: 'lib',
 	},
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
 	}
 };
 

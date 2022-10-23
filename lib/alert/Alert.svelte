@@ -6,6 +6,7 @@
   import StopIcon from "../icons/StopIcon.svelte";
   import type { AlertVariant } from "./alert.types.js";
 
+  /** Variant of alert component */
   export let variant: AlertVariant = "success";
   export let title: string;
   export let closable: boolean = false;

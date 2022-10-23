@@ -19,23 +19,23 @@ const mutatedTsConfig = JSON.parse(originalTsConfig);
 mutatedTsConfig.exclude = [
   ...(mutatedTsConfig.exclude ?? []),
   "**/*.story.svelte",
-  "**/*.test.ts",
-  "**/__tests__/**",
-  "**/node_modules/**"
+  "**/__tests__/**"
 ];
+
+console.log(mutatedTsConfig);
 
 mutatedTsConfig.compilerOptions = {
   ...(mutatedTsConfig.compilerOptions || { moduleResolution: "Node16" }),
   baseUrl: "",
   rootDir: "lib",
-  outDir: "dist/lib",
+  outDir: "package",
   paths: {}
 };
 
 await writeFile(tsConfigPath, JSON.stringify(mutatedTsConfig, null, 2));
 
 try {
-  await execAsync("npm exec svelte-package");
+  await execAsync("npm exec svelte-package --exclude **/*.story.svelte");
   console.log("✅ Package built successfully!");
 } catch (e) {
   console.log("⚠️", e.message);
