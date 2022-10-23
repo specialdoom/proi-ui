@@ -22,15 +22,15 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: install
-        working-directory: ./docs
+        working-directory: .
         run: npm i
 
       - name: build
-        working-directory: ./docs
-        run: npm run build
+        working-directory: .
+        run: npm run story:build
         
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: ./docs/dist # The folder the action should deploy.
+          folder: ./.histoire/dist # The folder the action should deploy.
