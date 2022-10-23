@@ -4,7 +4,7 @@ yet another Svelte ui library
 
 ![DevBadge](https://img.shields.io/badge/development-in%20progress-green)
 
-<img src="https://github.com/specialdoom/proi-ui/blob/main/docs/src/assets/thumbnail.jpg" alt="thumbnail" width="100%"/>
+<img src="https://github.com/specialdoom/proi-ui/blob/main/assets/thumbnail.jpg" alt="thumbnail" width="100%"/>
 
 ## Installation
 ```bash
@@ -14,7 +14,7 @@ yarn add @specialdoom/proi-ui
 
 ## Figma design resource [here](https://www.figma.com/community/file/1150697835816146933)
 
-## Check out docs [here](https://specialdoom.github.io/proi-ui/)
+## Check out docs [here](https://proi-dvlzf2vzl-specialdoom.vercel.app/)
 
 ## Coming next
 - multiple components
