@@ -14,7 +14,7 @@ yarn add @specialdoom/proi-ui
 
 ## Figma design resource [here](https://www.figma.com/community/file/1150697835816146933)
 
-## Check out docs [here](https://proi-dvlzf2vzl-specialdoom.vercel.app/)
+## Check out docs [here](https://proi-ui.vercel.app/)
 
 ## Coming next
 - multiple components
