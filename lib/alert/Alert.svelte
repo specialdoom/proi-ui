@@ -8,7 +8,11 @@
 
   /** Variant of alert component */
   export let variant: AlertVariant = "success";
+
+  /** Title of alert component */
   export let title: string;
+
+  /** Whether the alert component is closable */
   export let closable: boolean = false;
 
   const icons: any = {

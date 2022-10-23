@@ -1,10 +1,9 @@
 <script lang="ts">
-  export let className: string = "";
   export let visible: boolean = false;
 </script>
 
 {#if visible}
-  <div class="proi-backdrop {className}" on:click data-testid="proi-backdrop">
+  <div class:proi-backdrop={true} on:click data-testid="proi-backdrop">
     <div>
       <slot />
     </div>
