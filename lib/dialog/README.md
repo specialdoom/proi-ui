@@ -29,13 +29,17 @@ function toggle() {
 
 #### Dialog
 
-| Property    | Description                                             | Type       | Default   |
-| ----------- | ------------------------------------------------------- | ---------- | --------- |
-| visible     | Whether the dialog is visible                           | boolean    | false     |
-| title       | Title of dialog                                         | string     | ''        |
-| showActions | Whether the actions are visible or not                  | boolean    | true      |
-| onOk        | Ok action handler                                       | () => void | undefined |
-| onCancel    | Cancel action handler. Will fire on dialog close action | () => void | undefined |
+| Property    | Description                            | Type    | Default |
+| ----------- | -------------------------------------- | ------- | ------- |
+| visible     | Whether the dialog is visible          | boolean | false   |
+| title       | Title of dialog                        | string  | ''      |
+| showActions | Whether the actions are visible or not | boolean | true    |
 
+
+#### Events
+| Event name | Description                                                                  |
+| ---------- | ---------------------------------------------------------------------------- |
+| `ok`       | Dispatched when user click on `Ok` action                                    |
+| `cancel`   | Dispatched when user click on `Cancel` action or closes the dialog using `X` |
 
 

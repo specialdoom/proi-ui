@@ -43,4 +43,26 @@
       <p>Some dialog content</p>
     </Dialog>
   </Hst.Variant>
+
+  <Hst.Variant title="on:ok event">
+    <Button on:click={() => (showDialog = true)}>Show dialog</Button>
+    <Dialog
+      bind:visible={showDialog}
+      on:ok={() => alert("ok action triggered")}
+      title="Custom title"
+    >
+      <p>Some dialog content</p>
+    </Dialog>
+  </Hst.Variant>
+
+  <Hst.Variant title="on:cancel event">
+    <Button on:click={() => (showDialog = true)}>Show dialog</Button>
+    <Dialog
+      bind:visible={showDialog}
+      on:cancel={() => alert("ok action triggered")}
+      title="Custom title"
+    >
+      <p>Some dialog content</p>
+    </Dialog>
+  </Hst.Variant>
 </Hst.Story>
