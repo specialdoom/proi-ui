@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Slice } from "./toast.types.js";
   import CloseIcon from "../icons/CloseIcon.svelte";
-  import { feedbackIconsMap } from "lib/utils/icons.js";
+  import { feedbackIconsMap } from "../utils/icons.js";
 
   export let toast: Slice;
 

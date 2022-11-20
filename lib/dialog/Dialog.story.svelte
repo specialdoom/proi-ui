@@ -59,7 +59,7 @@
     <Button on:click={() => (showDialog = true)}>Show dialog</Button>
     <Dialog
       bind:visible={showDialog}
-      on:cancel={() => alert("ok action triggered")}
+      on:cancel={() => alert("cancel action triggered")}
       title="Custom title"
     >
       <p>Some dialog content</p>
