@@ -33,6 +33,7 @@
     flex-direction: column;
     justify-content: flex-start;
     gap: 4px;
+    padding: 0px 4px;
     margin: 6px 0;
   }
 
