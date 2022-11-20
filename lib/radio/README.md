@@ -27,8 +27,8 @@ let radio = 1;
 
 ### API
 
-| Property | Description                   | Type    | Default |
-| -------- | ----------------------------- | ------- | ------- |
-| value    | Value of radio                | any     | null    |
-| group    | Group value                   | any     | null    |
-| disabled | Whether the radio is disabled | boolean | false   |
+| Property | Description                   | Type                | Default   |
+| -------- | ----------------------------- | ------------------- | --------- |
+| value    | Value of radio                | `number  \| string` | undefined |
+| group    | Group value                   | `number  \| string` | undefined |
+| disabled | Whether the radio is disabled | boolean             | false     |

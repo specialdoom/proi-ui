@@ -1,9 +1,9 @@
 <script lang="ts">
   import CircleIcon from "../icons/CircleIcon.svelte";
 
-  export let value: number;
+  export let value: number | string;
+  export let group: number | string;
   export let disabled: boolean = false;
-  export let group: number;
 </script>
 
 <label
