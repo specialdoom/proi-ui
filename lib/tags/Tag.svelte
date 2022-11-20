@@ -6,7 +6,11 @@
   export let pill: boolean = false;
 </script>
 
-<span class="proi-tag data-display {variant}" class:badge class:pill>
+<span
+  class="proi-tag data-display {variant}"
+  class:badge
+  class:pill
+>
   <slot />
 </span>
 

@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Hst } from "@histoire/plugin-svelte";
+  import type { Hst as HstType } from "@histoire/plugin-svelte";
   import Switch from "./Switch.svelte";
 
-  export let Hst: Hst;
+  export let Hst: HstType;
 </script>
 
 <Hst.Story title="Switch">
@@ -23,6 +23,9 @@
   </Hst.Variant>
 
   <Hst.Variant title="Checked and disabled">
-    <Switch checked disabled>Switch me</Switch>
+    <Switch
+      checked
+      disabled>Switch me</Switch
+    >
   </Hst.Variant>
 </Hst.Story>

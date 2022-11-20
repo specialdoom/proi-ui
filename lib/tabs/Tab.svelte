@@ -7,6 +7,7 @@
   export let title: string;
   export let index: number;
   export let disabled: boolean = false;
+
   let tabElement: HTMLButtonElement;
 
   const { current, selectTab } = getContext<TabsContext>(contextName);

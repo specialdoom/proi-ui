@@ -5,4 +5,7 @@
   export let variant: TagVariant = "pine";
 </script>
 
-<Tag {variant} pill><slot /></Tag>
+<Tag
+  {variant}
+  pill><slot /></Tag
+>

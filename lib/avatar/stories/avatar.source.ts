@@ -3,17 +3,17 @@ const template = `<script>
 </script>
 `;
 
-export let withInitialsSource = `${template}
+export const withInitialsSource = `${template}
 
 <Avatar initials="PU" />
-`
+`;
 
-export let withImageSource = `${template}
+export const withImageSource = `${template}
 
 <Avatar image="image_url" />
 `;
 
-export let defaultAvatarsSource = `${template}
+export const defaultAvatarsSource = `${template}
 
 <Avatar.Lauren />
 <Avatar.Tim />

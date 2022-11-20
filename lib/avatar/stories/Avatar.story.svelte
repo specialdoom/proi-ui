@@ -1,24 +1,33 @@
 <script lang="ts">
-  import type { Hst } from "@histoire/plugin-svelte";
+  import type { Hst as HstType } from "@histoire/plugin-svelte";
   import Avatar from "../index.js";
 
   import * as source from "./avatar.source.js";
 
-  const {withInitialsSource, withImageSource, defaultAvatarsSource} = source;
+  const { withInitialsSource, withImageSource, defaultAvatarsSource } = source;
 
-  export let Hst: Hst;
+  export let Hst: HstType;
 </script>
 
 <Hst.Story title="Avatar">
-  <Hst.Variant title="With initials" source={withInitialsSource}>
+  <Hst.Variant
+    title="With initials"
+    source={withInitialsSource}
+  >
     <Avatar initials="PU" />
   </Hst.Variant>
 
-  <Hst.Variant title="With image" source={withImageSource}>
+  <Hst.Variant
+    title="With image"
+    source={withImageSource}
+  >
     <Avatar image="https://avatars.githubusercontent.com/u/41910815?v=4" />
   </Hst.Variant>
 
-  <Hst.Variant title="Default" source={defaultAvatarsSource}>
+  <Hst.Variant
+    title="Default"
+    source={defaultAvatarsSource}
+  >
     <Avatar.Lauren />
     <Avatar.Tim />
     <Avatar.Leo />

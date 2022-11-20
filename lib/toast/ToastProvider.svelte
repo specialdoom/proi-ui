@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { toast } from './store/toast.js';
-  import Toast from './Toast.svelte';
-  import type { Slice } from './toast.types.js';
+  import { toast } from "./store/toast.js";
+  import Toast from "./Toast.svelte";
+  import type { Slice } from "./toast.types.js";
 
   let toasts: Slice[] = [];
 
@@ -21,7 +21,7 @@
     }, 3000);
   }
 
-  $: _ = toast.subscribe((slice) => {
+  $: toast.subscribe((slice) => {
     if (!slice) {
       return;
     }

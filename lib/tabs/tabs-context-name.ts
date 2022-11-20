@@ -1,1 +1,1 @@
-export const contextName: string = 'TABS';
+export const contextName: string = "TABS";

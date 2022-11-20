@@ -5,4 +5,7 @@
   export let variant: TagVariant = "pine";
 </script>
 
-<Tag {variant} badge><slot /></Tag>
+<Tag
+  {variant}
+  badge><slot /></Tag
+>

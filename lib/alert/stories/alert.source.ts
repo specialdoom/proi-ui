@@ -5,7 +5,7 @@ const template = `<script>
 </script>
 `;
 
-export let defaultSource = `${template}
+export const defaultSource = `${template}
 
 <Alert 
   title="Some title" 
@@ -14,7 +14,7 @@ export let defaultSource = `${template}
 />
 `;
 
-export let withDescriptionSource = `${template}
+export const withDescriptionSource = `${template}
 
 <Alert 
   title="Some title" 
@@ -23,7 +23,7 @@ export let withDescriptionSource = `${template}
 </Alert>
 `;
 
-export let variantAlertSource = (variant: AlertVariant) =>
+export const variantAlertSource = (variant: AlertVariant) =>
   `${template}
 
 <Alert 
@@ -34,7 +34,7 @@ export let variantAlertSource = (variant: AlertVariant) =>
 </Alert>
 `;
 
-export let closableAlertSouce = `${template}
+export const closableAlertSouce = `${template}
 
 <Alert 
   title="Some title"

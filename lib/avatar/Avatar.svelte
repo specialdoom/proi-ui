@@ -6,9 +6,7 @@
   export let image: string = "";
 
   $: style =
-    image !== ""
-      ? `background: url(${image}) center center/50px 50px no-repeat;`
-      : "";
+    image !== "" ? `background: url(${image}) center center/50px 50px no-repeat;` : "";
 </script>
 
 <div

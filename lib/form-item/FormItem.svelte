@@ -4,8 +4,14 @@
   export let error: string = "";
 </script>
 
-<div class="proi-form-item" data-testid="proi-form-item">
-  <span class="proi-label" data-testid="proi-form-item-label">
+<div
+  class="proi-form-item"
+  data-testid="proi-form-item"
+>
+  <span
+    class="proi-label"
+    data-testid="proi-form-item-label"
+  >
     {label}
   </span>
   {#if description !== ""}

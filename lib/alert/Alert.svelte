@@ -1,10 +1,7 @@
 <script lang="ts">
-  import CheckIcon from "../icons/CheckIcon.svelte";
-  import CloseIcon from "../icons/CloseIcon.svelte";
-  import InfoIcon from "../icons/InfoIcon.svelte";
-  import WarningIcon from "../icons/WarningIcon.svelte";
-  import StopIcon from "../icons/StopIcon.svelte";
   import type { AlertVariant } from "./alert.types.js";
+  import CloseIcon from "../icons/CloseIcon.svelte";
+  import { getFeedbackIcon } from "../utils/icons.js";
 
   /** Variant of alert component */
   export let variant: AlertVariant = "success";
@@ -15,35 +12,42 @@
   /** Whether the alert component is closable */
   export let closable: boolean = false;
 
-  const icons: any = {
-    success: CheckIcon,
-    error: StopIcon,
-    info: InfoIcon,
-    warning: WarningIcon,
-  };
+  let closed: boolean = false;
 
-  let closed = false;
-
-  const close = () => (closed = true);
+  function close() {
+    closed = true;
+  }
 </script>
 
 {#if !closed}
-  <div class="proi-alert-container {variant}" data-testid="proi-alert">
+  <div
+    class="proi-alert-container {variant}"
+    data-testid="proi-alert"
+  >
     <div class="proi-alert">
       <div class="proi-alert-icon">
-        <svelte:component this={icons[variant]} />
+        <svelte:component this={getFeedbackIcon({ variant })} />
       </div>
-      <div class="proi-alert-title" data-testid="proi-alert-title">
+      <div
+        class="proi-alert-title"
+        data-testid="proi-alert-title"
+      >
         {title}
       </div>
       {#if closable}
-        <div class="proi-alert-close-icon" on:click={close}>
+        <div
+          class="proi-alert-close-icon"
+          on:click={close}
+        >
           <CloseIcon />
         </div>
       {/if}
     </div>
     {#if $$slots.default}
-      <div class="proi-alert-description" data-testid="proi-alert-description">
+      <div
+        class="proi-alert-description"
+        data-testid="proi-alert-description"
+      >
         <slot />
       </div>
     {/if}

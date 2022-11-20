@@ -18,6 +18,7 @@ module.exports = {
 		node: true
 	},
 	rules: {
-		quotes: [2, "single", { avoidEscape: true }]
+		quotes: [2, "double", { avoidEscape: true }],
+		"@typescript-eslint/no-inferrable-types": 0
 	}
 };

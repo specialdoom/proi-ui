@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Hst } from "@histoire/plugin-svelte";
+  import type { Hst as HstType } from "@histoire/plugin-svelte";
   import TextInput from "./TextInput.svelte";
 
-  export let Hst: Hst;
+  export let Hst: HstType;
 </script>
 
 <Hst.Story title="Input/TextInput">
@@ -27,6 +27,9 @@
   </Hst.Variant>
 
   <Hst.Variant title="Disabled with value">
-    <TextInput value="Some value" disabled />
+    <TextInput
+      value="Some value"
+      disabled
+    />
   </Hst.Variant>
 </Hst.Story>

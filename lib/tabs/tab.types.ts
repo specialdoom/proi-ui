@@ -1,3 +1,4 @@
+import { Writable } from "svelte/store";
 
 export type Pane = {
   index: number;
@@ -8,5 +9,5 @@ export type Pane = {
 export type TabsContext = {
   registerPane: (pane: Pane) => void;
   selectTab: (tabIndex: number) => void;
-  current: any;
-}
+  current: Writable<number>;
+};

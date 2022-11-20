@@ -3,7 +3,11 @@
 </script>
 
 {#if visible}
-  <div class:proi-backdrop={true} on:click data-testid="proi-backdrop">
+  <div
+    class:proi-backdrop={true}
+    on:click
+    data-testid="proi-backdrop"
+  >
     <div>
       <slot />
     </div>
