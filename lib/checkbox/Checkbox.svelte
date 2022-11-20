@@ -7,7 +7,11 @@
 </script>
 
 <label class="proi-checkbox-container {className}">
-  <input type="checkbox" bind:checked {disabled} />
+  <input
+    type="checkbox"
+    bind:checked
+    {disabled}
+  />
   <div class="proi-checkbox-wrapper">
     <div
       class:checked
@@ -19,7 +23,10 @@
         <CheckboxCheckmarkIcon />
       {/if}
     </div>
-    <span class="proi-checkbox-label" data-testid="proi-checkbox-label">
+    <span
+      class="proi-checkbox-label"
+      data-testid="proi-checkbox-label"
+    >
       <slot />
     </span>
   </div>

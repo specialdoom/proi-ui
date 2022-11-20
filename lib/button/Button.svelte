@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { ButtonVariant } from "./button.types.js";
-  
+
   export let variant: ButtonVariant = "primary";
   export let disabled: boolean = false;
   export let block: boolean = false;

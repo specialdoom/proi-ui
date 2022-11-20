@@ -18,5 +18,9 @@
     fill="#D8A200"
     stroke="#D8A200"
   />
-  <path d="M10 5.83332L10 11.6667" stroke="#E8AD00" stroke-width="2" />
+  <path
+    d="M10 5.83332L10 11.6667"
+    stroke="#E8AD00"
+    stroke-width="2"
+  />
 </svg>

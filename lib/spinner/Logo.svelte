@@ -43,7 +43,10 @@
       }
     }
   </style>
-  <g id="ejl2OaZPeQA2_tr" transform="translate(20,20) rotate(0)">
+  <g
+    id="ejl2OaZPeQA2_tr"
+    transform="translate(20,20) rotate(0)"
+  >
     <path
       d="M1,20C1,30.4934,9.50659,39,20,39s19-8.5066,19-19-8.5066-19-19-19"
       transform="translate(-20,-20)"
@@ -54,7 +57,10 @@
       stroke-linejoin="round"
     />
   </g>
-  <g id="ejl2OaZPeQA3_tr" transform="translate(20,27) rotate(0)">
+  <g
+    id="ejl2OaZPeQA3_tr"
+    transform="translate(20,27) rotate(0)"
+  >
     <path
       d="M32,27c0-6.6274-5.3726-12-12-12s-12,5.3726-12,12s5.3726,12,12,12"
       transform="translate(-20,-27)"
@@ -65,7 +71,10 @@
       stroke-linejoin="round"
     />
   </g>
-  <g id="ejl2OaZPeQA4_tr" transform="translate(20.5,32.5) rotate(0)">
+  <g
+    id="ejl2OaZPeQA4_tr"
+    transform="translate(20.5,32.5) rotate(0)"
+  >
     <path
       d="M14,32.5c0,3.5899,2.9101,6.5,6.5,6.5s6.5-2.9101,6.5-6.5-2.9101-6.5-6.5-6.5"
       transform="translate(-20.5,-32.5)"

@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { DropdownOption } from "./dropdown.types.js";
-  
+
   import { clickOutside } from "../utils/clickOutside.js";
   import CarretDown from "../icons/CarretDown.svelte";
   import CarretUp from "../icons/CarretUp.svelte";

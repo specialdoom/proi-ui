@@ -4,9 +4,17 @@
 </script>
 
 <label class="proi-switch-container">
-  <input type="checkbox" bind:checked {disabled} />
+  <input
+    type="checkbox"
+    bind:checked
+    {disabled}
+  />
   <div class="proi-switch-wrapper">
-    <div class:checked class:disabled class="proi-switch">
+    <div
+      class:checked
+      class:disabled
+      class="proi-switch"
+    >
       <div class="proi-switch-bullet" />
     </div>
     <span class="proi-switch-label">

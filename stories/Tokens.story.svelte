@@ -1,23 +1,23 @@
 <script lang="ts">
-  import type { Hst } from "@histoire/plugin-svelte";
+  import type { Hst as HstType } from "@histoire/plugin-svelte";
   import Dialog from "../lib/dialog/Dialog.svelte";
   import Button from "../lib/button/Button.svelte";
 
-  export let Hst: Hst;
+  export let Hst: HstType;
 
   const green = {
     g800: "#357266",
     g600: "#479A89",
     g400: "#73BFB0",
     g200: "#9DD2C7",
-    g0: "#D5ECE7",
+    g0: "#D5ECE7"
   };
   const neutral = {
     n800: "#223843",
     n600: "#55666F",
     n400: "#89959B",
     n200: "#BCC3C7",
-    n0: "#EFF1F3",
+    n0: "#EFF1F3"
   };
 
   const red = {
@@ -25,7 +25,7 @@
     r600: "#E35226",
     r400: "#E86F4A",
     r200: "#EC8C6F",
-    r0: "#F1A993",
+    r0: "#F1A993"
   };
 
   const blue = {
@@ -33,7 +33,7 @@
     b600: "#3993DD",
     b400: "#62AAE4",
     b200: "#85BDEA",
-    b0: "#A8D0F0",
+    b0: "#A8D0F0"
   };
 
   const yellow = {
@@ -41,7 +41,7 @@
     y600: "#FFC71F",
     y400: "#FFD147",
     y200: "#FFDB70",
-    y0: "#FFE699",
+    y0: "#FFE699"
   };
 
   const purple = {
@@ -49,11 +49,11 @@
     p600: "#873591",
     p400: "#A568AC",
     p200: "#C39AC8",
-    p0: "#E1CDE3",
+    p0: "#E1CDE3"
   };
 
   const bright = {
-    bright: "#ffffff",
+    bright: "#ffffff"
   };
 
   const variables: any = [neutral, green, yellow, purple, red, blue, bright];
@@ -87,11 +87,17 @@
   }
 </script>
 
-<Hst.Story title="Tokens" group="b">
+<Hst.Story
+  title="Tokens"
+  group="b"
+>
   <Hst.Variant>
     <p>
       You can easily change the colors and generate the override-variables file
-      <Button variant="ghost" on:click={generateCssFileContent}>
+      <Button
+        variant="ghost"
+        on:click={generateCssFileContent}
+      >
         Generate css file content
       </Button>
     </p>
@@ -103,14 +109,20 @@
           {#each Object.entries(variable) as [key]}
             <div class="color">
               --{key}:
-              <input type="color" bind:value={variable[key]} />
+              <input
+                type="color"
+                bind:value={variable[key]}
+              />
             </div>
           {/each}
         </div>
       {/each}
     </div>
 
-    <Dialog bind:visible={showDialog} title="override-variables.css">
+    <Dialog
+      bind:visible={showDialog}
+      title="override-variables.css"
+    >
       <code style="white-space: pre-line">
         {cssFileContent}
       </code>

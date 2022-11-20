@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Hst } from "@histoire/plugin-svelte";
+  import type { Hst as HstType } from "@histoire/plugin-svelte";
   import Progress from "./Progress.svelte";
 
-  export let Hst: Hst;
+  export let Hst: HstType;
 </script>
 
 <Hst.Story title="Progress">
@@ -19,6 +19,9 @@
   </Hst.Variant>
 
   <Hst.Variant title="With error">
-    <Progress percent={50} error />
+    <Progress
+      percent={50}
+      error
+    />
   </Hst.Variant>
 </Hst.Story>

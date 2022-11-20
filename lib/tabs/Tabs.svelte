@@ -22,16 +22,11 @@
       current.set(index);
     },
 
-    current,
+    current
   });
 
   onMount(() => {
     if (!tabsContainerElement) return;
-
-    console.log(
-      tabsContainerElement.scrollWidth,
-      tabsContainerElement.clientWidth
-    );
 
     if (tabsContainerElement.scrollWidth > tabsContainerElement.clientWidth) {
       elementOverflows = true;
@@ -47,9 +42,16 @@
       tabsContainerElement.scrollLeft -= 300;
     }}
   />
-  <div class="proi-tabs" bind:this={tabsContainerElement}>
+  <div
+    class="proi-tabs"
+    bind:this={tabsContainerElement}
+  >
     {#each $panes as pane, index}
-      <Tab {index} title={pane.title} disabled={pane.disabled} />
+      <Tab
+        {index}
+        title={pane.title}
+        disabled={pane.disabled}
+      />
     {/each}
   </div>
   <ScrollButton

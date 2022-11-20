@@ -1,14 +1,26 @@
 <script lang="ts">
   import CircleIcon from "../icons/CircleIcon.svelte";
 
-  export let value: number;
+  export let value: number | string;
+  export let group: number | string;
   export let disabled: boolean = false;
-  export let group: number;
 </script>
 
-<label class="proi-radio-container" class:sd-disabled={disabled}>
-  <input type="radio" bind:group {value} {disabled} />
-  <div class="proi-radio-bullet" class:checked={group === value} class:disabled>
+<label
+  class="proi-radio-container"
+  class:sd-disabled={disabled}
+>
+  <input
+    type="radio"
+    bind:group
+    {value}
+    {disabled}
+  />
+  <div
+    class="proi-radio-bullet"
+    class:checked={group === value}
+    class:disabled
+  >
     {#if group === value}
       <CircleIcon fillColor={disabled ? "#EFF1F3" : "#479A89"} />
     {/if}

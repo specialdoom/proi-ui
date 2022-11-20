@@ -1,31 +1,42 @@
 <script lang="ts">
-  import CloseIcon from '../icons/CloseIcon.svelte';
-  import Backdrop from '../backdrop/Backdrop.svelte';
-  import Button from '../button/Button.svelte';
+  import CloseIcon from "../icons/CloseIcon.svelte";
+  import Backdrop from "../backdrop/Backdrop.svelte";
+  import Button from "../button/Button.svelte";
+  import { createEventDispatcher } from "svelte";
 
-  export let title: string = '';
+  export let title: string = "";
   export let visible: boolean = false;
   export let showActions: boolean = true;
-  export let onOk: (e: Event) => void = () => {};
-  export let onCancel: () => void = () => {};
+
+  const dispatch = createEventDispatcher();
 
   const handleCancel = () => {
-    if (onCancel) onCancel();
+    dispatch("cancel");
 
     visible = false;
   };
+
+  function handleOk() {
+    dispatch("ok");
+  }
 </script>
 
 {#if visible}
   <Backdrop {visible}>
     <div class="container">
-      <div class="dialog" data-testid="proi-dialog">
+      <div
+        class="dialog"
+        data-testid="proi-dialog"
+      >
         <div
           class="header"
-          style={`justify-content: ${title ? 'space-between' : 'flex-end'};`}
+          style={`justify-content: ${title ? "space-between" : "flex-end"};`}
         >
           {title}
-          <span on:click={handleCancel} data-testid="proi-dialog-close-icon">
+          <span
+            on:click={handleCancel}
+            data-testid="proi-dialog-close-icon"
+          >
             <CloseIcon />
           </span>
         </div>
@@ -33,9 +44,18 @@
           <slot />
         </div>
         {#if showActions}
-          <div class="footer" data-testid="proi-dialog-actions">
-            <Button variant="ghost" on:click={handleCancel}>Cancel</Button>
-            <Button variant="primary" on:click={onOk}>Ok</Button>
+          <div
+            class="footer"
+            data-testid="proi-dialog-actions"
+          >
+            <Button
+              variant="ghost"
+              on:click={handleCancel}>Cancel</Button
+            >
+            <Button
+              variant="primary"
+              on:click={handleOk}>Ok</Button
+            >
           </div>
         {/if}
       </div>

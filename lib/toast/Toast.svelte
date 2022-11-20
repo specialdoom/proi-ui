@@ -1,35 +1,30 @@
 <script lang="ts">
-  import CheckIcon from "../icons/CheckIcon.svelte";
-  import CloseIcon from "../icons/CloseIcon.svelte";
-  import InfoIcon from "../icons/InfoIcon.svelte";
-  import WarningIcon from "../icons/WarningIcon.svelte";
-  import StopIcon from "../icons/StopIcon.svelte";
   import type { Slice } from "./toast.types.js";
+  import CloseIcon from "../icons/CloseIcon.svelte";
+  import { feedbackIconsMap } from "../utils/icons.js";
 
   export let toast: Slice;
 
-  const icons: any = {
-    success: CheckIcon,
-    error: StopIcon,
-    info: InfoIcon,
-    warning: WarningIcon,
-  };
+  let closed: boolean = false;
 
-  let closed = false;
-
-  const close = () => (closed = true);
+  function close() {
+    closed = true;
+  }
 </script>
 
 {#if !closed}
   <div class="proi-toast-container {toast.variant}">
     <div class="proi-toast">
       <div class="proi-toast-icon">
-        <svelte:component this={icons[toast.variant]} />
+        <svelte:component this={feedbackIconsMap[toast.variant]} />
       </div>
       <div class="proi-toast-text">
         {toast.title}
       </div>
-      <div class="proi-toast-close-icon" on:click={close}>
+      <div
+        class="proi-toast-close-icon"
+        on:click={close}
+      >
         <CloseIcon />
       </div>
     </div>
