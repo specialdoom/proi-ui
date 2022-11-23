@@ -1,11 +1,15 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
+  import { logEvent } from "histoire/client";
   import Alert from "../Alert.svelte";
   import type { AlertVariant } from "../alert.types.js";
-  import * as source from "./alert.source.js";
-
-  const { defaultSource, withDescriptionSource, variantAlertSource, closableAlertSouce } =
-    source;
+  import {
+    closableAlertSouce,
+    defaultSource,
+    onCloseEventTemplate,
+    variantAlertSource,
+    withDescriptionSource
+  } from "./alert.source.js";
 
   export let Hst: HstType;
 
@@ -76,7 +80,20 @@
     <Alert
       {title}
       {variant}
-      closable={true}
+      closable
     />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="on:close event"
+    source={onCloseEventTemplate}
+  >
+    <Alert
+      title="Some title"
+      closable
+      on:close={(event) => logEvent("close", event)}
+    >
+      Description
+    </Alert>
   </Hst.Variant>
 </Hst.Story>

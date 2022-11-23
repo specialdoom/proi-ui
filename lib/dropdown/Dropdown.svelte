@@ -74,7 +74,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 240px;
+    width: 100%;
     height: 32px;
     border: 2px solid var(--n200);
     padding: 6px 12px;
@@ -118,7 +118,7 @@
     position: absolute;
     top: 36px;
     border: 2px solid var(--n200);
-    width: 240px;
+    width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
     background: var(--bright);
