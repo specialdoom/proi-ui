@@ -21,7 +21,7 @@
   .proi-input {
     border: 2px solid var(--n200);
     border-radius: 4px;
-    width: 240px;
+    width: 100%;
     height: 32px;
     font-size: 14px;
     padding: 6px 12px;
