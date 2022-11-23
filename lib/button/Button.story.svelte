@@ -23,6 +23,10 @@
     <Button disabled>Click me</Button>
   </Hst.Variant>
 
+  <Hst.Variant title="With gap between children">
+    <Button><span>🍕</span> Click me</Button>
+  </Hst.Variant>
+
   <Hst.Variant title="With events">
     <Button on:click={(event) => logEvent("Click", event)}>Click me</Button>
   </Hst.Variant>

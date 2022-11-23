@@ -30,6 +30,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    gap: 4px;
     outline: none;
     user-select: none;
     cursor: pointer;
