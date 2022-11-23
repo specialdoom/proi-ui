@@ -12,6 +12,7 @@
   class="proi-input {className}"
   class:error
   on:change
+  on:keydown
   {disabled}
   type="text"
 />

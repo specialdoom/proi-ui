@@ -32,4 +32,15 @@
       disabled
     />
   </Hst.Variant>
+
+  <Hst.Variant title="on:keydown event">
+    <TextInput
+      value="Some value"
+      on:keydown={(e) => {
+        if (e.key === "Enter") {
+          alert("Enter is pressed!");
+        }
+      }}
+    />
+  </Hst.Variant>
 </Hst.Story>
