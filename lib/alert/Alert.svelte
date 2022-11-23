@@ -2,6 +2,7 @@
   import type { AlertVariant } from "./alert.types.js";
   import CloseIcon from "../icons/CloseIcon.svelte";
   import { getFeedbackIcon } from "../utils/icons.js";
+  import { createEventDispatcher } from "svelte";
 
   /** Variant of alert component */
   export let variant: AlertVariant = "success";
@@ -14,8 +15,12 @@
 
   let closed: boolean = false;
 
+  const dispatch = createEventDispatcher();
+
   function close() {
     closed = true;
+
+    dispatch("close");
   }
 </script>
 

@@ -43,3 +43,14 @@ export const closableAlertSouce = `${template}
   Description
 </Alert>
 `;
+
+export const onCloseEventTemplate = `${template}
+
+<Alert 
+  title="Some title"
+  closable
+  on:close={() => console.log("close event")}
+>
+  Description
+</Alert>
+`;
