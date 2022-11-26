@@ -1,5 +1,5 @@
 module.exports = {
-  endOfLine: "lf",
+  endOfLine: "crlf",
   arrowParens: "always",
   bracketSameLine: false,
   proseWrap: "always",
