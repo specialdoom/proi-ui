@@ -1,6 +1,6 @@
 {
 	"name": "@specialdoom/proi-ui",
-	"version": "3.2.0",
+	"version": "3.1.1",
 	"description": "yet another Svelte UI lib",
 	"keywords": [
 		"svelte",
@@ -32,7 +32,8 @@
 		"story:build": "histoire build",
 		"story:preview": "histoire preview",
 		"prepare": "husky install",
-		"release": "standard-version"
+		"release": "standard-version",
+		"publish": "node ./tasks/publish.js"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.3.0",
