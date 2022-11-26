@@ -34,6 +34,8 @@
 		"prepare": "husky install"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^17.3.0",
+		"@commitlint/config-conventional": "^17.3.0",
 		"@histoire/plugin-svelte": "^0.11.5",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
