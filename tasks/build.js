@@ -22,8 +22,6 @@ mutatedTsConfig.exclude = [
   "**/__tests__/**"
 ];
 
-console.log(mutatedTsConfig);
-
 mutatedTsConfig.compilerOptions = {
   ...(mutatedTsConfig.compilerOptions || { moduleResolution: "Node16" }),
   baseUrl: "",
@@ -35,6 +33,8 @@ mutatedTsConfig.compilerOptions = {
 await writeFile(tsConfigPath, JSON.stringify(mutatedTsConfig, null, 2));
 
 try {
+  await execAsync("npm run release");
+  console.log("✅ Version updated successfully!");
   await execAsync("npm exec svelte-package --exclude **/*.story.svelte");
   console.log("✅ Package built successfully!");
 } catch (e) {
