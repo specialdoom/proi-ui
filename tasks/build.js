@@ -32,9 +32,14 @@ mutatedTsConfig.compilerOptions = {
 
 await writeFile(tsConfigPath, JSON.stringify(mutatedTsConfig, null, 2));
 
+const runRelease = process.argv[2] ?? true;
+
 try {
-  await execAsync("npm run release");
-  console.log("✅ Version updated successfully!");
+  if (runRelease) {
+    await execAsync("npm run release");
+    console.log("✅ Version updated successfully!");
+  }
+
   await execAsync("npm exec svelte-package --exclude **/*.story.svelte");
   console.log("✅ Package built successfully!");
 } catch (e) {

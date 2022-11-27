@@ -43,6 +43,9 @@
         <div
           class="proi-alert-close-icon"
           on:click={close}
+          on:keyup
+          on:keydown
+          on:keypress
         >
           <CloseIcon />
         </div>

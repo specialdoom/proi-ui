@@ -12,7 +12,6 @@
 		"moduleResolution": "NodeNext",
 		"outDir": "package",
 		"types": [
-			"jest",
 			"svelte"
 		]
 	},

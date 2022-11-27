@@ -6,6 +6,9 @@
   <div
     class:proi-backdrop={true}
     on:click
+    on:keydown
+    on:keyup
+    on:keypress
     data-testid="proi-backdrop"
   >
     <div>
