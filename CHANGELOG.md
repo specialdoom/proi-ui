@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/specialdoom/proi-ui/compare/v3.1.1...v3.3.0) (2022-11-27)
+
+
+### Features
+
+* add `Textarea` component ([#72](https://github.com/specialdoom/proi-ui/issues/72)) ([f1662a6](https://github.com/specialdoom/proi-ui/commit/f1662a60d6300bc6293cc35caacfe708ce7c496a))
+
 ## [3.2.0](https://github.com/specialdoom/proi-ui/compare/v3.1.1...v3.2.0) (2022-11-27)
 
 
