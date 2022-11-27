@@ -17,7 +17,8 @@
 	},
 	"exclude": [
 		"package",
-		"node_modules"
+		"node_modules",
+		"public"
 	],
 	"include": [
 		".d.ts"

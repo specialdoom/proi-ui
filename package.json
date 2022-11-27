@@ -27,8 +27,6 @@
 		"format": "prettier --write ./lib/**/*.{js,svelte,html,ts}",
 		"lint": "eslint ./lib/**/*.{js,ts,svelte}",
 		"prelint": "npm run format",
-		"test": "vitest",
-		"coverage": "vitest run --coverage",
 		"story:build": "histoire build",
 		"story:preview": "histoire preview",
 		"prepare": "husky install",
