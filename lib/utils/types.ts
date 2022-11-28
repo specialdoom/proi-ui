@@ -1,4 +1,4 @@
-import { SvelteComponent } from "svelte";
+import type { SvelteComponent } from "svelte";
 
 export type FeedbackVariant = "success" | "info" | "warning" | "error";
 

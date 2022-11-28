@@ -77,8 +77,8 @@ function runSelector<T extends HTMLElement>(
   return els[0] as T;
 }
 
-type RenderOptions<TComponent extends SvelteComponentDev> = {
-  props?: ComponentProps<TComponent> & Record<string, any>;
+type RenderOptions<T extends SvelteComponentDev> = {
+  props?: ComponentProps<T> & Record<string, any>;
 } & Record<string, any>;
 
 interface CustomQueryDescriptor {
