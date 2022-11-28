@@ -3,7 +3,7 @@ import CheckIcon from "../icons/CheckIcon.svelte";
 import StopIcon from "../icons/StopIcon.svelte";
 import InfoIcon from "../icons/InfoIcon.svelte";
 import WarningIcon from "../icons/WarningIcon.svelte";
-import { SvelteComponent } from "svelte";
+import type { SvelteComponent } from "svelte";
 
 export const feedbackIconsMap: IconsMap = {
   success: CheckIcon,

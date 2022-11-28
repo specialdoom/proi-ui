@@ -17,5 +17,21 @@ export const render = getCustomRenderer({
   getAlert: {
     name: "alert",
     selector: ALERT
+  },
+  getAlertIcon: {
+    name: "alert-icon",
+    selector: ALERT_ICON
+  },
+  getAlertTitle: {
+    name: "alert-title",
+    selector: ALERT_TITLE
+  },
+  getAlertDescription: {
+    name: "alert-description",
+    selector: ALERT_DESCRIPTION
+  },
+  getAlertCloseIcon: {
+    name: "alert-close-icon",
+    selector: ALERT_CLOSE_ICON
   }
 });
