@@ -10,7 +10,7 @@ describe("Alert", () => {
   const alertVariants: AlertVariant[] = ["success", "info", "warning", "error"];
 
   describe("root element", () => {
-    it("should be present", () => {
+    it("should be in the document", () => {
       const { getRoot } = render(Alert, {
         props: {
           title
@@ -42,7 +42,7 @@ describe("Alert", () => {
   });
 
   describe("alert element", () => {
-    it("should be present", () => {
+    it("should be in the document", () => {
       const { getAlert } = render(Alert, {
         props: {
           title
@@ -64,7 +64,7 @@ describe("Alert", () => {
   });
 
   describe("alert icon element", () => {
-    it("should be present", () => {
+    it("should be in the document", () => {
       const { getAlertIcon } = render(Alert, {
         props: {
           title
@@ -86,7 +86,7 @@ describe("Alert", () => {
   });
 
   describe("alert title element", () => {
-    it("should be present", () => {
+    it("should be in the document", () => {
       const { getAlertTitle } = render(Alert, {
         props: {
           title
@@ -158,7 +158,7 @@ describe("Alert", () => {
       const closable = true;
 
       describe("alert close icon element", () => {
-        it("should be present", () => {
+        it("should be in the document", () => {
           const { getAlertCloseIcon } = render(Alert, {
             props: {
               title,
@@ -182,7 +182,7 @@ describe("Alert", () => {
 
         describe("on `click` event", () => {
           describe("root element", () => {
-            it("should not be present", async () => {
+            it("should not be in the document", async () => {
               const { getAlertCloseIcon, getRoot } = render(Alert, {
                 props: {
                   title,
@@ -203,7 +203,7 @@ describe("Alert", () => {
       const closable = false;
 
       describe("alert close icon element", () => {
-        it("should not be present", () => {
+        it("should not be in the document", () => {
           const { getAlertCloseIcon } = render(Alert, {
             props: {
               title,
@@ -220,7 +220,7 @@ describe("Alert", () => {
   describe("when default `slot`", () => {
     describe("is set", () => {
       describe("alert description element", () => {
-        it("should be present", () => {
+        it("should be in the document", () => {
           const { getAlertDescription } = render(FakeAlert, {
             props: {
               props: {

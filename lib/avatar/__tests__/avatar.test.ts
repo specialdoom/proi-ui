@@ -14,7 +14,7 @@ describe("Avatar", () => {
   ];
 
   describe("root element", () => {
-    it("should be present", () => {
+    it("should be in the document", () => {
       const { getRoot } = render(Avatar);
 
       expect(getRoot()).toBeInTheDocument();
