@@ -97,6 +97,10 @@
     width: 0;
   }
 
+  .proi-checkbox.disabled ~ .proi-checkbox-label {
+    color: var(--n400);
+  }
+
   .proi-checkbox-label {
     font-size: 16px;
     line-height: 18px;
