@@ -3,10 +3,10 @@
 
   export let checked: boolean = false;
   export let disabled: boolean = false;
-  export let className: string = "";
+  export let error: boolean = false;
 </script>
 
-<label class="proi-checkbox-container {className}">
+<label class="proi-checkbox-container">
   <input
     type="checkbox"
     bind:checked
@@ -16,17 +16,14 @@
     <div
       class:checked
       class:disabled
+      class:error
       class="proi-checkbox"
-      data-testid="proi-checkbox"
     >
       {#if checked}
         <CheckboxCheckmarkIcon />
       {/if}
     </div>
-    <span
-      class="proi-checkbox-label"
-      data-testid="proi-checkbox-label"
-    >
+    <span class="proi-checkbox-label">
       <slot />
     </span>
   </div>
@@ -72,6 +69,19 @@
   .proi-checkbox.disabled {
     background: var(--n200);
     border: unset;
+  }
+
+  .proi-checkbox.error {
+    border: 2px solid var(--r200);
+  }
+
+  .proi-checkbox.error ~ .proi-checkbox-label {
+    color: var(--r400);
+  }
+
+  .proi-checkbox.error.checked,
+  .proi-checkbox-wrapper:hover .proi-checkbox.checked.error {
+    background: var(--r200);
   }
 
   .proi-checkbox-container {
