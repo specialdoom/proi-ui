@@ -1,40 +1,48 @@
 <script lang="ts">
+  import InlineFormItem from "./InlineFormItem.svelte";
+
   export let label: string = "";
   export let description: string = "";
   export let error: string = "";
+  export let inline: boolean = false;
 </script>
 
-<div
-  class="proi-form-item"
-  data-testid="proi-form-item"
->
-  <span
-    class="proi-label"
-    data-testid="proi-form-item-label"
-  >
+{#if inline}
+  <InlineFormItem
     {label}
-  </span>
-  {#if description !== ""}
-    <span class="proi-description">
-      {description}
+    {error}
+  >
+    <slot />
+  </InlineFormItem>
+{:else}
+  <div class="proi-form-item">
+    <span class="proi-label">
+      {label}
     </span>
-  {/if}
-  <slot />
-  {#if error !== ""}
-    <span class="proi-error">
-      {error}
-    </span>
-  {/if}
-</div>
+    {#if description !== ""}
+      <span class="proi-description">
+        {description}
+      </span>
+    {/if}
+    <slot />
+    {#if error !== ""}
+      <span class="proi-error">
+        {error}
+      </span>
+    {/if}
+  </div>
+{/if}
 
 <style>
   .proi-form-item {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
     gap: 4px;
-    padding: 0px 4px;
-    margin: 6px 0;
+    padding: 0 4px;
+    margin: 8px 0;
   }
 
   .proi-label {

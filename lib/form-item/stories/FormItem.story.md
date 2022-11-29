@@ -1,25 +1,3 @@
----
-
-[proi-ui](https://github.com/specialdoom/proi-ui)
-
-###### FormItem component
-
-### Usage
-
-```sveltehtml
-<script>
-import { FormItem } from '@specialdoom/proi-ui';
-</script>
-
-<FormItem
-  label="Label"
-  description="Description (optional)"
-  error="Error message"
->
-  Some input component
-</FormItem>
-```
-
 ### Properties
 | Property      | Description                             | Type   | Default |
 |---------------|-----------------------------------------|--------|---------|
