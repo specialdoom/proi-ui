@@ -1,3 +1,3 @@
-import type { FeedbackVariant } from "../shared/types/base-variant.types.js";
+import type { FeedbackVariant } from "../utils/types.js";
 
 export type AlertVariant = FeedbackVariant;

@@ -4,15 +4,15 @@
   export let variant: ButtonVariant = "primary";
   export let disabled: boolean = false;
   export let block: boolean = false;
-  export let className: string = "";
 </script>
 
 <button
-  class="proi-button {variant} {className}"
+  class="proi-button {variant}"
   class:block
   {disabled}
   on:click
-  data-testid="proi-button"
+  on:keydown
+  on:keyup
 >
   <slot />
 </button>
@@ -95,5 +95,23 @@
   .secondary:disabled {
     color: var(--p0);
     background: var(--p200);
+  }
+
+  .danger {
+    color: var(--n0);
+    background: var(--r600);
+  }
+
+  .danger:active {
+    background: var(--r800);
+  }
+
+  .danger:hover {
+    background: var(--r400);
+  }
+
+  .danger:disabled {
+    color: var(--n600);
+    background: var(--r0);
   }
 </style>

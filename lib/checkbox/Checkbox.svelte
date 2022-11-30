@@ -1,12 +1,12 @@
 <script lang="ts">
-  import CheckboxCheckmarkIcon from "../icons/CheckboxCheckmarkIcon.svelte";
+  import CheckmarkIcon from "../icons/CheckmarkIcon.svelte";
 
   export let checked: boolean = false;
   export let disabled: boolean = false;
-  export let className: string = "";
+  export let error: boolean = false;
 </script>
 
-<label class="proi-checkbox-container {className}">
+<label class="proi-checkbox-container">
   <input
     type="checkbox"
     bind:checked
@@ -16,19 +16,18 @@
     <div
       class:checked
       class:disabled
+      class:error
       class="proi-checkbox"
-      data-testid="proi-checkbox"
     >
       {#if checked}
-        <CheckboxCheckmarkIcon />
+        <CheckmarkIcon />
       {/if}
     </div>
-    <span
-      class="proi-checkbox-label"
-      data-testid="proi-checkbox-label"
-    >
-      <slot />
-    </span>
+    {#if $$slots.default}
+      <span class="proi-checkbox-label">
+        <slot />
+      </span>
+    {/if}
   </div>
 </label>
 
@@ -74,6 +73,19 @@
     border: unset;
   }
 
+  .proi-checkbox.error {
+    border: 2px solid var(--r200);
+  }
+
+  .proi-checkbox.error ~ .proi-checkbox-label {
+    color: var(--r400);
+  }
+
+  .proi-checkbox.error.checked,
+  .proi-checkbox-wrapper:hover .proi-checkbox.checked.error {
+    background: var(--r200);
+  }
+
   .proi-checkbox-container {
     position: relative;
     cursor: pointer;
@@ -85,6 +97,10 @@
     cursor: pointer;
     height: 0;
     width: 0;
+  }
+
+  .proi-checkbox.disabled ~ .proi-checkbox-label {
+    color: var(--n400);
   }
 
   .proi-checkbox-label {

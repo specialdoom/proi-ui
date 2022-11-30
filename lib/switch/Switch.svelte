@@ -1,6 +1,7 @@
 <script lang="ts">
   export let checked: boolean = false;
   export let disabled: boolean = false;
+  export let error: boolean = false;
 </script>
 
 <label class="proi-switch-container">
@@ -13,13 +14,16 @@
     <div
       class:checked
       class:disabled
+      class:error
       class="proi-switch"
     >
       <div class="proi-switch-bullet" />
     </div>
-    <span class="proi-switch-label">
-      <slot />
-    </span>
+    {#if $$slots.default}
+      <span class="proi-switch-label">
+        <slot />
+      </span>
+    {/if}
   </div>
 </label>
 
@@ -76,6 +80,14 @@
     background: var(--g800);
   }
 
+  .proi-switch.error {
+    border: 2px solid var(--r200);
+  }
+
+  .proi-switch.error.checked {
+    background: var(--r200);
+  }
+
   .proi-switch-bullet {
     height: 11px;
     width: 11px;
@@ -95,6 +107,14 @@
     cursor: pointer;
     height: 0;
     width: 0;
+  }
+
+  .proi-switch.disabled ~ .proi-switch-label {
+    color: var(--n400);
+  }
+
+  .proi-switch.error ~ .proi-switch-label {
+    color: var(--r400);
   }
 
   .proi-switch-label {

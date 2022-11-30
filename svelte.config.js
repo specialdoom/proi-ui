@@ -1,16 +1,19 @@
-import adapter from '@sveltejs/adapter-auto';
-import preprocess from 'svelte-preprocess';
+import preprocess from "svelte-preprocess";
 
-/** @type {import('@sveltejs/kit').Config} */
 const config = {
 	package: {
-		source: 'lib',
-	},
-	preprocess: preprocess(),
+		source: "lib",
+		files: (filepath) => {
+			if (filepath.includes("/__stories__/")) return false;
+			if (filepath.endsWith(".story.svelte")) return false;
+			if (filepath.includes("__tests__")) return false;
 
-	kit: {
-		adapter: adapter(),
-	}
+			return true;
+		}
+	},
+	preprocess: preprocess({
+		sourceMap: true
+	})
 };
 
 export default config;

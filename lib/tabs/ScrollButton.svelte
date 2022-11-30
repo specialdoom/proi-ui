@@ -4,7 +4,12 @@
 </script>
 
 {#if visible}
-  <div on:click>
+  <div
+    on:click
+    on:keydown
+    on:keyup
+    on:keypress
+  >
     {#if direction === "left"}
       <svg
         width="8"

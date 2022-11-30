@@ -24,6 +24,9 @@
       <div
         class="proi-toast-close-icon"
         on:click={close}
+        on:keydown
+        on:keyup
+        on:keypress
       >
         <CloseIcon />
       </div>

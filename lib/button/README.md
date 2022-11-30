@@ -8,22 +8,21 @@
 
 ```sveltehtml
 <script>
-import { Button } from '@specialdoom/proi-ui'
-
-function click () {
-    console.log('clicked');
-}
+  import { Button } from '@specialdoom/proi-ui';
 </script>
 
-<Button on:click={click}>Click</Button>
+<Button>Click me</Button>
 ```
 
 ### API
 
-| Property  | Description                                                    | Type       | Default   |
-| --------- | -------------------------------------------------------------- | ---------- | --------- |
-| variant   | Variant of button. Options: 'primary', 'secondary' and 'ghost' | string     | 'primary' |
-| disabled  | Whether the button is disabled                                 | boolean    | false     |
-| className | Class name for button. Button component uses `.proi-button`    | string     | null      |
-| --------- | ----------------------------------------------------------     | -------    | --------- |
-| on:click  | Handler of the click event                                     | () => void | -         |
+| Property   | Description                                                                       | Type      | Default value |
+|------------|-----------------------------------------------------------------------------------|-----------|---------------|
+| `variant`  | Variant of Button component. Options: `primary`, `secondary`, `ghost` or `danger` | `string`  | `primary`     |
+| `disabled` | Whether the button is disabled                                                    | `boolean` | `false`       |
+| `block`    | Whether the button should take the entire width of container                      | `boolean` | `false`       |
+
+
+#### Forwarded events
+
+`on:click` `on:keyup` `on:keydown`

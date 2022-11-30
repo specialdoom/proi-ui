@@ -29,6 +29,9 @@
 
       toggle = !toggle;
     }}
+    on:keydown
+    on:keyup
+    on:keypress
     class:error
     class:focus={toggle}
     class:disabled
@@ -55,6 +58,9 @@
             class:selected={option.value === value}
             class:disabled={option.disabled}
             on:click={() => handleSelectOption(option.value)}
+            on:keydown
+            on:keyup
+            on:keypress
           >
             {option.label}
           </div>
