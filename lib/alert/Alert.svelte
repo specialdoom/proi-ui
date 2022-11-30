@@ -25,18 +25,12 @@
 </script>
 
 {#if !closed}
-  <div
-    class="proi-alert-container {variant}"
-    data-testid="proi-alert"
-  >
+  <div class="proi-alert-container {variant}">
     <div class="proi-alert">
       <div class="proi-alert-icon">
         <svelte:component this={getFeedbackIcon({ variant })} />
       </div>
-      <div
-        class="proi-alert-title"
-        data-testid="proi-alert-title"
-      >
+      <div class="proi-alert-title">
         {title}
       </div>
       {#if closable}
@@ -52,10 +46,7 @@
       {/if}
     </div>
     {#if $$slots.default}
-      <div
-        class="proi-alert-description"
-        data-testid="proi-alert-description"
-      >
+      <div class="proi-alert-description">
         <slot />
       </div>
     {/if}
