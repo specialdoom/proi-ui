@@ -145,7 +145,7 @@ describe("Button", () => {
 
     describe("is not set", () => {
       describe("root element", () => {
-        it("should contain default `slot` as innerHTML", () => {
+        it("should contain empty string as innerHTML", () => {
           const { getBySelector } = render(FakeButton);
 
           expect(getBySelector(ROOT)).toContainHTML("");

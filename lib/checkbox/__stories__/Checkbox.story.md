@@ -1,3 +1,4 @@
+#### Properties
 | Property   | Description                            | Type      | Default |
 |------------|----------------------------------------|-----------|---------|
 | `checked`  | Whether the Checkbox is checked        | `boolean` | `false` |
