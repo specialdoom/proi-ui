@@ -13,7 +13,7 @@
     title="Default"
     source={defaultSource}
   >
-    <Radio bind:group={value}>Pick me</Radio>
+    <Radio bind:group={value}>Radio label</Radio>
   </Hst.Variant>
 
   <Hst.Variant
