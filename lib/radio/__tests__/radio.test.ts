@@ -1,6 +1,13 @@
 import { describe } from "vitest";
 import { render } from "../../__tests__/tests.queries.js";
-import { INPUT, RADIO, RADIO_ICON, RADIO_LABEL, ROOT } from "./radio.selectors.js";
+import {
+  INPUT,
+  RADIO,
+  RADIO_ICON,
+  RADIO_ICON_RECT,
+  RADIO_LABEL,
+  ROOT
+} from "./radio.selectors.js";
 import Radio from "../Radio.svelte";
 import FakeRadio from "./FakeRadio.svelte";
 
@@ -117,6 +124,57 @@ describe("Radio", () => {
               });
 
               expect(getBySelector(RADIO_ICON)).toBeInTheDocument();
+            });
+          });
+
+          describe("and `disabled` property is set to `true`", () => {
+            const disabled = true;
+
+            describe("radio icon rect element", () => {
+              it("should contain `fill` attribute with `#EFF1F3` value", () => {
+                const { getBySelector } = render(Radio, {
+                  props: {
+                    value,
+                    group,
+                    disabled
+                  }
+                });
+
+                expect(getBySelector(RADIO_ICON_RECT)).toHaveAttribute("fill", "#EFF1F3");
+              });
+            });
+          });
+
+          describe("and `error` property is set to `true`", () => {
+            const error = true;
+
+            describe("radio icon rect element", () => {
+              it("should contain `fill` attribute with `#EFF1F3` value", () => {
+                const { getBySelector } = render(Radio, {
+                  props: {
+                    value,
+                    group,
+                    error
+                  }
+                });
+
+                expect(getBySelector(RADIO_ICON_RECT)).toHaveAttribute("fill", "#EFF1F3");
+              });
+            });
+          });
+
+          describe("and `disabled` and `error` properties are set to `false`", () => {
+            describe("radio icon rect element", () => {
+              it("should contain `fill` attribute with `#479A89` value", () => {
+                const { getBySelector } = render(Radio, {
+                  props: {
+                    value,
+                    group
+                  }
+                });
+
+                expect(getBySelector(RADIO_ICON_RECT)).toHaveAttribute("fill", "#479A89");
+              });
             });
           });
         });
