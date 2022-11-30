@@ -20,10 +20,14 @@ import { FormItem } from '@specialdoom/proi-ui';
 </FormItem>
 ```
 
-### API
+### Properties
+| Property      | Description                             | Type   | Default |
+|---------------|-----------------------------------------|--------|---------|
+| `label`       | Label of form item component (required) | string | ''      |
+| `description` | Description of form item component      | string | ''      |
+| `error`       | Error message of form item component    | string | ''      |
 
-| Property    | Description                             | Type   | Default |
-| ----------- | --------------------------------------- | ------ | ------- |
-| label       | Label of form item component (required) | string | ''      |
-| description | Description of form item component      | string | ''      |
-| error       | Error message of form item component    | string | ''      |
+### Slots
+| Property  | Description                    | Type   | Fallback |
+|-----------|--------------------------------|--------|----------|
+| `default` | Default slot used for controls | `slot` | -        |

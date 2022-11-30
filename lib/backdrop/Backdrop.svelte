@@ -4,7 +4,7 @@
 
 {#if visible}
   <div
-    class:proi-backdrop={true}
+    class="proi-backdrop"
     on:click
     on:keydown
     on:keyup
