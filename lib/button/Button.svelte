@@ -11,6 +11,8 @@
   class:block
   {disabled}
   on:click
+  on:keydown
+  on:keyup
 >
   <slot />
 </button>
@@ -93,5 +95,23 @@
   .secondary:disabled {
     color: var(--p0);
     background: var(--p200);
+  }
+
+  .danger {
+    color: var(--n0);
+    background: var(--r600);
+  }
+
+  .danger:active {
+    background: var(--r800);
+  }
+
+  .danger:hover {
+    background: var(--r400);
+  }
+
+  .danger:disabled {
+    color: var(--n600);
+    background: var(--r0);
   }
 </style>

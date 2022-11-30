@@ -6,7 +6,7 @@ import Button from "../Button.svelte";
 import FakeButton from "./FakeButton.svelte";
 
 describe("Button", () => {
-  const variants: ButtonVariant[] = ["primary", "secondary", "ghost"];
+  const variants: ButtonVariant[] = ["primary", "secondary", "ghost", "danger"];
 
   describe("root element", () => {
     it("should be in the document", () => {
