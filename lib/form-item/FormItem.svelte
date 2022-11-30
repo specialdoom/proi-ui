@@ -1,7 +1,7 @@
 <script lang="ts">
   import InlineFormItem from "./InlineFormItem.svelte";
 
-  export let label: string = "";
+  export let label: string;
   export let description: string = "";
   export let error: string = "";
   export let inline: boolean = false;

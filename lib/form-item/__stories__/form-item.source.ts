@@ -4,7 +4,7 @@ const template = `<script>
 `;
 
 export const defaultSource = `${template}
-<FormItem>
+<FormItem label="Label">
   <TextInput placeholder="Input something..." />
 </FormItem>
 `;

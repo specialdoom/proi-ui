@@ -21,7 +21,7 @@
     title="Default"
     source={defaultSource}
   >
-    <FormItem>
+    <FormItem label="Label">
       <TextInput placeholder="Input something..." />
     </FormItem>
   </Hst.Variant>
@@ -71,7 +71,10 @@
     title="With description"
     source={withDescription}
   >
-    <FormItem description="Description">
+    <FormItem
+      label="Label"
+      description="Description"
+    >
       <TextInput placeholder="Input something..." />
     </FormItem>
   </Hst.Variant>
@@ -92,7 +95,10 @@
     title="With error"
     source={withError}
   >
-    <FormItem error="Incorrect">
+    <FormItem
+      label="Label"
+      error="Incorrect"
+    >
       <TextInput
         placeholder="Input something..."
         error
