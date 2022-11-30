@@ -1,7 +1,7 @@
 <script lang="ts">
   import CircleIcon from "../icons/CircleIcon.svelte";
 
-  export let value: number | string | undefined = undefined;
+  export let value: number | string | undefined = "";
   export let group: number | string;
   export let disabled: boolean = false;
   export let error: boolean = false;
