@@ -1,9 +1,9 @@
-import type { Constructor, IconsMap } from "./types.js";
+import type { Constructor, FeedbackVariant, IconsMap } from "./types.js";
 import CheckIcon from "../icons/CheckIcon.svelte";
 import StopIcon from "../icons/StopIcon.svelte";
 import InfoIcon from "../icons/InfoIcon.svelte";
 import WarningIcon from "../icons/WarningIcon.svelte";
-import { SvelteComponent } from "svelte";
+import type { SvelteComponent } from "svelte";
 
 export const feedbackIconsMap: IconsMap = {
   success: CheckIcon,
@@ -12,6 +12,8 @@ export const feedbackIconsMap: IconsMap = {
   warning: WarningIcon
 };
 
-export function getFeedbackIcon(props): Constructor<SvelteComponent> {
+export function getFeedbackIcon(props: {
+  variant: FeedbackVariant;
+}): Constructor<SvelteComponent> {
   return feedbackIconsMap[props.variant];
 }

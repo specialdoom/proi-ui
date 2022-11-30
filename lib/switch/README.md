@@ -21,7 +21,14 @@ import { Switch } from '@specialdoom/proi-ui'
 
 ### API
 
-| Property | Description                      | Type    | Default |
-| -------- | -------------------------------- | ------- | ------- |
-| checked  | Whether the checkbox is checked  | boolean | false   |
-| disabled | Whether the checkbox is disabled | boolean | false   |
+| Property   | Description                          | Type      | Default |
+|------------|--------------------------------------|-----------|---------|
+| `checked`  | Whether the Switch is checked        | `boolean` | `false` |
+| `disabled` | Whether the Switch is disabled       | `boolean` | `false` |
+| `error`    | Whether the Switch is in error state | `boolean` | `false` |
+
+#### Slots
+
+| Name       | Description               |
+|------------|---------------------------|
+| `default`  | Label of Switch component |

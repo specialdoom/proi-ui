@@ -32,10 +32,10 @@ mutatedTsConfig.compilerOptions = {
 
 await writeFile(tsConfigPath, JSON.stringify(mutatedTsConfig, null, 2));
 
-const runRelease = process.argv[2] ?? true;
+const runRelease = process.argv[2] ?? false;
 
 try {
-  if (runRelease) {
+  if (!runRelease) {
     await execAsync("npm run release");
     console.log("✅ Version updated successfully!");
   }
