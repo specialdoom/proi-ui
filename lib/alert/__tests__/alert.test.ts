@@ -200,7 +200,7 @@ describe("Alert", () => {
 
               await fireEvent.click(getBySelector(ALERT_CLOSE_ICON));
 
-              expect(() => getBySelector(ROOT)).toThrowError();
+              expect(() => getBySelector(ROOT)).toThrowError("Unable to find element");
             });
           });
         });
@@ -219,7 +219,9 @@ describe("Alert", () => {
             }
           });
 
-          expect(() => getBySelector(ALERT_CLOSE_ICON)).toThrowError();
+          expect(() => getBySelector(ALERT_CLOSE_ICON)).toThrowError(
+            "Unable to find element"
+          );
         });
       });
     });

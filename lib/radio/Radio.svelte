@@ -24,7 +24,11 @@
       <CircleIcon fillColor={disabled || error ? "#EFF1F3" : "#479A89"} />
     {/if}
   </div>
-  <div class="proi-radio-label"><slot /></div>
+  {#if $$slots.default}
+    <div class="proi-radio-label">
+      <slot />
+    </div>
+  {/if}
 </label>
 
 <style>

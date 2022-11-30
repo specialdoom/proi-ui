@@ -250,7 +250,9 @@ describe("Switch", () => {
         it("should not be in the document", () => {
           const { getBySelector } = render(FakeSwitch);
 
-          expect(() => getBySelector(SWITCH_LABEL)).toThrowError();
+          expect(() => getBySelector(SWITCH_LABEL)).toThrowError(
+            "Unable to find element"
+          );
         });
       });
     });

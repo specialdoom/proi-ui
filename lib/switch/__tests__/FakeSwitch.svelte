@@ -12,9 +12,9 @@
 </script>
 
 {#if slot}
-  <Switch {...props} />
-{:else}
   <Switch {...props}>
     {slot}
   </Switch>
+{:else}
+  <Switch {...props} />
 {/if}

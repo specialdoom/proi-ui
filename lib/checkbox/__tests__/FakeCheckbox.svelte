@@ -11,8 +11,10 @@
   export let slot: Constructor<SvelteComponent> | HTMLElement | string = undefined;
 </script>
 
-<Checkbox {...props}>
-  {#if slot}
+{#if slot}
+  <Checkbox {...props}>
     {slot}
-  {/if}
-</Checkbox>
+  </Checkbox>
+{:else}
+  <Checkbox {...props} />
+{/if}

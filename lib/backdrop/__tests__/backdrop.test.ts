@@ -59,7 +59,7 @@ describe("Backdrop", () => {
             }
           });
 
-          expect(() => getBySelector(ROOT)).toThrowError();
+          expect(() => getBySelector(ROOT)).toThrowError("Unable to find element");
         });
       });
     });

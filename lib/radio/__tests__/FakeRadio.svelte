@@ -12,6 +12,10 @@
   export let slot: Constructor<SvelteComponent> | HTMLElement | string = undefined;
 </script>
 
-<Radio {...props}>
-  {slot}
-</Radio>
+{#if slot}
+  <Radio {...props}>
+    {slot}
+  </Radio>
+{:else}
+  <Radio {...props} />
+{/if}

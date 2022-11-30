@@ -146,7 +146,9 @@ describe("Radio", () => {
                 }
               });
 
-              expect(() => getBySelector(RADIO_ICON)).toThrowError();
+              expect(() => getBySelector(RADIO_ICON)).toThrowError(
+                "Unable to find element"
+              );
             });
           });
         });
@@ -271,6 +273,19 @@ describe("Radio", () => {
       const slot = "test";
 
       describe("radio label element", () => {
+        it("should be in the document", () => {
+          const { getBySelector } = render(FakeRadio, {
+            props: {
+              props: {
+                group
+              },
+              slot
+            }
+          });
+
+          expect(getBySelector(RADIO_LABEL)).toBeInTheDocument();
+        });
+
         it("should contain default `slot` as innerHTML", () => {
           const { getBySelector } = render(FakeRadio, {
             props: {
@@ -299,14 +314,14 @@ describe("Radio", () => {
 
     describe("is not set", () => {
       describe("radio label element", () => {
-        it("should contain empty string as innerHTML", () => {
+        it("should not be in the document", () => {
           const { getBySelector } = render(FakeRadio, {
             props: {
               props: { group }
             }
           });
 
-          expect(getBySelector(RADIO_LABEL)).toContainHTML("");
+          expect(() => getBySelector(RADIO_LABEL)).toThrowError("Unable to find element");
         });
       });
     });

@@ -120,7 +120,9 @@ describe("Checkbox", () => {
             }
           });
 
-          expect(() => getBySelector(CHECKBOX_ICON)).toThrowError();
+          expect(() => getBySelector(CHECKBOX_ICON)).toThrowError(
+            "Unable to find element"
+          );
         });
       });
     });
@@ -223,6 +225,16 @@ describe("Checkbox", () => {
       const slot = "test";
 
       describe("checkbox label element", () => {
+        it("should be in the document", () => {
+          const { getBySelector } = render(FakeCheckbox, {
+            props: {
+              slot
+            }
+          });
+
+          expect(getBySelector(CHECKBOX_LABEL)).toBeInTheDocument();
+        });
+
         it("should contain default `slot` as innerHTML", () => {
           const { getBySelector } = render(FakeCheckbox, {
             props: {
@@ -247,10 +259,12 @@ describe("Checkbox", () => {
 
     describe("is not set", () => {
       describe("checkbox label element", () => {
-        it("should contain empty string as innerHTML", () => {
+        it("should not be in the document", () => {
           const { getBySelector } = render(FakeCheckbox);
 
-          expect(getBySelector(CHECKBOX_LABEL)).toContainHTML("");
+          expect(() => getBySelector(CHECKBOX_LABEL)).toThrowError(
+            "Unable to find element"
+          );
         });
       });
     });
