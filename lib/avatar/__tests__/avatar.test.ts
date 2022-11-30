@@ -1,7 +1,8 @@
+import type { AvatarVariant } from "../avatar.types.js";
 import { describe } from "vitest";
+import { render } from "../../__tests__/tests.queries.js";
+import { ROOT } from "./avatar.selectors.js";
 import Avatar from "../Avatar.svelte";
-import type { AvatarVariant } from "../avatar.types";
-import { render } from "./avatar.queries";
 
 describe("Avatar", () => {
   const avatarVariants: AvatarVariant[] = [
@@ -15,27 +16,27 @@ describe("Avatar", () => {
 
   describe("root element", () => {
     it("should be in the document", () => {
-      const { getRoot } = render(Avatar);
+      const { getBySelector } = render(Avatar);
 
-      expect(getRoot()).toBeInTheDocument();
+      expect(getBySelector(ROOT)).toBeInTheDocument();
     });
 
     it("should contain `proi-avatar` class", () => {
-      const { getRoot } = render(Avatar);
+      const { getBySelector } = render(Avatar);
 
-      expect(getRoot()).toHaveClass("proi-avatar");
+      expect(getBySelector(ROOT)).toHaveClass("proi-avatar");
     });
 
     it("should contain `data-display` class", () => {
-      const { getRoot } = render(Avatar);
+      const { getBySelector } = render(Avatar);
 
-      expect(getRoot()).toHaveClass("data-display");
+      expect(getBySelector(ROOT)).toHaveClass("data-display");
     });
 
     it("should contain `pine` class", () => {
-      const { getRoot } = render(Avatar);
+      const { getBySelector } = render(Avatar);
 
-      expect(getRoot()).toHaveClass("pine");
+      expect(getBySelector(ROOT)).toHaveClass("pine");
     });
   });
 
@@ -47,13 +48,13 @@ describe("Avatar", () => {
         describe("is not set", () => {
           describe("root element", () => {
             it("should contain `initials` value as innerText", () => {
-              const { getRoot } = render(Avatar, {
+              const { getBySelector } = render(Avatar, {
                 props: {
                   initials
                 }
               });
 
-              expect(getRoot()).toHaveTextContent(initials);
+              expect(getBySelector(ROOT)).toHaveTextContent(initials);
             });
           });
         });
@@ -63,25 +64,25 @@ describe("Avatar", () => {
 
           describe("root element", () => {
             it("should contain empty innerText", () => {
-              const { getRoot } = render(Avatar, {
+              const { getBySelector } = render(Avatar, {
                 props: {
                   initials,
                   image
                 }
               });
 
-              expect(getRoot()).toHaveTextContent("");
+              expect(getBySelector(ROOT)).toHaveTextContent("");
             });
 
             it("should contain `background` inline style containing image", () => {
-              const { getRoot } = render(Avatar, {
+              const { getBySelector } = render(Avatar, {
                 props: {
                   initials,
                   image
                 }
               });
 
-              expect(getRoot()).toHaveStyle(
+              expect(getBySelector(ROOT)).toHaveStyle(
                 `background: url(${image}) center center/50px 50px no-repeat;`
               );
             });
@@ -94,9 +95,9 @@ describe("Avatar", () => {
       describe("root element", () => {
         it("should contain empty innerText", () => {
           it("should contain `initials` value as innerText", () => {
-            const { getRoot } = render(Avatar);
+            const { getBySelector } = render(Avatar);
 
-            expect(getRoot()).toHaveTextContent("");
+            expect(getBySelector(ROOT)).toHaveTextContent("");
           });
         });
       });
@@ -107,13 +108,13 @@ describe("Avatar", () => {
     describe("root element", () => {
       avatarVariants.forEach((variant) => {
         it(`should contain \`${variant}\` class`, () => {
-          const { getRoot } = render(Avatar, {
+          const { getBySelector } = render(Avatar, {
             props: {
               variant
             }
           });
 
-          expect(getRoot()).toHaveClass(variant);
+          expect(getBySelector(ROOT)).toHaveClass(variant);
         });
       });
     });
@@ -125,13 +126,13 @@ describe("Avatar", () => {
 
       describe("root element", () => {
         it("should contain `background` inline style", () => {
-          const { getRoot } = render(Avatar, {
+          const { getBySelector } = render(Avatar, {
             props: {
               image
             }
           });
 
-          expect(getRoot()).toHaveStyle(
+          expect(getBySelector(ROOT)).toHaveStyle(
             `background: url(${image}) center center/50px 50px no-repeat;`
           );
         });
@@ -141,9 +142,9 @@ describe("Avatar", () => {
     describe("is not set", () => {
       describe("root element", () => {
         it("should not contain `background` inline style", () => {
-          const { getRoot } = render(Avatar);
+          const { getBySelector } = render(Avatar);
 
-          expect(getRoot()).not.toHaveStyle("background: url()");
+          expect(getBySelector(ROOT)).not.toHaveStyle("background: url()");
         });
       });
     });

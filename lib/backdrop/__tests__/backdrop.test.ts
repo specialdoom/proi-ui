@@ -1,6 +1,7 @@
 import { describe, it } from "vitest";
+import { render } from "../../__tests__/tests.queries.js";
+import { ROOT } from "./backdrop.selectors.js";
 import Backdrop from "../Backdrop.svelte";
-import { render } from "./backdrop.queries.js";
 import FakeBackdrop from "./FakeBackdrop.svelte";
 
 describe("Backdrop", () => {
@@ -10,30 +11,30 @@ describe("Backdrop", () => {
 
       describe("root element", () => {
         it("should be in the document", () => {
-          const { getRoot } = render(Backdrop, {
+          const { getBySelector } = render(Backdrop, {
             props: {
               visible
             }
           });
 
-          expect(getRoot()).toBeInTheDocument();
+          expect(getBySelector(ROOT)).toBeInTheDocument();
         });
 
         it("should contain `proi-backdrop` class", () => {
-          const { getRoot } = render(Backdrop, {
+          const { getBySelector } = render(Backdrop, {
             props: {
               visible
             }
           });
 
-          expect(getRoot()).toHaveClass("proi-backdrop");
+          expect(getBySelector(ROOT)).toHaveClass("proi-backdrop");
         });
 
         describe("and default `slot` is set", () => {
           const slot = "test";
 
           it("should contain default `slot` as innerHTML", () => {
-            const { getRoot } = render(FakeBackdrop, {
+            const { getBySelector } = render(FakeBackdrop, {
               props: {
                 props: {
                   visible
@@ -41,7 +42,7 @@ describe("Backdrop", () => {
                 slot
               }
             });
-            expect(getRoot()).toContainHTML(`${slot}`);
+            expect(getBySelector(ROOT)).toContainHTML(`${slot}`);
           });
         });
       });
@@ -52,13 +53,13 @@ describe("Backdrop", () => {
 
       describe("root element", () => {
         it("should not be in the document", () => {
-          const { getRoot } = render(Backdrop, {
+          const { getBySelector } = render(Backdrop, {
             props: {
               visible
             }
           });
 
-          expect(() => getRoot()).toThrowError();
+          expect(() => getBySelector(ROOT)).toThrowError();
         });
       });
     });

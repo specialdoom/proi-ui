@@ -8,10 +8,25 @@ import {
 import type { ComponentProps, SvelteComponentDev } from "svelte/internal";
 import type { Constructor } from "../utils/types.js";
 
-export function getCustomRenderer(inputQueries: CustomQueriesInput) {
+export function getCustomRenderer() {
   const queries: CustomQueriesOutput = {
     ...baseQueries,
-    ...buildSingleElementQueries(inputQueries ?? ({} as CustomQueryDescriptors))
+    getBySelector: (container: HTMLElement, selector) => {
+      const els = container.querySelectorAll(selector);
+
+      if (!els.length) {
+        throw queryHelpers.getElementError("Unable to find element", container);
+      }
+
+      if (els.length > 1) {
+        throw queryHelpers.getElementError(
+          "Found multiple elements with the same selector",
+          container
+        );
+      }
+
+      return els[0] as HTMLElement;
+    }
   };
 
   return <TComponent extends SvelteComponentDev>(
@@ -21,79 +36,10 @@ export function getCustomRenderer(inputQueries: CustomQueriesInput) {
     baseRender(ui, options as any, { queries }) as any;
 }
 
-function buildSingleElementQueries(
-  queries: CustomQueryDescriptors
-): SingleElementQueries {
-  const keys = Object.keys(queries) as (keyof CustomQueryDescriptors)[];
-
-  return keys.reduce((sum, key) => {
-    sum[key] = (container: HTMLElement) =>
-      runSelector<HTMLElement>(container, queries[key].selector, queries[key].name);
-    return sum;
-  }, {} as SingleElementQueries);
-}
-
-/**
- * Helper function used to run component selector queries. This function expect
- * to always found the element and only one unique reference of it otherwise it
- * throws errors to help found early issue in our test cases.
- *
- * @param container
- * Reference of the element supposed to contains the element to query.
- *
- * @param selector
- * Dom selector query to execute.
- *
- * @param elementName
- * Name of the element to for that will displays in thrown errors.
- *
- * @returns
- * Returns the queried dom element. Otherwise, throws an error.
- */
-function runSelector<T extends HTMLElement>(
-  container: HTMLElement,
-  selector: string,
-  elementName: string,
-  nth?: number | undefined
-): T {
-  const els = container.querySelectorAll(
-    nth === undefined ? selector : selector.replace("%", nth.toString())
-  );
-
-  if (!els.length) {
-    throw queryHelpers.getElementError(
-      `Unable to find the ${elementName} element`,
-      container
-    );
-  }
-
-  if (els.length > 1) {
-    throw queryHelpers.getElementError(
-      `Found multiple ${elementName} elements`,
-      container
-    );
-  }
-
-  return els[0] as T;
-}
-
 type RenderOptions<T extends SvelteComponentDev> = {
   props?: ComponentProps<T> & Record<string, any>;
 } & Record<string, any>;
 
-interface CustomQueryDescriptor {
-  selector: string;
-  name: string;
-}
-
-type CustomQueryDescriptors = {
-  [k: string]: CustomQueryDescriptor;
+type CustomQueriesOutput = typeof baseQueries & {
+  getBySelector: (container: HTMLElement, selector: string) => HTMLElement;
 };
-
-type SingleElementQueries = {
-  [P in keyof CustomQueryDescriptors]: (container: HTMLElement) => HTMLElement;
-};
-
-type CustomQueriesInput = CustomQueryDescriptors;
-
-type CustomQueriesOutput = typeof baseQueries & SingleElementQueries;
