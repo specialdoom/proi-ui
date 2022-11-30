@@ -1,5 +1,5 @@
 <script lang="ts">
-  import CheckboxCheckmarkIcon from "../icons/CheckboxCheckmarkIcon.svelte";
+  import CheckmarkIcon from "../icons/CheckmarkIcon.svelte";
 
   export let checked: boolean = false;
   export let disabled: boolean = false;
@@ -20,12 +20,14 @@
       class="proi-checkbox"
     >
       {#if checked}
-        <CheckboxCheckmarkIcon />
+        <CheckmarkIcon />
       {/if}
     </div>
-    <span class="proi-checkbox-label">
-      <slot />
-    </span>
+    {#if $$slots.default}
+      <span class="proi-checkbox-label">
+        <slot />
+      </span>
+    {/if}
   </div>
 </label>
 
