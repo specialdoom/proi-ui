@@ -1,25 +1,3 @@
----
-
-[proi-ui](https://github.com/specialdoom/proi-ui)
-
-###### Switch component
-
-### Usage
-
-```sveltehtml
-<script>
-import { Progress, Button } from '@specialdoom/proi-ui';
-
-let percent = 67;
-let error = true;
-</script>
-
-<Progress {percent} />
-<Progress {percent} {error} />
-```
-
-### API
-
 ### Properties
 
 | Property        | Description                                    | Type      | Default value |
