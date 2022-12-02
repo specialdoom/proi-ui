@@ -1,78 +1,78 @@
 {
-  "name": "@specialdoom/proi-ui",
-  "version": "3.3.0",
-  "description": "yet another Svelte UI lib",
-  "keywords": [
-    "svelte",
-    "ui",
-    "svelte ui library",
-    "components",
-    "svelte3"
-  ],
-  "author": "specialdoom (https://github.com/specialdoom)",
-  "repository": "git://github.com/specialdoom/proi-ui",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
-  "homepage": "https://specialdoom.github.io/proi-ui/",
-  "bugs": {
-    "url": "https://github.com/specialdoom/proi-ui/issues"
-  },
-  "scripts": {
-    "dev": "histoire dev",
-    "build": "node ./tasks/build.js",
-    "build:dev": "node ./tasks/build.js --no-release",
-    "test": "vitest",
-    "test:coverage": "vitest --coverage",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "format": "prettier --write ./lib/**/*.{js,svelte,html,ts}",
-    "lint": "eslint ./lib/**/*.{js,ts,svelte}",
-    "prelint": "npm run format",
-    "story:build": "node ./tasks/copy-changelog.js && histoire build",
-    "story:preview": "histoire preview",
-    "prepare": "husky install",
-    "release": "standard-version",
-    "publish": "node ./tasks/publish.js"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
-    "@histoire/plugin-svelte": "^0.11.7",
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/kit": "next",
-    "@sveltejs/package": "next",
-    "@sveltejs/vite-plugin-svelte": "^1.3.1",
-    "@testing-library/dom": "^8.19.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/svelte": "^3.2.2",
-    "@tsconfig/svelte": "^3.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
-    "@vitest/coverage-c8": "^0.25.3",
-    "eslint": "^8.16.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "histoire": "^0.11.7",
-    "husky": "^8.0.2",
-    "jsdom": "^20.0.3",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
-    "prettier-plugin-svelte": "^2.8.0",
-    "standard-version": "^9.5.0",
-    "svelte": "^3.44.0",
-    "svelte-check": "^2.7.1",
-    "svelte-jester": "^2.3.2",
-    "svelte-preprocess": "^4.10.6",
-    "tslib": "^2.3.1",
-    "typescript": "^4.7.4",
-    "vite": "^3.0.0",
-    "vitest": "^0.25.3"
-  },
-  "lint-staged": {
-    "*.{js,ts,svelte}": [
-      "svelte-check",
-      "npm run lint"
-    ]
-  },
-  "type": "module"
+	"name": "@specialdoom/proi-ui",
+	"version": "3.3.0",
+	"description": "yet another Svelte UI lib",
+	"keywords": [
+		"svelte",
+		"ui",
+		"svelte ui library",
+		"components",
+		"svelte3"
+	],
+	"author": "specialdoom (https://github.com/specialdoom)",
+	"repository": "git://github.com/specialdoom/proi-ui",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org"
+	},
+	"homepage": "https://specialdoom.github.io/proi-ui/",
+	"bugs": {
+		"url": "https://github.com/specialdoom/proi-ui/issues"
+	},
+	"scripts": {
+		"dev": "histoire dev",
+		"build": "node ./tasks/build.js",
+		"build:dev": "node ./tasks/build.js --no-release",
+		"test": "vitest",
+		"test:coverage": "vitest --coverage",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"format": "prettier --write ./lib/**/*.{js,svelte,html,ts}",
+		"lint": "eslint ./lib/**/*.{js,ts,svelte}",
+		"prelint": "npm run format",
+		"story:build": "node ./tasks/copy-changelog.js && histoire build",
+		"story:preview": "histoire preview",
+		"prepare": "husky install",
+		"release": "standard-version",
+		"publish": "node ./tasks/publish.js"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.3.0",
+		"@commitlint/config-conventional": "^17.3.0",
+		"@histoire/plugin-svelte": "^0.11.7",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"@sveltejs/package": "next",
+		"@sveltejs/vite-plugin-svelte": "^1.3.1",
+		"@testing-library/dom": "^8.19.0",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/svelte": "^3.2.2",
+		"@tsconfig/svelte": "^3.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.27.0",
+		"@typescript-eslint/parser": "^5.27.0",
+		"@vitest/coverage-c8": "^0.25.3",
+		"eslint": "^8.16.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"histoire": "^0.11.7",
+		"husky": "^8.0.2",
+		"jsdom": "^20.0.3",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1",
+		"prettier-plugin-svelte": "^2.8.0",
+		"standard-version": "^9.5.0",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.7.1",
+		"svelte-jester": "^2.3.2",
+		"svelte-preprocess": "^4.10.6",
+		"tslib": "^2.3.1",
+		"typescript": "^4.7.4",
+		"vite": "^3.0.0",
+		"vitest": "^0.25.3"
+	},
+	"lint-staged": {
+		"*.{js,ts,svelte}": [
+			"svelte-check",
+			"npm run lint"
+		]
+	},
+	"type": "module"
 }
