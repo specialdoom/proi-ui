@@ -6,18 +6,17 @@
   import CarretUp from "../icons/CarretUp.svelte";
 
   export let options: DropdownOption[];
-  export let placeholder: string;
+  export let placeholder: string = "";
   export let value: string | number = "";
   export let error: boolean = false;
   export let disabled: boolean = false;
-
-  let toggle: boolean = false;
+  export let open: boolean = false;
 
   $: currentValue = options.find((o) => o.value === value)?.label;
 
   function handleSelectOption(selectedValue: string | number) {
     value = selectedValue;
-    toggle = false;
+    open = false;
   }
 </script>
 
@@ -27,34 +26,33 @@
     on:click={() => {
       if (disabled) return;
 
-      toggle = !toggle;
+      open = !open;
     }}
     on:keydown
     on:keyup
-    on:keypress
     class:error
-    class:focus={toggle}
+    class:focus={open}
     class:disabled
     class:placeholder={!currentValue}
-    data-testid="proi-dropdown"
+    style:justify-content={currentValue || placeholder ? "space-between" : "flex-end"}
   >
     {currentValue ? currentValue : placeholder}
-    {#if toggle}
+    {#if open}
       <CarretUp />
     {:else}
       <CarretDown fillColor={disabled ? "#89959B" : "#223843"} />
     {/if}
   </div>
-  {#if toggle}
+  {#if open}
     <div
-      class="proi-dropdown-options"
+      class="proi-dropdown-options-wrapper"
       use:clickOutside
-      on:click_outside={() => (toggle = false)}
+      on:click_outside={() => (open = false)}
     >
-      <div class="proi-options">
+      <div class="proi-dropdown-options">
         {#each options as option}
           <div
-            class="proi-option"
+            class="proi-dropdown-option"
             class:selected={option.value === value}
             class:disabled={option.disabled}
             on:click={() => handleSelectOption(option.value)}
@@ -120,7 +118,7 @@
     border-color: var(--n0);
   }
 
-  .proi-dropdown-options {
+  .proi-dropdown-options-wrapper {
     position: absolute;
     top: 36px;
     border: 2px solid var(--n200);
@@ -130,13 +128,13 @@
     background: var(--bright);
   }
 
-  .proi-options {
+  .proi-dropdown-options {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  .proi-option {
+  .proi-dropdown-option {
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
@@ -147,15 +145,15 @@
     font-weight: 500;
   }
 
-  .proi-option:hover {
+  .proi-dropdown-option:hover {
     background: var(--g200);
   }
 
-  .proi-option.selected {
+  .proi-dropdown-option.selected {
     background: var(--g0);
   }
 
-  .proi-option.disabled {
+  .proi-dropdown-option.disabled {
     background: var(--n200);
   }
 </style>
