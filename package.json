@@ -29,7 +29,7 @@
 		"format": "prettier --write ./lib/**/*.{js,svelte,html,ts}",
 		"lint": "eslint ./lib/**/*.{js,ts,svelte}",
 		"prelint": "npm run format",
-		"story:build": "histoire build",
+		"story:build": "node ./tasks/copy-changelog.js && histoire build",
 		"story:preview": "histoire preview",
 		"prepare": "husky install",
 		"release": "standard-version",
