@@ -1,8 +1,15 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [3.3.0](https://github.com/specialdoom/proi-ui/compare/v3.2.0...v3.3.0) (2022-11-30)
+
+
 ### Features
 
-* add `Textarea` component ([#72](https://github.com/specialdoom/proi-ui/issues/72)) ([f1662a6](https://github.com/specialdoom/proi-ui/commit/f1662a60d6300bc6293cc35caacfe708ce7c496a))
+* add `danger` variant for Button component [#65](https://github.com/specialdoom/proi-ui/issues/65) ([#78](https://github.com/specialdoom/proi-ui/issues/78)) ([f25f68c](https://github.com/specialdoom/proi-ui/commit/f25f68c243e30e41ca55751f5297be82eb1d2fa0))
+* add `error` property for `Checkbox`, `Radio` and `Switch` components [#56](https://github.com/specialdoom/proi-ui/issues/56) ([#77](https://github.com/specialdoom/proi-ui/issues/77)) ([7a95855](https://github.com/specialdoom/proi-ui/commit/7a95855cbfdbd552211413a1b5bd5e8df2d9643d))
+* add `inline` variant for `FormItem` component [#66](https://github.com/specialdoom/proi-ui/issues/66) ([#79](https://github.com/specialdoom/proi-ui/issues/79)) ([70fa721](https://github.com/specialdoom/proi-ui/commit/70fa7216fc2c3bb19efb3e3ad2b01f4cc9f01d82))
 
 ## [3.2.0](https://github.com/specialdoom/proi-ui/compare/v3.1.1...v3.2.0) (2022-11-27)
 
