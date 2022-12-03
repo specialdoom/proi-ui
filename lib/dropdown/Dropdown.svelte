@@ -1,7 +1,6 @@
 <script lang="ts">
   import type { DropdownOption } from "./dropdown.types.js";
 
-  import { clickOutside } from "../utils/clickOutside.js";
   import CarretDown from "../icons/CarretDown.svelte";
   import CarretUp from "../icons/CarretUp.svelte";
 
@@ -12,9 +11,13 @@
   export let disabled: boolean = false;
   export let open: boolean = false;
 
-  $: currentValue = options.find((o) => o.value === value)?.label;
+  $: label = options.find((o) => o.value === value)?.label;
 
   function handleSelectOption(selectedValue: string | number) {
+    if (options.find((o) => o.value === selectedValue).disabled) {
+      return;
+    }
+
     value = selectedValue;
     open = false;
   }
@@ -28,15 +31,15 @@
 
       open = !open;
     }}
-    on:keydown
     on:keyup
+    on:keydown
     class:error
     class:focus={open}
     class:disabled
-    class:placeholder={!currentValue}
-    style:justify-content={currentValue || placeholder ? "space-between" : "flex-end"}
+    class:placeholder={!label}
+    style:justify-content={label || placeholder ? "space-between" : "flex-end"}
   >
-    {currentValue ? currentValue : placeholder}
+    {label ? label : placeholder}
     {#if open}
       <CarretUp />
     {:else}
@@ -44,11 +47,7 @@
     {/if}
   </div>
   {#if open}
-    <div
-      class="proi-dropdown-options-wrapper"
-      use:clickOutside
-      on:click_outside={() => (open = false)}
-    >
+    <div class="proi-dropdown-options-wrapper">
       <div class="proi-dropdown-options">
         {#each options as option}
           <div
@@ -109,7 +108,6 @@
 
   .proi-dropdown.focus {
     outline: 2px solid var(--g200);
-    cursor: unset;
   }
 
   .proi-dropdown.disabled {

@@ -7,6 +7,7 @@
   height="10"
   viewBox="0 0 12 10"
   fill="none"
+  class="carret-down-icon"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
