@@ -25,6 +25,7 @@
     box-sizing: border-box;
     background: red;
     border-radius: 6px;
+    line-height: 12px;
     font-size: 8px;
     text-align: center;
     top: 0;
