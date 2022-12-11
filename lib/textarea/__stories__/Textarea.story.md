@@ -1,23 +1,3 @@
----
-
-[proi-ui](https://github.com/specialdoom/proi-ui)
-
-##### Textarea component
-
-### Usage
-
-```sveltehtml
-<script>
-import { Textarea } from '@specialdoom/proi-ui'
-
-function onChange() {
-    console.log('changed');
-}
-</script>
-
-<Textarea value="Value" placeholder="Text input" disabled on:change={onChange}/>
-```
-
 ### Properties
 
 | Property      | Description                            | Type      | Default |
