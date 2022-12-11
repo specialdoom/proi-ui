@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/specialdoom/proi-ui/compare/v3.3.0...v3.4.0) (2022-12-11)
+
+
+### Features
+
+* add  property for Dropdown component ([5086526](https://github.com/specialdoom/proi-ui/commit/50865260ce87d703670634c51810e42aba86dd5c))
+* add `bright` variant, update `neutral` variant and, new `label` property for `Pill` component ([006c8cc](https://github.com/specialdoom/proi-ui/commit/006c8cc3d21e444b4e0360b03f63d4db255e1123))
+* add `bright` variant, update `neutral` variant, new `label` property for `Badge` component ([551bad3](https://github.com/specialdoom/proi-ui/commit/551bad309bf9701deb4e80018d7064a1f9e9ba14))
+* add `Dot` component [#87](https://github.com/specialdoom/proi-ui/issues/87) ([8925121](https://github.com/specialdoom/proi-ui/commit/89251215a42606ca9995ce6ced266cdd1b7b3f00))
+* add `small` and `indeterminate` props for Progress component [#57](https://github.com/specialdoom/proi-ui/issues/57) ([#83](https://github.com/specialdoom/proi-ui/issues/83)) ([4f52330](https://github.com/specialdoom/proi-ui/commit/4f52330fbe5ca620d8cdb3625112eb07c01dd241))
+* update `neutral` variant and add `bright` variant for `Avatar` component ([12484b0](https://github.com/specialdoom/proi-ui/commit/12484b0f5a33450695a47e853f6a439ac91c8c01))
+
+
+* `Avatar` component's markup and styling ([7570e86](https://github.com/specialdoom/proi-ui/commit/7570e864c1d0a600739177a40132701b1376f9a7))
+
 ## [3.3.0](https://github.com/specialdoom/proi-ui/compare/v3.2.0...v3.3.0) (2022-11-30)
 
 
