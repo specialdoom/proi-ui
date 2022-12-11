@@ -9,24 +9,23 @@
     image !== "" ? `background: url(${image}) center center/50px 50px no-repeat;` : "";
 </script>
 
-<div
+<span
   class="proi-avatar data-display {variant}"
   {style}
 >
   {#if initials !== "" && image === ""}
     {initials}
   {/if}
-</div>
+</span>
 
 <style>
   .proi-avatar {
-    height: 50px;
-    width: 50px;
+    height: 48px;
+    width: 48px;
     border-radius: 50%;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-weight: 500;
     font-size: 18px;
   }
 
