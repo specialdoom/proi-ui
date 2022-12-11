@@ -1,0 +1,64 @@
+<script lang="ts">
+  import type { Hst as HstType } from "@histoire/plugin-svelte";
+  import Progress from "../Progress.svelte";
+  import {
+    complete,
+    defaultSource,
+    error,
+    indeterminate,
+    ongoing,
+    small
+  } from "./progress.source.js";
+
+  export let Hst: HstType;
+</script>
+
+<Hst.Story title="Progress">
+  <Hst.Variant
+    title="Default"
+    source={defaultSource}
+  >
+    <Progress />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Small"
+    source={small}
+  >
+    <Progress
+      small
+      percent={37}
+    />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Indeterminate"
+    source={indeterminate}
+  >
+    <Progress indeterminate />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Ongoing"
+    source={ongoing}
+  >
+    <Progress percent={87} />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Complete"
+    source={complete}
+  >
+    <Progress percent={100} />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Error"
+    source={error}
+  >
+    <Progress
+      percent={50}
+      error
+    />
+  </Hst.Variant>
+</Hst.Story>

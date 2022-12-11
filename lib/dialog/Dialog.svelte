@@ -10,11 +10,11 @@
 
   const dispatch = createEventDispatcher();
 
-  const handleCancel = () => {
+  function handleCancel() {
     dispatch("cancel");
 
     visible = false;
-  };
+  }
 
   function handleOk() {
     dispatch("ok");
@@ -23,31 +23,22 @@
 
 {#if visible}
   <Backdrop {visible}>
-    <div class="container">
-      <div
-        class="dialog"
-        data-testid="proi-dialog"
-      >
+    <div class="proi-dialog-container">
+      <div class="proi-dialog">
         <div
-          class="header"
-          style={`justify-content: ${title ? "space-between" : "flex-end"};`}
+          class="proi-dialog-header"
+          style:justify-content={title ? "space-between" : "flex-end"}
         >
           {title}
-          <span
-            on:click={handleCancel}
-            data-testid="proi-dialog-close-icon"
-          >
+          <button on:click={handleCancel}>
             <CloseIcon />
-          </span>
+          </button>
         </div>
-        <div class="body">
+        <div class="proi-dialog-body">
           <slot />
         </div>
         {#if showActions}
-          <div
-            class="footer"
-            data-testid="proi-dialog-actions"
-          >
+          <div class="proi-dialog-footer">
             <Button
               variant="ghost"
               on:click={handleCancel}>Cancel</Button
@@ -64,7 +55,7 @@
 {/if}
 
 <style>
-  div.container {
+  .proi-dialog-container {
     display: none;
     height: 100vh;
     width: 100vw;
@@ -75,7 +66,7 @@
     opacity: 1;
   }
 
-  div.dialog {
+  .proi-dialog {
     display: flex;
     flex-direction: column;
     max-height: 80%;
@@ -87,24 +78,27 @@
     border-radius: 8px;
   }
 
-  div.dialog div.header {
+  .proi-dialog-header {
     display: inline-flex;
     align-items: center;
     font-size: 18px;
     color: var(--n800);
   }
 
-  div.header span {
+  .proi-dialog-header button {
+    border: unset;
+    outline: unset;
+    background: transparent;
     cursor: pointer;
   }
 
-  div.dialog div.body {
+  .proi-dialog-body {
     font-size: 14px;
     color: var(--n600);
     overflow: auto;
   }
 
-  div.dialog div.footer {
+  .proi-dialog-footer {
     display: inline-flex;
     justify-content: flex-end;
     gap: 8px;

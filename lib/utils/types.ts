@@ -8,7 +8,8 @@ export type DataDisplayVariant =
   | "neutral"
   | "mikado"
   | "tufts"
-  | "vivid";
+  | "vivid"
+  | "bright";
 
 // eslint-disable-next-line
 export type Constructor<T> = new (...args: any[]) => T;

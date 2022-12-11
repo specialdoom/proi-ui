@@ -4,6 +4,7 @@
   export let variant: TagVariant = "pine";
   export let badge: boolean = false;
   export let pill: boolean = false;
+  export let label: string = "";
 </script>
 
 <span
@@ -11,7 +12,7 @@
   class:badge
   class:pill
 >
-  <slot />
+  {label}
 </span>
 
 <style>
@@ -19,9 +20,10 @@
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
-    height: 15px;
-    min-width: 15px;
+    height: 16px;
+    min-width: 16px;
     font-size: 12px;
+    line-height: 16px;
     color: var(--n0);
     padding: 4px 8px;
   }
@@ -37,8 +39,8 @@
   }
 
   .data-display.neutral {
-    background: var(--n0);
-    color: var(--n800);
+    background: var(--n800);
+    color: var(--n0);
   }
 
   .data-display.mikado {
@@ -54,6 +56,11 @@
   .data-display.vivid {
     background: var(--p600);
     color: var(--n0);
+  }
+
+  .data-display.bright {
+    background: var(--n0);
+    color: var(--n800);
   }
 
   .badge {

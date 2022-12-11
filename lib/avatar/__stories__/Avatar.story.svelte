@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
+  import { capitalizeFirstLetter, dataDisplayVariants } from "../../__stories__/utils.js";
   import Avatar from "../index.js";
 
   import * as source from "./avatar.source.js";
@@ -10,6 +11,16 @@
 </script>
 
 <Hst.Story title="Avatar">
+  <Hst.Variant
+    title="Default"
+    source={defaultAvatarsSource}
+  >
+    <Avatar.Lauren />
+    <Avatar.Tim />
+    <Avatar.Leo />
+    <Avatar.Nikita />
+  </Hst.Variant>
+
   <Hst.Variant
     title="With initials"
     source={withInitialsSource}
@@ -24,13 +35,15 @@
     <Avatar image="https://avatars.githubusercontent.com/u/41910815?v=4" />
   </Hst.Variant>
 
-  <Hst.Variant
-    title="Default"
-    source={defaultAvatarsSource}
-  >
-    <Avatar.Lauren />
-    <Avatar.Tim />
-    <Avatar.Leo />
-    <Avatar.Nikita />
-  </Hst.Variant>
+  {#each dataDisplayVariants as variant}
+    <Hst.Variant
+      title="{capitalizeFirstLetter(variant)} Avatar"
+      source={withImageSource}
+    >
+      <Avatar
+        {variant}
+        initials="PU"
+      />
+    </Hst.Variant>
+  {/each}
 </Hst.Story>

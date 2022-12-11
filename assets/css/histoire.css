@@ -1,0 +1,4 @@
+.htw-sandbox-contain {
+    contain: none !important;
+    padding: 8px;
+}

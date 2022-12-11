@@ -17,6 +17,7 @@ import { Badge, Pill } from '@specialdoom/proi-ui'
 
 ### API
 
-| Property | Description                                                                                     | Type   | Default |
-| -------- | ----------------------------------------------------------------------------------------------- | ------ | ------- |
-| variant  | Variant of tag component (Badge or Pill). Options: `pine, neutral, makido, vivid, flame, tufts` | string | 'pine'  |
+| Property | Description                                                                                             | Type   | Default |
+| -------- | ------------------------------------------------------------------------------------------------------- | ------ | ------- |
+| variant  | Variant of tag component (Badge or Pill). Options: `pine, neutral, makido, vivid, flame, tufts, bright` | string | 'pine'  |
+| label    | Label of Pill/Badge component                                                                           | string | 'pine'  |

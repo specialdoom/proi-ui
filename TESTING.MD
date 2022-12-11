@@ -1,8 +1,8 @@
 ## How do we write unit tests for `proi-ui` components?
 
 1. Define component's element(s) selector(s) in a `*.selectors.ts` file as constants:
-    - `ROOT` selector as the container of component
-    - `SPECIFIC_NAME` for other selectors
+   - `ROOT` selector as the container of component
+   - `SPECIFIC_NAME` for other selectors
 
 ```sveltehtml
 // Placeholder.svelte
@@ -18,9 +18,10 @@
 </div>
 ```
 
-2. Test component structure
-3. Test component behaviour based on different values for props
-4. Test events handling
+1. Test component structure
+   1. If strucutre of component is conditional, wrap that inside a prop test
+2. Test component behaviour based on different values for props
+3. Test events handling
 
 ## How do we structure unit tests for `utils` functions?
 

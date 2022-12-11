@@ -7,6 +7,10 @@
   height: 8px;
 }
 
+.small {
+  height: 4px;
+}
+
 .proi-progress-line {
   display: flex;
   flex-direction: column;
@@ -26,4 +30,24 @@
 .error {
   background-color: var(--r400);
   transition: background-color 1s ease, width 0.6s ease;
+}
+
+.indeterminate {
+  background-color: var(--b400);
+  animation: indeterminateAnimation 1s infinite linear;
+  transform-origin: 0% 50%;
+}
+
+@keyframes indeterminateAnimation {
+  0% {
+    transform: translateX(0) scaleX(0);
+  }
+
+  40% {
+    transform: translateX(0) scaleX(0.4);
+  }
+
+  100% {
+    transform: translateX(100%) scaleX(0.5);
+  }
 }
