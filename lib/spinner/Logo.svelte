@@ -5,6 +5,7 @@
   viewBox="0 0 40 40"
   shape-rendering="geometricPrecision"
   text-rendering="geometricPrecision"
+  class="proi-ui-logo"
   width="60"
   height="60"
 >

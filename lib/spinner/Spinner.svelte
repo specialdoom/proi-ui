@@ -4,7 +4,7 @@
   export let label: string = "";
 </script>
 
-<div class="sd-spinner-container">
+<div class="proi-spinner-container">
   <Logo />
   {#if label}
     {label}
@@ -12,7 +12,7 @@
 </div>
 
 <style>
-  .sd-spinner-container {
+  .proi-spinner-container {
     display: flex;
     height: fit-content;
     max-width: 150px;
