@@ -3,7 +3,7 @@
   import Backdrop from "../Backdrop.svelte";
   import { logEvent } from "histoire/client";
   import { defaultSource, onClickSource, withCustomContent } from "./backdrop.source.js";
-  import Badge from "../../tags/Badge.svelte";
+  import Badge from "../../tags/badge/Badge.svelte";
 
   export let Hst: HstType;
 </script>
