@@ -2,11 +2,11 @@
   "types": [
     {
       "type": "feat",
-      "section": "Features"
+      "section": "🚀 Features"
     },
     {
       "type": "fix",
-      "section": "Bug Fixes"
+      "section": "💥 Bug Fixes"
     },
     {
       "type": "chore",
@@ -17,10 +17,12 @@
       "hidden": true
     },
     {
-      "type": "style"
+      "type": "style",
+      "section": "🎨 Styling"
     },
     {
-      "type": "refactor"
+      "type": "refactor",
+      "section": "🏭 Refactor"
     },
     {
       "type": "perf",
