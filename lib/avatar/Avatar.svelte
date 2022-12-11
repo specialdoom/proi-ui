@@ -40,8 +40,8 @@
   }
 
   .data-display.neutral {
-    background: var(--n0);
-    color: var(--n800);
+    background: var(--n800);
+    color: var(--n0);
   }
 
   .data-display.mikado {
@@ -57,5 +57,10 @@
   .data-display.vivid {
     background: var(--p600);
     color: var(--n0);
+  }
+
+  .data-display.bright {
+    background: var(--n0);
+    color: var(--n800);
   }
 </style>

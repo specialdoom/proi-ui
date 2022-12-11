@@ -1,18 +1,11 @@
-import type { AvatarVariant } from "../avatar.types.js";
 import { describe } from "vitest";
 import { render } from "../../__tests__/tests.queries.js";
 import { ROOT } from "./avatar.selectors.js";
 import Avatar from "../Avatar.svelte";
+import { dataDisplayVariants } from "../../__stories__/utils.js";
 
 describe("Avatar", () => {
-  const avatarVariants: AvatarVariant[] = [
-    "pine",
-    "tufts",
-    "neutral",
-    "vivid",
-    "flame",
-    "mikado"
-  ];
+  const avatarVariants = dataDisplayVariants;
 
   describe("root element", () => {
     it("should be in the document", () => {
