@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
   import FormItem from "../FormItem.svelte";
-  import TextInput from "../../input/TextInput.svelte";
+  import TextInput from "../../text-input/TextInput.svelte";
   import {
     defaultSource,
     inline,

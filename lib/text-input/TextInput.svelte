@@ -3,13 +3,12 @@
   export let value: string = "";
   export let error: boolean = false;
   export let disabled: boolean = false;
-  export let className: string = "";
 </script>
 
 <input
   {placeholder}
   bind:value
-  class="proi-input {className}"
+  class="proi-input"
   class:error
   on:change
   on:keydown
