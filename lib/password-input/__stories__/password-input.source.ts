@@ -1,39 +1,39 @@
 const template = `<script>
-  import {TextInput} from "@specialdoom/proi-ui";
+  import {PasswordInput} from "@specialdoom/proi-ui";
 </script>
 `;
 
 export const defaultSource = `${template}
-<TextInput />
+<PasswordInput />
 `;
 
 export const disabled = `${template}
-<TextInput disabled />
+<PasswordInput disabled />
 `;
 
 export const error = `${template}
-<TextInput error />
+<PasswordInput error />
 `;
 
 export const withPlaceholder = `${template}
-<TextInput placeholder="Placeholder" />
+<PasswordInput placeholder="Placeholder" />
 `;
 
 export const withValue = `${template}
-<TextInput value="Value" />
+<PasswordInput value="Value" />
 `;
 
 export const bindValue = `<script>
-import {TextInput} from "@specialdoom/proi-ui";
+import {PasswordInput} from "@specialdoom/proi-ui";
 
 let value = "";
 </script>
 
-<TextInput bind:value />
+<PasswordInput bind:value />
 `;
 
 export const onKeyDownEvent = `${template}
-<TextInput
+<PasswordInput
   value="Some value"
   on:keydown={(e) => {
     if (e.key === "Enter") {
@@ -44,7 +44,7 @@ export const onKeyDownEvent = `${template}
 `;
 
 export const onChangeEvent = `${template}
-<TextInput
+<PasswordInput
   value="Some value"
   on:change={(e) => console.log("change", e)}
 />

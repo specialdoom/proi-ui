@@ -1,71 +1,71 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
   import { logEvent } from "histoire/client";
-  import TextInput from "../TextInput.svelte";
+  import PasswordInput from "../PasswordInput.svelte";
   import {
+    bindValue,
     defaultSource,
     disabled,
     error,
-    onChangeEvent,
     onKeyDownEvent,
     withPlaceholder,
     withValue
-  } from "./text-input.source.js";
+  } from "./password-input.source.js";
 
   export let Hst: HstType;
 
   let value: string = "";
 </script>
 
-<Hst.Story title="Inputs/TextInput">
+<Hst.Story title="Inputs/PasswordInput">
   <Hst.Variant
     title="Default"
     source={defaultSource}
   >
-    <TextInput />
+    <PasswordInput />
   </Hst.Variant>
 
   <Hst.Variant
     title="Disabled"
     source={disabled}
   >
-    <TextInput disabled />
+    <PasswordInput disabled />
   </Hst.Variant>
 
   <Hst.Variant
-    title="Error state"
+    title="Error"
     source={error}
   >
-    <TextInput error />
+    <PasswordInput error />
   </Hst.Variant>
 
   <Hst.Variant
     title="With placeholder"
     source={withPlaceholder}
   >
-    <TextInput placeholder="Placeholder" />
+    <PasswordInput placeholder="Placeholder" />
   </Hst.Variant>
 
   <Hst.Variant
     title="With value"
     source={withValue}
   >
-    <TextInput value="Some value" />
+    <PasswordInput value="Value" />
   </Hst.Variant>
 
   <Hst.Variant
     title="bind:value"
-    source={withValue}
+    source={bindValue}
   >
     Value: {value}
-    <TextInput bind:value />
+    <PasswordInput bind:value />
   </Hst.Variant>
 
   <Hst.Variant
-    title="on:keydown event"
+    title="on:keydown"
     source={onKeyDownEvent}
   >
-    <TextInput
+    <PasswordInput
       value="Some value"
       on:keydown={(e) => {
         if (e.key === "Enter") {
@@ -76,10 +76,10 @@
   </Hst.Variant>
 
   <Hst.Variant
-    title="on:change event"
-    source={onChangeEvent}
+    title="on:change"
+    source={onKeyDownEvent}
   >
-    <TextInput
+    <PasswordInput
       value="Some value"
       on:change={(e) => logEvent("change", e)}
     />
