@@ -1,4 +1,4 @@
-import { fireEvent } from "@testing-library/dom";
+import { fireEvent } from "@testing-library/svelte";
 import { describe, expect, it } from "vitest";
 import { render } from "../../__tests__/tests.queries.js";
 import type { AlertVariant } from "../alert.types";

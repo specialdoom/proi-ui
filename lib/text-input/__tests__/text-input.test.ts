@@ -1,4 +1,4 @@
-import { fireEvent } from "@testing-library/dom";
+import { fireEvent } from "@testing-library/svelte";
 import { describe, vi } from "vitest";
 import { render } from "../../__tests__/tests.queries.js";
 import TextInput from "../TextInput.svelte";

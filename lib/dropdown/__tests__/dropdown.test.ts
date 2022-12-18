@@ -11,7 +11,7 @@ import {
   ROOT
 } from "./dropdown.selectors.js";
 import Dropdown from "../Dropdown.svelte";
-import { fireEvent } from "@testing-library/dom";
+import { fireEvent } from "@testing-library/svelte";
 
 describe("Dropdown", () => {
   const options: DropdownOption[] = [
