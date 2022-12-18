@@ -8,12 +8,17 @@
   export let disabled: boolean = false;
 
   let showPassword: boolean = false;
+
+  function handleIconClick() {
+    showPassword = !showPassword;
+  }
 </script>
 
 <div
   class="proi-input-container"
   class:disabled
   class:error
+  class:with-value={value}
 >
   {#if showPassword}
     <input
@@ -22,6 +27,9 @@
       {placeholder}
       class="proi-input"
       {disabled}
+      on:change
+      on:input
+      on:focus
     />
   {:else}
     <input
@@ -30,18 +38,24 @@
       {placeholder}
       class="proi-input"
       {disabled}
+      on:change
+      on:input
+      on:focus
     />
   {/if}
-  <button
-    class="proi-icon"
-    on:click={() => (showPassword = !showPassword)}
-  >
-    {#if showPassword}
-      <ViewHide />
-    {:else}
-      <View />
-    {/if}
-  </button>
+  {#if value}
+    <button
+      class="proi-icon"
+      on:click={handleIconClick}
+      on:keydown
+    >
+      {#if showPassword}
+        <ViewHide />
+      {:else}
+        <View />
+      {/if}
+    </button>
+  {/if}
 </div>
 
 <style>
@@ -68,11 +82,15 @@
     outline: unset;
     padding: unset;
     height: 100%;
-    width: calc(100% - 20px);
+    width: 100%;
   }
 
   .proi-input::placeholder {
     color: var(--n400);
+  }
+
+  .proi-input-container.with-value .proi-input {
+    width: calc(100% - 20px);
   }
 
   .proi-input-container.disabled:focus-within {
@@ -111,10 +129,10 @@
     border: unset;
     background: transparent;
     width: 20px;
+    height: 20px;
     padding: unset;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
   }
 </style>
