@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/specialdoom/proi-ui/compare/v3.4.0...v3.5.0) (2022-12-18)
+
+
+### 🚀 Features
+
+* add `PasswordInput` component ([#89](https://github.com/specialdoom/proi-ui/issues/89)) ([c4782b7](https://github.com/specialdoom/proi-ui/commit/c4782b796ae4bdf0c6d2bd4e4b0c082ccba6b38d))
+
 ## [3.4.0](https://github.com/specialdoom/proi-ui/compare/v3.3.0...v3.4.0) (2022-12-11)
 
 
