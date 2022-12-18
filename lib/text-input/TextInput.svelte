@@ -42,12 +42,12 @@
 
   .proi-input:disabled:focus,
   .proi-input:disabled:active {
-    outline: none;
+    border: none;
   }
 
   .proi-input:focus,
   .proi-input:active {
-    outline: 2px solid var(--g200);
+    border: 2px solid var(--g200);
   }
 
   .proi-input.error {
