@@ -27,7 +27,7 @@ const svelteFileTemplate = `<script lang="ts">
 <!-- markup -->
 
 <style>
-    /* styling */
+  /* styling */
 </style>
 `;
 
@@ -39,9 +39,9 @@ export let Hst: HstType;
 </script>
 
 <Hst.Story title="${componenFileN}">
-    <Hst.Variant title="Default">
-        <!-- add component variant -->
-    </Hst.Variant>
+  <Hst.Variant title="Default">
+    <${componenFileN} />
+  </Hst.Variant>
 </Hst.Story>`;
 
 const READMEFileTemplate = `---
