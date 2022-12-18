@@ -1,3 +1,7 @@
+<script lang="ts">
+  export let color: string = "#479A89";
+</script>
+
 <svg
   width="20"
   height="20"
@@ -7,14 +11,14 @@
 >
   <path
     d="M15 5L5 15"
-    stroke="#223843"
+    stroke={color}
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
   />
   <path
     d="M5 5L15 15"
-    stroke="#223843"
+    stroke={color}
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"

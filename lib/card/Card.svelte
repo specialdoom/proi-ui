@@ -2,7 +2,7 @@
   import { createEventDispatcher } from "svelte";
   import Button from "../button/Button.svelte";
   import IconButton from "../button/IconButton.svelte";
-  import Trash from "../icons/Trash.svelte";
+  import CloseIcon from "../icons/CloseIcon.svelte";
 
   export let title: string = "";
   export let description: string = "";
@@ -48,7 +48,7 @@
       {#if showCancelAction}
         <IconButton
           variant="danger"
-          icon={Trash}
+          icon={CloseIcon}
           on:click={handleCancelActionClick}
         />
       {/if}

@@ -11,7 +11,10 @@
   class="proi-button {variant}"
   on:click
 >
-  <svelte:component this={icon} />
+  <svelte:component
+    this={icon}
+    color="#EFF1F3"
+  />
 </button>
 
 <style>

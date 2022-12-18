@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
+  import { logEvent } from "histoire/client";
   import Card from "../Card.svelte";
 
   export let Hst: HstType;
@@ -10,6 +11,15 @@
     <Card
       title="Title"
       description="Supporting description for the card goes here like a breeze."
+    />
+
+    <Card
+      title="On actions"
+      description="Supporting description for the card goes here like a breeze."
+      showAction
+      showCancelAction
+      on:action={(e) => logEvent("action triggered", e)}
+      on:cancel={(e) => logEvent("cancel triggered", e)}
     />
 
     <Card
