@@ -28,8 +28,7 @@
       class="proi-input"
       {disabled}
       on:change
-      on:input
-      on:focus
+      on:keydown
     />
   {:else}
     <input
@@ -39,8 +38,7 @@
       class="proi-input"
       {disabled}
       on:change
-      on:input
-      on:focus
+      on:keydown
     />
   {/if}
   {#if value}

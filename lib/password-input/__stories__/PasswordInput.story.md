@@ -1,25 +1,3 @@
----
-
-[proi-ui](https://github.com/specialdoom/proi-ui)
-
-##### PasswordInput component
-
-### Usage
-
-```sveltehtml
-<script>
-import { PasswordInput } from '@specialdoom/proi-ui'
-
-let value = "";
-
-function onChange () {
-    console.log('changed');
-}
-</script>
-
-<PasswordInput bind:value="Value" placeholder="Text input" disabled on:change={onChange}/>
-```
-
 ### Properties
 
 | Property      | Description                                 | Type      | Default |
