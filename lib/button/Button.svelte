@@ -102,11 +102,11 @@
     background: var(--r600);
   }
 
-  .danger:active {
+  .danger:hover {
     background: var(--r800);
   }
 
-  .danger:hover {
+  .danger:active {
     background: var(--r400);
   }
 
