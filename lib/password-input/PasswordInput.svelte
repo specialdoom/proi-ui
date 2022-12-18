@@ -73,6 +73,7 @@
     padding: 6px 12px;
     line-height: 20px;
     color: var(--n800);
+    background: var(--bright);
   }
 
   .proi-input {
