@@ -17,7 +17,7 @@
   let value: string = "";
 </script>
 
-<Hst.Story title="Input/TextInput">
+<Hst.Story title="Inputs/TextInput">
   <Hst.Variant
     title="Default"
     source={defaultSource}
