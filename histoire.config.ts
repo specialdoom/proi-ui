@@ -32,11 +32,11 @@ export default defineConfig({
   theme: {
     title: "@specialdoom/proi-ui",
     logo: {
-      square: "/assets/images/square.svg",
-      light: "/assets/images/logotype.svg",
-      dark: "/assets/images/dark-logotype.svg",
+      square: "./assets/images/square.svg",
+      light: "./assets/images/logotype.svg",
+      dark: "./assets/images/dark-logotype.svg",
     },
-    favicon: "./assets/images/logo.svg",
+    favicon: "favicon.ico",
     colors: {
       gray: {
         50: "#EFF1F3",
