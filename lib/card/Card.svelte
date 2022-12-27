@@ -7,7 +7,7 @@
   export let title: string;
   export let description: string;
   export let imageSrc: string = "";
-  export let imageDescription: string = "";
+  export let imageDescription: string = "Card image";
   export let showAction: boolean = false;
   export let actionLabel: string = "Action";
   export let showCancelAction: boolean = false;
