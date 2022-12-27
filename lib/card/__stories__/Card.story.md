@@ -1,22 +1,3 @@
----
-
-[proi-ui](https://github.com/specialdoom/proi-ui)
-
-##### Card component
-
-### Usage
-
-```sveltehtml
-<script>
-  import { Card } from '@specialdoom/proi-ui'
-</script>
-
-<Card
-  title="Title"
-  description="Supporting description for the card goes here like a breeze."
-/>
-```
-
 ### Properties
 
 | Property           | Description                                                                    | Type      | Default        |
@@ -35,28 +16,3 @@
 | ---------- | -------------------------------------------------- |
 | `action`   | Dispatched when user click on action button        |
 | `cancel`   | Dispatched when user click on cancel button action |
-
-##### FillCard component
-
-### Usage
-
-```sveltehtml
-<script>
-  import { FillCard } from '@specialdoom/proi-ui'
-</script>
-
-<FillCard
-  variant="pine"
-  title="Title"
-  description="Supporting description for the card goes here like a breeze."
-/>
-```
-
-### Properties
-
-| Property      | Description                                                                                  | Type     | Default  |
-| ------------- | -------------------------------------------------------------------------------------------- | -------- | -------- |
-| `title`       | Title of FillCard component (required)                                                       | `string` | `''`     |
-| `description` | Description of FillCard component (required)                                                 | `string` | `''`     |
-| `variant`     | Variant of FillCard component. Options: `pine, neutral, makido, vivid, flame, tufts, bright` | `string` | `'pine'` |
-
