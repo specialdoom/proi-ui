@@ -4,8 +4,8 @@
   import IconButton from "../button/IconButton.svelte";
   import CloseIcon from "../icons/CloseIcon.svelte";
 
-  export let title: string = "";
-  export let description: string = "";
+  export let title: string;
+  export let description: string;
   export let imageSrc: string = "";
   export let imageDescription: string = "";
   export let showAction: boolean = false;
