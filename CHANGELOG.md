@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/specialdoom/proi-ui/compare/v3.5.0...v3.6.0) (2022-12-27)
+
+
+### 🎨 Styling
+
+* update `Button` danger variant active style ([447a755](https://github.com/specialdoom/proi-ui/commit/447a7552352d00609635edd70a52007a77d5be33))
+* update background of `PasswordInput` ([b4b140a](https://github.com/specialdoom/proi-ui/commit/b4b140afb4fa00ae48ebbd2dc92c5a15246f1c83))
+* update focus/active style of `TextInput` ([0b642e1](https://github.com/specialdoom/proi-ui/commit/0b642e12f0e947699c970f71e5cf84e72f92fbdd))
+
+
+### 🚀 Features
+
+* add `Card` and `FillCard` component ([526ddbc](https://github.com/specialdoom/proi-ui/commit/526ddbcf053cf98fbc8ea5f676a9ff871a30a3d6))
+
 ## [3.5.0](https://github.com/specialdoom/proi-ui/compare/v3.4.0...v3.5.0) (2022-12-18)
 
 
