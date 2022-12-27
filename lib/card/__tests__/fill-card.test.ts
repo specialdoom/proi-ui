@@ -2,7 +2,7 @@ import { describe } from "vitest";
 import { render } from "../../__tests__/tests.queries.js";
 import { TITLE, DESCRIPTION, ROOT } from "./fill-card.selectors.js";
 import FillCard from "../FillCard.svelte";
-import { dataDisplayVariants } from "../../__stories__/utils";
+import { dataDisplayVariants } from "../../utils/variants.js";
 
 describe("FillCard", () => {
   describe("Card", () => {

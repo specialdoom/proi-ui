@@ -1,5 +1,5 @@
 import { describe } from "vitest";
-import { dataDisplayVariants } from "../../__stories__/utils";
+import { dataDisplayVariants } from "../../utils/variants.js";
 import { render } from "../../__tests__/tests.queries.js";
 import Dot from "../Dot.svelte";
 import { DOT, ROOT } from "./dot.selectors.js";

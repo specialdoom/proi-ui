@@ -2,7 +2,7 @@ import { describe } from "vitest";
 import { render } from "../../__tests__/tests.queries.js";
 import { ROOT } from "./tag.selectors.js";
 import Tag from "../Tag.svelte";
-import { dataDisplayVariants } from "../../__stories__/utils";
+import { dataDisplayVariants } from "../../utils/variants.js";
 
 describe("Tag", () => {
   const tagVariants = dataDisplayVariants;

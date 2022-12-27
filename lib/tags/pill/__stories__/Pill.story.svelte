@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
-  import { capitalizeFirstLetter, dataDisplayVariants } from "../../../__stories__/utils";
+  import { dataDisplayVariants } from "../../../utils/variants.js";
+  import { capitalizeFirstLetter } from "../../../utils/string.js";
   import Pill from "../Pill.svelte";
   import { defaultSource, variantPill, withLabel } from "./pill.source.js";
 

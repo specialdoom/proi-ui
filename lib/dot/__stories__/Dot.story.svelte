@@ -2,7 +2,8 @@
   import type { Hst as HstType } from "@histoire/plugin-svelte";
   import Button from "../../button/Button.svelte";
   import { withLabel } from "../../form-item/__stories__/form-item.source";
-  import { capitalizeFirstLetter, dataDisplayVariants } from "../../__stories__/utils";
+  import { dataDisplayVariants } from "../../utils/variants.js";
+  import { capitalizeFirstLetter } from "../../utils/string.js";
   import Dot from "../Dot.svelte";
   import { defaultSource, variantDot } from "./dot.source.js";
 
