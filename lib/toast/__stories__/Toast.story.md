@@ -1,29 +1,3 @@
----
-
-[proi-ui](https://github.com/specialdoom/proi-ui)
-
-###### Toast component
-
-### Usage
-
-```sveltehtml
-<script>
-import { ToastProvider, toaster, Button } from '@specialdoom/proi-ui'
-
-function notify () {
-    toaster.send({
-        title: "Title",
-        variant: "info"
-    });
-}
-</script>
-
-<ToastProvider />
-<Button on:click={() => toaster.success("Title", "Message")}>Success notification</Button>
-<Button on:click={notify}>Info notification</Button>
-
-```
-
 ### toaster object
 
 ```typescript

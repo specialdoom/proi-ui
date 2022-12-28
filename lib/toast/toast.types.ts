@@ -1,9 +1,9 @@
 import type { FeedbackVariant } from "../utils/types.js";
 
 export type Slice = {
-  variant: SliceVariant;
-  message: string;
+  variant: ToastVariant;
+  description: string;
   title: string;
 };
 
-export type SliceVariant = FeedbackVariant;
+export type ToastVariant = FeedbackVariant;

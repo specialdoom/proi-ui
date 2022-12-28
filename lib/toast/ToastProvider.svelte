@@ -29,14 +29,14 @@
   });
 </script>
 
-<div class="sd-toast-container">
+<div class="proi-toasts-container">
   {#each toasts as toast}
-    <Toast {toast} />
+    <Toast {...toast} />
   {/each}
 </div>
 
 <style>
-  .sd-toast-container {
+  .proi-toasts-container {
     position: fixed;
     top: 0;
     right: 0;

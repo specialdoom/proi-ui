@@ -1,25 +1,25 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
-  import type { SliceVariant } from "./toast.types.js";
-  import ToastProvider from "./ToastProvider.svelte";
-  import * as toaster from "./toaster.js";
-  import Button from "../button/Button.svelte";
+  import type { ToastVariant } from "../toast.types.js";
+  import ToastProvider from "../ToastProvider.svelte";
+  import * as toaster from "../utils.js";
+  import Button from "../../button/Button.svelte";
 
   export let Hst: HstType;
 
-  let variant: SliceVariant = "success";
+  let variant: ToastVariant = "success";
   let title: string;
-  let message: string;
+  let description: string;
 
   function notify(
-    variant: SliceVariant = "success",
+    variant: ToastVariant = "success",
     title: string = "Default title",
-    message: string
+    description: string
   ) {
     toaster.send({
       variant,
       title,
-      message
+      description
     });
   }
 </script>
@@ -29,7 +29,9 @@
 
   Use controls to toast a notification
 
-  <Button on:click={() => notify(variant, title, message)}>Toast a notification</Button>
+  <Button on:click={() => notify(variant, title, description)}>
+    Toast a notification
+  </Button>
 
   <svelte:fragment slot="controls">
     <Hst.Text
@@ -37,8 +39,8 @@
       title="Title"
     />
     <Hst.Text
-      bind:value={message}
-      title="Message"
+      bind:value={description}
+      title="Description"
     />
     <Hst.Select
       bind:value={variant}

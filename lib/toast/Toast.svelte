@@ -1,9 +1,11 @@
 <script lang="ts">
-  import type { Slice } from "./toast.types.js";
+  import type { ToastVariant } from "./toast.types.js";
   import CloseIcon from "../icons/CloseIcon.svelte";
   import { feedbackIconsMap } from "../utils/icons.js";
 
-  export let toast: Slice;
+  export let variant: ToastVariant = "success";
+  export let title: string;
+  export let description: string = "";
 
   let closed: boolean = false;
 
@@ -13,16 +15,17 @@
 </script>
 
 {#if !closed}
-  <div class="proi-toast-container {toast.variant}">
+  <div class="proi-toast-container {variant}">
     <div class="proi-toast">
       <div class="proi-toast-icon">
-        <svelte:component this={feedbackIconsMap[toast.variant]} />
+        <svelte:component this={feedbackIconsMap[variant]} />
       </div>
-      <div class="proi-toast-text">
-        {toast.title}
+      <div class="proi-toast-title">
+        {title}
       </div>
       <div
         class="proi-toast-close-icon"
+        on:click
         on:click={close}
         on:keydown
         on:keyup
@@ -31,9 +34,9 @@
         <CloseIcon />
       </div>
     </div>
-    {#if toast?.message}
+    {#if description}
       <div class="proi-toast-description">
-        {toast?.message}
+        {description}
       </div>
     {/if}
   </div>
@@ -65,10 +68,9 @@
     color: var(--n800);
   }
 
-  .proi-toast-text {
+  .proi-toast-title {
     line-height: 20px;
     font-size: 16px;
-    font-weight: 300;
   }
 
   .proi-toast-close-icon {

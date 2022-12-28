@@ -1,4 +1,4 @@
-import type { DataDisplayVariant } from "./types.js";
+import type { DataDisplayVariant, FeedbackVariant } from "./types.js";
 
 export const dataDisplayVariants: DataDisplayVariant[] = [
   "pine",
@@ -8,4 +8,11 @@ export const dataDisplayVariants: DataDisplayVariant[] = [
   "tufts",
   "vivid",
   "bright"
+];
+
+export const feedbackVariants: FeedbackVariant[] = [
+  "success",
+  "error",
+  "warning",
+  "info"
 ];
