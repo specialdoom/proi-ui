@@ -158,7 +158,7 @@ describe("Card", () => {
           const imageDescription = "some image";
 
           describe("image element", () => {
-            it("should contain `alt` attribute with `imageDescription` property as value", () => {
+            it("should contain `title` attribute with `imageDescription` property as value", () => {
               const { getBySelector } = render(Card, {
                 props: {
                   title,
@@ -168,14 +168,14 @@ describe("Card", () => {
                 }
               });
 
-              expect(getBySelector(IMAGE)).toHaveAttribute("alt", imageDescription);
+              expect(getBySelector(IMAGE)).toHaveAttribute("title", imageDescription);
             });
           });
         });
 
         describe("is not set", () => {
           describe("image element", () => {
-            it("should contain `alt` attribute with default value", () => {
+            it("should contain `title` attribute with default value", () => {
               const { getBySelector } = render(Card, {
                 props: {
                   title,
@@ -184,7 +184,7 @@ describe("Card", () => {
                 }
               });
 
-              expect(getBySelector(IMAGE)).toHaveAttribute("alt", "Card image");
+              expect(getBySelector(IMAGE)).toHaveAttribute("title", "Card image");
             });
           });
         });

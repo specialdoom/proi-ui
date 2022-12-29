@@ -28,7 +28,7 @@
     <div
       class="proi-card-image"
       style:background-image="url({imageSrc})"
-      alt={imageDescription}
+      title={imageDescription}
     />
   {/if}
   {#if title}
