@@ -4,10 +4,9 @@ import { ROOT } from "./button.selectors.js";
 import type { ButtonVariant } from "../button.types.js";
 import Button from "../Button.svelte";
 import FakeButton from "./FakeButton.svelte";
+import { buttonVariants } from "../../utils/variants";
 
 describe("Button", () => {
-  const variants: ButtonVariant[] = ["primary", "secondary", "ghost", "danger"];
-
   describe("root element", () => {
     it("should be in the document", () => {
       const { getBySelector } = render(Button);
@@ -30,7 +29,7 @@ describe("Button", () => {
 
   describe("when `variant` property", () => {
     describe("root element", () => {
-      variants.forEach((variant) => {
+      buttonVariants.forEach((variant) => {
         it(`should contain \`${variant}\` class`, () => {
           const { getBySelector } = render(Button, {
             props: {
@@ -41,7 +40,7 @@ describe("Button", () => {
           expect(getBySelector(ROOT)).toHaveClass(variant);
         });
 
-        variants
+        buttonVariants
           .filter((remainingVariant) => variant !== remainingVariant)
           .forEach((variant) => {
             it(`should not contain \`${variant}\` class`, () => {

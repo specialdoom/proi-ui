@@ -1,3 +1,5 @@
+import type { ButtonVariant } from "../button.types";
+
 const template = `<script>
   import {Button} from "@specialdoom/proi-ui";
 </script>
@@ -7,18 +9,6 @@ export const defaultSource = `${template}
 <Button>Click me</Button>
 `;
 
-export const secondary = `${template}
-<Button variant="secondary">Click me</Button>
-`;
-
-export const ghost = `${template}
-<Button variant="ghost">Click me</Button>
-`;
-
-export const danger = `${template}
-<Button variant="danger">Click me</Button>
-`;
-
 export const disabled = `${template}
 <Button disabled>Click me</Button>
 `;
@@ -26,6 +16,12 @@ export const disabled = `${template}
 export const block = `${template}
 <Button block>Click me</Button>
 `;
+
+export function variantButton(variant: ButtonVariant) {
+  return `${template}
+<Button variant="${variant}">Click me</Button>
+`;
+}
 
 export const withGap = `${template}
 <Button>

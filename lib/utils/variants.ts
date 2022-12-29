@@ -1,3 +1,4 @@
+import type { ButtonVariant } from "../button/button.types.js";
 import type { DataDisplayVariant, FeedbackVariant } from "./types.js";
 
 export const dataDisplayVariants: DataDisplayVariant[] = [
@@ -15,4 +16,12 @@ export const feedbackVariants: FeedbackVariant[] = [
   "error",
   "warning",
   "info"
+];
+
+export const buttonVariants: ButtonVariant[] = [
+  "primary",
+  "secondary",
+  "ghost",
+  "danger",
+  "outline"
 ];

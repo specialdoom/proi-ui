@@ -58,22 +58,22 @@
     background: var(--g0);
   }
 
-  .ghost {
+  .outline {
     color: var(--n600);
     background: var(--bright);
     border: 2px solid var(--n600);
   }
 
-  .ghost:hover {
+  .outline:hover {
     background: var(--n0);
   }
 
-  .ghost:active {
+  .outline:active {
     background: var(--n600);
     color: var(--n0);
   }
 
-  .ghost:disabled {
+  .outline:disabled {
     color: var(--n200);
     background: var(--bright);
     border-color: var(--n200);

@@ -4,14 +4,14 @@
   import { logEvent } from "histoire/client";
   import {
     block,
-    danger,
     defaultSource,
     disabled,
-    ghost,
     onEvents,
-    secondary,
+    variantButton,
     withGap
   } from "./button.source.js";
+  import { buttonVariants } from "../../utils/variants";
+  import { capitalizeFirstLetter } from "../../utils/string";
 
   export let Hst: HstType;
 </script>
@@ -24,26 +24,14 @@
     <Button>Click me</Button>
   </Hst.Variant>
 
-  <Hst.Variant
-    title="Secondary button"
-    source={secondary}
-  >
-    <Button variant="secondary">Click me</Button>
-  </Hst.Variant>
-
-  <Hst.Variant
-    title="Ghost button"
-    source={ghost}
-  >
-    <Button variant="ghost">Click me</Button>
-  </Hst.Variant>
-
-  <Hst.Variant
-    title="Danger button"
-    source={danger}
-  >
-    <Button variant="danger">Click me</Button>
-  </Hst.Variant>
+  {#each buttonVariants as variant}
+    <Hst.Variant
+      title="{capitalizeFirstLetter(variant)} button"
+      source={variantButton(variant)}
+    >
+      <Button {variant}>Click me</Button>
+    </Hst.Variant>
+  {/each}
 
   <Hst.Variant
     title="Disabled button"
