@@ -10,6 +10,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  gap: 4px;
   outline: none;
   user-select: none;
   cursor: pointer;
@@ -37,22 +38,22 @@
   background: var(--g0);
 }
 
-.ghost {
+.outline {
   color: var(--n600);
   background: var(--bright);
   border: 2px solid var(--n600);
 }
 
-.ghost:hover {
+.outline:hover {
   background: var(--n0);
 }
 
-.ghost:active {
+.outline:active {
   background: var(--n600);
   color: var(--n0);
 }
 
-.ghost:disabled {
+.outline:disabled {
   color: var(--n200);
   background: var(--bright);
   border-color: var(--n200);
@@ -74,4 +75,39 @@
 .secondary:disabled {
   color: var(--p0);
   background: var(--p200);
+}
+
+.danger {
+  color: var(--n0);
+  background: var(--r600);
+}
+
+.danger:hover {
+  background: var(--r800);
+}
+
+.danger:active {
+  background: var(--r400);
+}
+
+.danger:disabled {
+  color: var(--n600);
+  background: var(--r0);
+}
+
+.ghost {
+  color: var(--n600);
+  background: transparent;
+}
+
+.ghost:hover {
+  background: var(--n200);
+}
+
+.ghost:active {
+  background: var(--n0);
+}
+
+.ghost:disabled {
+  color: var(--n200);
 }

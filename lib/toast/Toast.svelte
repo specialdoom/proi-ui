@@ -2,6 +2,7 @@
   import type { ToastVariant } from "./toast.types.js";
   import CloseIcon from "../icons/CloseIcon.svelte";
   import { feedbackIconsMap } from "../utils/icons.js";
+  import IconButton from "../button/IconButton.svelte";
 
   export let variant: ToastVariant = "success";
   export let title: string;
@@ -23,16 +24,11 @@
       <div class="proi-toast-title">
         {title}
       </div>
-      <div
-        class="proi-toast-close-icon"
-        on:click
+      <IconButton
+        icon={CloseIcon}
+        variant="ghost"
         on:click={close}
-        on:keydown
-        on:keyup
-        on:keypress
-      >
-        <CloseIcon />
-      </div>
+      />
     </div>
     {#if description}
       <div class="proi-toast-description">
@@ -64,6 +60,10 @@
     box-sizing: border-box;
   }
 
+  :global(.proi-toast .proi-icon-button) {
+    margin-left: auto;
+  }
+
   .proi-toast-description {
     color: var(--n800);
   }
@@ -71,14 +71,6 @@
   .proi-toast-title {
     line-height: 20px;
     font-size: 16px;
-  }
-
-  .proi-toast-close-icon {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    opacity: 0.5;
   }
 
   .proi-toast-icon {
@@ -104,9 +96,5 @@
   .warning {
     color: var(--y800);
     border-color: var(--y800);
-  }
-
-  .proi-toast-close-icon:hover {
-    opacity: 1;
   }
 </style>

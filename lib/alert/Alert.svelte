@@ -3,6 +3,7 @@
   import CloseIcon from "../icons/CloseIcon.svelte";
   import { getFeedbackIcon } from "../utils/icons.js";
   import { createEventDispatcher } from "svelte";
+  import IconButton from "../button/IconButton.svelte";
 
   /** Variant of alert component */
   export let variant: AlertVariant = "success";
@@ -34,15 +35,11 @@
         {title}
       </div>
       {#if closable}
-        <div
-          class="proi-alert-close-icon"
+        <IconButton
+          icon={CloseIcon}
+          variant="ghost"
           on:click={close}
-          on:keyup
-          on:keydown
-          on:keypress
-        >
-          <CloseIcon />
-        </div>
+        />
       {/if}
     </div>
     {#if $$slots.default}
@@ -69,6 +66,10 @@
     align-items: center;
     gap: 10px;
     box-sizing: border-box;
+  }
+
+  :global(.proi-alert .proi-icon-button) {
+    margin-left: auto;
   }
 
   .proi-alert-description {
@@ -111,9 +112,5 @@
   .warning {
     background: var(--y0);
     color: var(--y800);
-  }
-
-  .proi-alert-close-icon:hover {
-    opacity: 1;
   }
 </style>

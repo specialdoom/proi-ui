@@ -1,5 +1,5 @@
 import { get } from "svelte/store";
-import { describe, vi } from "vitest";
+import { describe } from "vitest";
 import { toast } from "../store/toast.js";
 import { send, error, success, info, warning } from "../utils";
 

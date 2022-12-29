@@ -3,6 +3,7 @@
   import Backdrop from "../backdrop/Backdrop.svelte";
   import Button from "../button/Button.svelte";
   import { createEventDispatcher } from "svelte";
+  import IconButton from "../button/IconButton.svelte";
 
   export let title: string = "";
   export let visible: boolean = false;
@@ -30,9 +31,11 @@
           style:justify-content={title ? "space-between" : "flex-end"}
         >
           {title}
-          <button on:click={handleCancel}>
-            <CloseIcon />
-          </button>
+          <IconButton
+            icon={CloseIcon}
+            variant="ghost"
+            on:click={handleCancel}
+          />
         </div>
         <div class="proi-dialog-body">
           <slot />
@@ -83,13 +86,6 @@
     align-items: center;
     font-size: 18px;
     color: var(--n800);
-  }
-
-  .proi-dialog-header button {
-    border: unset;
-    outline: unset;
-    background: transparent;
-    cursor: pointer;
   }
 
   .proi-dialog-body {

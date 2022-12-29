@@ -1,10 +1,9 @@
 import { describe, it, expect } from "vitest";
 import { render } from "../../__tests__/tests.queries";
 import { ROOT } from "./button.selectors.js";
-import type { ButtonVariant } from "../button.types.js";
+import { buttonVariants } from "../../utils/variants";
 import Button from "../Button.svelte";
 import FakeButton from "./FakeButton.svelte";
-import { buttonVariants } from "../../utils/variants";
 
 describe("Button", () => {
   describe("root element", () => {

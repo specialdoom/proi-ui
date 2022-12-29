@@ -5,27 +5,23 @@
 
   export let icon: Constructor<SvelteComponent>;
   export let variant: ButtonVariant = "primary";
+  export let disabled: boolean = false;
 </script>
 
 <button
-  class="proi-button {variant}"
+  class="proi-icon-button {variant}"
   on:click
+  {disabled}
 >
-  <svelte:component
-    this={icon}
-    color="#EFF1F3"
-  />
+  <svelte:component this={icon} />
 </button>
 
 <style>
-  .proi-button {
+  .proi-icon-button {
     box-sizing: border-box;
     width: 32px;
     height: 32px;
-    font-size: 14px;
-    padding: 6px;
     border-radius: 4px;
-    font-weight: 300;
     border: none;
     display: inline-flex;
     justify-content: center;
@@ -53,22 +49,22 @@
     background: var(--g0);
   }
 
-  .ghost {
+  .outline {
     color: var(--n600);
     background: var(--bright);
     border: 2px solid var(--n600);
   }
 
-  .ghost:hover {
+  .outline:hover {
     background: var(--n0);
   }
 
-  .ghost:active {
+  .outline:active {
     background: var(--n600);
     color: var(--n0);
   }
 
-  .ghost:disabled {
+  .outline:disabled {
     color: var(--n200);
     background: var(--bright);
     border-color: var(--n200);
@@ -108,5 +104,39 @@
   .danger:disabled {
     color: var(--n600);
     background: var(--r0);
+  }
+
+  .ghost {
+    background: transparent;
+  }
+
+  :global(.ghost:hover svg path) {
+    stroke: var(--n800);
+  }
+
+  :global(.ghost:active svg path) {
+    stroke: var(--n400);
+  }
+
+  :global(.primary svg path, .secondary svg path, .danger svg path) {
+    stroke: var(--n0);
+  }
+
+  :global(.ghost svg path, .outline svg path) {
+    stroke: var(--n600);
+  }
+
+  :global(.outline:active svg path) {
+    stroke: var(--n0);
+  }
+
+  :global(
+      .primary:disabled svg path,
+      .secondary:disabled svg path,
+      .outline:disabled svg path,
+      .ghost:disabled svg path,
+      .danger:disabled svg path
+    ) {
+    stroke: var(--n400);
   }
 </style>
