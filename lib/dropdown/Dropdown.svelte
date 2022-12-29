@@ -11,6 +11,8 @@
   export let disabled: boolean = false;
   export let open: boolean = false;
 
+  let ref: HTMLDivElement | undefined = undefined;
+
   $: label = options.find((o) => o.value === value)?.label;
 
   function handleSelectOption(selectedValue: string | number) {
@@ -21,20 +23,35 @@
     value = selectedValue;
     open = false;
   }
+
+  function handleDropdownClick() {
+    if (disabled) return;
+
+    open = !open;
+  }
+
+  function handleWindowClick(event: Event) {
+    const target = event.target as HTMLElement;
+
+    if (ref && !ref.contains(target)) {
+      open = false;
+    }
+  }
 </script>
 
-<div class="proi-dropdown-container">
+<svelte:window on:click={handleWindowClick} />
+
+<div
+  class="proi-dropdown-container"
+  bind:this={ref}
+>
   <div
     class="proi-dropdown"
-    on:click={() => {
-      if (disabled) return;
-
-      open = !open;
-    }}
+    on:click={handleDropdownClick}
     on:keyup
     on:keydown
     class:error
-    class:focus={open}
+    class:focus={open && !(disabled || error)}
     class:disabled
     class:placeholder={!label}
     style:justify-content={label || placeholder ? "space-between" : "flex-end"}
@@ -98,16 +115,12 @@
     background: var(--bright);
   }
 
-  .proi-dropdown.error.focus {
-    outline: unset;
-  }
-
   .proi-dropdown.error.placeholder {
     color: var(--r200);
   }
 
   .proi-dropdown.focus {
-    outline: 2px solid var(--g200);
+    border: 2px solid var(--g200);
   }
 
   .proi-dropdown.disabled {
