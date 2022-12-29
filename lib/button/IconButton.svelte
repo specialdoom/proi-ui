@@ -11,6 +11,9 @@
 <button
   class="proi-icon-button {variant}"
   on:click
+  on:keydown
+  on:keyup
+  on:keypress
   {disabled}
 >
   <svelte:component this={icon} />

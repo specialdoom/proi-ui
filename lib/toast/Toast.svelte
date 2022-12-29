@@ -28,6 +28,10 @@
         icon={CloseIcon}
         variant="ghost"
         on:click={close}
+        on:click
+        on:keydown
+        on:keyup
+        on:keypress
       />
     </div>
     {#if description}

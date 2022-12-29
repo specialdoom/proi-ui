@@ -177,7 +177,7 @@ describe("Alert", () => {
           expect(getBySelector(ALERT_CLOSE_ICON)).toBeInTheDocument();
         });
 
-        it("should containt `proi-alert-close-icon` element", () => {
+        it("should contain `proi-icon-button` class", () => {
           const { getBySelector } = render(Alert, {
             props: {
               title,
@@ -185,7 +185,7 @@ describe("Alert", () => {
             }
           });
 
-          expect(getBySelector(ALERT_CLOSE_ICON)).toHaveClass("proi-alert-close-icon");
+          expect(getBySelector(ALERT_CLOSE_ICON)).toHaveClass("proi-icon-button");
         });
 
         describe("on `click` event", () => {

@@ -144,14 +144,14 @@ describe("Toast", () => {
       expect(getBySelector(CLOSE_ICON)).toBeInTheDocument();
     });
 
-    it("should contain `proi-toast-close-icon` class", () => {
+    it("should contain `proi-icon-button` class", () => {
       const { getBySelector } = render(Toast, {
         props: {
           title
         }
       });
 
-      expect(getBySelector(CLOSE_ICON)).toHaveClass("proi-toast-close-icon");
+      expect(getBySelector(CLOSE_ICON)).toHaveClass("proi-icon-button");
     });
 
     describe("when click event is triggered", () => {
