@@ -114,4 +114,21 @@
     color: var(--n600);
     background: var(--r0);
   }
+
+  .ghost {
+    color: var(--n600);
+    background: transparent;
+  }
+
+  .ghost:hover {
+    background: var(--n200);
+  }
+
+  .ghost:active {
+    background: var(--n0);
+  }
+
+  .ghost:disabled {
+    color: var(--n200);
+  }
 </style>
