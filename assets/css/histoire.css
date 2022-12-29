@@ -1,4 +1,7 @@
-.htw-sandbox-contain {
-    contain: none !important;
+#app {
+    height: 95vh;
+}
+
+.histoire-generic-render-story {
     padding: 8px;
 }
