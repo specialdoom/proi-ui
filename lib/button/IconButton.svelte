@@ -25,7 +25,7 @@
     width: 32px;
     height: 32px;
     border-radius: 4px;
-    border: none;
+    border: unset;
     display: inline-flex;
     justify-content: center;
     align-items: center;
