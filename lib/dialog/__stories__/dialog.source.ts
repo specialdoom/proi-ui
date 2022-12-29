@@ -30,16 +30,6 @@ export const withoutActions = `${template}
 </Dialog>
 `;
 
-export const withControlComponent = `${template}
-<Button on:click={() => (showDialog = true)}>Show dialog</Button>
-<Dialog
-  bind:visible={showDialog}
-  title="Custom title"
->
-  <div>Some dialog content</div>
-</Dialog>
-`;
-
 export const onOkEvent = `${template}
 <Button on:click={() => (showDialog = true)}>Show dialog</Button>
 <Dialog

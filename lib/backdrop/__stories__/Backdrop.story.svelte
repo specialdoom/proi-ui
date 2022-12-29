@@ -6,6 +6,8 @@
   import Badge from "../../tags/badge/Badge.svelte";
 
   export let Hst: HstType;
+
+  let visible: boolean = false;
 </script>
 
 <Hst.Story title="Backdrop">
@@ -14,6 +16,16 @@
     source={defaultSource}
   >
     <Backdrop visible>Backdrop content</Backdrop>
+  </Hst.Variant>
+
+  <Hst.Variant title="Playground">
+    <Backdrop {visible} />
+    <svelte:fragment slot="controls">
+      <Hst.Checkbox
+        bind:value={visible}
+        title="Visible"
+      />
+    </svelte:fragment>
   </Hst.Variant>
 
   <Hst.Variant

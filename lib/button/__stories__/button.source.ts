@@ -9,7 +9,7 @@ export const defaultSource = `${template}
 <Button>Click me</Button>
 `;
 
-export const disabled = `${template}
+export const disabledSource = `${template}
 <Button disabled>Click me</Button>
 `;
 

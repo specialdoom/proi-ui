@@ -5,15 +5,19 @@
   import {
     block,
     defaultSource,
-    disabled,
+    disabledSource,
     onEvents,
     variantButton,
     withGap
   } from "./button.source.js";
   import { buttonVariants } from "../../utils/variants";
   import { capitalizeFirstLetter } from "../../utils/string";
+  import type { ButtonVariant } from "../button.types";
 
   export let Hst: HstType;
+  let variant: ButtonVariant = "primary";
+  let disabled: boolean = false;
+  let label: string = "Click me";
 </script>
 
 <Hst.Story title="Button">
@@ -22,6 +26,30 @@
     source={defaultSource}
   >
     <Button>Click me</Button>
+  </Hst.Variant>
+
+  <Hst.Variant title="Playground">
+    <Button
+      {variant}
+      {disabled}
+    >
+      {label}
+    </Button>
+    <svelte:fragment slot="controls">
+      <Hst.Text
+        bind:value={label}
+        title="Label"
+      />
+      <Hst.Select
+        bind:value={variant}
+        title="Variant"
+        options={buttonVariants.map((x) => ({ label: x, value: x }))}
+      />
+      <Hst.Checkbox
+        title="Disabled"
+        bind:value={disabled}
+      />
+    </svelte:fragment>
   </Hst.Variant>
 
   {#each buttonVariants as variant}
@@ -35,7 +63,7 @@
 
   <Hst.Variant
     title="Disabled button"
-    source={disabled}
+    source={disabledSource}
   >
     <Button disabled>Click me</Button>
   </Hst.Variant>

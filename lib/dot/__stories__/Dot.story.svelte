@@ -6,8 +6,12 @@
   import { capitalizeFirstLetter } from "../../utils/string.js";
   import Dot from "../Dot.svelte";
   import { defaultSource, variantDot } from "./dot.source.js";
+  import type { DotVariant } from "../dot.types";
 
   export let Hst: HstType;
+
+  let label: string = "";
+  let variant: DotVariant = "pine";
 </script>
 
 <Hst.Story title="Dot">
@@ -18,6 +22,27 @@
     <Dot>
       <Button>Test</Button>
     </Dot>
+  </Hst.Variant>
+
+  <Hst.Variant title="Playground">
+    <Dot
+      {label}
+      {variant}
+    >
+      <Button>Test</Button>
+    </Dot>
+
+    <svelte:fragment slot="controls">
+      <Hst.Text
+        bind:value={label}
+        title="Label"
+      />
+      <Hst.Select
+        bind:value={variant}
+        title="Variant"
+        options={dataDisplayVariants.map((x) => ({ label: x, value: x }))}
+      />
+    </svelte:fragment>
   </Hst.Variant>
 
   <Hst.Variant

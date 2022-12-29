@@ -7,14 +7,14 @@ export const defaultSource = `${template}
 <Checkbox>Checkbox label</Checkbox>
 `;
 
-export const checked = `${template}
+export const checkedSource = `${template}
 <Checkbox checked>Checkbox label</Checkbox>
 `;
 
-export const disabled = `${template}
+export const disabledSource = `${template}
 <Checkbox disabled>Checkbox label</Checkbox>
 `;
 
-export const error = `${template}
+export const errorSource = `${template}
 <Checkbox error>Checkbox label</Checkbox>
 `;

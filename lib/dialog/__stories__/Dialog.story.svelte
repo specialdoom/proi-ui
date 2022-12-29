@@ -7,14 +7,16 @@
     defaultSource,
     onCancelEvent,
     onOkEvent,
-    withControlComponent,
     withoutActions,
     withTitle
   } from "./dialog.source.js";
 
   export let Hst: HstType;
 
-  export let showDialog: boolean = false;
+  let visible: boolean = true;
+  let title: string = "Title";
+  let content: string = "Content";
+  let showActions: boolean = false;
 </script>
 
 <Hst.Story title="Dialog">
@@ -25,6 +27,34 @@
     <Dialog visible={true}>
       <div>Some dialog content</div>
     </Dialog>
+  </Hst.Variant>
+
+  <Hst.Variant title="Playground">
+    <Dialog
+      bind:visible
+      {title}
+      {showActions}
+    >
+      {content}
+    </Dialog>
+    <svelte:fragment slot="controls">
+      <Hst.Checkbox
+        bind:value={visible}
+        title="Visible"
+      />
+      <Hst.Text
+        bind:value={title}
+        title="Title"
+      />
+      <Hst.Text
+        bind:value={content}
+        title="Content"
+      />
+      <Hst.Checkbox
+        bind:value={showActions}
+        title="Show actions"
+      />
+    </svelte:fragment>
   </Hst.Variant>
 
   <Hst.Variant
@@ -53,25 +83,12 @@
   </Hst.Variant>
 
   <Hst.Variant
-    title="With control component"
-    source={withControlComponent}
-  >
-    <Button on:click={() => (showDialog = true)}>Show dialog</Button>
-    <Dialog
-      bind:visible={showDialog}
-      title="Custom title"
-    >
-      <div>Some dialog content</div>
-    </Dialog>
-  </Hst.Variant>
-
-  <Hst.Variant
     title="on:ok event"
     source={onOkEvent}
   >
-    <Button on:click={() => (showDialog = true)}>Show dialog</Button>
+    <Button on:click={() => (visible = true)}>Show dialog</Button>
     <Dialog
-      bind:visible={showDialog}
+      bind:visible
       on:ok={(event) => logEvent("ok action triggered", event)}
       title="Custom title"
     >
@@ -83,9 +100,9 @@
     title="on:cancel event"
     source={onCancelEvent}
   >
-    <Button on:click={() => (showDialog = true)}>Show dialog</Button>
+    <Button on:click={() => (visible = true)}>Show dialog</Button>
     <Dialog
-      bind:visible={showDialog}
+      bind:visible
       on:cancel={(event) => logEvent("cancel action triggered", event)}
       title="Custom title"
     >

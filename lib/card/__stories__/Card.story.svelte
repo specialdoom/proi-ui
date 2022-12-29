@@ -14,6 +14,14 @@
   } from "./card.source.js";
 
   export let Hst: HstType;
+
+  let title: string = "Title";
+  let description: string = "Description";
+  let imageSrc: string = "";
+  let imageDescription: string = "";
+  let showAction: boolean = false;
+  let actionLabel: string = "Action";
+  let showCancelAction: boolean = false;
 </script>
 
 <Hst.Story title="Cards/Card">
@@ -26,6 +34,51 @@
       description="Supporting description for the card goes here like a breeze."
     />
   </Hst.Variant>
+
+  <Hst.Variant title="Playground">
+    <Card
+      {title}
+      {description}
+      {imageDescription}
+      {imageSrc}
+      {showAction}
+      {actionLabel}
+      {showCancelAction}
+    />
+    <svelte:fragment slot="controls">
+      <Hst.Text
+        bind:value={title}
+        title="Title"
+      />
+      <Hst.Text
+        bind:value={description}
+        title="Description"
+      />
+      <Hst.Text
+        bind:value={imageSrc}
+        title="Image source"
+      />
+      <Hst.Text
+        bind:value={imageDescription}
+        title="Image description"
+      />
+      <Hst.Checkbox
+        title="Show action"
+        bind:value={showAction}
+      />
+      {#if showAction}
+        <Hst.Text
+          bind:value={actionLabel}
+          title="Action label"
+        />
+        <Hst.Checkbox
+          title="Show cancel action"
+          bind:value={showCancelAction}
+        />
+      {/if}
+    </svelte:fragment>
+  </Hst.Variant>
+
   <Hst.Variant
     title="With longer title"
     source={withLongerTitle}
