@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/specialdoom/proi-ui/compare/v3.6.0...v3.7.0) (2023-01-01)
+
+
+### 🏭 Refactor
+
+* change `message` property to `description` for Slice ([d675f0b](https://github.com/specialdoom/proi-ui/commit/d675f0b52639d6aa556925476639b3c5ecdc9975))
+* update `click outside` handling for Dropdown ([e85f93d](https://github.com/specialdoom/proi-ui/commit/e85f93d9d3d2dbd713f43f0314ea51e40a88e1cd))
+
+
+### 🚀 Features
+
+* add `outline` variant of `Button` ([bb8a6d7](https://github.com/specialdoom/proi-ui/commit/bb8a6d7cfdae5faa20e18dbaca898137bfe05dfb))
+
+
+### 🎨 Styling
+
+* update `ghost` variant of Button ([1ab220d](https://github.com/specialdoom/proi-ui/commit/1ab220dd62100a5661368f61decacbe7aadb1dfd))
+* update `IconButton` styling ([b2fee93](https://github.com/specialdoom/proi-ui/commit/b2fee93e7c9e8456b5bb9f4fbd6d2048cd479270))
+
+
+### 💥 Bug Fixes
+
+* update path for `Badge` and `Pill` components ([2d532ea](https://github.com/specialdoom/proi-ui/commit/2d532eac649374a71a924868d9e5df7da0e9a3c0))
+
 ## [3.6.0](https://github.com/specialdoom/proi-ui/compare/v3.5.0...v3.6.0) (2022-12-27)
 
 
