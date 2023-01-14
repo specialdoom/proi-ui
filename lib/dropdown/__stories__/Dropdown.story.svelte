@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
+  import Button from "../../button/Button.svelte";
   import Dropdown from "../Dropdown.svelte";
   import type { DropdownOption } from "../dropdown.types.js";
   import {
@@ -17,6 +18,14 @@
     { label: "🍎", value: "🍎" },
     { label: "🥭", value: "🥭" }
   ];
+
+  let open: boolean = false;
+  let option = { label: "", value: "" };
+
+  function handleOptionAdd() {
+    options = [...options, { ...option }];
+    option = { label: "", value: "" };
+  }
 </script>
 
 <Hst.Story title="Dropdown">
@@ -80,5 +89,29 @@
       error
       value="🍎"
     />
+  </Hst.Variant>
+
+  <Hst.Variant title="Playground">
+    <Dropdown
+      placeholder="Choose option"
+      bind:open
+      {options}
+    />
+
+    <svelte:fragment slot="controls">
+      <Hst.Text
+        title="Value"
+        bind:value={option.value}
+      />
+      <Hst.Text
+        title="Label"
+        bind:value={option.label}
+      />
+      <Button on:click={handleOptionAdd}>Add option</Button>
+      <Hst.Checkbox
+        bind:value={open}
+        title="Is open?"
+      />
+    </svelte:fragment>
   </Hst.Variant>
 </Hst.Story>

@@ -14,6 +14,10 @@
   } from "./form-item.source.js";
 
   export let Hst: HstType;
+
+  let label: string = "Label";
+  let description: string = "Description";
+  let error: string = "Something went wrong...";
 </script>
 
 <Hst.Story title="FormItem">
@@ -122,5 +126,33 @@
         value="value"
       />
     </FormItem>
+  </Hst.Variant>
+
+  <Hst.Variant title="Playground">
+    <FormItem
+      {label}
+      {description}
+      {error}
+    >
+      <TextInput
+        placeholder="Input something..."
+        value="value"
+      />
+    </FormItem>
+
+    <svelte:fragment slot="controls">
+      <Hst.Text
+        title="Label"
+        bind:value={label}
+      />
+      <Hst.Text
+        title="Description"
+        bind:value={description}
+      />
+      <Hst.Text
+        title="Error"
+        bind:value={error}
+      />
+    </svelte:fragment>
   </Hst.Variant>
 </Hst.Story>
