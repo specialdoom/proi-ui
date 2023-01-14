@@ -1,7 +1,6 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
   import { logEvent } from "histoire/client";
-  import Checkbox from "../../checkbox/Checkbox.svelte";
   import Alert from "../Alert.svelte";
   import type { AlertVariant } from "../alert.types.js";
   import {

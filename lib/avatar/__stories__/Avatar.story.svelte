@@ -5,7 +5,6 @@
   import Avatar from "../index.js";
 
   import * as source from "./avatar.source.js";
-  import type { AlertVariant } from "../../alert/alert.types.js";
   import type { AvatarVariant } from "../avatar.types.js";
 
   const { withInitialsSource, withImageSource, defaultAvatarsSource } = source;

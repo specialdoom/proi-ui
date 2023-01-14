@@ -16,7 +16,7 @@
 <Alert type="warning" closable>Closable warning variant alert with default title</Alert>
 ```
 
-### API
+### Properties
 
 | Property | Description                                                        | Type   | Default   |
 | -------- | ------------------------------------------------------------------ | ------ | --------- |
