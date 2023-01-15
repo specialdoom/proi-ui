@@ -116,6 +116,7 @@
 
   .proi-input-container.error > .proi-input {
     color: var(--r600);
+    background: var(--bright);
   }
 
   .proi-input-container.error > .proi-input::placeholder {

@@ -15,6 +15,9 @@
   export let Hst: HstType;
 
   let value: string = "";
+  let placeholder: string = "";
+  let hasError: boolean = false;
+  let isDisabled: boolean = false;
 </script>
 
 <Hst.Story title="Inputs/PasswordInput">
@@ -83,5 +86,28 @@
       value="Some value"
       on:change={(e) => logEvent("change", e)}
     />
+  </Hst.Variant>
+
+  <Hst.Variant title="Playground">
+    <PasswordInput
+      bind:value
+      {placeholder}
+      error={hasError}
+      disabled={isDisabled}
+    />
+    <svelte:fragment slot="controls">
+      <Hst.Text
+        title="Placeholder"
+        bind:value={placeholder}
+      />
+      <Hst.Checkbox
+        title="Has error?"
+        bind:value={hasError}
+      />
+      <Hst.Checkbox
+        title="Is disabled?"
+        bind:value={isDisabled}
+      />
+    </svelte:fragment>
   </Hst.Variant>
 </Hst.Story>

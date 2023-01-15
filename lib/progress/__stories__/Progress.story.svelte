@@ -11,6 +11,11 @@
   } from "./progress.source.js";
 
   export let Hst: HstType;
+
+  let percent: number = 0;
+  let hasError: boolean = false;
+  let isSmall: boolean = false;
+  let isIndeterminate: boolean = false;
 </script>
 
 <Hst.Story title="Progress">
@@ -60,5 +65,32 @@
       percent={50}
       error
     />
+  </Hst.Variant>
+
+  <Hst.Variant title="Playground">
+    <Progress
+      {percent}
+      small={isSmall}
+      error={hasError}
+      indeterminate={isIndeterminate}
+    />
+    <svelte:fragment slot="controls">
+      <Hst.Number
+        title="Percent"
+        bind:value={percent}
+      />
+      <Hst.Checkbox
+        title="Has error?"
+        bind:value={hasError}
+      />
+      <Hst.Checkbox
+        title="Is small?"
+        bind:value={isSmall}
+      />
+      <Hst.Checkbox
+        title="Is indeterminate?"
+        bind:value={isIndeterminate}
+      />
+    </svelte:fragment>
   </Hst.Variant>
 </Hst.Story>
