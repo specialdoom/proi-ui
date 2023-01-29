@@ -17,7 +17,10 @@
   let value: string = "";
 </script>
 
-<Hst.Story title="Inputs/TextInput">
+<Hst.Story
+  title="Inputs/TextInput"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

@@ -8,7 +8,10 @@
   export let Hst: HstType;
 </script>
 
-<Hst.Story title="Tags/Pill">
+<Hst.Story
+  title="Tags/Pill"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}
@@ -20,7 +23,7 @@
     title="With label"
     source={withLabel}
   >
-    <Pill label="Content" />
+    <Pill label="Label" />
   </Hst.Variant>
 
   {#each dataDisplayVariants as variant}

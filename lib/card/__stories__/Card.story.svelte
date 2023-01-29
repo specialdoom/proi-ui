@@ -24,7 +24,10 @@
   let showCancelAction: boolean = false;
 </script>
 
-<Hst.Story title="Cards/Card">
+<Hst.Story
+  title="Cards/Card"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

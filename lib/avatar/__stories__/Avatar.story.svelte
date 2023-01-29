@@ -17,7 +17,10 @@
   let useImage: boolean = false;
 </script>
 
-<Hst.Story title="Avatar">
+<Hst.Story
+  title="Avatar"
+  layout={{ type: "grid", width: 300 }}
+>
   <Hst.Variant
     title="Default"
     source={defaultAvatarsSource}

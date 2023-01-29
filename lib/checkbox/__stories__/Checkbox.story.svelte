@@ -16,12 +16,36 @@
   let error: boolean = false;
 </script>
 
-<Hst.Story title="Checkbox">
+<Hst.Story
+  title="Checkbox"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}
   >
     <Checkbox>Checkbox</Checkbox>
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Checked"
+    source={checkedSource}
+  >
+    <Checkbox checked>Checkbox</Checkbox>
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Disabled"
+    source={disabledSource}
+  >
+    <Checkbox disabled>Checkbox</Checkbox>
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Error"
+    source={errorSource}
+  >
+    <Checkbox error>Checkbox</Checkbox>
   </Hst.Variant>
 
   <Hst.Variant title="Playground">
@@ -50,26 +74,5 @@
         title="Error"
       />
     </svelte:fragment>
-  </Hst.Variant>
-
-  <Hst.Variant
-    title="Checked"
-    source={checkedSource}
-  >
-    <Checkbox checked>Checkbox</Checkbox>
-  </Hst.Variant>
-
-  <Hst.Variant
-    title="Disabled"
-    source={disabledSource}
-  >
-    <Checkbox disabled>Checkbox</Checkbox>
-  </Hst.Variant>
-
-  <Hst.Variant
-    title="Error"
-    source={errorSource}
-  >
-    <Checkbox error>Checkbox</Checkbox>
   </Hst.Variant>
 </Hst.Story>

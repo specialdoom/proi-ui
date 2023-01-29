@@ -14,7 +14,10 @@
   let isDisabled: boolean = false;
 </script>
 
-<Hst.Story title="Radio">
+<Hst.Story
+  title="Radio"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

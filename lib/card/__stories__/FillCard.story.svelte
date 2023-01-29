@@ -13,7 +13,10 @@
   let variant: CardVariant = "pine";
 </script>
 
-<Hst.Story title="Cards/FillCard">
+<Hst.Story
+  title="Cards/FillCard"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

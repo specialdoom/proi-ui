@@ -20,7 +20,10 @@
   let label: string = "Click me";
 </script>
 
-<Hst.Story title="Button">
+<Hst.Story
+  title="Button"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

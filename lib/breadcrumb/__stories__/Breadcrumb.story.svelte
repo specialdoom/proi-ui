@@ -20,7 +20,10 @@
   }
 </script>
 
-<Hst.Story title="Breadcrumb">
+<Hst.Story
+  title="Breadcrumb"
+  layout={{ type: "grid", width: "100%" }}
+>
   <Hst.Variant title="Default">
     <Breadcrumb>
       <BreadcrumbItem
@@ -59,6 +62,7 @@
   </Hst.Variant>
 
   <Hst.Variant title="Playground">
+    Add your breadcrumbs using controls: <br />
     <Breadcrumb>
       {#each breadcrumbItems as breadcrumbItem}
         <BreadcrumbItem {...breadcrumbItem} />

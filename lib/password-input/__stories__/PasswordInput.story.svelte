@@ -20,7 +20,10 @@
   let isDisabled: boolean = false;
 </script>
 
-<Hst.Story title="Inputs/PasswordInput">
+<Hst.Story
+  title="Inputs/PasswordInput"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

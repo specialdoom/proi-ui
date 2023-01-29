@@ -18,7 +18,10 @@
   let isIndeterminate: boolean = false;
 </script>
 
-<Hst.Story title="Progress">
+<Hst.Story
+  title="Progress"
+  layout={{ type: "grid", width: "100%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

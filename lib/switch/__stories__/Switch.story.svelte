@@ -13,7 +13,10 @@
   export let Hst: HstType;
 </script>
 
-<Hst.Story title="Switch">
+<Hst.Story
+  title="Switch"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

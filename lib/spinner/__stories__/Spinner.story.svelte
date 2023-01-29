@@ -6,7 +6,10 @@
   export let Hst: HstType;
 </script>
 
-<Hst.Story title="Spinner">
+<Hst.Story
+  title="Spinner"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

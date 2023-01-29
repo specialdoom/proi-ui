@@ -20,7 +20,10 @@
   let error: string = "Something went wrong...";
 </script>
 
-<Hst.Story title="FormItem">
+<Hst.Story
+  title="FormItem"
+  layout={{ type: "grid", width: "100%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

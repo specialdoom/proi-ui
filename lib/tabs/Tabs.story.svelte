@@ -11,7 +11,10 @@
   }));
 </script>
 
-<Hst.Story title="Tabs">
+<Hst.Story
+  title="Tabs"
+  layout={{ type: "grid", width: "100%" }}
+>
   <Hst.Variant title="Default">
     <Tabs>
       <Tabs.Pane

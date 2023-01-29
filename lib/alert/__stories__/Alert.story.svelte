@@ -19,7 +19,10 @@
   let closable: boolean = false;
 </script>
 
-<Hst.Story title="Alert">
+<Hst.Story
+  title="Alert"
+  layout={{ type: "grid", width: "100%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

@@ -18,7 +18,10 @@
   let value: string = "";
 </script>
 
-<Hst.Story title="Textarea">
+<Hst.Story
+  title="Textarea"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}

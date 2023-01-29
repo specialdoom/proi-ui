@@ -14,7 +14,10 @@
   let variant: DotVariant = "pine";
 </script>
 
-<Hst.Story title="Dot">
+<Hst.Story
+  title="Dot"
+  layout={{ type: "grid", width: "50%" }}
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}
