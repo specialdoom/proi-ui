@@ -36,6 +36,7 @@ export default defineConfig({
       light: "./assets/images/logotype.svg",
       dark: "./assets/images/dark-logotype.svg",
     },
+    logoHref: "https://github.com/specialdoom/proi-ui",
     favicon: "favicon.ico",
     colors: {
       gray: {
