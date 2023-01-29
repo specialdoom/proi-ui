@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.8.0](https://github.com/specialdoom/proi-ui/compare/v3.7.0...v3.8.0) (2023-01-29)
+
+
+### 🚀 Features
+
+* add `Breadcrumb` component ([f1e4754](https://github.com/specialdoom/proi-ui/commit/f1e4754af26476d82c1980b4dd063c4862ad4f92))
+
 ## [3.7.0](https://github.com/specialdoom/proi-ui/compare/v3.6.0...v3.7.0) (2023-01-01)
 
 
