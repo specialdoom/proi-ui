@@ -14,7 +14,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "homepage": "https://specialdoom.github.io/proi-ui/",
+  "homepage": "https://proi-ui.vercel.app",
   "bugs": {
     "url": "https://github.com/specialdoom/proi-ui/issues"
   },
