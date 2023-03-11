@@ -8,10 +8,11 @@
 
 ```sveltehtml
 <script>
-import { Progress, Button } from '@specialdoom/proi-ui';
+  import Button from '@specialdoom/proi-ui/Button.svelte';
+  import Progress from '@specialdoom/proi-ui/Progress.svelte';
 
-let percent = 67;
-let error = true;
+  let percent = 67;
+  let error = true;
 </script>
 
 <Progress {percent} />

@@ -1,5 +1,5 @@
 const template = `<script>
-  import {Progress} from "@specialdoom/proi-ui";
+  import Progress from "@specialdoom/proi-ui/Progress.svelte";
 </script>
 `;
 

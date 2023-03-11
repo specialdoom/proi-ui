@@ -1,5 +1,5 @@
 const template = `<script>
-  import {Card} from "@specialdoom/proi-ui"
+  import Card from "@specialdoom/proi-ui/Card.svelte";
 </script>
 `;
 

@@ -1,5 +1,6 @@
 const template = `<script>
-  import {Dialog, Button} from "@specialdoom/proi-ui";
+  import Dialog from "@specialdoom/proi-ui/Dialog.svelte";
+  import Button from "@specialdoom/proi-ui/Button.svelte";
 
   let showDialog = true;
 </script>

@@ -8,7 +8,8 @@
 
 ```sveltehtml
 <script>
-import { Dot, Button } from '@specialdoom/proi-ui';
+  import Button from '@specialdoom/proi-ui/Button.svelte';
+  import Dot from '@specialdoom/proi-ui/Dot.svelte';
 </script>
 
 <Dot>

@@ -1,7 +1,7 @@
 import type { DataDisplayVariant } from "../../../utils/types.js";
 
 const template = `<script>
-  import {Pill} from "@specialdoom/proi-ui";
+  import Pill from "@specialdoom/proi-ui/Pill.svelte";
 </script>
 `;
 

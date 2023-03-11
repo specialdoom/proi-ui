@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
-import { FormItem } from '@specialdoom/proi-ui';
+  import FormItem from '@specialdoom/proi-ui/FormItem.svelte';
 </script>
 
 <FormItem
@@ -21,13 +21,15 @@ import { FormItem } from '@specialdoom/proi-ui';
 ```
 
 ### Properties
+
 | Property      | Description                             | Type   | Default |
-|---------------|-----------------------------------------|--------|---------|
+| ------------- | --------------------------------------- | ------ | ------- |
 | `label`       | Label of form item component (required) | string | ''      |
 | `description` | Description of form item component      | string | ''      |
 | `error`       | Error message of form item component    | string | ''      |
 
 ### Slots
+
 | Property  | Description                    | Type   | Fallback |
-|-----------|--------------------------------|--------|----------|
+| --------- | ------------------------------ | ------ | -------- |
 | `default` | Default slot used for controls | `slot` | -        |

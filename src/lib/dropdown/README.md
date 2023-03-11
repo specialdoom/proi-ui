@@ -10,7 +10,7 @@ You should bind to Dropdown selected attribute.
 
 ```sveltehtml
 <script>
-import {Dropdown} from '@specialdoom/proi-ui';
+import Dropdown from '@specialdoom/proi-ui/Dropdown.svelte';
 
 let options = [
   { label: "Label 1", value: "1" },

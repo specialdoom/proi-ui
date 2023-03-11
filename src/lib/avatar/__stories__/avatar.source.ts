@@ -1,5 +1,5 @@
 const template = `<script>
-  import {Avatar} from "@specialdoom/proi-ui"
+  import Avatar from "@specialdoom/proi-ui/avatar";
 </script>
 `;
 

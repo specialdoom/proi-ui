@@ -1,5 +1,5 @@
 const template = `<script>
-  import {Textarea} from "@specialdoom/proi-ui";
+  import Textarea from "@specialdoom/proi-ui/Textarea.svelte";
 </script>
 `;
 
@@ -24,7 +24,7 @@ export const withValue = `${template}
 `;
 
 export const bindValue = `<script>
-  import {Textarea} from "@specialdoom/proi-ui";
+  import Textarea from "@specialdoom/proi-ui/Textarea.svelte";
 
   let value = "";
 </script>

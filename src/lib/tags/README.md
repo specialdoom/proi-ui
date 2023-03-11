@@ -8,7 +8,8 @@
 
 ```sveltehtml
 <script>
-import { Badge, Pill } from '@specialdoom/proi-ui'
+import Badge from '@specialdoom/proi-ui/Badge.svelte'
+import Pill from '@specialdoom/proi-ui/Pill.svelte'
 </script>
 
 <Badge>Badge</Badge>

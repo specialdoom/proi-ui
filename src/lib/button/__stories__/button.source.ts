@@ -1,7 +1,7 @@
 import type { ButtonVariant } from "../button.types";
 
 const template = `<script>
-  import {Button} from "@specialdoom/proi-ui";
+  import Button from "@specialdoom/proi-ui/Button";
 </script>
 `;
 

@@ -8,7 +8,8 @@
 
 ```sveltehtml
 <script>
-import { Dialog, Button } from '@specialdoom/proi-ui'
+import Button from '@specialdoom/proi-ui/Button.svelte';
+import Dialog from '@specialdoom/proi-ui/Dialog.svelte';
 
 let showDialog = false;
 

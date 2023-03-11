@@ -8,7 +8,9 @@
 
 ```sveltehtml
 <script>
-  import {Breadcrumb, BreadcrumbItem} from "@specialdoom/proi-ui";
+  import Breadcrumb from "@specialdoom/proi-ui/Breadcrumb.svelte";
+  import BreadcrumbItem from "@specialdoom/proi-ui/BreadcrumbItem.svelte";
+
 </script>
 
 <Breadcrumb>
@@ -25,4 +27,3 @@
 | `href`      | Set the `href` attribute for anchor tag. (required) | `string`  | `undefined` |
 | `text`      | Inner text of anchor tag element. (required)        | `string`  | `undefined` |
 | `isCurrent` | Whether the anchor tag represents current page .    | `boolean` | `false`     |
-

@@ -1,7 +1,7 @@
 import type { DataDisplayVariant } from "../../utils/types.js";
 
 const template = `<script>
-  import {FillCard} from "@specialdoom/proi-ui"
+  import FillCard from "@specialdoom/proi-ui/FillCard.svelte";
 </script>
 `;
 

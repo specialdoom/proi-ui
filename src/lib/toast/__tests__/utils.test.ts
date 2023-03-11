@@ -1,7 +1,9 @@
 import { get } from "svelte/store";
 import { describe } from "vitest";
 import { toast } from "../store/toast.js";
-import { send, error, success, info, warning } from "../utils";
+import { toaster } from "../toaster.js";
+
+const { send, info, warning, success, error } = toaster;
 
 describe("toast/utils", () => {
   const variant = "success";

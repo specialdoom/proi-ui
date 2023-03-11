@@ -8,13 +8,13 @@
 
 ```sveltehtml
 <script>
-import { PasswordInput } from '@specialdoom/proi-ui'
+  import PasswordInput from '@specialdoom/proi-ui/PasswordInput.svelte';
 
-let value = "";
+  let value = "";
 
-function onChange () {
+  function onChange () {
     console.log('changed');
-}
+  }
 </script>
 
 <PasswordInput bind:value="Value" placeholder="Text input" disabled on:change={onChange}/>

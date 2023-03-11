@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
-import { TextInput } from '@specialdoom/proi-ui'
+import TextInput from '@specialdoom/proi-ui/TextInput.svelte';
 
 let value = "";
 

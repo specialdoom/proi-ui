@@ -4,7 +4,7 @@
 
 ```sveltehtml
 <script>
-import { Badge } from '@specialdoom/proi-ui'
+import Badge from '@specialdoom/proi-ui/Badge.svelte';
 </script>
 
 <Badge />

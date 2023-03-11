@@ -1,5 +1,5 @@
 const template = `<script>
-  import {Radio} from "@specialdoom/proi-ui";
+  import Radio from "@specialdoom/proi-ui/Radio.svelte";
   
   let value = 0;
 </script>

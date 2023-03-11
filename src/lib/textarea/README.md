@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
-import { Textarea } from '@specialdoom/proi-ui'
+import Textarea from '@specialdoom/proi-ui/Textarea.svelte';
 
 function onChange() {
     console.log('changed');

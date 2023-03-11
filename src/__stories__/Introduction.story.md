@@ -1,7 +1,7 @@
 ---
 id: "introduction"
-group: 'a'
-icon: 'carbon:bookmark'
+group: "a"
+icon: "carbon:bookmark"
 title: "1. Introduction"
 ---
 
@@ -12,11 +12,12 @@ yet another Svelte ui library
 <img src="https://github.com/specialdoom/proi-ui/blob/main/assets/images/thumbnail.jpg?raw=true" alt="thumbnail" width="100%"/>
 
 ## Installation
+
 ```
-npm i @specialdoom/proi-ui
-yarn add @specialdoom/proi-ui
+npm i --save-dev @specialdoom/proi-ui
 ```
 
 ## Coming next
+
 - multiple components
 - update existing components

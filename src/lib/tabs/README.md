@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
-  import { Tabs } from '@specialdoom/proi-ui';
+  import Tabs from '@specialdoom/proi-ui/tabs';
 </script>
 
 <Tabs>

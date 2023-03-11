@@ -8,7 +8,10 @@
 
 ```sveltehtml
 <script>
-import { Backdrop, Tag, Button } from '@specialdoom/proi-ui';
+import Button from '@specialdoom/proi-ui/Button.svelte';
+import Backdrop from '@specialdoom/proi-ui/Backdrop.svelte';
+import Tag from '@specialdoom/proi-ui/Tag.svelte';
+
 
 let backdrop = false;
 

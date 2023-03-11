@@ -230,11 +230,6 @@
       "svelte": "./dist/tags/pill/Pill.svelte",
       "default": "./dist/tags/pill/Pill.svelte"
     },
-    "./Tag.svelte": {
-      "types": "./dist/tags/Tag.svelte.d.ts",
-      "svelte": "./dist/tags/Tag.svelte",
-      "default": "./dist/tags/Tag.svelte"
-    },
     "./tags.types": {
       "types": "./dist/tags/tags.types.d.ts",
       "default": "./dist/tags/tags.types.js"
@@ -249,9 +244,9 @@
       "svelte": "./dist/textarea/Textarea.svelte",
       "default": "./dist/textarea/Textarea.svelte"
     },
-    "./toast": {
-      "types": "./dist/toast/store/toast.d.ts",
-      "default": "./dist/toast/store/toast.js"
+    "./toaster": {
+      "types": "./dist/toast/toaster.d.ts",
+      "default": "./dist/toast/toaster.js"
     },
     "./Toast.svelte": {
       "types": "./dist/toast/Toast.svelte.d.ts",

@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
- import {Avatar} from '@specialdoom/proi-ui';
+ import Avatar from '@specialdoom/proi-ui/Avatar.svelte';
 </script>;
 
 <Avatar initials="PI" />

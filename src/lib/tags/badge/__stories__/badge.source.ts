@@ -1,7 +1,7 @@
 import type { DataDisplayVariant } from "../../../utils/types.js";
 
 const template = `<script>
-  import {Badge} from "@specialdoom/proi-ui";
+  import Badge from "@specialdoom/proi-ui/Badge.svelte";
 </script>
 `;
 

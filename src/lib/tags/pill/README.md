@@ -4,7 +4,7 @@
 
 ```sveltehtml
 <script>
-import { Pill } from '@specialdoom/proi-ui'
+import Pill from '@specialdoom/proi-ui/Pill.svelte';
 </script>
 
 <Pill />

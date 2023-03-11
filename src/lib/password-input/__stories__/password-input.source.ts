@@ -1,5 +1,5 @@
 const template = `<script>
-  import {PasswordInput} from "@specialdoom/proi-ui";
+  import PasswordInput from "@specialdoom/proi-ui/PasswordInput.svelte";
 </script>
 `;
 
@@ -24,7 +24,7 @@ export const withValue = `${template}
 `;
 
 export const bindValue = `<script>
-import {PasswordInput} from "@specialdoom/proi-ui";
+import PasswordInput from "@specialdoom/proi-ui/PasswordInput.svelte";
 
 let value = "";
 </script>

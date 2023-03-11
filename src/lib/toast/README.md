@@ -8,7 +8,9 @@
 
 ```sveltehtml
 <script>
-import { ToastProvider, toaster, Button } from '@specialdoom/proi-ui'
+import {toaster} from '@specialdoom/proi-ui/toaster'
+import ToastProvider from '@specialdoom/proi-ui/ToasterProvider.svelte';
+import Button from '@specialdoom/proi-ui/Button.svelte';
 
 function notify () {
     toaster.send({

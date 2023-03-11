@@ -1,5 +1,5 @@
 const template = `<script>
-  import {Switch} from "@specialdoom/proi-ui";
+  import Switch from "@specialdoom/proi-ui/Switch.svelte";
 </script>
 `;
 

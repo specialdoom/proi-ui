@@ -1,5 +1,6 @@
 const template = `<script>
-  import {FormItem, TextInput} from "@specialdoom/proi-ui";
+  import FormItem from "@specialdoom/proi-ui/FormItem.svelte";
+  import TextInput from "@specialdoom/proi-ui/TextInput.svelte";
 </script>
 `;
 

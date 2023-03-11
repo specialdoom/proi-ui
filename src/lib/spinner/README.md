@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
-  import {Spinner} from '@specialdoom/proi-ui';
+  import Spinner from '@specialdoom/proi-ui/Spinner.svelte';
 </script>
 
 <Spinner />

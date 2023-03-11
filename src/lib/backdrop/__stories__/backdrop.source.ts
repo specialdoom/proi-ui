@@ -1,5 +1,6 @@
 const template = `<script>
-  import {Backdrop, Badge} from "@specialdoom/proi-ui";
+  import Backdrop from "@specialdoom/proi-ui/Backdrop.svelte";
+  import Badge from "@specialdoom/proi-ui/Badge.svelte";
 </script>
 `;
 

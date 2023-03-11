@@ -10,7 +10,7 @@ You should bind to Switch checked attribute.
 
 ```sveltehtml
 <script>
-import { Switch } from '@specialdoom/proi-ui'
+import Switch from '@specialdoom/proi-ui/Switch.svelte';
 
 </script>
 
@@ -22,13 +22,13 @@ import { Switch } from '@specialdoom/proi-ui'
 ### API
 
 | Property   | Description                          | Type      | Default |
-|------------|--------------------------------------|-----------|---------|
+| ---------- | ------------------------------------ | --------- | ------- |
 | `checked`  | Whether the Switch is checked        | `boolean` | `false` |
 | `disabled` | Whether the Switch is disabled       | `boolean` | `false` |
 | `error`    | Whether the Switch is in error state | `boolean` | `false` |
 
 #### Slots
 
-| Name       | Description               |
-|------------|---------------------------|
-| `default`  | Label of Switch component |
+| Name      | Description               |
+| --------- | ------------------------- |
+| `default` | Label of Switch component |

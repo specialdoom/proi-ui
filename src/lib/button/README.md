@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
-  import { Button } from '@specialdoom/proi-ui';
+  import Button from '@specialdoom/proi-ui/Button.svelte';
 </script>
 
 <Button>Click me</Button>

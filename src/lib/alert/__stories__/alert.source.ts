@@ -1,7 +1,7 @@
 import type { AlertVariant } from "../alert.types.js";
 
 const template = `<script>
-  import {Alert} from "@specialdoom/proi-ui";
+  import Alert from "@specialdoom/proi-ui/Alert.svelte";
 </script>
 `;
 

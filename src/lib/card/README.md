@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
-  import { Card } from '@specialdoom/proi-ui'
+  import Card from '@specialdoom/proi-ui/Card.svelte';
 </script>
 
 <Card
@@ -42,7 +42,7 @@
 
 ```sveltehtml
 <script>
-  import { FillCard } from '@specialdoom/proi-ui'
+  import FillCard from '@specialdoom/proi-ui/FillCard.svelte';
 </script>
 
 <FillCard
@@ -59,4 +59,3 @@
 | `title`       | Title of FillCard component (required)                                                       | `string` | `''`     |
 | `description` | Description of FillCard component (required)                                                 | `string` | `''`     |
 | `variant`     | Variant of FillCard component. Options: `pine, neutral, makido, vivid, flame, tufts, bright` | `string` | `'pine'` |
-

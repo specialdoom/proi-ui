@@ -1,5 +1,5 @@
 const template = `<script>
-  import {Checkbox} from "@specialdoom/proi-ui";
+  import Checkbox from "@specialdoom/proi-ui/Checkbox.svelte";
 </script>
 `;
 

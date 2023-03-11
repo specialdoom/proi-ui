@@ -8,7 +8,7 @@
 
 ```sveltehtml
 <script>
- import { Alert } from '@specialdoom/proi-ui';
+ import Alert from '@specialdoom/proi-ui/Alert.svelte';
 </script>;
 
 <Alert title="Alert title">Default variant alert description</Alert>

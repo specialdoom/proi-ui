@@ -1,5 +1,5 @@
 const template = `<script>
-  import {TextInput} from "@specialdoom/proi-ui";
+  import TextInput from "@specialdoom/proi-ui/TextInput.svelte";
 </script>
 `;
 
@@ -24,7 +24,7 @@ export const withValue = `${template}
 `;
 
 export const bindValue = `<script>
-import {TextInput} from "@specialdoom/proi-ui";
+import TextInput from "@specialdoom/proi-ui/TextInput.svelte";
 
 let value = "";
 </script>
