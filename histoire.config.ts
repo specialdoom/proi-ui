@@ -15,7 +15,7 @@ export default defineConfig({
       {
         id: "a",
         title: "",
-        include: file => file.path.includes("histoire-sections")
+        include: file => file.path.includes("src/__stories__")
       },
       {
         id: "b",
@@ -32,9 +32,9 @@ export default defineConfig({
   theme: {
     title: "@specialdoom/proi-ui",
     logo: {
-      square: "./assets/images/square.svg",
-      light: "./assets/images/logotype.svg",
-      dark: "./assets/images/dark-logotype.svg",
+      square: "./src/assets/images/square.svg",
+      light: "./src/assets/images/logotype.svg",
+      dark: "./src/assets/images/dark-logotype.svg",
     },
     logoHref: "https://github.com/specialdoom/proi-ui",
     favicon: "favicon.ico",
