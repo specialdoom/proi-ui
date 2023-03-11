@@ -262,7 +262,7 @@
       "svelte": "./dist/toast/ToastProvider.svelte",
       "default": "./dist/toast/ToastProvider.svelte"
     },
-    "./variables.css": "./variables.css"
+    "./variables.css": "./dist/variables.css"
   },
   "typesVersions": {
     ">4.0": {
