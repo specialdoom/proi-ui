@@ -1,3 +1,4 @@
+run-name: Unit tests
 on:
   pull_request:
     branches:
@@ -14,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2 # checkout the repo
       - run: npm ci # install packages
-      - run: npm test:ci # run tests (configured to use jest-junit reporter)
+      - run: npm run test:ci # run tests (configured to use jest-junit reporter)
 
       - name: Test Report
         uses: dorny/test-reporter@v1

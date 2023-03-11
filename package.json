@@ -23,6 +23,7 @@
     "build": "node ./tasks/build.js",
     "build:dev": "node ./tasks/build.js --no-release",
     "test": "vitest",
+    "test:ci": "vitest",
     "test:coverage": "vitest --coverage",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
