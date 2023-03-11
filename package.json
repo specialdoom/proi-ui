@@ -22,6 +22,7 @@
     "dev": "histoire dev",
     "build": "node ./src/tasks/build.js",
     "test": "vitest",
+    "test:ci": "vitest",
     "test:coverage": "vitest --coverage",
     "package": "svelte-kit sync && svelte-package && cp .npmignore dist/",
     "check": "svelte-check --tsconfig ./tsconfig.json",
