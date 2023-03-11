@@ -2,7 +2,7 @@ import { resolve } from "node:path";
 import { copyFile } from "node:fs";
 
 const changelogPath = resolve("./CHANGELOG.md");
-const changelogSectionPath = resolve("./histoire-sections/Changelog.story.md");
+const changelogSectionPath = resolve(".src/__stories__/Changelog.story.md");
 try {
     copyFile(changelogPath, changelogSectionPath, (err) => {
         if (err) throw err;
