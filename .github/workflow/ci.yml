@@ -1,6 +1,12 @@
 on:
-  pull_request: ["main", "dev"]
-  push: ["main", "dev"]
+  pull_request:
+    branches:
+      - main
+      - dev
+  push:
+    branches:
+      - main
+      - dev
 jobs:
   build-test:
     name: Build & Test
