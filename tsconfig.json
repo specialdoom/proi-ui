@@ -1,13 +1,8 @@
 {
-	"extends": "@tsconfig/svelte/tsconfig.json",
+	"extends": "./.svelte-kit/tsconfig.json",
 	"exclude": [
-		"package",
+		"dist",
 		"node_modules",
 		"public"
-	],
-	"include": [
-		"lib/**/*.ts",
-		"lib/**/*.svelte",
-		"global.d.ts"
 	]
 }
