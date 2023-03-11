@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-develop.1](https://github.com/specialdoom/proi-ui/compare/v4.0.0-develop.0...v4.0.0-develop.1) (2023-03-11)
+
 ## [4.0.0-develop.0](https://github.com/specialdoom/proi-ui/compare/v3.8.0...v4.0.0-develop.0) (2023-03-11)
 
 
