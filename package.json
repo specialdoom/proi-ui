@@ -110,10 +110,10 @@
       "svelte": "./dist/backdrop/Backdrop.svelte",
       "default": "./dist/backdrop/Backdrop.svelte"
     },
-    "./Breadcrumb.svelte": {
-      "types": "./dist/breadcrumb/Breadcrumb.svelte.d.ts",
-      "svelte": "./dist/breadcrumb/Breadcrumb.svelte",
-      "default": "./dist/breadcrumb/Breadcrumb.svelte"
+    "./breadcrumb": {
+      "types": "./dist/breadcrumb/index.d.ts",
+      "svelte": "./dist/breadcrumb/index.js",
+      "default": "./dist/breadcrumb/index.js"
     },
     "./BreadcrumbItem.svelte": {
       "types": "./dist/breadcrumb/BreadcrumbItem.svelte.d.ts",

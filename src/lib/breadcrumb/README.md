@@ -8,13 +8,11 @@
 
 ```sveltehtml
 <script>
-  import Breadcrumb from "@specialdoom/proi-ui/Breadcrumb.svelte";
-  import BreadcrumbItem from "@specialdoom/proi-ui/BreadcrumbItem.svelte";
-
+  import Breadcrumb from "@specialdoom/proi-ui/breadcrumb";
 </script>
 
 <Breadcrumb>
-  <BreadcrumbItem href="href" text="text" />
+  <Breadcrumb.Item href="href" text="text" />
 </Breadcrumb>
 ```
 
