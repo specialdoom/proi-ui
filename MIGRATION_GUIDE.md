@@ -1,5 +1,6 @@
 ## Migrate to version 4.0.0
 
+- import `@specialdoom/proi-ui/variables.css` for styling
 - no more named imports (except for `toaster` utility), use default imports for what
   components you need e.g.
 
