@@ -16,9 +16,4 @@ npm i --save-dev @specialdoom/proi-ui
 
 ## Check out docs [here](https://proi-ui.vercel.app/)
 
-## Coming next
-
-- multiple components
-- update existing components
-
 ## Check out migration guide [here](MIGRATION_GUIDE.md)
