@@ -22,8 +22,8 @@
 <style>
   .proi-icon-button {
     box-sizing: border-box;
-    width: 32px;
-    height: 32px;
+    max-width: 32px;
+    max-height: 32px;
     border-radius: 4px;
     border: unset;
     display: inline-flex;
