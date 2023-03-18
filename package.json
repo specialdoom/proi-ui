@@ -83,6 +83,16 @@
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
+    "./Accodrion.svelte": {
+      "types": "./dist/accordion/Accodrion.svelte.d.ts",
+      "svelte": "./dist/accordion/Accodrion.svelte",
+      "default": "./dist/accordion/Accodrion.svelte"
+    },
+    "./AccordionItem.svelte": {
+      "types": "./dist/accordion/AccordionItem.svelte.d.ts",
+      "svelte": "./dist/accordion/AccordionItem.svelte",
+      "default": "./dist/accordion/AccordionItem.svelte"
+    },
     "./Alert.svelte": {
       "types": "./dist/alert/Alert.svelte.d.ts",
       "svelte": "./dist/alert/Alert.svelte",
