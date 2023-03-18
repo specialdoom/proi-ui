@@ -280,6 +280,9 @@
       "Accordion.svelte": [
         "./dist/accordion/Accordion.svelte.d.ts"
       ],
+      "AccordionItem.svelte": [
+        "./dist/accordion/AccordionItem.svelte.d.ts"
+      ],
       "Alert.svelte": [
         "./dist/alert/Alert.svelte.d.ts"
       ],

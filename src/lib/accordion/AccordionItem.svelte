@@ -50,6 +50,7 @@
   }
 
   .proi-accordion-item-control {
+    border: unset;
     display: flex;
     width: 100%;
     align-items: center;
