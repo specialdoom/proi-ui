@@ -16,16 +16,18 @@
   class:proi-accordion-item-disabled={disabled}
 >
   <button
-    class:proi-accordion-control={true}
+    class:proi-accordion-item-control={true}
     {disabled}
     on:click={handleClick}
   >
     {title}
     <ArrowRight />
   </button>
-  <div class:proi-accordion-content={true}>
-    <slot />
-  </div>
+  {#if open}
+    <div class:proi-accordion-item-content={true}>
+      <slot />
+    </div>
+  {/if}
 </li>
 
 <style>
@@ -47,7 +49,7 @@
     border-bottom: 1px solid var(--n0);
   }
 
-  .proi-accordion-control {
+  .proi-accordion-item-control {
     display: flex;
     width: 100%;
     align-items: center;
@@ -61,32 +63,38 @@
     transition: background 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
   }
 
-  .proi-accordion-control:hover {
+  .proi-accordion-item-control:hover {
     background: var(--g0);
   }
 
-  .proi-accordion-control:focus {
+  .proi-accordion-item-control:focus {
     outline: 2px solid var(--g800);
   }
 
-  .proi-accordion-control :global(svg) {
+  .proi-accordion-item-control :global(svg) {
     transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
     transform: rotate(-90deg);
   }
 
-  .proi-accordion-content {
+  .proi-accordion-item-control:disabled:hover {
+    background: transparent;
+  }
+
+  .proi-accordion-item-control:disabled {
+    color: var(--n400);
+  }
+
+  .proi-accordion-item-control:disabled :global(svg path) {
+    stroke: var(--n400);
+  }
+
+  .proi-accordion-item-content {
     font-size: 14px;
-    display: none;
     padding: 6px 12px 20px;
     color: var(--n800);
-    display: none;
   }
 
-  .proi-accordion-item-active .proi-accordion-content {
-    display: block;
-  }
-
-  .proi-accordion-item-active .proi-accordion-control :global(svg) {
+  .proi-accordion-item-active .proi-accordion-item-control :global(svg) {
     transform: rotate(90deg);
   }
 </style>
