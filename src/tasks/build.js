@@ -8,21 +8,33 @@ const options = {
   release: {
     type: "boolean",
     short: "r"
+  },
+  prerelease: {
+    type: "boolean",
+    short: "p"
   }
 }
 
 const {
-  values: { release }
+  values: { release, prerelease }
 } = parseArgs({ options });
 
 if (!release) {
-  console.warn("⚠️: Use `--release` to update version!")
+  console.warn("⚠️: Use `--release` or `--r` to update version!")
+}
+
+if (!prerelease) {
+  console.warn("⚠️: Use `--prerelease` or `--p` to update prerelease version!")
 }
 
 try {
   if (release) {
     await execAsync("npm run release");
     console.log("✅: Version updated successfully!");
+  }
+
+  if (prerelease) {
+    await execAsync("npm run release -- --prerelease develop --skip.changelog");
   }
 
   await execAsync("npm exec svelte-package && cp .npmignore dist/");
