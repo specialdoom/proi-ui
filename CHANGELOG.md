@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## [4.0.0](https://github.com/specialdoom/proi-ui/compare/v4.0.0-develop.6...v4.0.0) (2023-04-22)
+### ⚠ BREAKING CHANGES
+
+* no more named imports, default imports instead
+
+e.g. import Button from "@specialdoom/proi-ui/Button.svelte"
+
+### 🚀 Features
+
+* use `@sveltejs/package` v2 approach ([#92](https://github.com/specialdoom/proi-ui/issues/92)) ([77c98a1](https://github.com/specialdoom/proi-ui/commit/77c98a1a7c2f093b0a12b3ca9e4b383d2fde56e2))
 
 ## [3.8.0](https://github.com/specialdoom/proi-ui/compare/v3.7.0...v3.8.0) (2023-01-29)
 
