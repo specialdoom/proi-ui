@@ -27,38 +27,19 @@
   <Hst.Variant title="Default">
     <Breadcrumb>
       <BreadcrumbItem
-        href="#item1"
+        href="#"
         text="Item1"
       />
       <BreadcrumbItem
-        href="#item2"
+        href="#"
         text="Item2"
       />
       <BreadcrumbItem
-        href="#item3"
+        href="#"
         text="Item3"
         isCurrent
       />
     </Breadcrumb>
-
-    <div
-      id="item1"
-      style:height="300px"
-    >
-      Item 1
-    </div>
-    <div
-      id="item2"
-      style:height="300px"
-    >
-      Item 2
-    </div>
-    <div
-      id="item3"
-      style:height="300px"
-    >
-      Item 3
-    </div>
   </Hst.Variant>
 
   <Hst.Variant title="Playground">
