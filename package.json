@@ -41,7 +41,7 @@
     "@commitlint/config-conventional": "^17.4.4",
     "@histoire/plugin-svelte": "^0.16.1",
     "@sveltejs/adapter-auto": "^2.0.0",
-    "@sveltejs/kit": "^1.11.0",
+    "@sveltejs/kit": "^1.15.7",
     "@sveltejs/package": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^2.0.3",
     "@testing-library/dom": "^9.0.1",
