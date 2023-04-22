@@ -1,6 +1,5 @@
 import { describe } from "vitest";
-import { delay } from "../../utils/delay.js";
-import { render } from "../../../__tests__/tests.queries.js";
+import { render, waitFor } from "../../../__tests__/tests.queries.js";
 import { toast } from "../store/toast.js";
 import ToastProvider from "../ToastProvider.svelte";
 import { ROOT } from "./toast-provider.selectors.js";
@@ -33,9 +32,12 @@ describe("ToastProvider", () => {
       it("should be an empty dom element after 3000ms", async () => {
         const { getBySelector } = render(ToastProvider);
 
-        await delay(3000);
-
-        expect(getBySelector(ROOT).childElementCount).toBe(0);
+        await waitFor(
+          () => {
+            expect(getBySelector(ROOT).childElementCount).toBe(0);
+          },
+          { timeout: 3000 }
+        );
       });
     });
   });
