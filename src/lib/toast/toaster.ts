@@ -21,10 +21,12 @@ function warning(title: string, description: string = "") {
   send({ variant: "warning", title, description });
 }
 
-export const toaster = {
+const toaster = {
   send,
   error,
   success,
   warning,
   info
 };
+
+export default toaster;

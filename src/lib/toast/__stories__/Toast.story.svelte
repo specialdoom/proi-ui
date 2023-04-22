@@ -2,7 +2,7 @@
   import type { Hst as HstType } from "@histoire/plugin-svelte";
   import type { ToastVariant } from "../toast.types.js";
   import ToastProvider from "../ToastProvider.svelte";
-  import { toaster } from "../toaster.js";
+  import toaster from "../toaster.js";
   import Button from "../../button/Button.svelte";
 
   export let Hst: HstType;
