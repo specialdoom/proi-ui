@@ -1,2 +1,2 @@
-import "./lib/variables.css";
-import "./assets/css/histoire.css";
+import "./src/lib/variables.css";
+import "./src/assets/css/histoire.css";
