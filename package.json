@@ -39,7 +39,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
-    "@histoire/plugin-svelte": "^0.15.8",
+    "@histoire/plugin-svelte": "^0.16.1",
     "@sveltejs/adapter-auto": "^2.0.0",
     "@sveltejs/kit": "^1.11.0",
     "@sveltejs/package": "^2.0.0",
@@ -47,13 +47,13 @@
     "@testing-library/dom": "^9.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/svelte": "^3.2.2",
-    "@tsconfig/svelte": "^3.0.0",
+    "@tsconfig/svelte": "^4.0.1",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
-    "@vitest/coverage-c8": "^0.29.2",
+    "@vitest/coverage-c8": "^0.30.1",
     "eslint": "^8.36.0",
     "eslint-plugin-svelte3": "^4.0.0",
-    "histoire": "^0.15.8",
+    "histoire": "^0.16.1",
     "husky": "^8.0.3",
     "jsdom": "^21.1.0",
     "lint-staged": "^13.2.0",
@@ -64,9 +64,9 @@
     "svelte-jester": "^2.3.2",
     "svelte-preprocess": "^5.0.1",
     "tslib": "^2.5.0",
-    "typescript": "^4.9.5",
+    "typescript": "^5.0.4",
     "vite": "^4.1.4",
-    "vitest": "^0.29.2"
+    "vitest": "^0.30.1"
   },
   "peerDependencies": {
     "svelte": "^3.56.0"
