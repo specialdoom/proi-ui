@@ -12,6 +12,9 @@
   />
   <div class="proi-switch-wrapper">
     <div
+      tabindex={disabled ? -1 : 0}
+      role="switch"
+      aria-checked={checked}
       class:checked
       class:disabled
       class:error
@@ -46,6 +49,10 @@
     border: 2px solid var(--n200);
     border-radius: 16px;
     padding: 0 2px;
+  }
+
+  .proi-switch:focus {
+    outline: 2px solid var(--g800);
   }
 
   .proi-switch:hover {

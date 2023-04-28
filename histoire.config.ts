@@ -9,7 +9,7 @@ export default defineConfig({
   vite: {
     root: "."
   },
-  storyIgnored: ["**/node_modules/**", "**/package/**"],
+  storyIgnored: ["**/node_modules/**", "**/package/**", "**/dist/**"],
   tree: {
     groups: [
       {
