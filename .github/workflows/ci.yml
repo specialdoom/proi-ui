@@ -1,4 +1,4 @@
-run-name: Unit tests
+name: 🧪 Unit tests
 on:
   pull_request:
     branches:
@@ -10,7 +10,6 @@ on:
       - dev
 jobs:
   build-test:
-    name: Build & Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2 # checkout the repo
