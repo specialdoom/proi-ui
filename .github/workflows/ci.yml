@@ -9,7 +9,8 @@ on:
       - main
       - dev
 jobs:
-  build-test:
+  test:
+    if: "!contains(github.event.head_commit.message, 'chore(release)')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2 # checkout the repo
