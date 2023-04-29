@@ -14,6 +14,8 @@ jobs:
       publishFlag: ${{ github.ref == 'refs/heads/main' && '' || '--tag develop'}}
     steps:
       - uses: actions/checkout@v2 # checkout the repo
+        with:
+          token: ${{ secrets.TOKEN }}
       - uses: actions/setup-node@v3 # setup node
         with:
           node-version: "16.x"
