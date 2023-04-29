@@ -5,16 +5,17 @@
   export let label: string = "";
 </script>
 
-<span class="proi-dot-container">
+<div class="proi-dot-container">
   <span class="proi-dot {variant}">
     {label}
   </span>
   <slot />
-</span>
+</div>
 
 <style>
   .proi-dot-container {
     position: relative;
+    width: fit-content;
   }
 
   .proi-dot {
@@ -31,7 +32,7 @@
     top: 0;
     right: 0;
     z-index: 5;
-    transform: scale(1) translate(40%, -60%);
+    transform: scale(1) translate(50%, -50%);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 
