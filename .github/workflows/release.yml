@@ -6,7 +6,6 @@ on:
       - dev
 jobs:
   build:
-    name: Build and release
     runs-on: ubuntu-latest
     env:
       main: github.ref == 'refs/heads/main'
