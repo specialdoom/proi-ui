@@ -10,8 +10,7 @@ jobs:
     env:
       main: github.ref == 'refs/heads/main'
       flag: ${{ github.ref == 'refs/heads/main' && '-r' || '-p'}}
-      publishFlag:
-        ${{ github.ref == 'refs/heads/dev' && '--tag develop' || '--tag develop'}}
+      publishFlag: ${{ github.ref == 'refs/heads/main' && '' || '--tag develop'}}
     steps:
       - uses: actions/checkout@v2 # checkout the repo
       - uses: actions/setup-node@v3 # setup node
@@ -28,11 +27,3 @@ jobs:
         run: npm publish $publishFlag # publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Merge ci/release-action in dev2 branch
-        if: ${{ env.main }}
-        uses: devmasx/merge-branch@master
-        with:
-          type: now
-          from_branch: ci/release-action
-          target_branch: dev2
-          github_token: ${{ secrets.GITHUB_TOKEN }}
