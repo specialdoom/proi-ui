@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm ci # install dependencies
       - name: Build package and  update release
-        run: npm run build -- "$flag" # build
+        run: npm run build --release-as 4.0.1-develop.3 # build
       - name: Publish package
         run: npm publish $publishFlag # publish
         env:
