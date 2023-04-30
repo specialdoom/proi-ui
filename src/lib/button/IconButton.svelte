@@ -32,6 +32,12 @@
     outline: none;
     user-select: none;
     cursor: pointer;
+    padding: unset;
+  }
+
+  .proi-icon-button:focus {
+    outline: 2px solid var(--g800);
+    outline-offset: 1px;
   }
 
   .primary {
@@ -113,33 +119,34 @@
     background: transparent;
   }
 
-  :global(.ghost:hover svg path) {
+  .proi-icon-button :global(.ghost:hover svg path) {
     stroke: var(--n800);
   }
 
-  :global(.ghost:active svg path) {
+  .proi-icon-button :global(.ghost:active svg path) {
     stroke: var(--n400);
   }
 
-  :global(.primary svg path, .secondary svg path, .danger svg path) {
+  .proi-icon-button :global(.primary svg path),
+  .proi-icon-button :global(.secondary svg path),
+  .proi-icon-button :global(.danger svg path) {
     stroke: var(--n0);
   }
 
-  :global(.ghost svg path, .outline svg path) {
+  .proi-icon-button :global(.ghost svg path),
+  .proi-icon-button :global(.outline svg path) {
     stroke: var(--n600);
   }
 
-  :global(.outline:active svg path) {
+  .proi-icon-button :global(.outline:active svg path) {
     stroke: var(--n0);
   }
 
-  :global(
-      .primary:disabled svg path,
-      .secondary:disabled svg path,
-      .outline:disabled svg path,
-      .ghost:disabled svg path,
-      .danger:disabled svg path
-    ) {
+  .proi-icon-button :global(.primary:disabled svg path),
+  .proi-icon-button :global(.secondary:disabled svg path),
+  .proi-icon-button :global(.outline:disabled svg path),
+  .proi-icon-button :global(.ghost:disabled svg path),
+  .proi-icon-button :global(.danger:disabled svg path) {
     stroke: var(--n400);
   }
 </style>

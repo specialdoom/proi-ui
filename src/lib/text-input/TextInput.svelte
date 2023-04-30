@@ -47,7 +47,8 @@
 
   .proi-input:focus,
   .proi-input:active {
-    border: 2px solid var(--g200);
+    outline: 2px solid var(--g800);
+    outline-offset: -2px;
   }
 
   .proi-input.error {

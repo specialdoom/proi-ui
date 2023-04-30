@@ -1,8 +1,6 @@
 <script lang="ts">
   import type { DropdownOption } from "./dropdown.types.js";
-
-  import CarretDown from "../icons/CarretDown.svelte";
-  import CarretUp from "../icons/CarretUp.svelte";
+  import ArrowDown from "../icons/ArrowDown.svelte";
 
   export let options: DropdownOption[];
   export let placeholder: string = "";
@@ -45,24 +43,21 @@
   class="proi-dropdown-container"
   bind:this={ref}
 >
-  <div
+  <button
     class="proi-dropdown"
     on:click={handleDropdownClick}
     on:keyup
     on:keydown
     class:error
-    class:focus={open && !(disabled || error)}
+    class:opened={open && !(disabled || error)}
     class:disabled
+    {disabled}
     class:placeholder={!label}
     style:justify-content={label || placeholder ? "space-between" : "flex-end"}
   >
     {label ? label : placeholder}
-    {#if open}
-      <CarretUp />
-    {:else}
-      <CarretDown fillColor={disabled ? "#89959B" : "#223843"} />
-    {/if}
-  </div>
+    <ArrowDown />
+  </button>
   {#if open}
     <div class="proi-dropdown-options-wrapper">
       <div class="proi-dropdown-options">
@@ -105,6 +100,20 @@
     color: var(--n800);
   }
 
+  .proi-dropdown:focus {
+    outline: 2px solid var(--g800);
+    outline-offset: -2px;
+  }
+
+  .proi-dropdown :global(svg) {
+    transform: rotate(0deg);
+    transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
+  }
+
+  .proi-dropdown.opened :global(svg) {
+    transform: rotate(-180deg);
+  }
+
   .proi-dropdown.placeholder {
     color: var(--n400);
   }
@@ -117,10 +126,6 @@
 
   .proi-dropdown.error.placeholder {
     color: var(--r200);
-  }
-
-  .proi-dropdown.focus {
-    border: 2px solid var(--g200);
   }
 
   .proi-dropdown.disabled {

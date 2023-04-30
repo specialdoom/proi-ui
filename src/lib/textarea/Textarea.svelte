@@ -47,7 +47,7 @@
 
   .proi-textarea:focus,
   .proi-textarea:active {
-    outline: 2px solid var(--g200);
+    outline: 2px solid var(--g800);
   }
 
   .proi-textarea.error {
