@@ -5,7 +5,6 @@ import {
   CHECKBOX,
   CHECKBOX_ICON,
   CHECKBOX_LABEL,
-  CHECKBOX_WRAPPER,
   INPUT,
   ROOT
 } from "./checkbox.selectors.js";
@@ -37,20 +36,6 @@ describe("Checkbox", () => {
       const { getBySelector } = render(Checkbox);
 
       expect(getBySelector(INPUT)).toHaveAttribute("type", "checkbox");
-    });
-  });
-
-  describe("checkbox wrapper element", () => {
-    it("should be in the document", () => {
-      const { getBySelector } = render(Checkbox);
-
-      expect(getBySelector(CHECKBOX_WRAPPER)).toBeInTheDocument();
-    });
-
-    it("should contain `proi-checkbox-wrapper` class", () => {
-      const { getBySelector } = render(Checkbox);
-
-      expect(getBySelector(CHECKBOX_WRAPPER)).toHaveClass("proi-checkbox-wrapper");
     });
   });
 
