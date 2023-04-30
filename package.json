@@ -1,6 +1,6 @@
 {
   "name": "@specialdoom/proi-ui",
-  "version": "4.0.0",
+  "version": "4.0.1-develop.10",
   "description": "yet another Svelte UI lib",
   "keywords": [
     "svelte",
