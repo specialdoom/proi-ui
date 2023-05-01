@@ -4,13 +4,10 @@
   import Card from "../Card.svelte";
   import {
     defaultSource,
-    onActionEvent,
-    withAction,
-    withCancelAction,
-    withCustomActionLabel,
-    withImage,
-    withLongerTitle,
-    onCancelEvent
+    withImageSource,
+    withLongerTitleSource,
+    onCloseEventSource,
+    closableSource
   } from "./card.source.js";
 
   export let Hst: HstType;
@@ -19,9 +16,7 @@
   let description: string = "Description";
   let imageSrc: string = "";
   let imageDescription: string = "";
-  let showAction: boolean = false;
-  let actionLabel: string = "Action";
-  let showCancelAction: boolean = false;
+  let closable: boolean = false;
 </script>
 
 <Hst.Story
@@ -44,9 +39,7 @@
       {description}
       {imageDescription}
       {imageSrc}
-      {showAction}
-      {actionLabel}
-      {showCancelAction}
+      {closable}
     />
     <svelte:fragment slot="controls">
       <Hst.Text
@@ -66,25 +59,15 @@
         title="Image description"
       />
       <Hst.Checkbox
-        title="Show action"
-        bind:value={showAction}
+        title="Closable"
+        bind:value={closable}
       />
-      {#if showAction}
-        <Hst.Text
-          bind:value={actionLabel}
-          title="Action label"
-        />
-        <Hst.Checkbox
-          title="Show cancel action"
-          bind:value={showCancelAction}
-        />
-      {/if}
     </svelte:fragment>
   </Hst.Variant>
 
   <Hst.Variant
     title="With longer title"
-    source={withLongerTitle}
+    source={withLongerTitleSource}
   >
     <Card
       title="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
@@ -94,7 +77,7 @@
 
   <Hst.Variant
     title="With image"
-    source={withImage}
+    source={withImageSource}
   >
     <Card
       title="Title"
@@ -104,61 +87,25 @@
   </Hst.Variant>
 
   <Hst.Variant
-    title="With action"
-    source={withAction}
+    title="Closable"
+    source={closableSource}
   >
     <Card
       title="Title"
       description="Supporting description for the card goes here like a breeze."
-      showAction
+      closable
     />
   </Hst.Variant>
 
   <Hst.Variant
-    title="With custom action label"
-    source={withCustomActionLabel}
+    title="on:close event"
+    source={onCloseEventSource}
   >
     <Card
       title="Title"
       description="Supporting description for the card goes here like a breeze."
-      showAction
-      actionLabel="Custom action"
-    />
-  </Hst.Variant>
-
-  <Hst.Variant
-    title="With cancel action"
-    source={withCancelAction}
-  >
-    <Card
-      title="Title"
-      description="Supporting description for the card goes here like a breeze."
-      showAction
-      showCancelAction
-    />
-  </Hst.Variant>
-  <Hst.Variant
-    title="on:action event"
-    source={onActionEvent}
-  >
-    <Card
-      title="Title"
-      description="Supporting description for the card goes here like a breeze."
-      showAction
-      on:action={(e) => logEvent("action", e)}
-    />
-  </Hst.Variant>
-
-  <Hst.Variant
-    title="on:cancel event"
-    source={onCancelEvent}
-  >
-    <Card
-      title="Title"
-      description="Supporting description for the card goes here like a breeze."
-      showAction
-      showCancelAction
-      on:cancel={(e) => logEvent("cancel", e)}
+      closable
+      on:close={(e) => logEvent("cancel", e)}
     />
   </Hst.Variant>
 </Hst.Story>
