@@ -273,6 +273,16 @@
       "svelte": "./dist/toast/ToastProvider.svelte",
       "default": "./dist/toast/ToastProvider.svelte"
     },
+    "./Divider.svelte": {
+      "types": "./dist/divider/Divider.svelte.d.ts",
+      "svelte": "./dist/divider/Divider.svelte",
+      "default": "./dist/divider/Divider.svelte"
+    },
+    "./Link.svelte": {
+      "types": "./dist/link/Link.svelte.d.ts",
+      "svelte": "./dist/link/Link.svelte",
+      "default": "./dist/link/Link.svelte"
+    },
     "./variables.css": "./dist/variables.css"
   },
   "typesVersions": {
@@ -378,6 +388,12 @@
       ],
       "ToastProvider.svelte": [
         "./dist/toast/ToastProvider.svelte.d.ts"
+      ],
+      "Divider.svelte": [
+        "./dist/divider/Divider.svelte.d.ts"
+      ],
+      "Link.svelte": [
+        "./dist/link/Link.svelte.d.ts"
       ]
     }
   }
