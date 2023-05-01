@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
-import { render } from "../../../__tests__/tests.queries";
+import { render } from "../../../__tests__/tests.queries.js";
 import { ROOT } from "./button.selectors.js";
-import { buttonVariants } from "../../utils/variants";
+import { buttonVariants } from "../../utils/variants.js";
 import Button from "../Button.svelte";
 import FakeButton from "./FakeButton.svelte";
 

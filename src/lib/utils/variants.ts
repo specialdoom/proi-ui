@@ -23,5 +23,6 @@ export const buttonVariants: ButtonVariant[] = [
   "secondary",
   "ghost",
   "danger",
-  "outline"
+  "outline",
+  "link"
 ];
