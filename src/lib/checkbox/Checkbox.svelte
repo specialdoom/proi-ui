@@ -8,6 +8,7 @@
 
 <label class="proi-checkbox-container">
   <input
+    tabindex="-1"
     type="checkbox"
     bind:checked
     {disabled}

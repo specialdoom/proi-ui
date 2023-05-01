@@ -37,6 +37,12 @@ describe("Checkbox", () => {
 
       expect(getBySelector(INPUT)).toHaveAttribute("type", "checkbox");
     });
+
+    it("should have `tabindex` attribute set to `-1`", () => {
+      const { getBySelector } = render(Checkbox);
+
+      expect(getBySelector(INPUT)).toHaveAttribute("tabindex", "-1");
+    });
   });
 
   describe("checkbox element", () => {

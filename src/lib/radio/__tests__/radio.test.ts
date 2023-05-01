@@ -47,7 +47,7 @@ describe("Radio", () => {
       expect(getBySelector(INPUT)).toBeInTheDocument();
     });
 
-    it("should contain `type` attribute with `checkbox` value", () => {
+    it("should have `type` attribute set to `radio`", () => {
       const { getBySelector } = render(Radio, {
         props: {
           group
@@ -55,6 +55,12 @@ describe("Radio", () => {
       });
 
       expect(getBySelector(INPUT)).toHaveAttribute("type", "radio");
+    });
+
+    it("should have `tabindex` attribute set to `-1`", () => {
+      const { getBySelector } = render(Radio);
+
+      expect(getBySelector(INPUT)).toHaveAttribute("tabindex", "-1");
     });
   });
 
@@ -78,6 +84,16 @@ describe("Radio", () => {
 
       expect(getBySelector(RADIO)).toHaveClass("proi-radio-bullet");
     });
+
+    it("should have `role` attribute set to `radio`", () => {
+      const { getBySelector } = render(Radio, {
+        props: {
+          group
+        }
+      });
+
+      expect(getBySelector(RADIO)).toHaveAttribute("role", "radio");
+    });
   });
 
   describe("when `value` property", () => {
@@ -98,7 +114,7 @@ describe("Radio", () => {
       });
 
       describe("and `group` property", () => {
-        describe("have same value", () => {
+        describe("have the same value", () => {
           const group = value;
 
           describe("radio element", () => {
@@ -111,6 +127,17 @@ describe("Radio", () => {
               });
 
               expect(getBySelector(RADIO)).toHaveClass("checked");
+            });
+
+            it("should have `aria-checked` attribute set to `true`", () => {
+              const { getBySelector } = render(Radio, {
+                props: {
+                  value,
+                  group
+                }
+              });
+
+              expect(getBySelector(RADIO)).toHaveAttribute("aria-checked", "true");
             });
           });
 
@@ -193,6 +220,17 @@ describe("Radio", () => {
 
               expect(getBySelector(RADIO)).not.toHaveClass("checked");
             });
+
+            it("should have `aria-checked` attribute set to `false`", () => {
+              const { getBySelector } = render(Radio, {
+                props: {
+                  value,
+                  group
+                }
+              });
+
+              expect(getBySelector(RADIO)).toHaveAttribute("aria-checked", "false");
+            });
           });
 
           describe("radio icon element", () => {
@@ -256,6 +294,17 @@ describe("Radio", () => {
 
           expect(getBySelector(RADIO)).toHaveClass("disabled");
         });
+
+        it("should have `tabindex` attribute set to `-1`", () => {
+          const { getBySelector } = render(Radio, {
+            props: {
+              group,
+              disabled
+            }
+          });
+
+          expect(getBySelector(RADIO)).toHaveAttribute("tabindex", "-1");
+        });
       });
     });
 
@@ -285,6 +334,17 @@ describe("Radio", () => {
           });
 
           expect(getBySelector(RADIO)).not.toHaveClass("disabled");
+        });
+
+        it("should have `tabindex` attribute set to `0`", () => {
+          const { getBySelector } = render(Radio, {
+            props: {
+              group,
+              disabled
+            }
+          });
+
+          expect(getBySelector(RADIO)).toHaveAttribute("tabindex", "0");
         });
       });
     });
