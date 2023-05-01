@@ -3,15 +3,10 @@ on:
   push:
     branches:
       - main
-      - dev
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, 'chore(release)')"
+    if: "!contains(github.event.head_commit.message, 'chore')"
     runs-on: ubuntu-latest
-    env:
-      main: github.ref == 'refs/heads/main'
-      flag: ${{ github.ref == 'refs/heads/main' && '-r' || '-p'}}
-      publishFlag: ${{ github.ref == 'refs/heads/main' && '' || '--tag develop'}}
     steps:
       - uses: actions/checkout@v2 # checkout the repo
         with:
@@ -25,9 +20,9 @@ jobs:
       - name: Install dependencies
         run: npm ci # install dependencies
       - name: Build package and  update release
-        run: npm run build -- "$flag" # build
+        run: npm run build -- -r # build
       - name: Publish package
-        run: npm publish $publishFlag # publish
+        run: npm publish # publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Git push

@@ -20,7 +20,7 @@
     box-sizing: border-box;
     display: inline-flex;
     align-items: center;
-    height: 16px;
+    height: 20px;
     min-width: 16px;
     font-size: 12px;
     line-height: 16px;
@@ -68,6 +68,6 @@
   }
 
   .pill {
-    border-radius: 8px;
+    border-radius: 10px;
   }
 </style>
