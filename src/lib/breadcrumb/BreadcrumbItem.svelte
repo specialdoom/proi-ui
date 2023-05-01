@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Link from "../link/Link.svelte";
+
   export let href: string;
   export let text: string;
   export let isCurrent: boolean = false;
@@ -8,7 +10,13 @@
   class="proi-breadcrumb-item"
   class:current={isCurrent}
 >
-  <a {href}>{text}</a>
+  <Link
+    {href}
+    title={text}
+    class={isCurrent ? "current" : ""}
+  >
+    {text}
+  </Link>
 </li>
 
 <style>
@@ -19,38 +27,20 @@
     margin-right: 8px;
   }
 
-  .proi-breadcrumb-item.current a,
-  .proi-breadcrumb-item.current a:hover {
+  .proi-breadcrumb-item.current :global(a),
+  .proi-breadcrumb-item.current :global(a:hover),
+  .proi-breadcrumb-item.current :global(a:visited) {
     color: var(--n800);
     text-decoration: none;
   }
 
-  .proi-breadcrumb-item a:focus {
-    outline: 2px solid var(--g800);
-  }
-
-  .proi-breadcrumb-item.current a:hover {
-    text-decoration: none;
-  }
-
-  .proi-breadcrumb-item a {
-    white-space: nowrap;
+  .proi-breadcrumb-item :global(a:visited) {
     color: var(--b600);
-    text-decoration: none;
   }
 
   .proi-breadcrumb-item::after {
     margin-left: 8px;
     color: var(--n400);
     content: "/";
-  }
-
-  .proi-breadcrumb-item a {
-    color: var(--b600);
-  }
-
-  .proi-breadcrumb-item a:hover {
-    color: var(--b800);
-    text-decoration: underline;
   }
 </style>
