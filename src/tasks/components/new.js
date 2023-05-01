@@ -44,17 +44,6 @@ export let Hst: HstType;
   </Hst.Variant>
 </Hst.Story>`;
 
-const READMEFileTemplate = `---
-
-[proi-ui](https://github.com/specialdoom/proi-ui)
-
-##### ${componenFileN} component
-
-### Usage
-
-### Properties
-`;
-
 
 const $$libFolder = resolve("./src/lib");
 const $$newComponentFolder = resolve($$libFolder, name);
@@ -62,7 +51,6 @@ const $$storiesFolder = resolve($$newComponentFolder, "__stories__")
 const $$testsFolder = resolve($$newComponentFolder, "__tests__")
 const $$newComponentSvelteFile = resolve($$newComponentFolder, `${componenFileN}.svelte`)
 const $$newComponentStoryFile = resolve($$storiesFolder, `${componenFileN}.story.svelte`)
-const $$newComponentReadmeFile = resolve($$newComponentFolder, "README.md")
 const $$newComponentTestFile = resolve($$testsFolder, `${name}.test.ts`)
 
 mkdirSync($$newComponentFolder);
@@ -70,9 +58,13 @@ mkdirSync($$storiesFolder);
 mkdirSync($$testsFolder)
 writeFileSync($$newComponentSvelteFile, svelteFileTemplate)
 writeFileSync($$newComponentStoryFile, svelteStoryFileTemplate)
-writeFileSync($$newComponentReadmeFile, READMEFileTemplate)
 writeFileSync($$newComponentTestFile, "")
 
+/**
+ * Returns the component file name based on the given name.
+ * @param {string} name - The name of the component.
+ * @returns {string} - The formatted file name.
+ */
 function getComponentFileName(name) {
     const names = name.split("-");
 
@@ -83,6 +75,12 @@ function getComponentFileName(name) {
     return filename.join("");
 }
 
+/**
+ * Capitalizes the first letter of a string and returns the modified string.
+ * 
+ * @param {string} string - The input string that needs to be modified.
+ * @returns {string} The modified string with the first letter capitalized.
+ */
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
