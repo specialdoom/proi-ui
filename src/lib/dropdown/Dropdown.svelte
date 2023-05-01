@@ -86,6 +86,7 @@
 
   .proi-dropdown {
     box-sizing: border-box;
+    background: var(--bright);
     display: flex;
     justify-content: space-between;
     align-items: center;

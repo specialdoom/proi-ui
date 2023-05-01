@@ -2,8 +2,7 @@ import type { DropdownOption } from "../dropdown.types.js";
 import { describe } from "vitest";
 import { render } from "../../../__tests__/tests.queries.js";
 import {
-  CARRET_DOWN_ICON,
-  CARRET_UP_ICON,
+  ARROW_ICON,
   DROPDOWN,
   DROPDOWN_OPTION,
   DROPDOWN_OPTIONS_CONTAINER,
@@ -78,20 +77,7 @@ describe("Dropdown", () => {
     describe("is set to `true`", () => {
       const open = true;
 
-      describe("dropdown element", () => {
-        it("should contain `focus` class", () => {
-          const { getBySelector } = render(Dropdown, {
-            props: {
-              options,
-              open
-            }
-          });
-
-          expect(getBySelector(DROPDOWN)).toHaveClass("focus");
-        });
-      });
-
-      describe("carret up icon element", () => {
+      describe("icon element", () => {
         it("should be in the document", () => {
           const { getBySelector } = render(Dropdown, {
             props: {
@@ -100,33 +86,7 @@ describe("Dropdown", () => {
             }
           });
 
-          expect(getBySelector(CARRET_UP_ICON)).toBeInTheDocument();
-        });
-
-        it("should contain class `carret-up-icon`", () => {
-          const { getBySelector } = render(Dropdown, {
-            props: {
-              options,
-              open
-            }
-          });
-
-          expect(getBySelector(CARRET_UP_ICON)).toHaveClass("carret-up-icon");
-        });
-      });
-
-      describe("carret down icon element", () => {
-        it("should not be in the document", () => {
-          const { getBySelector } = render(Dropdown, {
-            props: {
-              options,
-              open
-            }
-          });
-
-          expect(() => getBySelector(CARRET_DOWN_ICON)).toThrowError(
-            "Unable to find element"
-          );
+          expect(getBySelector(ARROW_ICON)).toBeInTheDocument();
         });
       });
 
@@ -401,58 +361,6 @@ describe("Dropdown", () => {
 
     describe("is set to `false`", () => {
       const open = false;
-
-      describe("dropdown element", () => {
-        it("should not contain `focus` class", () => {
-          const { getBySelector } = render(Dropdown, {
-            props: {
-              options,
-              open
-            }
-          });
-
-          expect(getBySelector(DROPDOWN)).not.toHaveClass("focus");
-        });
-      });
-
-      describe("carret up icon element", () => {
-        it("should not be in the document", () => {
-          const { getBySelector } = render(Dropdown, {
-            props: {
-              options,
-              open
-            }
-          });
-
-          expect(() => getBySelector(CARRET_UP_ICON)).toThrowError(
-            "Unable to find element"
-          );
-        });
-      });
-
-      describe("carret down icon element", () => {
-        it("should be in the document", () => {
-          const { getBySelector } = render(Dropdown, {
-            props: {
-              options,
-              open
-            }
-          });
-
-          expect(getBySelector(CARRET_DOWN_ICON)).toBeInTheDocument();
-        });
-
-        it("should contain class `carret-down-icon`", () => {
-          const { getBySelector } = render(Dropdown, {
-            props: {
-              options,
-              open
-            }
-          });
-
-          expect(getBySelector(CARRET_DOWN_ICON)).toHaveClass("carret-down-icon");
-        });
-      });
 
       describe("dropdown options wrapper", () => {
         it("should not be in the document", () => {
