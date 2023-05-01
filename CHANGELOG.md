@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 4.1.0 (2023-05-01)
+
+
+### 🛠️ Continuous Integration
+
+* update unit tests action ([fe98274](https://github.com/specialdoom/proi-ui/commit/fe982747e0453d37ac8f82c7337b3a84dc0b3430))
+
 ### 4.0.1 (2023-05-01)
 
 ### 🛠️ Continuous Integration
