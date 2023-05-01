@@ -68,6 +68,7 @@
   }
 
   .proi-card-title {
+    color: var(--n800);
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -83,6 +84,7 @@
   }
 
   .proi-card-description {
+    color: var(--n800);
     font-size: 12px;
   }
 
