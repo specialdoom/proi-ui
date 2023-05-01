@@ -9,7 +9,7 @@
 
 <label class="proi-radio-container">
   <input
-    tabindex={-1}
+    tabindex="-1"
     type="radio"
     bind:group
     {value}
@@ -25,7 +25,7 @@
     class:error
   >
     {#if group === value}
-      <CircleIcon fillColor={disabled || error ? "#EFF1F3" : "#479A89"} />
+      <CircleIcon />
     {/if}
   </div>
   {#if $$slots.default}
@@ -105,5 +105,11 @@
   .proi-radio-label {
     font-size: 16px;
     line-height: 18px;
+  }
+
+  /* Icon */
+  .proi-radio-bullet.disabled :global(svg rect),
+  .proi-radio-bullet.error :global(svg rect) {
+    fill: var(--n0);
   }
 </style>
