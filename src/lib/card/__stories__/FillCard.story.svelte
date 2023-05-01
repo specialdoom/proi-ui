@@ -3,7 +3,12 @@
   import { dataDisplayVariants } from "../../utils/variants.js";
   import { capitalizeFirstLetter } from "../../utils/string.js";
   import FillCard from "../FillCard.svelte";
-  import { defaultSource, variantFillCard, withLongerTitle } from "./fill-card.source.js";
+  import {
+    closable,
+    defaultSource,
+    variantFillCard,
+    withLongerTitle
+  } from "./fill-card.source.js";
   import type { CardVariant } from "../card.types.js";
 
   export let Hst: HstType;
@@ -48,6 +53,27 @@
         options={dataDisplayVariants.map((x) => ({ label: x, value: x }))}
       />
     </svelte:fragment>
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="With longer title"
+    source={withLongerTitle}
+  >
+    <FillCard
+      title="Lorem ipsum, dolor sit amet consectetur adipisicing elit"
+      description="Supporting description for the card goes here like a breeze."
+    />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Closable"
+    source={closable}
+  >
+    <FillCard
+      title="Lorem ipsum"
+      description="Supporting description for the card goes here like a breeze."
+      closable
+    />
   </Hst.Variant>
 
   <Hst.Variant

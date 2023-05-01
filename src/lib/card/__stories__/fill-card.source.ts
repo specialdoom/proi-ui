@@ -12,6 +12,14 @@ export const defaultSource = `${template}
 />
 `;
 
+export const closable = `${template}
+<FillCard
+  title="Lorem ipsum"
+  description="Supporting description for the card goes here like a breeze."
+  closable
+/>
+`;
+
 export const withLongerTitle = `${template}
 <FillCard
   title="Lorem ipsum, dolor sit amet consectetur adipisicing elit"

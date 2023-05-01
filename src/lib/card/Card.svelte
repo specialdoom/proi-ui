@@ -1,6 +1,5 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
-  import Button from "../button/Button.svelte";
   import IconButton from "../button/IconButton.svelte";
   import CloseIcon from "../icons/CloseIcon.svelte";
 
@@ -8,53 +7,52 @@
   export let description: string;
   export let imageSrc: string = "";
   export let imageDescription: string = "Card image";
-  export let showAction: boolean = false;
-  export let actionLabel: string = "Action";
-  export let showCancelAction: boolean = false;
+  export let closable: boolean = false;
+
+  let closed: boolean = false;
 
   const dispatch = createEventDispatcher();
 
-  function handleActionButtonClick() {
-    dispatch("action");
-  }
-
-  function handleCancelActionClick() {
-    dispatch("cancel");
+  function onClose() {
+    closed = true;
+    dispatch("close");
   }
 </script>
 
-<div class="proi-card">
-  {#if imageSrc}
-    <div
-      class="proi-card-image"
-      style:background-image="url({imageSrc})"
-      title={imageDescription}
-    />
-  {/if}
-  {#if title}
-    <h2 class="proi-card-title">{title}</h2>
-  {/if}
-  {#if description}
-    <div class="proi-card-description">{description}</div>
-  {/if}
-  {#if showAction}
-    <div class="proi-card-actions">
-      <Button
-        block
-        on:click={handleActionButtonClick}
+{#if !closed}
+  <div class="proi-card">
+    {#if title}
+      <h2
+        class="proi-card-title"
+        style:justify-content={closable ? "space-between" : "flex-start"}
       >
-        {actionLabel}
-      </Button>
-      {#if showCancelAction}
-        <IconButton
-          variant="danger"
-          icon={CloseIcon}
-          on:click={handleCancelActionClick}
-        />
-      {/if}
-    </div>
-  {/if}
-</div>
+        {title}
+        {#if closable}
+          <IconButton
+            icon={CloseIcon}
+            variant="ghost"
+            on:click={onClose}
+          />
+        {/if}
+      </h2>
+    {/if}
+    {#if imageSrc}
+      <div
+        class="proi-card-image"
+        style:background-image="url({imageSrc})"
+        title={imageDescription}
+      />
+    {/if}
+    {#if description}
+      <div class="proi-card-description">{description}</div>
+    {/if}
+    {#if $$slots.actions}
+      <div class="proi-card-actions">
+        <slot name="actions" />
+      </div>
+    {/if}
+  </div>
+{/if}
 
 <style>
   .proi-card {
@@ -70,6 +68,10 @@
   }
 
   .proi-card-title {
+    color: var(--n800);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
     font-size: 16px;
     margin: 0;
   }
@@ -82,20 +84,22 @@
   }
 
   .proi-card-description {
+    color: var(--n800);
     font-size: 12px;
   }
 
   .proi-card-actions {
-    margin-top: 4px;
+    margin-top: 8px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     gap: 4px;
   }
 
-  .proi-card-actions :global(.proi-icon-button) {
-    width: 32px;
-  }
-
-  .proi-card-actions :global(.proi-icon-button svg path) {
-    stroke: var(--n0);
+  /* Close button */
+  .proi-card-title :global(.proi-icon-button) {
+    position: absolute;
+    right: 0;
+    top: 2px;
   }
 </style>
