@@ -16,4 +16,4 @@
 
 #### Slots
 
-- use `actions` named slot to display action for the target Card component
+- use `actions` named slot to display actions for the target Card component
