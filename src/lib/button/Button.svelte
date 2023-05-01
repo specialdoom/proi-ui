@@ -155,4 +155,22 @@
     outline: 2px solid var(--g800);
     outline-offset: 0px;
   }
+
+  .link {
+    color: var(--b600);
+    background: transparent;
+  }
+
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  .link:disabled {
+    color: var(--b200);
+  }
+
+  .link:focus {
+    outline: 2px solid var(--b800);
+    outline-offset: 0px;
+  }
 </style>
