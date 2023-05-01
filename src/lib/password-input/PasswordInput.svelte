@@ -93,11 +93,17 @@
   }
 
   .proi-input-container.disabled:focus-within {
-    border: 2px solid var(--n200);
+    outline: 2px solid var(--g800);
+    outline-offset: -2px;
+  }
+
+  .proi-input-container.error:focus-within {
+    outline: unset;
   }
 
   .proi-input-container:focus-within {
-    border: 2px solid var(--g200);
+    outline: 2px solid var(--g800);
+    outline-offset: -2px;
   }
 
   .proi-input:disabled {

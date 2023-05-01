@@ -68,7 +68,7 @@
     box-sizing: border-box;
   }
 
-  :global(.proi-alert .proi-icon-button) {
+  .proi-alert :global(.proi-icon-button) {
     margin-left: auto;
   }
 

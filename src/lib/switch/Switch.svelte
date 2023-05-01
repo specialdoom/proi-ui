@@ -6,34 +6,35 @@
 
 <label class="proi-switch-container">
   <input
+    tabindex="-1"
     type="checkbox"
     bind:checked
     {disabled}
   />
-  <div class="proi-switch-wrapper">
-    <div
-      class:checked
-      class:disabled
-      class:error
-      class="proi-switch"
-    >
-      <div class="proi-switch-bullet" />
-    </div>
-    {#if $$slots.default}
-      <span class="proi-switch-label">
-        <slot />
-      </span>
-    {/if}
+  <div
+    tabindex={disabled ? -1 : 0}
+    role="switch"
+    aria-checked={checked}
+    class:checked
+    class:disabled
+    class:error
+    class="proi-switch"
+  >
+    <div class="proi-switch-bullet" />
   </div>
+  {#if $$slots.default}
+    <span class="proi-switch-label">
+      <slot />
+    </span>
+  {/if}
 </label>
 
 <style>
-  .proi-switch-wrapper {
-    display: flex;
-    justify-content: flex-start;
+  .proi-switch-container {
+    display: inline-flex;
     align-items: center;
+    cursor: pointer;
     gap: 8px;
-    width: fit-content;
   }
 
   .proi-switch {
@@ -46,6 +47,10 @@
     border: 2px solid var(--n200);
     border-radius: 16px;
     padding: 0 2px;
+  }
+
+  .proi-switch:focus {
+    outline: 2px solid var(--g800);
   }
 
   .proi-switch:hover {
