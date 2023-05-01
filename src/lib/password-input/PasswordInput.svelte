@@ -23,7 +23,7 @@
 
 <div class="proi-input-container">
   <input
-    value
+    {value}
     type={showPassword ? "text" : "password"}
     {placeholder}
     class="proi-input"
