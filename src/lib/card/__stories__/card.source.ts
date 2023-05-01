@@ -9,55 +9,45 @@ export const defaultSource = `${template}
   description="Supporting description for the card goes here like a breeze."
 />`;
 
-export const withLongerTitle = `${template}
+export const withLongerTitleSource = `${template}
 <Card
   title="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
   description="Supporting description for the card goes here like a breeze."
 />`;
 
-export const withImage = `${template}
+export const withImageSource = `${template}
 <Card
   title="Title"
   description="Supporting description for the card goes here like a breeze."
   imageSrc="https://www.wallart.com/media/catalog/product/cache/871f459736130e239a3f5e6472128962/m/a/marble_1.jpg"
 />`;
 
-export const withAction = `${template}
+export const closableSource = `${template}
 <Card
   title="Title"
   description="Supporting description for the card goes here like a breeze."
-  showAction
+  closable
 />`;
 
-export const withCustomActionLabel = `${template}
+export const withActionsSlotSource = `${template}
 <Card
   title="Title"
   description="Supporting description for the card goes here like a breeze."
-  showAction
-  actionLabel="Custom action"
-/>`;
+  closable
+>
+  <svelte:fragment slot="actions">
+    <Button variant="ghost">🧪</Button>
+    <Divider />
+    <Button variant="ghost">📦</Button>
+    <Divider />
+    <Button variant="ghost">🧬</Button>
+  </svelte:fragment>
+</Card>`;
 
-export const withCancelAction = `${template}
+export const onCloseEventSource = `${template}
 <Card
   title="Title"
   description="Supporting description for the card goes here like a breeze."
-  showAction
-  showCancelAction
-/>`;
-
-export const onActionEvent = `${template}
-<Card
-  title="Title"
-  description="Supporting description for the card goes here like a breeze."
-  showAction
-  on:action={() => console.log("action")}
-/>`;
-
-export const onCancelEvent = `${template}
-<Card
-  title="Title"
-  description="Supporting description for the card goes here like a breeze."
-  showAction
-  showCancelAction
-  on:cancel={() => console.log("cancel")}
+  closable
+  on:close={() => console.log("closed")}
 />`;
