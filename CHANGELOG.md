@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 4.1.2 (2023-05-01)
+
+
+### 💥 Bug Fixes
+
+* add new component for impot ([a6dd3dd](https://github.com/specialdoom/proi-ui/commit/a6dd3ddc4d4fb88bae0c143d0c18c49805d79752))
+
 ### 4.1.1 (2023-05-01)
 
 ## 4.1.0 (2023-05-01)
