@@ -10,8 +10,8 @@
     variantButton,
     withGap
   } from "./button.source.js";
-  import { buttonVariants } from "../../utils/variants";
-  import { capitalizeFirstLetter } from "../../utils/string";
+  import { buttonVariants } from "../../utils/variants.js";
+  import { capitalizeFirstLetter } from "../../utils/string.js";
   import type { ButtonVariant } from "../button.types";
 
   export let Hst: HstType;
@@ -55,15 +55,6 @@
     </svelte:fragment>
   </Hst.Variant>
 
-  {#each buttonVariants as variant}
-    <Hst.Variant
-      title="{capitalizeFirstLetter(variant)} button"
-      source={variantButton(variant)}
-    >
-      <Button {variant}>Click me</Button>
-    </Hst.Variant>
-  {/each}
-
   <Hst.Variant
     title="Disabled button"
     source={disabledSource}
@@ -97,4 +88,13 @@
       Click me
     </Button>
   </Hst.Variant>
+
+  {#each buttonVariants as variant}
+    <Hst.Variant
+      title="{capitalizeFirstLetter(variant)} button"
+      source={variantButton(variant)}
+    >
+      <Button {variant}>Click me</Button>
+    </Hst.Variant>
+  {/each}
 </Hst.Story>
