@@ -9,6 +9,7 @@
 
 <label class="proi-radio-container">
   <input
+    tabindex={-1}
     type="radio"
     bind:group
     {value}
@@ -16,6 +17,9 @@
   />
   <div
     class="proi-radio-bullet"
+    tabindex={disabled ? -1 : 0}
+    role="radio"
+    aria-checked={group === value}
     class:checked={group === value}
     class:disabled
     class:error
@@ -84,6 +88,10 @@
 
   .proi-radio-bullet.error.checked {
     background: var(--r200);
+  }
+
+  .proi-radio-bullet:focus {
+    outline: 2px solid var(--g800);
   }
 
   .proi-radio-bullet.disabled ~ .proi-radio-label {

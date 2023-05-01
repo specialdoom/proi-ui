@@ -25,6 +25,10 @@
     text-decoration: none;
   }
 
+  .proi-breadcrumb-item a:focus {
+    outline: 2px solid var(--g800);
+  }
+
   .proi-breadcrumb-item.current a:hover {
     text-decoration: none;
   }

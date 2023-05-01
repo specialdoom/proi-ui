@@ -2,14 +2,7 @@ import { describe, it } from "vitest";
 import { render } from "../../../__tests__/tests.queries";
 import Switch from "../Switch.svelte";
 import FakeSwitch from "./FakeSwitch.svelte";
-import {
-  SWITCH,
-  SWITCH_BULLET,
-  SWITCH_LABEL,
-  SWITCH_WRAPPER,
-  INPUT,
-  ROOT
-} from "./switch.selectors.js";
+import { SWITCH, SWITCH_BULLET, SWITCH_LABEL, INPUT, ROOT } from "./switch.selectors.js";
 
 describe("Switch", () => {
   describe("root element", () => {
@@ -33,24 +26,16 @@ describe("Switch", () => {
       expect(getBySelector(INPUT)).toBeInTheDocument();
     });
 
-    it("should contain `type` attribute with `checkbox` value", () => {
+    it("should have `type` attribute set to `checkbox`", () => {
       const { getBySelector } = render(Switch);
 
       expect(getBySelector(INPUT)).toHaveAttribute("type", "checkbox");
     });
-  });
 
-  describe("switch wrapper element", () => {
-    it("should be in the document", () => {
+    it("should have `tabindex` attribute set to `-1`", () => {
       const { getBySelector } = render(Switch);
 
-      expect(getBySelector(SWITCH_WRAPPER)).toBeInTheDocument();
-    });
-
-    it("should contain `proi-switch-wrapper` class", () => {
-      const { getBySelector } = render(Switch);
-
-      expect(getBySelector(SWITCH_WRAPPER)).toHaveClass("proi-switch-wrapper");
+      expect(getBySelector(INPUT)).toHaveAttribute("tabindex", "-1");
     });
   });
 
@@ -65,6 +50,12 @@ describe("Switch", () => {
       const { getBySelector } = render(Switch);
 
       expect(getBySelector(SWITCH)).toHaveClass("proi-switch");
+    });
+
+    it("should have `role` attribute set to `switch`", () => {
+      const { getBySelector } = render(Switch);
+
+      expect(getBySelector(SWITCH)).toHaveAttribute("role", "switch");
     });
   });
 
@@ -96,6 +87,16 @@ describe("Switch", () => {
 
           expect(getBySelector(SWITCH)).toHaveClass("checked");
         });
+
+        it("should have `aria-checked` attribute set to `true`", () => {
+          const { getBySelector } = render(Switch, {
+            props: {
+              checked
+            }
+          });
+
+          expect(getBySelector(SWITCH)).toHaveAttribute("aria-checked", "true");
+        });
       });
     });
 
@@ -111,6 +112,16 @@ describe("Switch", () => {
           });
 
           expect(getBySelector(SWITCH)).not.toHaveClass("checked");
+        });
+
+        it("should have `aria-checked` attribute set to `false`", () => {
+          const { getBySelector } = render(Switch, {
+            props: {
+              checked
+            }
+          });
+
+          expect(getBySelector(SWITCH)).toHaveAttribute("aria-checked", "false");
         });
       });
     });
@@ -142,6 +153,16 @@ describe("Switch", () => {
 
           expect(getBySelector(SWITCH)).toHaveClass("disabled");
         });
+
+        it("should have `tabindex` attribute set to `-1`", () => {
+          const { getBySelector } = render(Switch, {
+            props: {
+              disabled
+            }
+          });
+
+          expect(getBySelector(SWITCH)).toHaveAttribute("tabindex", "-1");
+        });
       });
     });
 
@@ -169,6 +190,16 @@ describe("Switch", () => {
           });
 
           expect(getBySelector(SWITCH)).not.toHaveClass("disabled");
+        });
+
+        it("should have `tabindex` attribute set to `0`", () => {
+          const { getBySelector } = render(Switch, {
+            props: {
+              disabled
+            }
+          });
+
+          expect(getBySelector(SWITCH)).toHaveAttribute("tabindex", "0");
         });
       });
     });

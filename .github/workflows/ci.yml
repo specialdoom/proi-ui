@@ -1,4 +1,4 @@
-run-name: Unit tests
+name: 🧪 Unit tests
 on:
   pull_request:
     branches:
@@ -9,8 +9,9 @@ on:
       - main
       - dev
 jobs:
-  build-test:
-    name: Build & Test
+  test:
+    name: 🧪 Unit tests
+    if: "!contains(github.event.head_commit.message, 'chore(release)')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2 # checkout the repo
@@ -21,6 +22,6 @@ jobs:
         uses: dorny/test-reporter@v1
         if: success() || failure() # run this step even if previous step failed
         with:
-          name: JEST Tests # Name of the check run which will be created
+          name: Tests report # Name of the check run which will be created
           path: test-results.xml # Path to test results
           reporter: jest-junit # Format of test results

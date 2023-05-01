@@ -34,6 +34,7 @@
     outline: none;
     user-select: none;
     cursor: pointer;
+    outline-offset: 1px;
   }
 
   .block {
@@ -58,6 +59,10 @@
     background: var(--g0);
   }
 
+  .primary:focus {
+    outline: 2px solid var(--g800);
+  }
+
   .outline {
     color: var(--n600);
     background: var(--bright);
@@ -79,6 +84,12 @@
     border-color: var(--n200);
   }
 
+  .outline:focus {
+    outline: 2px solid var(--g800);
+    background: var(--n600);
+    color: var(--n0);
+  }
+
   .secondary {
     color: var(--n0);
     background: var(--p600);
@@ -95,6 +106,10 @@
   .secondary:disabled {
     color: var(--p0);
     background: var(--p200);
+  }
+
+  .secondary:focus {
+    outline: 2px solid var(--p800);
   }
 
   .danger {
@@ -115,6 +130,10 @@
     background: var(--r0);
   }
 
+  .danger:focus {
+    outline: 2px solid var(--r800);
+  }
+
   .ghost {
     color: var(--n600);
     background: transparent;
@@ -130,5 +149,10 @@
 
   .ghost:disabled {
     color: var(--n200);
+  }
+
+  .ghost:focus {
+    outline: 2px solid var(--g800);
+    outline-offset: 0px;
   }
 </style>

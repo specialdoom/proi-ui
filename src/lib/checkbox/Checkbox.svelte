@@ -8,36 +8,37 @@
 
 <label class="proi-checkbox-container">
   <input
+    tabindex="-1"
     type="checkbox"
     bind:checked
     {disabled}
   />
-  <div class="proi-checkbox-wrapper">
-    <div
-      class:checked
-      class:disabled
-      class:error
-      class="proi-checkbox"
-    >
-      {#if checked}
-        <CheckmarkIcon />
-      {/if}
-    </div>
-    {#if $$slots.default}
-      <span class="proi-checkbox-label">
-        <slot />
-      </span>
+  <div
+    tabindex={disabled ? -1 : 0}
+    role="checkbox"
+    aria-checked={checked}
+    class:checked
+    class:disabled
+    class:error
+    class="proi-checkbox"
+  >
+    {#if checked}
+      <CheckmarkIcon />
     {/if}
   </div>
+  {#if $$slots.default}
+    <div class="proi-checkbox-label">
+      <slot />
+    </div>
+  {/if}
 </label>
 
 <style>
-  .proi-checkbox-wrapper {
-    display: flex;
-    justify-content: flex-start;
+  .proi-checkbox-container {
+    display: inline-flex;
     align-items: center;
+    cursor: pointer;
     gap: 8px;
-    width: fit-content;
   }
 
   .proi-checkbox {
@@ -52,8 +53,8 @@
     border-radius: 4px;
   }
 
-  .proi-checkbox-wrapper:hover .proi-checkbox {
-    background: var(--n0);
+  .proi-checkbox:focus {
+    outline: 2px solid var(--g800);
   }
 
   .proi-checkbox.checked {
@@ -61,13 +62,11 @@
     border: unset;
   }
 
-  .proi-checkbox-wrapper:hover .proi-checkbox.checked,
   .proi-checkbox.checked:hover {
     background: var(--g800);
     border: unset;
   }
 
-  .proi-checkbox-wrapper:hover .proi-checkbox.disabled,
   .proi-checkbox.disabled {
     background: var(--n200);
     border: unset;
@@ -81,8 +80,7 @@
     color: var(--r400);
   }
 
-  .proi-checkbox.error.checked,
-  .proi-checkbox-wrapper:hover .proi-checkbox.checked.error {
+  .proi-checkbox.error.checked {
     background: var(--r200);
   }
 
@@ -92,9 +90,7 @@
   }
 
   .proi-checkbox-container input {
-    position: absolute;
     opacity: 0;
-    cursor: pointer;
     height: 0;
     width: 0;
   }

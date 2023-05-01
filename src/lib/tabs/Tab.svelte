@@ -50,6 +50,19 @@
     user-select: none;
   }
 
+  button:focus {
+    outline: 2px solid var(--g800);
+    outline-offset: -2px;
+  }
+
+  button:focus::after {
+    opacity: 0;
+  }
+
+  button.selected:focus::after {
+    opacity: 1;
+  }
+
   button:hover {
     background: var(--g0);
   }

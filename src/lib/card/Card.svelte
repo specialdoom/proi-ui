@@ -90,4 +90,8 @@
     display: flex;
     gap: 4px;
   }
+
+  .proi-card-actions :global(.proi-icon-button) {
+    width: 32px;
+  }
 </style>
