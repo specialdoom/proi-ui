@@ -1,4 +1,5 @@
 <script lang="ts">
+  import IconButton from "../button/IconButton.svelte";
   import View from "../icons/View.svelte";
   import ViewHide from "../icons/ViewHide.svelte";
 
@@ -9,77 +10,59 @@
 
   let showPassword: boolean = false;
 
-  function handleIconClick() {
+  function onInput(e: Event) {
+    const target = e.target as HTMLInputElement;
+
+    value = target.value;
+  }
+
+  function onIconClick(e: Event) {
     showPassword = !showPassword;
   }
 </script>
 
-<div
-  class="proi-input-container"
-  class:disabled
-  class:error
-  class:with-value={value}
->
-  {#if showPassword}
-    <input
-      bind:value
-      type="text"
-      {placeholder}
-      class="proi-input"
-      {disabled}
-      on:change
-      on:keydown
-    />
-  {:else}
-    <input
-      bind:value
-      type="password"
-      {placeholder}
-      class="proi-input"
-      {disabled}
-      on:change
-      on:keydown
-    />
-  {/if}
+<div class="proi-input-container">
+  <input
+    {value}
+    type={showPassword ? "text" : "password"}
+    {placeholder}
+    class="proi-input"
+    {disabled}
+    class:disabled
+    class:error
+    on:input
+    on:input={onInput}
+    on:change
+    on:keydown
+  />
   {#if value}
-    <button
-      class="proi-icon"
-      on:click={handleIconClick}
-      on:keydown
-    >
-      {#if showPassword}
-        <ViewHide />
-      {:else}
-        <View />
-      {/if}
-    </button>
+    <IconButton
+      icon={showPassword ? ViewHide : View}
+      variant="ghost"
+      on:click={onIconClick}
+    />
   {/if}
 </div>
 
 <style>
   .proi-input-container {
+    position: relative;
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
     box-sizing: border-box;
     height: 32px;
     width: 100%;
-    padding: 6px 12px;
-    border: 2px solid var(--n200);
-    border-radius: 4px;
-    width: 100%;
-    height: 32px;
-    font-size: 14px;
-    padding: 6px 12px;
-    line-height: 20px;
-    color: var(--n800);
-    background: var(--bright);
   }
 
   .proi-input {
-    border: unset;
+    border: 2px solid var(--n200);
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--n800);
+    background: var(--bright);
+    padding: 6px 12px;
     outline: unset;
-    padding: unset;
+    border-radius: 4px;
     height: 100%;
     width: 100%;
   }
@@ -88,20 +71,7 @@
     color: var(--n400);
   }
 
-  .proi-input-container.with-value .proi-input {
-    width: calc(100% - 20px);
-  }
-
-  .proi-input-container.disabled:focus-within {
-    outline: 2px solid var(--g800);
-    outline-offset: -2px;
-  }
-
-  .proi-input-container.error:focus-within {
-    outline: unset;
-  }
-
-  .proi-input-container:focus-within {
+  .proi-input:focus {
     outline: 2px solid var(--g800);
     outline-offset: -2px;
   }
@@ -110,35 +80,21 @@
     background: var(--n200);
   }
 
-  .proi-input-container.disabled {
+  .proi-input.disabled {
     background: var(--n200);
     color: var(--n800);
   }
 
-  .proi-input-container.error {
+  .proi-input.error {
     border: 2px solid var(--r200);
     background: var(--bright);
   }
 
-  .proi-input-container.error > .proi-input {
-    color: var(--r600);
-    background: var(--bright);
-  }
-
-  .proi-input-container.error > .proi-input::placeholder {
-    color: var(--r200);
-  }
-
-  .proi-icon {
-    cursor: pointer;
-    outline: unset;
-    border: unset;
-    background: transparent;
-    width: 20px;
-    height: 20px;
-    padding: unset;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .proi-input-container :global(.proi-icon-button) {
+    position: absolute;
+    right: 2px;
+    width: 27px;
+    border-radius: 2px;
+    height: 27px;
   }
 </style>

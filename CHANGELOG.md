@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 4.0.1 (2023-05-01)
 
+### 🛠️ Continuous Integration
+
+* ci: add `release` action ([646a3b1](https://github.com/specialdoom/proi-ui/commit/646a3b1adf54936ad089c2da080f9cec06497be2))
+
+### 🎨 Styling
+
+* style: update styling position of dot element ([678b661](https://github.com/specialdoom/proi-ui/commit/678b66123ed69a068226efa4dd8211f34432d828))
+* style: focus styling for interactive components ([514b63d](https://github.com/specialdoom/proi-ui/commit/514b63dcc35c015d816536fbb389f3ab96ddb889))
+
 ## [4.0.0](https://github.com/specialdoom/proi-ui/compare/v4.0.0-develop.6...v4.0.0) (2023-04-22)
 ### ⚠ BREAKING CHANGES
 

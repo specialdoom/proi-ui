@@ -58,7 +58,11 @@ describe("Radio", () => {
     });
 
     it("should have `tabindex` attribute set to `-1`", () => {
-      const { getBySelector } = render(Radio);
+      const { getBySelector } = render(Radio, {
+        props: {
+          group
+        }
+      });
 
       expect(getBySelector(INPUT)).toHaveAttribute("tabindex", "-1");
     });
@@ -167,7 +171,7 @@ describe("Radio", () => {
                   }
                 });
 
-                expect(getBySelector(RADIO_ICON_RECT)).toHaveAttribute("fill", "#EFF1F3");
+                expect(getBySelector(RADIO_ICON_RECT)).toHaveAttribute("fill", "#479A89");
               });
             });
           });
@@ -185,7 +189,7 @@ describe("Radio", () => {
                   }
                 });
 
-                expect(getBySelector(RADIO_ICON_RECT)).toHaveAttribute("fill", "#EFF1F3");
+                expect(getBySelector(RADIO_ICON_RECT)).toHaveAttribute("fill", "#479A89");
               });
             });
           });
