@@ -10,7 +10,7 @@ on:
       - dev
 jobs:
   test:
-    name: 🧪 Unit tests
+    name: 🧪 Running...
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
     runs-on: ubuntu-latest
     steps:
