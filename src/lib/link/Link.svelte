@@ -22,6 +22,7 @@
     white-space: nowrap;
     color: var(--b600);
     text-decoration: none;
+    font-size: 14px;
   }
 
   .proi-link:focus {
