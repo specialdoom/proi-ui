@@ -7,8 +7,12 @@
     withImageSource,
     withLongerTitleSource,
     onCloseEventSource,
-    closableSource
+    closableSource,
+    withActionsSlotSource
   } from "./card.source.js";
+  import Button from "../../button/Button.svelte";
+  import Divider from "../../divider/Divider.svelte";
+  import Link from "../../link/Link.svelte";
 
   export let Hst: HstType;
 
@@ -21,7 +25,7 @@
 
 <Hst.Story
   title="Cards/Card"
-  layout={{ type: "grid", width: "50%" }}
+  layout={{ type: "grid", width: "90%" }}
 >
   <Hst.Variant
     title="Default"
@@ -95,6 +99,47 @@
       description="Supporting description for the card goes here like a breeze."
       closable
     />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="With slot: actions"
+    source={withActionsSlotSource}
+  >
+    <Card
+      title="Title"
+      description="Supporting description for the card goes here like a breeze."
+      closable
+    >
+      <svelte:fragment slot="actions">
+        <Link
+          href="#"
+          title="link"
+        >
+          First
+        </Link>
+        <Divider />
+        <Link
+          href="#"
+          title="link"
+        >
+          Second
+        </Link>
+      </svelte:fragment>
+    </Card>
+    <br />
+    <Card
+      title="Title"
+      description="Supporting description for the card goes here like a breeze."
+      closable
+    >
+      <svelte:fragment slot="actions">
+        <Button variant="ghost">🧪</Button>
+        <Divider />
+        <Button variant="ghost">📦</Button>
+        <Divider />
+        <Button variant="ghost">🧬</Button>
+      </svelte:fragment>
+    </Card>
   </Hst.Variant>
 
   <Hst.Variant

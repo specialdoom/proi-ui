@@ -29,6 +29,21 @@ export const closableSource = `${template}
   closable
 />`;
 
+export const withActionsSlotSource = `${template}
+<Card
+  title="Title"
+  description="Supporting description for the card goes here like a breeze."
+  closable
+>
+  <svelte:fragment slot="actions">
+    <Button variant="ghost">🧪</Button>
+    <Divider />
+    <Button variant="ghost">📦</Button>
+    <Divider />
+    <Button variant="ghost">🧬</Button>
+  </svelte:fragment>
+</Card>`;
+
 export const onCloseEventSource = `${template}
 <Card
   title="Title"

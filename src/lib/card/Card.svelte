@@ -87,18 +87,11 @@
   }
 
   .proi-card-actions {
-    margin-top: 4px;
+    margin-top: 8px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     gap: 4px;
-  }
-
-  .proi-card-actions :global(.proi-icon-button) {
-    width: 32px;
-  }
-
-  .proi-card-actions :global(.proi-icon-button svg path) {
-    stroke: var(--n0);
   }
 
   /* Close button */
