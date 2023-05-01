@@ -51,6 +51,12 @@ describe("Checkbox", () => {
 
       expect(getBySelector(CHECKBOX)).toHaveClass("proi-checkbox");
     });
+
+    it("should have `role` attribute set to `checkbox`", () => {
+      const { getBySelector } = render(Checkbox);
+
+      expect(getBySelector(CHECKBOX)).toHaveAttribute("role", "checkbox");
+    });
   });
 
   describe("when `checked` property", () => {
@@ -66,6 +72,19 @@ describe("Checkbox", () => {
           });
 
           expect(getBySelector(CHECKBOX)).toHaveClass("checked");
+        });
+
+        it("should have `aria-checked` attribute set to `true`", () => {
+          const { getBySelector } = render(Checkbox, {
+            props: {
+              checked
+            }
+          });
+
+          expect(getBySelector(CHECKBOX)).toHaveAttribute(
+            "aria-checked",
+            checked.toString()
+          );
         });
       });
 
@@ -139,6 +158,16 @@ describe("Checkbox", () => {
 
           expect(getBySelector(CHECKBOX)).toHaveClass("disabled");
         });
+
+        it("should have `tabindex` attribute set to `-1`", () => {
+          const { getBySelector } = render(Checkbox, {
+            props: {
+              disabled
+            }
+          });
+
+          expect(getBySelector(CHECKBOX)).toHaveAttribute("tabindex", "-1");
+        });
       });
     });
 
@@ -166,6 +195,16 @@ describe("Checkbox", () => {
           });
 
           expect(getBySelector(CHECKBOX)).not.toHaveClass("disabled");
+        });
+
+        it("should have `tabindex` attribute set to `0`", () => {
+          const { getBySelector } = render(Checkbox, {
+            props: {
+              disabled
+            }
+          });
+
+          expect(getBySelector(CHECKBOX)).toHaveAttribute("tabindex", "0");
         });
       });
     });
