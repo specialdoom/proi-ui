@@ -94,4 +94,8 @@
   .proi-card-actions :global(.proi-icon-button) {
     width: 32px;
   }
+
+  .proi-card-actions :global(.proi-icon-button svg path) {
+    stroke: var(--n0);
+  }
 </style>

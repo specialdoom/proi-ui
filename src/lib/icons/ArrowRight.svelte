@@ -1,7 +1,3 @@
-<script lang="ts">
-  export let stroke: string = "#223843";
-</script>
-
 <svg
   width="16"
   height="16"
@@ -11,7 +7,7 @@
 >
   <path
     d="M6 4L10 8L6 12"
-    {stroke}
+    stroke="#223843"
     stroke-linecap="round"
   />
 </svg>

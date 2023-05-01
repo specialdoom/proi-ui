@@ -9,6 +9,10 @@
       "section": "💥 Bug Fixes"
     },
     {
+      "type": "ci",
+      "section": "🛠️ Continuous Integration"
+    },
+    {
       "type": "chore",
       "hidden": true
     },

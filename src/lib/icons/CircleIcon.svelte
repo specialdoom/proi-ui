@@ -1,7 +1,3 @@
-<script lang="ts">
-  export let fillColor: string = "#479A89";
-</script>
-
 <svg
   width="10"
   height="10"
@@ -14,6 +10,6 @@
     width="10"
     height="10"
     rx="5"
-    fill={fillColor}
+    fill="#479A89"
   />
 </svg>
