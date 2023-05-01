@@ -6,3 +6,9 @@
 | `description` | Description of FillCard component (required)                                                 | `string`  | `''`     |
 | `variant`     | Variant of FillCard component. Options: `pine, neutral, makido, vivid, flame, tufts, bright` | `string`  | `'pine'` |
 | `closable`    | Whether the FillCard component is closable or not.                                           | `boolean` | `false`  |
+
+#### Events
+
+| Event name | Description                                 |
+| ---------- | ------------------------------------------- |
+| `close`    | Dispatched when user click on close button. |
