@@ -36,86 +36,105 @@
   }
 
   .proi-icon-button:focus {
-    outline: 2px solid var(--g800);
-    outline-offset: 1px;
+    outline: 2px solid var(--pi-focus);
+  }
+
+  .proi-icon-button:disabled {
+    color: var(--pi-text-disabled);
+    background: var(--pi-bg-disabled);
+  }
+
+  .proi-icon-button:disabled:hover {
+    background: var(--pi-bg-disabled);
   }
 
   .primary {
-    color: var(--n0);
-    background: var(--g600);
+    color: var(--pi-button-primary-text);
+    background: var(--pi-button-primary);
   }
 
   .primary:hover {
-    background: var(--g800);
+    background: var(--pi-button-primary-hover);
   }
 
   .primary:active {
-    background: var(--g400);
-  }
-
-  .primary:disabled {
-    color: var(--n400);
-    background: var(--g0);
+    background: var(--pi-button-primary-active);
   }
 
   .outline {
-    color: var(--n600);
-    background: var(--bright);
-    border: 2px solid var(--n600);
-  }
-
-  .outline:hover {
-    background: var(--n0);
+    color: var(--pi-button-outline-text);
+    background: var(--pi-button-outline);
+    border: 2px solid var(--pi-border-inverse);
   }
 
   .outline:active {
-    background: var(--n600);
-    color: var(--n0);
+    background: var(--pi-button-outline-active);
+    color: var(--pi-button-outline-active-text);
   }
 
   .outline:disabled {
-    color: var(--n200);
-    background: var(--bright);
-    border-color: var(--n200);
+    color: var(--pi-text-disabled);
+    background: var(--pi-bg);
+    border-color: var(--pi-border-disabled);
   }
 
   .secondary {
-    color: var(--n0);
-    background: var(--p600);
+    color: var(--pi-button-secondary-text);
+    background: var(--pi-button-secondary);
   }
 
   .secondary:hover {
-    background: var(--p800);
+    background: var(--pi-button-secondary-hover);
   }
 
   .secondary:active {
-    background: var(--p400);
-  }
-
-  .secondary:disabled {
-    color: var(--p0);
-    background: var(--p200);
+    background: var(--pi-button-secondary-active);
   }
 
   .danger {
-    color: var(--n0);
-    background: var(--r600);
+    color: var(--pi-button-danger-text);
+    background: var(--pi-button-danger);
   }
 
   .danger:hover {
-    background: var(--r800);
+    background: var(--pi-button-danger-hover);
   }
 
   .danger:active {
-    background: var(--r400);
-  }
-
-  .danger:disabled {
-    color: var(--n600);
-    background: var(--r0);
+    background: var(--pi-button-danger-active);
   }
 
   .ghost {
+    color: var(--pi-text);
+    border: 2px solid transparent;
     background: transparent;
+  }
+
+  .ghost:hover {
+    border: 2px solid var(--pi-border-inverse);
+  }
+
+  .ghost:disabled {
+    background: transparent;
+    color: var(--pi-text-disabled);
+  }
+
+  .ghost:disabled:hover {
+    border-color: transparent;
+  }
+
+  .link {
+    color: var(--pi-link-text);
+    background: transparent;
+  }
+
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  .link:disabled {
+    color: var(--pi-text-disabled);
+    background: unset;
+    text-decoration: unset;
   }
 </style>

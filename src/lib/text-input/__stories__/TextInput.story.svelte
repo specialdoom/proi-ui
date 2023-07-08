@@ -11,13 +11,15 @@
     withPlaceholder,
     withValue
   } from "./text-input.source.js";
+  import ThemeStory from "../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 
   let value: string = "";
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Inputs/TextInput"
   layout={{ type: "grid", width: "50%" }}
 >
@@ -87,4 +89,4 @@
       on:change={(e) => logEvent("change", e)}
     />
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

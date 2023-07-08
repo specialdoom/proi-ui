@@ -24,7 +24,6 @@
     min-width: 12px;
     padding: 0 4px;
     box-sizing: border-box;
-    background: red;
     border-radius: 6px;
     line-height: 12px;
     font-size: 8px;
@@ -37,37 +36,39 @@
   }
 
   .pine {
-    background: var(--g600);
-    color: var(--n0);
+    background: var(--pi-pine);
+    color: var(--pi-pine-text);
   }
 
   .flame {
-    background: var(--r600);
-    color: var(--n0);
+    background: var(--pi-flame);
+    color: var(--pi-flame-text);
   }
 
   .neutral {
-    background: var(--n800);
-    color: var(--n0);
+    background: var(--pi-neutral);
+    color: var(--pi-neutral-text);
   }
 
   .mikado {
-    background: var(--y600);
-    color: var(--n800);
+    background: var(--pi-mikado);
+    color: var(--pi-mikado-text);
   }
 
   .tufts {
-    background: var(--b600);
-    color: var(--n0);
+    background: var(--pi-tufts);
+    color: var(--pi-tufts-text);
   }
 
   .vivid {
-    background: var(--p600);
-    color: var(--n0);
+    background: var(--pi-vivid);
+    color: var(--pi-vivid-text);
   }
 
   .bright {
-    background: var(--n0);
-    color: var(--n800);
+    line-height: 8px;
+    background: var(--pi-bg);
+    color: var(--pi-text);
+    border: 2px solid var(--pi-border-inverse);
   }
 </style>

@@ -20,7 +20,10 @@
     class:error
     class="proi-switch"
   >
-    <div class="proi-switch-bullet" />
+    <div
+      class="proi-switch-bullet"
+      class:checked
+    />
   </div>
   {#if $$slots.default}
     <span class="proi-switch-label">
@@ -35,70 +38,72 @@
     align-items: center;
     cursor: pointer;
     gap: 8px;
+    color: var(--pi-text);
   }
 
   .proi-switch {
     box-sizing: border-box;
-    background: var(--bright);
+    background: transparent;
     height: 18px;
     width: 32px;
     display: inline-flex;
     align-items: center;
-    border: 2px solid var(--n200);
+    border: 2px solid var(--pi-border-inverse);
     border-radius: 16px;
     padding: 0 2px;
   }
 
   .proi-switch:focus {
-    outline: 2px solid var(--g800);
+    outline: 2px solid var(--pi-focus);
+    outline-offset: 2px;
   }
 
-  .proi-switch:hover {
-    background: var(--n0);
+  .proi-switch.disabled {
+    outline: unset;
+    color: var(--pi-text-disabled);
+    border-color: var(--pi-border-disabled);
   }
 
-  .proi-switch.disabled,
-  .proi-switch.checked.disabled {
-    background: var(--n200);
+  .proi-switch.disabled:not(.checked) .proi-switch-bullet {
+    background: var(--pi-switch-bullet-disabled);
   }
 
-  .proi-switch.disabled:hover,
-  .proi-switch.checked.disabled:hover {
-    background: var(--n200);
-  }
-
-  .proi-switch.disabled .proi-switch-bullet {
-    background: var(--n0);
+  .proi-switch.disabled.checked {
+    background: var(--pi-switch-disabled);
   }
 
   .proi-switch.checked .proi-switch-bullet {
-    background: var(--n0);
+    background: var(--pi-switch-bullet-checked);
     transform: translateX(14px);
   }
 
   .proi-switch.checked {
     border: unset;
-    background: var(--g600);
-  }
-
-  .proi-switch.checked:hover {
-    background: var(--g800);
+    background: var(--pi-bg-interactive);
   }
 
   .proi-switch.error {
-    border: 2px solid var(--r200);
+    border: 2px solid var(--pi-border-error);
+  }
+
+  .proi-switch.error:not(.checked) .proi-switch-bullet {
+    background: var(--pi-bg-error);
   }
 
   .proi-switch.error.checked {
-    background: var(--r200);
+    background: var(--pi-bg-error);
   }
 
   .proi-switch-bullet {
-    height: 11px;
-    width: 11px;
-    background: var(--n200);
+    height: 10px;
+    width: 10px;
+    background: var(--pi-bg-inverse);
     border-radius: 6px;
     transition: 0.4s;
+  }
+
+  .proi-switch-bullet.checked {
+    background: var(--pi-bg);
   }
 
   .proi-switch-container {
@@ -115,11 +120,11 @@
   }
 
   .proi-switch.disabled ~ .proi-switch-label {
-    color: var(--n400);
+    color: var(--pi-text-disabled);
   }
 
   .proi-switch.error ~ .proi-switch-label {
-    color: var(--r400);
+    color: var(--pi-text-error);
   }
 
   .proi-switch-label {

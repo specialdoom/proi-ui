@@ -3,6 +3,7 @@
   import Checkbox from "../../checkbox/Checkbox.svelte";
   import Radio from "../Radio.svelte";
   import { bindGroup, checked, defaultSource, disabled, error } from "./radio.source.js";
+  import ThemeStory from "../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -14,7 +15,8 @@
   let isDisabled: boolean = false;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Radio"
   layout={{ type: "grid", width: "50%" }}
 >
@@ -108,4 +110,4 @@
       />
     </svelte:fragment>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

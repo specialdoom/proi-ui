@@ -11,6 +11,7 @@
     withPlaceholder,
     withValue
   } from "./password-input.source.js";
+  import ThemeStory from "../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -20,7 +21,8 @@
   let isDisabled: boolean = false;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Inputs/PasswordInput"
   layout={{ type: "grid", width: "50%" }}
 >
@@ -113,4 +115,4 @@
       />
     </svelte:fragment>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

@@ -41,123 +41,96 @@
     width: 100%;
   }
 
+  .proi-button:focus {
+    outline: 2px solid var(--pi-focus);
+  }
+
+  .proi-button:disabled {
+    color: var(--pi-text-disabled);
+    background: var(--pi-bg-disabled);
+  }
+
+  .proi-button:disabled:hover {
+    background: var(--pi-bg-disabled);
+  }
+
   .primary {
-    color: var(--n0);
-    background: var(--g600);
+    color: var(--pi-button-primary-text);
+    background: var(--pi-button-primary);
   }
 
   .primary:hover {
-    background: var(--g800);
+    background: var(--pi-button-primary-hover);
   }
 
   .primary:active {
-    background: var(--g400);
-  }
-
-  .primary:disabled {
-    color: var(--n400);
-    background: var(--g0);
-  }
-
-  .primary:focus {
-    outline: 2px solid var(--g800);
+    background: var(--pi-button-primary-active);
   }
 
   .outline {
-    color: var(--n600);
-    background: var(--bright);
-    border: 2px solid var(--n600);
-  }
-
-  .outline:hover {
-    background: var(--n0);
+    color: var(--pi-button-outline-text);
+    background: var(--pi-button-outline);
+    border: 2px solid var(--pi-border-inverse);
   }
 
   .outline:active {
-    background: var(--n600);
-    color: var(--n0);
+    background: var(--pi-button-outline-active);
+    color: var(--pi-button-outline-active-text);
   }
 
   .outline:disabled {
-    color: var(--n200);
-    background: var(--bright);
-    border-color: var(--n200);
-  }
-
-  .outline:focus {
-    outline: 2px solid var(--g800);
-    background: var(--n600);
-    color: var(--n0);
+    color: var(--pi-text-disabled);
+    background: var(--pi-bg);
+    border-color: var(--pi-border-disabled);
   }
 
   .secondary {
-    color: var(--n0);
-    background: var(--p600);
+    color: var(--pi-button-secondary-text);
+    background: var(--pi-button-secondary);
   }
 
   .secondary:hover {
-    background: var(--p800);
+    background: var(--pi-button-secondary-hover);
   }
 
   .secondary:active {
-    background: var(--p400);
-  }
-
-  .secondary:disabled {
-    color: var(--p0);
-    background: var(--p200);
-  }
-
-  .secondary:focus {
-    outline: 2px solid var(--p800);
+    background: var(--pi-button-secondary-active);
   }
 
   .danger {
-    color: var(--n0);
-    background: var(--r600);
+    color: var(--pi-button-danger-text);
+    background: var(--pi-button-danger);
   }
 
   .danger:hover {
-    background: var(--r800);
+    background: var(--pi-button-danger-hover);
   }
 
   .danger:active {
-    background: var(--r400);
-  }
-
-  .danger:disabled {
-    color: var(--n600);
-    background: var(--r0);
-  }
-
-  .danger:focus {
-    outline: 2px solid var(--r800);
+    background: var(--pi-button-danger-active);
   }
 
   .ghost {
-    color: var(--n600);
+    color: var(--pi-text);
+    border: 2px solid transparent;
     background: transparent;
   }
 
   .ghost:hover {
-    background: var(--n200);
-  }
-
-  .ghost:active {
-    background: var(--n0);
+    border: 2px solid var(--pi-border-inverse);
   }
 
   .ghost:disabled {
-    color: var(--n200);
+    background: transparent;
+    color: var(--pi-text-disabled);
   }
 
-  .ghost:focus {
-    outline: 2px solid var(--g800);
-    outline-offset: 0px;
+  .ghost:disabled:hover {
+    border-color: transparent;
   }
 
   .link {
-    color: var(--b600);
+    color: var(--pi-link-text);
     background: transparent;
   }
 
@@ -166,11 +139,8 @@
   }
 
   .link:disabled {
-    color: var(--b200);
-  }
-
-  .link:focus {
-    outline: 2px solid var(--b800);
-    outline-offset: 0px;
+    color: var(--pi-text-disabled);
+    background: unset;
+    text-decoration: unset;
   }
 </style>

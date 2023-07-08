@@ -7,6 +7,6 @@
     min-height: 12px;
     margin: auto 0;
     height: 100%;
-    background: var(--n400);
+    background: var(--pi-divider);
   }
 </style>

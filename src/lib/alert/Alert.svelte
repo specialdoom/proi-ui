@@ -73,7 +73,7 @@
   }
 
   .proi-alert-description {
-    color: var(--n800);
+    color: var(--pi-text-on-color);
   }
 
   .proi-alert-title {
@@ -95,22 +95,22 @@
   }
 
   .success {
-    background: var(--g0);
-    color: var(--g800);
+    background: var(--pi-success);
+    color: var(--pi-success-text);
   }
 
   .error {
-    background: var(--r0);
-    color: var(--r800);
+    background: var(--pi-error);
+    color: var(--pi-error-text);
   }
 
   .info {
-    background: var(--b0);
-    color: var(--b800);
+    background: var(--pi-info);
+    color: var(--pi-info-text);
   }
 
   .warning {
-    background: var(--y0);
-    color: var(--y800);
+    background: var(--pi-warning);
+    color: var(--pi-warning-text);
   }
 </style>

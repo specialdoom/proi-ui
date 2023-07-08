@@ -30,37 +30,39 @@
   }
 
   .data-display.pine {
-    background: var(--g600);
-    color: var(--n0);
+    background: var(--pi-pine);
+    color: var(--pi-pine-text);
   }
 
   .data-display.flame {
-    background: var(--r600);
-    color: var(--n0);
+    background: var(--pi-flame);
+    color: var(--pi-flame-text);
   }
 
   .data-display.neutral {
-    background: var(--n800);
-    color: var(--n0);
+    background: var(--pi-neutral);
+    color: var(--pi-neutral-text);
+    border: var(--pi-neutral-border);
   }
 
   .data-display.mikado {
-    background: var(--y600);
-    color: var(--n800);
+    background: var(--pi-mikado);
+    color: var(--pi-mikado-text);
   }
 
   .data-display.tufts {
-    background: var(--b600);
-    color: var(--n0);
+    background: var(--pi-tufts);
+    color: var(--pi-tufts-text);
   }
 
   .data-display.vivid {
-    background: var(--p600);
-    color: var(--n0);
+    background: var(--pi-vivid);
+    color: var(--pi-vivid-text);
   }
 
   .data-display.bright {
-    background: var(--n0);
-    color: var(--n800);
+    background: var(--pi-inverse);
+    color: var(--pi-inverse-text);
+    border: 2px solid var(--pi-border-inverse);
   }
 </style>

@@ -7,6 +7,7 @@
     disabledSource,
     errorSource
   } from "./checkbox.source.js";
+  import ThemeStory from "../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -16,7 +17,8 @@
   let error: boolean = false;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Checkbox"
   layout={{ type: "grid", width: "50%" }}
 >
@@ -75,4 +77,4 @@
       />
     </svelte:fragment>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

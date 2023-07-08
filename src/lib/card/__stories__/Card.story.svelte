@@ -13,6 +13,7 @@
   import Button from "../../button/Button.svelte";
   import Divider from "../../divider/Divider.svelte";
   import Link from "../../link/Link.svelte";
+  import ThemeStory from "../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -23,7 +24,8 @@
   let closable: boolean = false;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Cards/Card"
   layout={{ type: "grid", width: "90%" }}
 >
@@ -153,4 +155,4 @@
       on:close={(e) => logEvent("cancel", e)}
     />
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

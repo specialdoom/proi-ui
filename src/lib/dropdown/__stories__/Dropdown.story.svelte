@@ -11,6 +11,7 @@
     disabledWithSelectedOption,
     error
   } from "./dropdown.source.js";
+  import ThemeStory from "../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -28,7 +29,10 @@
   }
 </script>
 
-<Hst.Story title="Dropdown">
+<ThemeStory
+  {Hst}
+  title="Dropdown"
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}
@@ -114,4 +118,4 @@
       />
     </svelte:fragment>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

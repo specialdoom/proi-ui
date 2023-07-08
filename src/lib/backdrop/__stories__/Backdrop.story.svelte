@@ -4,13 +4,17 @@
   import { logEvent } from "histoire/client";
   import { defaultSource, onClickSource, withCustomContent } from "./backdrop.source.js";
   import Badge from "../../tags/badge/Badge.svelte";
+  import ThemeStory from "../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 
   let visible: boolean = false;
 </script>
 
-<Hst.Story title="Backdrop">
+<ThemeStory
+  {Hst}
+  title="Backdrop"
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}
@@ -46,4 +50,4 @@
       on:click={(event) => logEvent("Click", event)}>Backdrop content</Backdrop
     >
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

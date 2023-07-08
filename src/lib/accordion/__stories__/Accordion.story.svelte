@@ -3,11 +3,13 @@
   import Accordion from "../Accordion.svelte";
   import AccordionItem from "../AccordionItem.svelte";
   import { multiItemsSource, singleItemSource } from "./accordion.source";
+  import ThemeStory from "../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Accordion"
   layout={{ type: "grid", width: "100%" }}
 >
@@ -91,4 +93,4 @@
       </AccordionItem>
     </Accordion>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

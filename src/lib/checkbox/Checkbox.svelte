@@ -43,45 +43,41 @@
 
   .proi-checkbox {
     box-sizing: border-box;
-    background: var(--bright);
+    background: transparent;
     height: 18px;
     width: 18px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--n200);
+    border: 2px solid var(--pi-border-inverse);
     border-radius: 4px;
   }
 
   .proi-checkbox:focus {
-    outline: 2px solid var(--g800);
+    outline: 2px solid var(--pi-focus);
+    outline-offset: 2px;
   }
 
   .proi-checkbox.checked {
-    background: var(--g600);
-    border: unset;
-  }
-
-  .proi-checkbox.checked:hover {
-    background: var(--g800);
+    background: var(--pi-bg-interactive);
     border: unset;
   }
 
   .proi-checkbox.disabled {
-    background: var(--n200);
+    background: var(--pi-bg-disabled);
     border: unset;
   }
 
   .proi-checkbox.error {
-    border: 2px solid var(--r200);
+    border: 2px solid var(--pi-border-error);
   }
 
   .proi-checkbox.error ~ .proi-checkbox-label {
-    color: var(--r400);
+    color: var(--pi-text-error);
   }
 
   .proi-checkbox.error.checked {
-    background: var(--r200);
+    background: var(--pi-bg-error);
   }
 
   .proi-checkbox-container {
@@ -96,7 +92,7 @@
   }
 
   .proi-checkbox.disabled ~ .proi-checkbox-label {
-    color: var(--n400);
+    color: var(--pi-text-disabled);
   }
 
   .proi-checkbox-label {

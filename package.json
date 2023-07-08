@@ -283,6 +283,11 @@
       "svelte": "./dist/link/Link.svelte",
       "default": "./dist/link/Link.svelte"
     },
+    "./Theme.svelte": {
+      "types": "./dist/theme/Theme.svelte.d.ts",
+      "svelte": "./dist/theme/Theme.svelte",
+      "default": "./dist/theme/Theme.svelte"
+    },
     "./variables.css": "./dist/variables.css"
   },
   "typesVersions": {
@@ -394,6 +399,12 @@
       ],
       "Link.svelte": [
         "./dist/link/Link.svelte.d.ts"
+      ],
+      "Theme.svelte": [
+        "./dist/theme/Theme.svelte.d.ts"
+      ],
+      "Switch.svelte": [
+        "./dist/switch/Switch.svelte.d.ts"
       ]
     }
   }

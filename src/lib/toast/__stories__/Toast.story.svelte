@@ -4,6 +4,7 @@
   import ToastProvider from "../ToastProvider.svelte";
   import toaster from "../toaster.js";
   import Button from "../../button/Button.svelte";
+  import ThemeStory from "../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -24,7 +25,10 @@
   }
 </script>
 
-<Hst.Story title="Toasts">
+<ThemeStory
+  {Hst}
+  title="Toasts"
+>
   <ToastProvider />
 
   Use controls to toast a notification
@@ -53,4 +57,4 @@
       ]}
     />
   </svelte:fragment>
-</Hst.Story>
+</ThemeStory>

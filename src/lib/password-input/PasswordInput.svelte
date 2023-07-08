@@ -55,11 +55,11 @@
   }
 
   .proi-input {
-    border: 2px solid var(--n200);
+    border: 2px solid var(--pi-border-subtle);
     font-size: 14px;
     line-height: 20px;
-    color: var(--n800);
-    background: var(--bright);
+    color: var(--pi-text);
+    background: var(--pi-bg);
     padding: 6px 12px;
     outline: unset;
     border-radius: 4px;
@@ -68,26 +68,20 @@
   }
 
   .proi-input::placeholder {
-    color: var(--n400);
+    color: var(--pi-text-placeholder);
   }
 
   .proi-input:focus {
-    outline: 2px solid var(--g800);
-    outline-offset: -2px;
-  }
-
-  .proi-input:disabled {
-    background: var(--n200);
+    border: 2px solid var(--pi-focus);
   }
 
   .proi-input.disabled {
-    background: var(--n200);
-    color: var(--n800);
+    background: var(--pi-bg-disabled);
+    color: var(--pi-text-disabled);
   }
 
   .proi-input.error {
-    border: 2px solid var(--r200);
-    background: var(--bright);
+    border: 2px solid var(--pi-border-error);
   }
 
   .proi-input-container :global(.proi-icon-button) {

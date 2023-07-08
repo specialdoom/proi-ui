@@ -18,26 +18,27 @@
 
 <style>
   .proi-input {
-    border: 2px solid var(--n200);
+    border: 2px solid var(--pi-border-subtle);
     border-radius: 4px;
     width: 100%;
+    background: var(--pi-bg);
     height: 32px;
     font-size: 14px;
     padding: 6px 12px;
     box-sizing: border-box;
     line-height: 20px;
     outline: none;
-    color: var(--n800);
+    color: var(--pi-text);
   }
 
   .proi-input::placeholder {
-    color: var(--n400);
+    color: var(--pi-text-placeholder);
   }
 
   .proi-input:disabled {
-    background: var(--n200);
-    color: var(--n800);
-    outline: none;
+    background: var(--pi-bg-disabled);
+    color: var(--pi-text-disabled);
+    border: none;
   }
 
   .proi-input:disabled:focus,
@@ -47,18 +48,11 @@
 
   .proi-input:focus,
   .proi-input:active {
-    outline: 2px solid var(--g800);
-    outline-offset: -2px;
+    border: 2px solid var(--pi-focus);
   }
 
   .proi-input.error {
-    border: 2px solid var(--r200);
-    background: var(--bright);
-    color: var(--r600);
-    outline: none;
-  }
-
-  .proi-input.error::placeholder {
-    color: var(--r200);
+    border: 2px solid var(--pi-border-error);
+    color: var(--pi-text-error);
   }
 </style>

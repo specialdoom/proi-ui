@@ -25,7 +25,9 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--pi-bg-inverse);
+    color: var(--pi-text);
+    opacity: 0.2;
     z-index: 9000;
   }
 </style>

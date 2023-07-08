@@ -9,11 +9,13 @@
     error,
     withLabel
   } from "./switch.source.js";
+  import ThemeStory from "../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Switch"
   layout={{ type: "grid", width: "50%" }}
 >
@@ -63,4 +65,4 @@
       Switch me
     </Switch>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

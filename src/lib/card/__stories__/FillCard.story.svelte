@@ -4,21 +4,24 @@
   import { capitalizeFirstLetter } from "../../utils/string.js";
   import FillCard from "../FillCard.svelte";
   import {
-    closable,
+    closable as closableSource,
     defaultSource,
     variantFillCard,
     withLongerTitle
   } from "./fill-card.source.js";
   import type { CardVariant } from "../card.types.js";
+  import ThemeStory from "../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 
   let title: string = "Title";
   let description: string = "Description";
   let variant: CardVariant = "pine";
+  let closable: boolean = false;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Cards/FillCard"
   layout={{ type: "grid", width: "50%" }}
 >
@@ -37,6 +40,7 @@
       {title}
       {description}
       {variant}
+      {closable}
     />
     <svelte:fragment slot="controls">
       <Hst.Text
@@ -52,22 +56,16 @@
         title="Variant"
         options={dataDisplayVariants.map((x) => ({ label: x, value: x }))}
       />
+      <Hst.Checkbox
+        bind:value={closable}
+        title="Closable?"
+      />
     </svelte:fragment>
   </Hst.Variant>
 
   <Hst.Variant
-    title="With longer title"
-    source={withLongerTitle}
-  >
-    <FillCard
-      title="Lorem ipsum, dolor sit amet consectetur adipisicing elit"
-      description="Supporting description for the card goes here like a breeze."
-    />
-  </Hst.Variant>
-
-  <Hst.Variant
     title="Closable"
-    source={closable}
+    source={closableSource}
   >
     <FillCard
       title="Lorem ipsum"
@@ -77,25 +75,79 @@
   </Hst.Variant>
 
   <Hst.Variant
-    title="With longer title"
-    source={withLongerTitle}
+    title="Pine variant"
+    source={variantFillCard("pine")}
   >
     <FillCard
-      title="Lorem ipsum, dolor sit amet consectetur adipisicing elit"
-      description="Supporting description for the card goes here like a breeze."
+      variant="pine"
+      title="Title"
+      description="Description"
     />
   </Hst.Variant>
 
-  {#each dataDisplayVariants as variant}
-    <Hst.Variant
-      title="{capitalizeFirstLetter(variant)} variant"
-      source={variantFillCard(variant)}
-    >
-      <FillCard
-        {variant}
-        title="Title"
-        description="Description"
-      />
-    </Hst.Variant>
-  {/each}
-</Hst.Story>
+  <Hst.Variant
+    title="Tufts variant"
+    source={variantFillCard("tufts")}
+  >
+    <FillCard
+      variant="tufts"
+      title="Title"
+      description="Description"
+    />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Mikado variant"
+    source={variantFillCard("mikado")}
+  >
+    <FillCard
+      variant="mikado"
+      title="Title"
+      description="Description"
+    />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Vivid variant"
+    source={variantFillCard("vivid")}
+  >
+    <FillCard
+      variant="vivid"
+      title="Title"
+      description="Description"
+    />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Neutral variant"
+    source={variantFillCard("neutral")}
+  >
+    <FillCard
+      variant="neutral"
+      title="Title"
+      description="Description"
+    />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Bright variant"
+    source={variantFillCard("bright")}
+  >
+    <FillCard
+      variant="bright"
+      title="Title"
+      description="Description"
+    />
+  </Hst.Variant>
+
+  <Hst.Variant
+    title="Flame variant"
+    source={variantFillCard("flame")}
+  >
+    <FillCard
+      variant="flame"
+      title="Title"
+      description="Description"
+    />
+  </Hst.Variant>
+</ThemeStory>

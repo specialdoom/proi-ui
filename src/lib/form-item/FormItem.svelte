@@ -48,14 +48,16 @@
   .proi-label {
     font-size: 14px;
     font-weight: 500;
+    color: var(--pi-text);
   }
 
   .proi-description {
     font-size: 12px;
+    color: var(--pi-text-helper);
   }
 
   .proi-error {
-    color: var(--r400);
+    color: var(--pi-text-error);
     font-size: 13px;
   }
 </style>

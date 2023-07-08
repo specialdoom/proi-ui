@@ -62,18 +62,19 @@
     padding: 20px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    background: var(--bright);
+    background: var(--pi-bg-static);
+    color: var(--pi-text-on-color);
     width: 250px;
     gap: 8px;
   }
 
   .proi-card-title {
-    color: var(--n800);
     position: relative;
     display: inline-flex;
     align-items: center;
     font-size: 16px;
     margin: 0;
+    padding-bottom: 8px;
   }
 
   .proi-card-image {
@@ -84,7 +85,6 @@
   }
 
   .proi-card-description {
-    color: var(--n800);
     font-size: 12px;
   }
 

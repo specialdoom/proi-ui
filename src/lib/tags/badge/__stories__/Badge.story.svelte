@@ -4,11 +4,13 @@
   import { capitalizeFirstLetter } from "../../../utils/string.js";
   import Badge from "../Badge.svelte";
   import { defaultSource, variantBadge, withLabel } from "./badge.source.js";
+  import ThemeStory from "../../../histoire/ThemeStory.svelte";
 
   export let Hst: HstType;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Tags/Badge"
   layout={{ type: "grid", width: "50%" }}
 >
@@ -38,4 +40,4 @@
       />
     </Hst.Variant>
   {/each}
-</Hst.Story>
+</ThemeStory>

@@ -57,49 +57,38 @@
     height: 18px;
     width: 18px;
     border-radius: 50px;
-    border: 1px solid var(--n200);
-    background: var(--bright);
-  }
-
-  .proi-radio-container:hover .proi-radio-bullet {
-    background: var(--n0);
-  }
-
-  .proi-radio-container:hover .proi-radio-bullet.disabled {
-    background: var(--n200);
-  }
-
-  .proi-radio-bullet:hover {
-    background: var(--n0);
+    border: 2px solid var(--pi-border-inverse);
+    background: transparent;
   }
 
   .proi-radio-bullet.disabled.checked {
-    background: var(--n200);
+    background: var(--pi-bg-disabled);
   }
 
   .proi-radio-bullet.disabled {
-    background: var(--n200);
+    background: var(--pi-bg-disabled);
     border: unset;
   }
 
   .proi-radio-bullet.error {
-    border: 2px solid var(--r200);
+    border: 2px solid var(--pi-border-error);
   }
 
   .proi-radio-bullet.error.checked {
-    background: var(--r200);
+    background: var(--pi-bg-error);
   }
 
   .proi-radio-bullet:focus {
-    outline: 2px solid var(--g800);
+    outline: 2px solid var(--pi-focus);
+    outline-offset: 2px;
   }
 
   .proi-radio-bullet.disabled ~ .proi-radio-label {
-    color: var(--n400);
+    color: var(--pi-text-disabled);
   }
 
   .proi-radio-bullet.error ~ .proi-radio-label {
-    color: var(--r400);
+    color: var(--pi-text-error);
   }
 
   .proi-radio-label {
@@ -108,8 +97,12 @@
   }
 
   /* Icon */
+  .proi-radio-bullet :global(svg rect) {
+    fill: var(--pi-bg-inverse);
+  }
+
   .proi-radio-bullet.disabled :global(svg rect),
   .proi-radio-bullet.error :global(svg rect) {
-    fill: var(--n0);
+    fill: var(--pi-radio-bullet-subtle);
   }
 </style>

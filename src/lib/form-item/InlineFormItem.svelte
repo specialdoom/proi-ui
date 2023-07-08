@@ -38,6 +38,7 @@
     vertical-align: middle;
     font-size: 14px;
     font-weight: 500;
+    color: var(--pi-text);
     width: 10%;
   }
 
@@ -47,7 +48,7 @@
     align-items: center;
     max-width: 100%;
     height: 32px;
-    color: rgba(0, 0, 0, 0.88);
+    color: var(--pi-text);
     font-size: 14px;
   }
 
@@ -65,7 +66,7 @@
   }
 
   .proi-error {
-    color: var(--r400);
+    color: var(--pi-text-error);
     font-size: 13px;
   }
 </style>

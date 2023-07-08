@@ -19,45 +19,40 @@
 
 <style>
   .proi-textarea {
-    border: 2px solid var(--n200);
+    border: 2px solid var(--pi-border-subtle);
     border-radius: 4px;
     width: 100%;
+    background: var(--pi-bg);
     font-size: 14px;
     padding: 6px 12px;
     box-sizing: border-box;
     line-height: 20px;
     outline: none;
-    color: var(--n800);
+    color: var(--pi-text);
   }
 
   .proi-textarea::placeholder {
-    color: var(--n400);
+    color: var(--pi-text-placeholder);
   }
 
   .proi-textarea:disabled {
-    background: var(--n200);
-    color: var(--n800);
-    outline: none;
+    background: var(--pi-bg-disabled);
+    color: var(--pi-text-disabled);
+    border: none;
   }
 
   .proi-textarea:disabled:focus,
   .proi-textarea:disabled:active {
-    outline: none;
+    border: none;
   }
 
   .proi-textarea:focus,
   .proi-textarea:active {
-    outline: 2px solid var(--g800);
+    border: 2px solid var(--pi-focus);
   }
 
   .proi-textarea.error {
-    border: 2px solid var(--r200);
-    background: var(--bright);
-    color: var(--r600);
-    outline: none;
-  }
-
-  .proi-textarea.error::placeholder {
-    color: var(--r200);
+    border: 2px solid var(--pi-border-error);
+    color: var(--pi-text-error);
   }
 </style>

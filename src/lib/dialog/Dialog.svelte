@@ -23,38 +23,39 @@
 </script>
 
 {#if visible}
-  <Backdrop {visible}>
-    <div class="proi-dialog-container">
-      <div class="proi-dialog">
-        <div
-          class="proi-dialog-header"
-          style:justify-content={title ? "space-between" : "flex-end"}
-        >
-          {title}
-          <IconButton
-            icon={CloseIcon}
-            variant="ghost"
-            on:click={handleCancel}
-          />
-        </div>
-        <div class="proi-dialog-body">
-          <slot />
-        </div>
-        {#if showActions}
-          <div class="proi-dialog-footer">
-            <Button
-              variant="ghost"
-              on:click={handleCancel}>Cancel</Button
-            >
-            <Button
-              variant="primary"
-              on:click={handleOk}>Ok</Button
-            >
-          </div>
-        {/if}
+  <div class="proi-dialog-container">
+    <div class="proi-dialog">
+      <div
+        class="proi-dialog-header"
+        style:justify-content={title ? "space-between" : "flex-end"}
+      >
+        {title}
+        <IconButton
+          icon={CloseIcon}
+          variant="ghost"
+          on:click={handleCancel}
+        />
       </div>
+      <div class="proi-dialog-body">
+        <slot />
+      </div>
+      {#if showActions}
+        <div
+          class="proi-dialog-footer"
+          data-theme="light"
+        >
+          <Button
+            variant="ghost"
+            on:click={handleCancel}>Cancel</Button
+          >
+          <Button
+            variant="primary"
+            on:click={handleOk}>Ok</Button
+          >
+        </div>
+      {/if}
     </div>
-  </Backdrop>
+  </div>
 {/if}
 
 <style>
@@ -74,23 +75,23 @@
     flex-direction: column;
     max-height: 80%;
     gap: 32px;
-    background: var(--bright);
+    background: var(--pi-bg-static);
     min-width: 400px;
     max-width: 600px;
     padding: 32px;
     border-radius: 8px;
+    box-shadow: var(--pi-dialog-box-shadow);
+    color: var(--pi-text-on-color);
   }
 
   .proi-dialog-header {
     display: inline-flex;
     align-items: center;
     font-size: 18px;
-    color: var(--n800);
   }
 
   .proi-dialog-body {
     font-size: 14px;
-    color: var(--n600);
     overflow: auto;
   }
 
