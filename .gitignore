@@ -9,3 +9,4 @@ node_modules
 .histoire
 coverage
 test-results.xml
+.idea
