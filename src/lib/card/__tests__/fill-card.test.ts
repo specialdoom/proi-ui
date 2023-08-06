@@ -31,17 +31,6 @@ describe("FillCard", () => {
 
       expect(getBySelector(ROOT)).toHaveClass("proi-card");
     });
-
-    it("should contain `data-display` class", () => {
-      const { getBySelector } = render(FillCard, {
-        props: {
-          title,
-          description
-        }
-      });
-
-      expect(getBySelector(ROOT)).toHaveClass("data-display");
-    });
   });
 
   describe("title element", () => {

@@ -104,8 +104,8 @@
     border: 2px solid var(--pi-border-inverse, #000000);
   }
 
-  .data-display.bright :global(.proi-icon-button svg path),
-  .data-display.mikado :global(.proi-icon-button svg path) {
+  .bright :global(.proi-icon-button svg path),
+  .mikado :global(.proi-icon-button svg path) {
     stroke: var(--pi-icon-inverse, #000000);
   }
 </style>

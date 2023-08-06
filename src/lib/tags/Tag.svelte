@@ -8,7 +8,7 @@
 </script>
 
 <span
-  class="proi-tag data-display {variant}"
+  class="proi-tag {variant}"
   class:badge
   class:pill
 >
@@ -27,37 +27,37 @@
     padding: 4px 8px;
   }
 
-  .data-display.pine {
+  .pine {
     background: var(--pi-pine, #479a89);
     color: var(--pi-pine-text, #ffffff);
   }
 
-  .data-display.flame {
+  .flame {
     background: var(--pi-flame, #e35226);
     color: var(--pi-flame-text, #ffffff);
   }
 
-  .data-display.neutral {
+  .neutral {
     background: var(--pi-neutral, #000000);
     color: var(--pi-neutral-text, #ffffff);
   }
 
-  .data-display.mikado {
+  .mikado {
     background: var(--pi-mikado, #ffc71f);
     color: var(--pi-mikado-text, #000000);
   }
 
-  .data-display.tufts {
+  .tufts {
     background: var(--pi-tufts, #1a6fb6);
     color: var(--pi-tufts-text, #ffffff);
   }
 
-  .data-display.vivid {
+  .vivid {
     background: var(--pi-vivid, #873591);
     color: var(--pi-vivid-text, #ffffff);
   }
 
-  .data-display.bright {
+  .bright {
     background: var(--pi-inverse, #ffffff);
     color: var(--pi-inverse-text, #000000);
     border: 2px solid var(--pi-border-inverse, #000000);
