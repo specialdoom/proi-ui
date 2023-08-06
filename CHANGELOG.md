@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 4.1.5 (2023-08-06)
+
+
+### 🛠️ Continuous Integration
+
+* new `docs:build` task ([55282e4](https://github.com/specialdoom/proi-ui/commit/55282e408685488276d6cb9c5d37287bc617d749))
+
 ### 4.1.4 (2023-08-06)
 
 
