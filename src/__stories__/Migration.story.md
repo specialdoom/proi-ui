@@ -16,7 +16,7 @@ title: "3. Migrate to v4.0.0"
 </script>
 ```
 
-## Migrate to version 4.1.2
+## Migrate to version 4.1.3
 
 - no need to import `@specialdoom/proi-ui/variables.css` anymore because the css variables
   have fallback values
@@ -32,3 +32,8 @@ title: "3. Migrate to v4.0.0"
   <slot />
 </Theme>
 ```
+
+## Migrate to version 4.2.0
+
+- deprecated `<ToastProvider>` component and `toaster` utility
+- renamed `<Toast>` component to `<Notification>`

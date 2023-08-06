@@ -1,15 +1,15 @@
 import { describe, vi } from "vitest";
 import { render, fireEvent } from "../../../__tests__/tests.queries.js";
-import { CLOSE_ICON, DESCRIPTION, ICON, ROOT, TITLE } from "./toast.selectors.js";
-import Toast from "../Toast.svelte";
+import { CLOSE_ICON, DESCRIPTION, ICON, ROOT, TITLE } from "./notification.selectors.js";
+import Notification from "../Notification.svelte";
 import { feedbackVariants } from "../../utils/variants.js";
 
-describe("Toast", () => {
+describe("Notification", () => {
   const title = "Title";
 
   describe("root element", () => {
     it("should be in the document", () => {
-      const { getBySelector } = render(Toast, {
+      const { getBySelector } = render(Notification, {
         props: {
           title
         }
@@ -18,19 +18,19 @@ describe("Toast", () => {
       expect(getBySelector(ROOT)).toBeInTheDocument();
     });
 
-    it("should contain `proi-toast-container` class", () => {
-      const { getBySelector } = render(Toast, {
+    it("should contain `proi-notification-container` class", () => {
+      const { getBySelector } = render(Notification, {
         props: {
           title
         }
       });
 
-      expect(getBySelector(ROOT)).toHaveClass("proi-toast-container");
+      expect(getBySelector(ROOT)).toHaveClass("proi-notification-container");
     });
 
     it("should forward the `click` event to close icon element", async () => {
       const mock = vi.fn();
-      const { component, getBySelector } = render(Toast, {
+      const { component, getBySelector } = render(Notification, {
         props: {
           title
         }
@@ -45,7 +45,7 @@ describe("Toast", () => {
 
     it("should forward the `keyup` event to close icon element", async () => {
       const mock = vi.fn();
-      const { component, getBySelector } = render(Toast, {
+      const { component, getBySelector } = render(Notification, {
         props: {
           title
         }
@@ -60,7 +60,7 @@ describe("Toast", () => {
 
     it("should forward the `keydown` event to close icon element", async () => {
       const mock = vi.fn();
-      const { component, getBySelector } = render(Toast, {
+      const { component, getBySelector } = render(Notification, {
         props: {
           title
         }
@@ -75,7 +75,7 @@ describe("Toast", () => {
 
     it("should forward the `keypress` event to close icon element", async () => {
       const mock = vi.fn();
-      const { component, getBySelector } = render(Toast, {
+      const { component, getBySelector } = render(Notification, {
         props: {
           title
         }
@@ -91,7 +91,7 @@ describe("Toast", () => {
 
   describe("icon element", () => {
     it("should be in the document", () => {
-      const { getBySelector } = render(Toast, {
+      const { getBySelector } = render(Notification, {
         props: {
           title
         }
@@ -100,20 +100,20 @@ describe("Toast", () => {
       expect(getBySelector(ICON)).toBeInTheDocument();
     });
 
-    it("should contain `proi-toast-icon` class", () => {
-      const { getBySelector } = render(Toast, {
+    it("should contain `proi-notification-icon` class", () => {
+      const { getBySelector } = render(Notification, {
         props: {
           title
         }
       });
 
-      expect(getBySelector(ICON)).toHaveClass("proi-toast-icon");
+      expect(getBySelector(ICON)).toHaveClass("proi-notification-icon");
     });
   });
 
   describe("title element", () => {
     it("should be in the document", () => {
-      const { getBySelector } = render(Toast, {
+      const { getBySelector } = render(Notification, {
         props: {
           title
         }
@@ -122,20 +122,20 @@ describe("Toast", () => {
       expect(getBySelector(TITLE)).toBeInTheDocument();
     });
 
-    it("should contain `proi-toast-title` class", () => {
-      const { getBySelector } = render(Toast, {
+    it("should contain `proi-notification-title` class", () => {
+      const { getBySelector } = render(Notification, {
         props: {
           title
         }
       });
 
-      expect(getBySelector(TITLE)).toHaveClass("proi-toast-title");
+      expect(getBySelector(TITLE)).toHaveClass("proi-notification-title");
     });
   });
 
   describe("close icon element", () => {
     it("should be in the document", () => {
-      const { getBySelector } = render(Toast, {
+      const { getBySelector } = render(Notification, {
         props: {
           title
         }
@@ -145,7 +145,7 @@ describe("Toast", () => {
     });
 
     it("should contain `proi-icon-button` class", () => {
-      const { getBySelector } = render(Toast, {
+      const { getBySelector } = render(Notification, {
         props: {
           title
         }
@@ -156,7 +156,7 @@ describe("Toast", () => {
 
     describe("when click event is triggered", () => {
       it("should remove the root element", async () => {
-        const { getBySelector } = render(Toast, {
+        const { getBySelector } = render(Notification, {
           props: {
             title
           }
@@ -172,7 +172,7 @@ describe("Toast", () => {
   describe("when `title` property is set", () => {
     describe("title element", () => {
       it("should contain `title` property as innerText", () => {
-        const { getBySelector } = render(Toast, {
+        const { getBySelector } = render(Notification, {
           props: {
             title
           }
@@ -188,7 +188,7 @@ describe("Toast", () => {
       describe(`is set to \`${variant}\``, () => {
         describe("root element", () => {
           it(`should contain \`${variant}\` class`, () => {
-            const { getBySelector } = render(Toast, {
+            const { getBySelector } = render(Notification, {
               props: {
                 title,
                 variant
@@ -204,7 +204,7 @@ describe("Toast", () => {
     describe("is not set", () => {
       describe("root element", () => {
         it("should contain default `success` class", () => {
-          const { getBySelector } = render(Toast, {
+          const { getBySelector } = render(Notification, {
             props: {
               title
             }
@@ -222,7 +222,7 @@ describe("Toast", () => {
 
       describe("description element", () => {
         it("should be in the document", () => {
-          const { getBySelector } = render(Toast, {
+          const { getBySelector } = render(Notification, {
             props: {
               title,
               description
@@ -232,19 +232,19 @@ describe("Toast", () => {
           expect(getBySelector(DESCRIPTION)).toBeInTheDocument();
         });
 
-        it("should contain `proi-toast-description` class", () => {
-          const { getBySelector } = render(Toast, {
+        it("should contain `proi-notification-description` class", () => {
+          const { getBySelector } = render(Notification, {
             props: {
               title,
               description
             }
           });
 
-          expect(getBySelector(DESCRIPTION)).toHaveClass("proi-toast-description");
+          expect(getBySelector(DESCRIPTION)).toHaveClass("proi-notification-description");
         });
 
         it("should contain `description` property as innerText", () => {
-          const { getBySelector } = render(Toast, {
+          const { getBySelector } = render(Notification, {
             props: {
               title,
               description
@@ -259,7 +259,7 @@ describe("Toast", () => {
     describe("is not set", () => {
       describe("description element", () => {
         it("should not be in the document", () => {
-          const { getBySelector } = render(Toast, {
+          const { getBySelector } = render(Notification, {
             props: {
               title
             }

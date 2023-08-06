@@ -1,15 +1,34 @@
+## Migrate to version 4.2.0
+
+- deprecated `<ToastProvider>` component and `toaster` utility
+- renamed `<Toast>` component to `<Notification>`
+
+## Migrate to version 4.1.3
+
+- no need to import `@specialdoom/proi-ui/variables.css` anymore because the css variables
+  have fallback values
+- if you want to use theming (light or dark) you need to wrap your app using `<Theme>`
+  component e.g.
+
+```html
+<script>
+  import Theme from "@specialdoom/proi-ui/Theme.svelte";
+</script>
+
+<Theme theme="light">
+  <slot />
+</Theme>
+```
+
 ## Migrate to version 4.0.0
 
 - import `@specialdoom/proi-ui/variables.css` for styling
-- no more named imports (except for `toaster` utility), use default imports for what
-  components you need e.g.
+- use default import for components (import what you need):
 
-```svelte
+```html
 <script>
-  import Button from "@specialdoom/proi-ui/Button.svelte";
+  import Accordion from "@specialdoom/proi-ui/Accordion.svelte";
 </script>
-
-<Button>Click me</Button>
 ```
 
 ## Migrate to version 3.0.0

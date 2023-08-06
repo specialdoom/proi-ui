@@ -255,24 +255,6 @@
       "svelte": "./dist/textarea/Textarea.svelte",
       "default": "./dist/textarea/Textarea.svelte"
     },
-    "./toaster": {
-      "types": "./dist/toast/toaster.d.ts",
-      "default": "./dist/toast/toaster.js"
-    },
-    "./Toast.svelte": {
-      "types": "./dist/toast/Toast.svelte.d.ts",
-      "svelte": "./dist/toast/Toast.svelte",
-      "default": "./dist/toast/Toast.svelte"
-    },
-    "./toast.types": {
-      "types": "./dist/toast/toast.types.d.ts",
-      "default": "./dist/toast/toast.types.js"
-    },
-    "./ToastProvider.svelte": {
-      "types": "./dist/toast/ToastProvider.svelte.d.ts",
-      "svelte": "./dist/toast/ToastProvider.svelte",
-      "default": "./dist/toast/ToastProvider.svelte"
-    },
     "./Divider.svelte": {
       "types": "./dist/divider/Divider.svelte.d.ts",
       "svelte": "./dist/divider/Divider.svelte",
@@ -287,6 +269,11 @@
       "types": "./dist/theme/Theme.svelte.d.ts",
       "svelte": "./dist/theme/Theme.svelte",
       "default": "./dist/theme/Theme.svelte"
+    },
+    "./Notification.svelte": {
+      "types": "./dist/notification/Notification.svelte.d.ts",
+      "svelte": "./dist/notification/Notification.svelte",
+      "default": "./dist/notification/Notification.svelte"
     },
     "./variables.css": "./dist/variables.css"
   },
@@ -382,18 +369,6 @@
       "Textarea.svelte": [
         "./dist/textarea/Textarea.svelte.d.ts"
       ],
-      "toast": [
-        "./dist/toast/store/toast.d.ts"
-      ],
-      "toast.types": [
-        "./dist/toast/toast.types.d.ts"
-      ],
-      "Toast.svelte": [
-        "./dist/toast/Toast.svelte.d.ts"
-      ],
-      "ToastProvider.svelte": [
-        "./dist/toast/ToastProvider.svelte.d.ts"
-      ],
       "Divider.svelte": [
         "./dist/divider/Divider.svelte.d.ts"
       ],
@@ -405,6 +380,9 @@
       ],
       "Switch.svelte": [
         "./dist/switch/Switch.svelte.d.ts"
+      ],
+      "Notification.svelte": [
+        "./dist/notification/Notification.svelte.d.ts"
       ]
     }
   }

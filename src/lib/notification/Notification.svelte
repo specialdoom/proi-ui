@@ -1,33 +1,33 @@
 <script lang="ts">
-  import type { ToastVariant } from "./toast.types.js";
+  import type { NotificationVariant } from "./types.js";
   import CloseIcon from "../icons/CloseIcon.svelte";
   import { feedbackIconsMap } from "../utils/icons.js";
   import IconButton from "../button/IconButton.svelte";
 
-  export let variant: ToastVariant = "success";
+  export let variant: NotificationVariant = "success";
   export let title: string;
   export let description: string = "";
 
   let closed: boolean = false;
 
-  function close() {
+  function onClick() {
     closed = true;
   }
 </script>
 
 {#if !closed}
-  <div class="proi-toast-container {variant}">
-    <div class="proi-toast">
-      <div class="proi-toast-icon">
+  <div class="proi-notification-container {variant}">
+    <div class="proi-notification">
+      <div class="proi-notification-icon">
         <svelte:component this={feedbackIconsMap[variant]} />
       </div>
-      <div class="proi-toast-title">
+      <div class="proi-notification-title">
         {title}
       </div>
       <IconButton
         icon={CloseIcon}
         variant="ghost"
-        on:click={close}
+        on:click={onClick}
         on:click
         on:keydown
         on:keyup
@@ -35,7 +35,7 @@
       />
     </div>
     {#if description}
-      <div class="proi-toast-description">
+      <div class="proi-notification-description">
         {description}
       </div>
     {/if}
@@ -43,7 +43,7 @@
 {/if}
 
 <style>
-  .proi-toast-container {
+  .proi-notification-container {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -54,31 +54,31 @@
     width: 300px;
     border-left: 4px solid var(--pi-success, #d5ece7);
     background: var(--pi-bg-static, #000000);
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--pi-box-shadow, rgba(0, 0, 0, 0.16) 0px 1px 4px);
     color: var(--pi-text-on-color, #000000);
   }
 
-  .proi-toast {
+  .proi-notification {
     display: flex;
     align-items: center;
     gap: 10px;
     box-sizing: border-box;
   }
 
-  :global(.proi-toast .proi-icon-button) {
+  :global(.proi-notification .proi-icon-button) {
     margin-left: auto;
   }
 
-  .proi-toast-description {
+  .proi-notification-description {
     color: var(--pi-text-helper, #5c5c5c);
   }
 
-  .proi-toast-title {
+  .proi-notification-title {
     line-height: 20px;
     font-size: 16px;
   }
 
-  .proi-toast-icon {
+  .proi-notification-icon {
     display: flex;
     align-items: center;
   }
