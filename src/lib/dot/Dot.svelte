@@ -5,7 +5,10 @@
   export let label: string = "";
 </script>
 
-<div class="proi-dot-container">
+<div
+  class="proi-dot-container"
+  {...$$restProps}
+>
   <span class="proi-dot {variant}">
     {label}
   </span>

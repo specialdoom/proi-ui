@@ -8,6 +8,7 @@
 <div
   class="proi-progress"
   class:small
+  {...$$restProps}
 >
   <div
     class="proi-progress-line"

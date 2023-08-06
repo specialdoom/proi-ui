@@ -4,7 +4,10 @@
   export let error: boolean = false;
 </script>
 
-<label class="proi-switch-container">
+<label
+  class="proi-switch-container"
+  {...$$restProps}
+>
   <input
     tabindex="-1"
     type="checkbox"

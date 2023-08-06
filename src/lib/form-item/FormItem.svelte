@@ -11,11 +11,15 @@
   <InlineFormItem
     {label}
     {error}
+    {...$$restProps}
   >
     <slot />
   </InlineFormItem>
 {:else}
-  <div class="proi-form-item">
+  <div
+    class="proi-form-item"
+    {...$$restProps}
+  >
     <span class="proi-label">
       {label}
     </span>

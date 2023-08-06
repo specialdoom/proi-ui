@@ -16,7 +16,10 @@
 </script>
 
 {#if !closed}
-  <div class="proi-notification-container {variant}">
+  <div
+    class="proi-notification-container {variant}"
+    {...$$restProps}
+  >
     <div class="proi-notification">
       <div class="proi-notification-icon">
         <svelte:component this={feedbackIconsMap[variant]} />

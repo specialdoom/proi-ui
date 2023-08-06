@@ -21,7 +21,10 @@
 </script>
 
 {#if !closed}
-  <div class="proi-card {variant}">
+  <div
+    class="proi-card {variant}"
+    {...$$restProps}
+  >
     {#if title}
       <h2
         class="proi-card-title"

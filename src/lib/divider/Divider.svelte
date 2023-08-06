@@ -1,4 +1,7 @@
-<div class:proi-divider={true} />
+<div
+  class:proi-divider={true}
+  {...$$restProps}
+/>
 
 <style>
   .proi-divider {

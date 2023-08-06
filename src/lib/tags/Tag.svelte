@@ -11,6 +11,7 @@
   class="proi-tag {variant}"
   class:badge
   class:pill
+  {...$$restProps}
 >
   {label}
 </span>

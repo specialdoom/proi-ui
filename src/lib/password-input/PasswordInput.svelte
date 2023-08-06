@@ -21,7 +21,10 @@
   }
 </script>
 
-<div class="proi-input-container">
+<div
+  class="proi-input-container"
+  {...$$restProps}
+>
   <input
     {value}
     type={showPassword ? "text" : "password"}

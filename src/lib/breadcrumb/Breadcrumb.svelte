@@ -1,4 +1,4 @@
-<nav>
+<nav {...$$restProps}>
   <ol class="proi-breadcrumb">
     <slot />
   </ol>

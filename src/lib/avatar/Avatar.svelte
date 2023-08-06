@@ -12,6 +12,7 @@
 <span
   class="proi-avatar {variant}"
   {style}
+  {...$$restProps}
 >
   {#if initials !== "" && image === ""}
     {initials}

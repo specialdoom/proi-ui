@@ -22,7 +22,10 @@
 </script>
 
 {#if visible}
-  <div class="proi-dialog-container">
+  <div
+    class="proi-dialog-container"
+    {...$$restProps}
+  >
     <div class="proi-dialog">
       <div
         class="proi-dialog-header"

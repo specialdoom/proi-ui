@@ -7,12 +7,12 @@
   class:proi-link={true}
   {href}
   {title}
-  {...$$restProps}
   on:click
   on:focus
   on:mouseover
   on:mouseenter
   on:mouseleave
+  {...$$restProps}
 >
   <slot />
 </a>

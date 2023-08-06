@@ -14,6 +14,7 @@
   on:keydown
   {disabled}
   type="text"
+  {...$$restProps}
 />
 
 <style>

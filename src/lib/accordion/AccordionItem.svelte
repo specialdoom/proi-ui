@@ -14,6 +14,7 @@
   class:proi-accordion-item={true}
   class:proi-accordion-item-active={open}
   class:proi-accordion-item-disabled={disabled}
+  {...$$restProps}
 >
   <button
     class:proi-accordion-item-control={true}

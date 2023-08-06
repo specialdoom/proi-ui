@@ -3,7 +3,10 @@
   export let error: string = "";
 </script>
 
-<div class="proi-form-item__inline">
+<div
+  class="proi-form-item__inline"
+  {...$$restProps}
+>
   <div class="proi-form-item__inline-label">
     <span>{label}</span>
   </div>

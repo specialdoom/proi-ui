@@ -20,7 +20,10 @@
 </script>
 
 {#if !closed}
-  <div class="proi-card">
+  <div
+    class="proi-card"
+    {...$$restProps}
+  >
     {#if title}
       <h2
         class="proi-card-title"

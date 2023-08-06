@@ -9,6 +9,7 @@
     on:click
     on:keydown
     on:keyup
+    {...$$restProps}
   >
     <div>
       <slot />

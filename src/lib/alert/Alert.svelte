@@ -26,7 +26,10 @@
 </script>
 
 {#if !closed}
-  <div class="proi-alert-container {variant}">
+  <div
+    class="proi-alert-container {variant}"
+    {...$$restProps}
+  >
     <div class="proi-alert">
       <div class="proi-alert-icon">
         <svelte:component this={getFeedbackIcon({ variant })} />

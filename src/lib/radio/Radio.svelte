@@ -7,7 +7,10 @@
   export let error: boolean = false;
 </script>
 
-<label class="proi-radio-container">
+<label
+  class="proi-radio-container"
+  {...$$restProps}
+>
   <input
     tabindex="-1"
     type="radio"

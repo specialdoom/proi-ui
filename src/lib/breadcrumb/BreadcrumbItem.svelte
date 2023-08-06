@@ -9,6 +9,7 @@
 <li
   class="proi-breadcrumb-item"
   class:current={isCurrent}
+  {...$$restProps}
 >
   <Link
     {href}

@@ -13,6 +13,7 @@
   on:click
   on:keydown
   on:keyup
+  {...$$restProps}
 >
   <slot />
 </button>

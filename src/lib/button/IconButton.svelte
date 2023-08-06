@@ -15,6 +15,7 @@
   on:keyup
   on:keypress
   {disabled}
+  {...$$restProps}
 >
   <svelte:component this={icon} />
 </button>

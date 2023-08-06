@@ -15,6 +15,7 @@
   {disabled}
   on:change
   on:keydown
+  {...$$restProps}
 />
 
 <style>

@@ -1,6 +1,6 @@
 import { describe } from "vitest";
 import { render } from "../../../__tests__/tests.queries.js";
-import InlineFormItemSvelte from "../InlineFormItem.svelte";
+import InlineFormItem from "../InlineFormItem.svelte";
 import FakeFormItem from "./FakeFormItem.svelte";
 import {
   CONTROLS_CONTAINER,
@@ -15,7 +15,7 @@ describe("InlineFormItem", () => {
 
   describe("root element", () => {
     it("should be in the document", () => {
-      const { getBySelector } = render(InlineFormItemSvelte, {
+      const { getBySelector } = render(InlineFormItem, {
         props: {
           label
         }
@@ -25,7 +25,7 @@ describe("InlineFormItem", () => {
     });
 
     it("should contain `proi-form-item__inline` class", () => {
-      const { getBySelector } = render(InlineFormItemSvelte, {
+      const { getBySelector } = render(InlineFormItem, {
         props: {
           label
         }
@@ -37,7 +37,7 @@ describe("InlineFormItem", () => {
 
   describe("label element", () => {
     it("should be present", () => {
-      const { getBySelector } = render(InlineFormItemSvelte, {
+      const { getBySelector } = render(InlineFormItem, {
         props: {
           label
         }
@@ -47,7 +47,7 @@ describe("InlineFormItem", () => {
     });
 
     it("should contain `proi-form-item__inline-label` class", () => {
-      const { getBySelector } = render(InlineFormItemSvelte, {
+      const { getBySelector } = render(InlineFormItem, {
         props: {
           label
         }
@@ -59,7 +59,7 @@ describe("InlineFormItem", () => {
 
   describe("controls container element", () => {
     it("should be present", () => {
-      const { getBySelector } = render(InlineFormItemSvelte, {
+      const { getBySelector } = render(InlineFormItem, {
         props: {
           label
         }
@@ -69,7 +69,7 @@ describe("InlineFormItem", () => {
     });
 
     it("should contain `proi-form-item__inline-control` class", () => {
-      const { getBySelector } = render(InlineFormItemSvelte, {
+      const { getBySelector } = render(InlineFormItem, {
         props: {
           label
         }
@@ -83,7 +83,7 @@ describe("InlineFormItem", () => {
 
   describe("control item element", () => {
     it("should be present", () => {
-      const { getBySelector } = render(InlineFormItemSvelte, {
+      const { getBySelector } = render(InlineFormItem, {
         props: {
           label
         }
@@ -93,7 +93,7 @@ describe("InlineFormItem", () => {
     });
 
     it("should contain `proi-form-item__inline-control-item` class", () => {
-      const { getBySelector } = render(InlineFormItemSvelte, {
+      const { getBySelector } = render(InlineFormItem, {
         props: {
           label
         }
@@ -109,7 +109,7 @@ describe("InlineFormItem", () => {
     describe("is set", () => {
       describe("label element", () => {
         it("should contain `label` property as innerText", () => {
-          const { getBySelector } = render(InlineFormItemSvelte, {
+          const { getBySelector } = render(InlineFormItem, {
             props: {
               label
             }
@@ -127,7 +127,7 @@ describe("InlineFormItem", () => {
 
       describe("error element", () => {
         it("should be present", () => {
-          const { getBySelector } = render(InlineFormItemSvelte, {
+          const { getBySelector } = render(InlineFormItem, {
             props: {
               label,
               error
@@ -138,7 +138,7 @@ describe("InlineFormItem", () => {
         });
 
         it("should contain `proi-error` class", () => {
-          const { getBySelector } = render(InlineFormItemSvelte, {
+          const { getBySelector } = render(InlineFormItem, {
             props: {
               label,
               error
@@ -149,7 +149,7 @@ describe("InlineFormItem", () => {
         });
 
         it("should contain `error` property as innerText", () => {
-          const { getBySelector } = render(InlineFormItemSvelte, {
+          const { getBySelector } = render(InlineFormItem, {
             props: {
               label,
               error
@@ -164,7 +164,7 @@ describe("InlineFormItem", () => {
     describe("is not set", () => {
       describe("error element", () => {
         it("should not be present", () => {
-          const { getBySelector } = render(InlineFormItemSvelte, {
+          const { getBySelector } = render(InlineFormItem, {
             props: {
               label
             }
@@ -195,6 +195,23 @@ describe("InlineFormItem", () => {
           expect(getBySelector(CONTROL_ITEM)).toContainHTML(slot);
         });
       });
+    });
+  });
+
+  describe("when custom props are passed", () => {
+    const customProps = {
+      custom: "test"
+    };
+
+    it("should be passed as attributes to the root element", () => {
+      const { getBySelector } = render(InlineFormItem, {
+        props: {
+          label,
+          ...customProps
+        }
+      });
+
+      expect(getBySelector(ROOT)).toHaveAttribute("custom", "test");
     });
   });
 });

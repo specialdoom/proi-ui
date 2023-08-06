@@ -6,7 +6,10 @@
   export let error: boolean = false;
 </script>
 
-<label class="proi-checkbox-container">
+<label
+  class="proi-checkbox-container"
+  {...$$restProps}
+>
   <input
     tabindex="-1"
     type="checkbox"

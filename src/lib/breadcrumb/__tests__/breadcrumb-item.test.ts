@@ -103,4 +103,22 @@ describe("BreadcrumbItem", () => {
       });
     });
   });
+
+  describe("when custom props are passed", () => {
+    const customProps = {
+      custom: "test"
+    };
+
+    it("should be passed as attributes to the root element", () => {
+      const { getBySelector } = render(BreadcrumbItem, {
+        props: {
+          href,
+          text,
+          ...customProps
+        }
+      });
+
+      expect(getBySelector(ROOT)).toHaveAttribute("custom", "test");
+    });
+  });
 });

@@ -42,6 +42,7 @@
 <div
   class="proi-dropdown-container"
   bind:this={ref}
+  {...$$restProps}
 >
   <button
     class="proi-dropdown"

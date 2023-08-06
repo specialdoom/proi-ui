@@ -21,4 +21,18 @@ describe("Accordion", () => {
       expect(getBySelector(ROOT)).toHaveClass("proi-accordion");
     });
   });
+
+  describe("when custom props are passed", () => {
+    const customProps = {
+      custom: "test"
+    };
+
+    it("should be passed as attributes to the root element", () => {
+      const { getBySelector } = render(Accordion, {
+        props: customProps
+      });
+
+      expect(getBySelector(ROOT)).toHaveAttribute("custom", "test");
+    });
+  });
 });
