@@ -4,7 +4,8 @@
 
 {#if visible}
   <div
-    class="proi-backdrop"
+    role="presentation"
+    class:proi-backdrop={true}
     on:click
     on:keydown
     on:keyup
@@ -25,7 +26,9 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--pi-bg-inverse, #000000);
+    color: var(--pi-text, #000000);
+    opacity: 0.2;
     z-index: 9000;
   }
 </style>

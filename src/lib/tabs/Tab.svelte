@@ -36,11 +36,11 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    background: var(--bright);
     width: fit-content;
     min-width: fit-content;
     font-size: 16px;
-    color: var(--n600);
+    color: var(--pi-text, #000000);
+    background: var(--pi-bg, #ffffff);
     outline: unset;
     border: unset;
     padding: 6px 8px;
@@ -51,7 +51,7 @@
   }
 
   button:focus {
-    outline: 2px solid var(--g800);
+    outline: 2px solid var(--pi-focus, #1a6fb6);
     outline-offset: -2px;
   }
 
@@ -64,22 +64,22 @@
   }
 
   button:hover {
-    background: var(--g0);
+    background: var(--pi-bg-hover, #d6d6d6);
   }
 
   button:disabled {
-    color: var(--n200);
+    color: var(--pi-text-disabled, #adadad);
   }
 
   button:disabled:hover {
-    background: var(--bright);
+    background: var(--pi-bg, #ffffff);
   }
 
   button::after {
     content: "";
     position: absolute;
     height: 2px;
-    background: var(--g200);
+    background: var(--pi-bg-interactive-subtle, #62aae4);
     width: 100%;
     bottom: 0;
   }
@@ -89,7 +89,7 @@
     position: absolute;
     height: 4px;
     border-radius: 2px;
-    background: var(--g800);
+    background: var(--pi-bg-interactive, #3993dd);
     width: 100%;
     bottom: -1px;
   }

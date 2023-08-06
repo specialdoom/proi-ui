@@ -1,9 +1,0 @@
-.tag {
-  display: inline-flex;
-  align-items: center;
-  height: 15px;
-  min-width: 15px;
-  font-size: 12px;
-  color: var(--n0);
-  padding: 4px 8px;
-}

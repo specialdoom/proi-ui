@@ -7,6 +7,7 @@
   import Dot from "../Dot.svelte";
   import { defaultSource, variantDot } from "./dot.source.js";
   import type { DotVariant } from "../dot.types";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -14,7 +15,8 @@
   let variant: DotVariant = "pine";
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Dot"
   layout={{ type: "grid", width: "50%" }}
 >
@@ -67,4 +69,4 @@
       </Dot>
     </Hst.Variant>
   {/each}
-</Hst.Story>
+</ThemeStory>

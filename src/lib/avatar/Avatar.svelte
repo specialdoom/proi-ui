@@ -10,7 +10,7 @@
 </script>
 
 <span
-  class="proi-avatar data-display {variant}"
+  class="proi-avatar {variant}"
   {style}
 >
   {#if initials !== "" && image === ""}
@@ -29,38 +29,39 @@
     font-size: 18px;
   }
 
-  .data-display.pine {
-    background: var(--g600);
-    color: var(--n0);
+  .pine {
+    background: var(--pi-pine, #479a89);
+    color: var(--pi-pine-text, #ffffff);
   }
 
-  .data-display.flame {
-    background: var(--r600);
-    color: var(--n0);
+  .flame {
+    background: var(--pi-flame, #e35226);
+    color: var(--pi-flame-text, #ffffff);
   }
 
-  .data-display.neutral {
-    background: var(--n800);
-    color: var(--n0);
+  .neutral {
+    background: var(--pi-neutral, #000000);
+    color: var(--pi-neutral-text, #ffffff);
   }
 
-  .data-display.mikado {
-    background: var(--y600);
-    color: var(--n800);
+  .mikado {
+    background: var(--pi-mikado, #ffc71f);
+    color: var(--pi-mikado-text, #000000);
   }
 
-  .data-display.tufts {
-    background: var(--b600);
-    color: var(--n0);
+  .tufts {
+    background: var(--pi-tufts, #1a6fb6);
+    color: var(--pi-tufts-text, #ffffff);
   }
 
-  .data-display.vivid {
-    background: var(--p600);
-    color: var(--n0);
+  .vivid {
+    background: var(--pi-vivid, #873591);
+    color: var(--pi-vivid-text, #ffffff);
   }
 
-  .data-display.bright {
-    background: var(--n0);
-    color: var(--n800);
+  .bright {
+    background: var(--pi-inverse, #ffffff);
+    color: var(--pi-inverse-text, #000000);
+    border: 2px solid var(--pi-border-inverse, #000000);
   }
 </style>

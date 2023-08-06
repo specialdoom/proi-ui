@@ -34,19 +34,19 @@
   .proi-accordion-item {
     display: list-item;
     overflow: visible;
-    border-top: 1px solid var(--g0);
+    border-top: 1px solid var(--pi-border-interactive, #62aae4);
   }
 
   .proi-accordion-item:last-child {
-    border-bottom: 1px solid var(--g0);
+    border-bottom: 1px solid var(--pi-border-interactive, #62aae4);
   }
 
   .proi-accordion-item-disabled {
-    border-top: 1px solid var(--n0);
+    border-top: 1px solid var(--pi-border-disabled, #d6d6d6);
   }
 
   .proi-accordion-item-disabled:last-child {
-    border-bottom: 1px solid var(--n0);
+    border-bottom: 1px solid var(--pi-border-disabled, #d6d6d6);
   }
 
   .proi-accordion-item-control {
@@ -56,20 +56,19 @@
     align-items: center;
     justify-content: space-between;
     padding: 6px 12px;
-    background: transparent;
-    color: var(--n800);
+    background: var(--pi-bg, #ffffff);
+    color: var(--pi-text, #000000);
     margin: 0;
     cursor: pointer;
     font-size: 14px;
-    transition: background 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
   }
 
   .proi-accordion-item-control:hover {
-    background: var(--g0);
+    background: var(--pi-bg-hover, #d6d6d6);
   }
 
   .proi-accordion-item-control:focus {
-    outline: 2px solid var(--g800);
+    outline: 2px solid var(--pi-focus, #1a6fb6);
   }
 
   .proi-accordion-item-control :global(svg) {
@@ -77,22 +76,26 @@
     transform: rotate(-90deg);
   }
 
+  .proi-accordion-item-control :global(svg path) {
+    stroke: var(--pi-icon-inverse, #000000);
+  }
+
   .proi-accordion-item-control:disabled:hover {
     background: transparent;
   }
 
   .proi-accordion-item-control:disabled {
-    color: var(--n400);
+    color: var(--pi-text-disabled, #adadad);
   }
 
   .proi-accordion-item-control:disabled :global(svg path) {
-    stroke: var(--n400);
+    stroke: var(--pi-icon-disabled, #adadad);
   }
 
   .proi-accordion-item-content {
     font-size: 14px;
     padding: 6px 12px 20px;
-    color: var(--n800);
+    color: var(--pi-text, #000000);
   }
 
   .proi-accordion-item-active .proi-accordion-item-control :global(svg) {

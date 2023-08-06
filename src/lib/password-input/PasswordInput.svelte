@@ -16,7 +16,7 @@
     value = target.value;
   }
 
-  function onIconClick(e: Event) {
+  function onIconClick() {
     showPassword = !showPassword;
   }
 </script>
@@ -55,11 +55,12 @@
   }
 
   .proi-input {
-    border: 2px solid var(--n200);
+    border: 2px solid var(--pi-border-subtle, #5c5c5c);
     font-size: 14px;
     line-height: 20px;
-    color: var(--n800);
-    background: var(--bright);
+    color: var(--pi-text, #000000);
+    background: var(--pi-bg, #ffffff);
+    box-sizing: border-box;
     padding: 6px 12px;
     outline: unset;
     border-radius: 4px;
@@ -68,26 +69,21 @@
   }
 
   .proi-input::placeholder {
-    color: var(--n400);
+    color: var(--pi-text-placeholder, #adadad);
   }
 
   .proi-input:focus {
-    outline: 2px solid var(--g800);
-    outline-offset: -2px;
-  }
-
-  .proi-input:disabled {
-    background: var(--n200);
+    border: 2px solid var(--pi-focus, #1a6fb6);
   }
 
   .proi-input.disabled {
-    background: var(--n200);
-    color: var(--n800);
+    border: unset;
+    background: var(--pi-bg-disabled, #d6d6d6);
+    color: var(--pi-text-disabled, #adadad);
   }
 
   .proi-input.error {
-    border: 2px solid var(--r200);
-    background: var(--bright);
+    border: 2px solid var(--pi-border-error, #e35226);
   }
 
   .proi-input-container :global(.proi-icon-button) {

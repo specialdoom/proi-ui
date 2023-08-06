@@ -23,7 +23,7 @@
     width: 100%;
     display: flex;
     overflow: hidden;
-    background-color: var(--n0);
+    background-color: var(--pi-bg, #ffffff);
     border-radius: 4px;
     height: 8px;
   }
@@ -38,23 +38,23 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: var(--b400);
+    background-color: var(--pi-bg-interactive, #3993dd);
     transition: width 0.6s ease;
     border-radius: 4px;
   }
 
   .completed {
-    background-color: var(--g400);
+    background-color: var(--pi-pine, #479a89);
     transition: background-color 1s ease, width 0.6s ease;
   }
 
   .error {
-    background-color: var(--r400);
+    background-color: var(--pi-bg-error, #e35226);
     transition: background-color 1s ease, width 0.6s ease;
   }
 
   .indeterminate {
-    background-color: var(--b400);
+    background-color: var(--pi-bg-interactive, #3993dd);
     animation: indeterminateAnimation 1s infinite linear;
     transform-origin: 0% 50%;
   }

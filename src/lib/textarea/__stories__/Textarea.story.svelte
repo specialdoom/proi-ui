@@ -12,13 +12,15 @@
     withPlaceholder,
     withValue
   } from "./textarea.source.js";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 
   let value: string = "";
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Textarea"
   layout={{ type: "grid", width: "50%" }}
 >
@@ -84,4 +86,4 @@
       on:keydown={(e) => logEvent("change", e)}
     />
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

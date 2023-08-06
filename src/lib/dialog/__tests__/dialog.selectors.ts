@@ -1,7 +1,6 @@
 /** Component's element(s) selector(s) */
 export const ROOT = ":scope > div > div";
-export const DIALOG_CONTAINER = `${ROOT} > div > div`;
-export const DIALOG = `${DIALOG_CONTAINER} > div`;
+export const DIALOG = `${ROOT} > div`;
 export const DIALOG_HEADER = `${DIALOG} > .proi-dialog-header`;
 export const DIALOG_CLOSE_ICON = `${DIALOG_HEADER} > .proi-icon-button`;
 export const DIALOG_BODY = `${DIALOG} > .proi-dialog-body`;

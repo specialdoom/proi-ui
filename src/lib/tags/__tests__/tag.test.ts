@@ -14,12 +14,6 @@ describe("Tag", () => {
       expect(getBySelector(ROOT)).toBeInTheDocument();
     });
 
-    it("should contain `data-display` class", () => {
-      const { getBySelector } = render(Tag);
-
-      expect(getBySelector(ROOT)).toHaveClass("data-display");
-    });
-
     it("should contain `proi-tag` class", () => {
       const { getBySelector } = render(Tag);
 

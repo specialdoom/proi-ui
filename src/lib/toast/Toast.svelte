@@ -52,9 +52,10 @@
     margin: 12px;
     padding: 14px;
     width: 300px;
-    border-left: 4px solid var(--g800);
-    background: var(--bright);
+    border-left: 4px solid var(--pi-success, #d5ece7);
+    background: var(--pi-bg-static, #000000);
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    color: var(--pi-text-on-color, #000000);
   }
 
   .proi-toast {
@@ -69,7 +70,7 @@
   }
 
   .proi-toast-description {
-    color: var(--n800);
+    color: var(--pi-text-helper, #5c5c5c);
   }
 
   .proi-toast-title {
@@ -83,22 +84,18 @@
   }
 
   .success {
-    color: var(--g800);
-    border-color: var(--g800);
+    border-color: var(--pi-success-02, #357266);
   }
 
   .error {
-    color: var(--r800);
-    border-color: var(--r800);
+    border-color: var(--pi-error-02, #b53c17);
   }
 
   .info {
-    color: var(--b800);
-    border-color: var(--b800);
+    border-color: var(--pi-info-02, #1a6fb6);
   }
 
   .warning {
-    color: var(--y800);
-    border-color: var(--y800);
+    border-color: var(--pi-warning-02, #cd9400);
   }
 </style>

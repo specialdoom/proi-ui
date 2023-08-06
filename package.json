@@ -30,46 +30,46 @@
     "format": "prettier --write ./src/lib/**/*.{js,svelte,html,ts}",
     "lint": "eslint ./src/lib/**/*.{js,ts,svelte}",
     "prelint": "npm run format",
-    "story:build": "node ./src/tasks/copy-changelog.js && histoire build",
+    "story:build": "histoire build",
     "story:preview": "histoire preview",
     "prepare": "husky install",
     "release": "standard-version",
     "new:component": "node ./src/tasks/components/new.js"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.4.4",
-    "@commitlint/config-conventional": "^17.4.4",
-    "@histoire/plugin-svelte": "^0.16.1",
-    "@sveltejs/adapter-auto": "^2.0.0",
-    "@sveltejs/kit": "^1.15.7",
-    "@sveltejs/package": "^2.0.0",
-    "@sveltejs/vite-plugin-svelte": "^2.0.3",
-    "@testing-library/dom": "^9.0.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/svelte": "^3.2.2",
-    "@tsconfig/svelte": "^4.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.54.1",
-    "@typescript-eslint/parser": "^5.54.1",
-    "@vitest/coverage-c8": "^0.30.1",
-    "eslint": "^8.36.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "histoire": "^0.16.1",
-    "husky": "^8.0.3",
-    "jsdom": "^21.1.0",
-    "lint-staged": "^13.2.0",
-    "prettier": "^2.8.4",
-    "prettier-plugin-svelte": "^2.9.0",
-    "standard-version": "^9.5.0",
-    "svelte-check": "^3.1.2",
-    "svelte-jester": "^2.3.2",
-    "svelte-preprocess": "^5.0.1",
-    "tslib": "^2.5.0",
-    "typescript": "^5.0.4",
-    "vite": "^4.1.4",
-    "vitest": "^0.30.1"
+    "@commitlint/cli": "17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
+    "@histoire/plugin-svelte": "0.16.1",
+    "@sveltejs/adapter-auto": "2.1.0",
+    "@sveltejs/kit": "1.20.2",
+    "@sveltejs/package": "2.0.0",
+    "@sveltejs/vite-plugin-svelte": "2.4.1",
+    "@testing-library/dom": "9.3.0",
+    "@testing-library/jest-dom": "5.17.0",
+    "@testing-library/svelte": "4.0.3",
+    "@tsconfig/svelte": "4.0.1",
+    "@typescript-eslint/eslint-plugin": "5.59.9",
+    "@typescript-eslint/parser": "5.59.9",
+    "@vitest/coverage-c8": "0.32.0",
+    "eslint": "8.42.0",
+    "eslint-plugin-svelte3": "4.0.0",
+    "histoire": "0.16.2",
+    "husky": "8.0.3",
+    "jsdom": "22.1.0",
+    "lint-staged": "13.2.2",
+    "prettier": "2.8.8",
+    "prettier-plugin-svelte": "2.10.1",
+    "standard-version": "9.5.0",
+    "svelte-check": "3.4.3",
+    "svelte-jester": "2.3.2",
+    "svelte-preprocess": "5.0.4",
+    "tslib": "2.5.3",
+    "typescript": "5.1.3",
+    "vite": "4.4.8",
+    "vitest": "0.34.1"
   },
   "peerDependencies": {
-    "svelte": "^3.56.0"
+    "svelte": "3.56.0"
   },
   "lint-staged": {
     "*.{js,ts,svelte}": [
@@ -283,6 +283,11 @@
       "svelte": "./dist/link/Link.svelte",
       "default": "./dist/link/Link.svelte"
     },
+    "./Theme.svelte": {
+      "types": "./dist/theme/Theme.svelte.d.ts",
+      "svelte": "./dist/theme/Theme.svelte",
+      "default": "./dist/theme/Theme.svelte"
+    },
     "./variables.css": "./dist/variables.css"
   },
   "typesVersions": {
@@ -394,6 +399,12 @@
       ],
       "Link.svelte": [
         "./dist/link/Link.svelte.d.ts"
+      ],
+      "Theme.svelte": [
+        "./dist/theme/Theme.svelte.d.ts"
+      ],
+      "Switch.svelte": [
+        "./dist/switch/Switch.svelte.d.ts"
       ]
     }
   }

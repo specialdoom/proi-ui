@@ -9,6 +9,7 @@
     ongoing,
     small
   } from "./progress.source.js";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -18,7 +19,8 @@
   let isIndeterminate: boolean = false;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Progress"
   layout={{ type: "grid", width: "100%" }}
 >
@@ -96,4 +98,4 @@
       />
     </svelte:fragment>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

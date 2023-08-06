@@ -62,7 +62,7 @@
     <div class="proi-dropdown-options-wrapper">
       <div class="proi-dropdown-options">
         {#each options as option}
-          <div
+          <button
             class="proi-dropdown-option"
             class:selected={option.value === value}
             class:disabled={option.disabled}
@@ -72,7 +72,7 @@
             on:keypress
           >
             {option.label}
-          </div>
+          </button>
         {/each}
       </div>
     </div>
@@ -86,24 +86,24 @@
 
   .proi-dropdown {
     box-sizing: border-box;
-    background: var(--bright);
+    background: var(--pi-bg, #ffffff);
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 32px;
-    border: 2px solid var(--n200);
+    border: 2px solid var(--pi-border-subtle, #5c5c5c);
+    background: var(--pi-bg, #ffffff);
     padding: 6px 12px;
     border-radius: 4px;
     line-height: 20px;
     font-size: 14px;
     cursor: pointer;
-    color: var(--n800);
+    color: var(--pi-text, #000000);
   }
 
   .proi-dropdown:focus {
-    outline: 2px solid var(--g800);
-    outline-offset: -2px;
+    border: 2px solid var(--pi-focus, #1a6fb6);
   }
 
   .proi-dropdown :global(svg) {
@@ -111,38 +111,37 @@
     transition: all 0.11s cubic-bezier(0.2, 0, 0.38, 0.9);
   }
 
+  .proi-dropdown :global(svg path) {
+    stroke: var(--pi-bg-inverse);
+  }
+
   .proi-dropdown.opened :global(svg) {
     transform: rotate(-180deg);
   }
 
   .proi-dropdown.placeholder {
-    color: var(--n400);
+    color: var(--pi-text-placeholder, #adadad);
   }
 
   .proi-dropdown.error {
-    border-color: var(--r200);
-    color: var(--r600);
-    background: var(--bright);
-  }
-
-  .proi-dropdown.error.placeholder {
-    color: var(--r200);
+    border-color: var(--pi-border-error, #e35226);
+    color: var(--pi-text-error, #e35226);
   }
 
   .proi-dropdown.disabled {
-    background: var(--n0);
-    color: var(--n400);
-    border-color: var(--n0);
+    background: var(--pi-bg-disabled, #d6d6d6);
+    color: var(--pi-text-disabled, #adadad);
+    border: unset;
   }
 
   .proi-dropdown-options-wrapper {
     position: absolute;
     top: 36px;
-    border: 2px solid var(--n200);
+    border: 2px solid var(--pi-border-subtle, #5c5c5c);
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
-    background: var(--bright);
+    background: var(--pi-bg, #ffffff);
   }
 
   .proi-dropdown-options {
@@ -160,17 +159,15 @@
     font-size: 14px;
     cursor: pointer;
     font-weight: 500;
+    background: unset;
+    border: unset;
   }
 
   .proi-dropdown-option:hover {
-    background: var(--g200);
-  }
-
-  .proi-dropdown-option.selected {
-    background: var(--g0);
+    background: var(--pi-bg-hover, #d6d6d6);
   }
 
   .proi-dropdown-option.disabled {
-    background: var(--n200);
+    color: var(--pi-text-disabled, #adadad);
   }
 </style>

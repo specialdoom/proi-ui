@@ -3,6 +3,7 @@
   import Button from "../../button/Button.svelte";
   import Breadcrumb from "../Breadcrumb.svelte";
   import BreadcrumbItem from "../BreadcrumbItem.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -20,7 +21,8 @@
   }
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Breadcrumb"
   layout={{ type: "grid", width: "100%" }}
 >
@@ -66,4 +68,4 @@
       <Button on:click={handleBreadcrumbAdd}>Add breadcrumb</Button>
     </svelte:fragment>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

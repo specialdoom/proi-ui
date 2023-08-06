@@ -24,7 +24,6 @@
     min-width: 12px;
     padding: 0 4px;
     box-sizing: border-box;
-    background: red;
     border-radius: 6px;
     line-height: 12px;
     font-size: 8px;
@@ -37,37 +36,39 @@
   }
 
   .pine {
-    background: var(--g600);
-    color: var(--n0);
+    background: var(--pi-pine, #479a89);
+    color: var(--pi-pine-text, #ffffff);
   }
 
   .flame {
-    background: var(--r600);
-    color: var(--n0);
+    background: var(--pi-flame, #e35226);
+    color: var(--pi-flame-text, #ffffff);
   }
 
   .neutral {
-    background: var(--n800);
-    color: var(--n0);
+    background: var(--pi-neutral, #000000);
+    color: var(--pi-neutral-text, #ffffff);
   }
 
   .mikado {
-    background: var(--y600);
-    color: var(--n800);
+    background: var(--pi-mikado, #ffc71f);
+    color: var(--pi-mikado-text, #000000);
   }
 
   .tufts {
-    background: var(--b600);
-    color: var(--n0);
+    background: var(--pi-tufts, #1a6fb6);
+    color: var(--pi-tufts-text, #ffffff);
   }
 
   .vivid {
-    background: var(--p600);
-    color: var(--n0);
+    background: var(--pi-vivid, #873591);
+    color: var(--pi-vivid-text, #ffffff);
   }
 
   .bright {
-    background: var(--n0);
-    color: var(--n800);
+    line-height: 8px;
+    background: var(--pi-bg, #ffffff);
+    color: var(--pi-text, #000000);
+    border: 2px solid var(--pi-border-inverse, #000000);
   }
 </style>

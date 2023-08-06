@@ -8,11 +8,13 @@
     usageWithButtonComponentSource,
     usageWithTagComponentSource
   } from "./divider.source.js";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Divider"
   layout={{ type: "grid", width: "100%" }}
 >
@@ -54,4 +56,4 @@
       <Pill label="Third tag" />
     </div>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

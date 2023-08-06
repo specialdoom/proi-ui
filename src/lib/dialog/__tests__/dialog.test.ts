@@ -5,7 +5,6 @@ import {
   DIALOG_BODY,
   DIALOG_CANCEL_BUTTON,
   DIALOG_CLOSE_ICON,
-  DIALOG_CONTAINER,
   DIALOG_FOOTER,
   DIALOG_HEADER,
   DIALOG_OK_BUTTON,
@@ -30,28 +29,6 @@ describe("Dialog", () => {
           expect(getBySelector(ROOT)).toBeInTheDocument();
         });
 
-        it("should contain `proi-backdrop` class", () => {
-          const { getBySelector } = render(Dialog, {
-            props: {
-              visible
-            }
-          });
-
-          expect(getBySelector(ROOT)).toHaveClass("proi-backdrop");
-        });
-      });
-
-      describe("dialog container element", () => {
-        it("should be in the document", () => {
-          const { getBySelector } = render(Dialog, {
-            props: {
-              visible
-            }
-          });
-
-          expect(getBySelector(DIALOG_CONTAINER)).toBeInTheDocument();
-        });
-
         it("should contain `proi-dialog-container` class", () => {
           const { getBySelector } = render(Dialog, {
             props: {
@@ -59,7 +36,7 @@ describe("Dialog", () => {
             }
           });
 
-          expect(getBySelector(DIALOG_CONTAINER)).toHaveClass("proi-dialog-container");
+          expect(getBySelector(ROOT)).toHaveClass("proi-dialog-container");
         });
       });
 

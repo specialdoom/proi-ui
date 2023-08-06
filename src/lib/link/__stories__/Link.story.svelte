@@ -1,11 +1,13 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
   import Link from "../Link.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Link"
   layout={{ type: "grid", width: "100%" }}
 >
@@ -17,4 +19,4 @@
       Go here
     </Link>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

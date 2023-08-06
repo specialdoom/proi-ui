@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
-  import Tabs from "./index.js";
+  import Tabs from "../index.js";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -11,7 +12,8 @@
   }));
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Tabs"
   layout={{ type: "grid", width: "100%" }}
 >
@@ -72,4 +74,4 @@
       {/each}
     </Tabs>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

@@ -12,6 +12,7 @@
     withLabelAndDescription,
     withLabelDescriptionAndError
   } from "./form-item.source.js";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -20,7 +21,8 @@
   let error: string = "Something went wrong...";
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="FormItem"
   layout={{ type: "grid", width: "100%" }}
 >
@@ -158,4 +160,4 @@
       />
     </svelte:fragment>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

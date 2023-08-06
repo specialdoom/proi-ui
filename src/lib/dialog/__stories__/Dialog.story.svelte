@@ -10,6 +10,7 @@
     withoutActions,
     withTitle
   } from "./dialog.source.js";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -19,7 +20,10 @@
   let showActions: boolean = false;
 </script>
 
-<Hst.Story title="Dialog">
+<ThemeStory
+  {Hst}
+  title="Dialog"
+>
   <Hst.Variant
     title="Default"
     source={defaultSource}
@@ -109,4 +113,4 @@
       <div>Some dialog content</div>
     </Dialog>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

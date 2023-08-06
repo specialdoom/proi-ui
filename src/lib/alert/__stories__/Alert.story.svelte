@@ -10,6 +10,7 @@
     variantAlertSource,
     withDescriptionSource
   } from "./alert.source.js";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -19,7 +20,8 @@
   let closable: boolean = false;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Alert"
   layout={{ type: "grid", width: "100%" }}
 >
@@ -134,4 +136,4 @@
       Description
     </Alert>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

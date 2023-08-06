@@ -13,6 +13,7 @@
   import { buttonVariants } from "../../utils/variants.js";
   import { capitalizeFirstLetter } from "../../utils/string.js";
   import type { ButtonVariant } from "../button.types";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
   let variant: ButtonVariant = "primary";
@@ -20,9 +21,10 @@
   let label: string = "Click me";
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Button"
-  layout={{ type: "grid", width: "50%" }}
+  layout={{ type: "grid", width: "25%" }}
 >
   <Hst.Variant
     title="Default"
@@ -89,7 +91,7 @@
     </Button>
   </Hst.Variant>
 
-  {#each buttonVariants as variant}
+  {#each buttonVariants as variant (variant)}
     <Hst.Variant
       title="{capitalizeFirstLetter(variant)} button"
       source={variantButton(variant)}
@@ -97,4 +99,4 @@
       <Button {variant}>Click me</Button>
     </Hst.Variant>
   {/each}
-</Hst.Story>
+</ThemeStory>

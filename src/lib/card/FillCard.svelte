@@ -21,7 +21,7 @@
 </script>
 
 {#if !closed}
-  <div class="proi-card data-display {variant}">
+  <div class="proi-card {variant}">
     {#if title}
       <h2
         class="proi-card-title"
@@ -51,71 +51,61 @@
     padding: 20px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    background: var(--bright);
     width: 250px;
     gap: 8px;
   }
 
   .proi-card-title {
-    position: relative;
     display: inline-flex;
+    align-items: center;
     font-size: 16px;
     margin: 0;
-    padding-right: 24px;
+    padding-bottom: 8px;
   }
 
   .proi-card-description {
     font-size: 12px;
   }
 
-  .data-display.pine {
-    background: var(--g600);
-    color: var(--n0);
+  .pine {
+    background: var(--pi-pine, #479a89);
+    color: var(--pi-text-on-color-inverse, #000000);
   }
 
-  .data-display.flame {
-    background: var(--r600);
-    color: var(--n0);
+  .flame {
+    background: var(--pi-flame, #e35226);
+    color: var(--pi-text-on-color-inverse, #000000);
   }
 
-  .data-display.neutral {
-    background: var(--n800);
-    color: var(--n0);
+  .neutral {
+    background: var(--pi-neutral, #000000);
+    color: var(--pi-text-inverse, #ffffff);
+    border: var(--pi-border-inverse, #000000);
   }
 
-  .data-display.mikado {
-    background: var(--y600);
-    color: var(--n800);
+  .mikado {
+    background: var(--pi-mikado, #ffc71f);
+    color: var(--pi-text-on-color, #000000);
   }
 
-  .data-display.tufts {
-    background: var(--b600);
-    color: var(--n0);
+  .tufts {
+    background: var(--pi-tufts, #1a6fb6);
+    color: var(--pi-text-on-color-inverse, #000000);
   }
 
-  .data-display.vivid {
-    background: var(--p600);
-    color: var(--n0);
+  .vivid {
+    background: var(--pi-vivid, #873591);
+    color: var(--pi-text-on-color-inverse, #000000);
   }
 
-  .data-display.bright {
-    background: var(--n0);
-    color: var(--n800);
+  .bright {
+    background: var(--pi-bg, #ffffff);
+    color: var(--pi-text, #000000);
+    border: 2px solid var(--pi-border-inverse, #000000);
   }
 
-  /* Close button */
-  .proi-card-title :global(.proi-icon-button) {
-    position: absolute;
-    right: 0;
-    top: 2px;
-  }
-
-  .proi-card-title :global(.proi-icon-button svg path) {
-    stroke: var(--n0);
-  }
-
-  .data-display.bright :global(.proi-icon-button svg path),
-  .data-display.mikado :global(.proi-icon-button svg path) {
-    stroke: var(--n800);
+  .bright :global(.proi-icon-button svg path),
+  .mikado :global(.proi-icon-button svg path) {
+    stroke: var(--pi-icon-inverse, #000000);
   }
 </style>

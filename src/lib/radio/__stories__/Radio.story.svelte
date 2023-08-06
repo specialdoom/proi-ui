@@ -1,20 +1,20 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
-  import Checkbox from "../../checkbox/Checkbox.svelte";
   import Radio from "../Radio.svelte";
   import { bindGroup, checked, defaultSource, disabled, error } from "./radio.source.js";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 
   let value: number = 0;
 
   let label: string = "";
-  let isChecked: boolean = false;
   let hasError: boolean = false;
   let isDisabled: boolean = false;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Radio"
   layout={{ type: "grid", width: "50%" }}
 >
@@ -108,4 +108,4 @@
       />
     </svelte:fragment>
   </Hst.Variant>
-</Hst.Story>
+</ThemeStory>

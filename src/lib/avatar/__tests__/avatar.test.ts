@@ -20,12 +20,6 @@ describe("Avatar", () => {
       expect(getBySelector(ROOT)).toHaveClass("proi-avatar");
     });
 
-    it("should contain `data-display` class", () => {
-      const { getBySelector } = render(Avatar);
-
-      expect(getBySelector(ROOT)).toHaveClass("data-display");
-    });
-
     it("should contain `pine` class", () => {
       const { getBySelector } = render(Avatar);
 

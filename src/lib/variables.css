@@ -1,13 +1,10 @@
 * {
-    /* bright */
-    --bright: #ffffff;
-
     /* extended neutral */
-    --n800: #223843;
-    --n600: #55666F;
-    --n400: #89959B;
-    --n200: #BCC3C7;
-    --n0: #EFF1F3;
+    --n800: #000000;
+    --n600: #5C5C5C;
+    --n400: #ADADAD;
+    --n200: #D6D6D6;
+    --n0: #FFFFFF;
 
     /* extended green */
     --g800: #357266;
