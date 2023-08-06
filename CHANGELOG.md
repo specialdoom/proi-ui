@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 4.1.3 (2023-08-06)
 
+### 🚀 Features
+
+- feat: add theming ([#103](https://github.com/specialdoom/proi-ui/issues/103))
+
 ### 4.1.2 (2023-05-01)
 
 
