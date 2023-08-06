@@ -38,7 +38,7 @@
     align-items: center;
     cursor: pointer;
     gap: 8px;
-    color: var(--pi-text);
+    color: var(--pi-text, #000000);
   }
 
   .proi-switch {
@@ -48,62 +48,58 @@
     width: 32px;
     display: inline-flex;
     align-items: center;
-    border: 2px solid var(--pi-border-inverse);
+    border: 2px solid var(--pi-border-inverse, #000000);
     border-radius: 16px;
     padding: 0 2px;
   }
 
   .proi-switch:focus {
-    outline: 2px solid var(--pi-focus);
+    outline: 2px solid var(--pi-focus, #1a6fb6);
     outline-offset: 2px;
   }
 
   .proi-switch.disabled {
     outline: unset;
-    color: var(--pi-text-disabled);
-    border-color: var(--pi-border-disabled);
-  }
-
-  .proi-switch.disabled:not(.checked) .proi-switch-bullet {
-    background: var(--pi-switch-bullet-disabled);
+    color: var(--pi-text-disabled, #adadad);
+    border-color: var(--pi-border-disabled, #d6d6d6);
   }
 
   .proi-switch.disabled.checked {
-    background: var(--pi-switch-disabled);
+    background: var(--pi-bg-disabled, #adadad);
   }
 
   .proi-switch.checked .proi-switch-bullet {
-    background: var(--pi-switch-bullet-checked);
+    background: var(--pi-bg-static, #ffffff);
     transform: translateX(14px);
   }
 
   .proi-switch.checked {
     border: unset;
-    background: var(--pi-bg-interactive);
+    background: var(--pi-bg-interactive, #3993dd);
   }
 
   .proi-switch.error {
-    border: 2px solid var(--pi-border-error);
+    border: 2px solid var(--pi-border-error, #e35226);
   }
 
   .proi-switch.error:not(.checked) .proi-switch-bullet {
-    background: var(--pi-bg-error);
+    background: var(--pi-bg-error, #e35226);
   }
 
   .proi-switch.error.checked {
-    background: var(--pi-bg-error);
+    background: var(--pi-bg-error, #e35226);
   }
 
   .proi-switch-bullet {
     height: 10px;
     width: 10px;
-    background: var(--pi-bg-inverse);
+    background: var(--pi-bg-inverse, #000000);
     border-radius: 6px;
     transition: 0.4s;
   }
 
   .proi-switch-bullet.checked {
-    background: var(--pi-bg);
+    background: var(--pi-bg, #ffffff);
   }
 
   .proi-switch-container {
@@ -120,11 +116,11 @@
   }
 
   .proi-switch.disabled ~ .proi-switch-label {
-    color: var(--pi-text-disabled);
+    color: var(--pi-text-disabled, #adadad);
   }
 
   .proi-switch.error ~ .proi-switch-label {
-    color: var(--pi-text-error);
+    color: var(--pi-text-error, #e35226);
   }
 
   .proi-switch-label {

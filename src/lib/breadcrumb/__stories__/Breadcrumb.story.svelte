@@ -3,7 +3,7 @@
   import Button from "../../button/Button.svelte";
   import Breadcrumb from "../Breadcrumb.svelte";
   import BreadcrumbItem from "../BreadcrumbItem.svelte";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 

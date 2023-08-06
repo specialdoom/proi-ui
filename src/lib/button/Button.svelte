@@ -42,87 +42,83 @@
   }
 
   .proi-button:focus {
-    outline: 2px solid var(--pi-focus);
+    outline: 2px solid var(--pi-focus, #1a6fb6);
   }
 
   .proi-button:disabled {
-    color: var(--pi-text-disabled);
-    background: var(--pi-bg-disabled);
+    color: var(--pi-text-disabled, #adadad);
+    background: var(--pi-bg-disabled, #d6d6d6);
   }
 
   .proi-button:disabled:hover {
-    background: var(--pi-bg-disabled);
+    background: var(--pi-bg-disabled, #d6d6d6);
   }
 
   .primary {
-    color: var(--pi-button-primary-text);
-    background: var(--pi-button-primary);
+    color: var(--pi-button-primary-text, #ffffff);
+    background: var(--pi-button-primary, #3993dd);
   }
 
   .primary:hover {
-    background: var(--pi-button-primary-hover);
+    background: var(--pi-button-primary-hover, #1a6fb6);
   }
 
   .primary:active {
-    background: var(--pi-button-primary-active);
+    background: var(--pi-button-primary-active, #62aae4);
   }
 
   .outline {
-    color: var(--pi-button-outline-text);
-    background: var(--pi-button-outline);
-    border: 2px solid var(--pi-border-inverse);
+    color: var(--pi-button-outline-text, #000000);
+    background: var(--pi-button-outline, inherit);
+    border: 2px solid var(--pi-border-inverse, #000000);
   }
 
   .outline:active {
-    background: var(--pi-button-outline-active);
-    color: var(--pi-button-outline-active-text);
+    background: var(--pi-button-outline-active, #000000);
+    color: var(--pi-button-outline-active-text, #ffffff);
   }
 
   .outline:disabled {
-    color: var(--pi-text-disabled);
-    background: var(--pi-bg);
-    border-color: var(--pi-border-disabled);
+    color: var(--pi-text-disabled, #adadad);
+    background: var(--pi-bg, #ffffff);
+    border-color: var(--pi-border-disabled, #d6d6d6);
   }
 
   .secondary {
-    color: var(--pi-button-secondary-text);
-    background: var(--pi-button-secondary);
+    color: var(--pi-button-secondary-text, #ffffff);
+    background: var(--pi-button-secondary, #873591);
   }
 
   .secondary:hover {
-    background: var(--pi-button-secondary-hover);
+    background: var(--pi-button-secondary-hover, #690375);
   }
 
   .secondary:active {
-    background: var(--pi-button-secondary-active);
+    background: var(--pi-button-secondary-active, #a568ac);
   }
 
   .danger {
-    color: var(--pi-button-danger-text);
-    background: var(--pi-button-danger);
+    color: var(--pi-button-danger-text, #ffffff);
+    background: var(--pi-button-danger, #e35226);
   }
 
   .danger:hover {
-    background: var(--pi-button-danger-hover);
+    background: var(--pi-button-danger-hover, #b53c17);
   }
 
   .danger:active {
-    background: var(--pi-button-danger-active);
+    background: var(--pi-button-danger-active, #e86f4a);
   }
 
   .ghost {
-    color: var(--pi-text);
+    color: var(--pi-text, #000000);
     border: 2px solid transparent;
     background: transparent;
   }
 
-  .ghost:hover {
-    border: 2px solid var(--pi-border-inverse);
-  }
-
   .ghost:disabled {
     background: transparent;
-    color: var(--pi-text-disabled);
+    color: var(--pi-text-disabled, #adadad);
   }
 
   .ghost:disabled:hover {
@@ -130,7 +126,7 @@
   }
 
   .link {
-    color: var(--pi-link-text);
+    color: var(--pi-link-text, #3993dd);
     background: transparent;
   }
 
@@ -139,7 +135,7 @@
   }
 
   .link:disabled {
-    color: var(--pi-text-disabled);
+    color: var(--pi-text-disabled, #adadad);
     background: unset;
     text-decoration: unset;
   }

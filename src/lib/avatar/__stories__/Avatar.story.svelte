@@ -6,7 +6,7 @@
 
   import * as source from "./avatar.source.js";
   import type { AvatarVariant } from "../avatar.types.js";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   const { withInitialsSource, withImageSource, defaultAvatarsSource } = source;
 

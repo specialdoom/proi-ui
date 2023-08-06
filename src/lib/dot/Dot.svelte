@@ -36,39 +36,39 @@
   }
 
   .pine {
-    background: var(--pi-pine);
-    color: var(--pi-pine-text);
+    background: var(--pi-pine, #479a89);
+    color: var(--pi-pine-text, #ffffff);
   }
 
   .flame {
-    background: var(--pi-flame);
-    color: var(--pi-flame-text);
+    background: var(--pi-flame, #e35226);
+    color: var(--pi-flame-text, #ffffff);
   }
 
   .neutral {
-    background: var(--pi-neutral);
-    color: var(--pi-neutral-text);
+    background: var(--pi-neutral, #000000);
+    color: var(--pi-neutral-text, #ffffff);
   }
 
   .mikado {
-    background: var(--pi-mikado);
-    color: var(--pi-mikado-text);
+    background: var(--pi-mikado, #ffc71f);
+    color: var(--pi-mikado-text, #000000);
   }
 
   .tufts {
-    background: var(--pi-tufts);
-    color: var(--pi-tufts-text);
+    background: var(--pi-tufts, #1a6fb6);
+    color: var(--pi-tufts-text, #ffffff);
   }
 
   .vivid {
-    background: var(--pi-vivid);
-    color: var(--pi-vivid-text);
+    background: var(--pi-vivid, #873591);
+    color: var(--pi-vivid-text, #ffffff);
   }
 
   .bright {
     line-height: 8px;
-    background: var(--pi-bg);
-    color: var(--pi-text);
-    border: 2px solid var(--pi-border-inverse);
+    background: var(--pi-bg, #ffffff);
+    color: var(--pi-text, #000000);
+    border: 2px solid var(--pi-border-inverse, #000000);
   }
 </style>

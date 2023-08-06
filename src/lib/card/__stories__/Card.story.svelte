@@ -13,7 +13,7 @@
   import Button from "../../button/Button.svelte";
   import Divider from "../../divider/Divider.svelte";
   import Link from "../../link/Link.svelte";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 

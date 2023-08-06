@@ -34,19 +34,19 @@
   .proi-accordion-item {
     display: list-item;
     overflow: visible;
-    border-top: 1px solid var(--pi-border-interactive);
+    border-top: 1px solid var(--pi-border-interactive, #62aae4);
   }
 
   .proi-accordion-item:last-child {
-    border-bottom: 1px solid var(--pi-border-interactive);
+    border-bottom: 1px solid var(--pi-border-interactive, #62aae4);
   }
 
   .proi-accordion-item-disabled {
-    border-top: 1px solid var(--pi-border-disabled);
+    border-top: 1px solid var(--pi-border-disabled, #d6d6d6);
   }
 
   .proi-accordion-item-disabled:last-child {
-    border-bottom: 1px solid var(--pi-border-disabled);
+    border-bottom: 1px solid var(--pi-border-disabled, #d6d6d6);
   }
 
   .proi-accordion-item-control {
@@ -56,19 +56,19 @@
     align-items: center;
     justify-content: space-between;
     padding: 6px 12px;
-    background: var(--pi-bg);
-    color: var(--pi-text);
+    background: var(--pi-bg, #ffffff);
+    color: var(--pi-text, #000000);
     margin: 0;
     cursor: pointer;
     font-size: 14px;
   }
 
   .proi-accordion-item-control:hover {
-    background: var(--pi-bg-hover);
+    background: var(--pi-bg-hover, #d6d6d6);
   }
 
   .proi-accordion-item-control:focus {
-    outline: 2px solid var(--pi-focus);
+    outline: 2px solid var(--pi-focus, #1a6fb6);
   }
 
   .proi-accordion-item-control :global(svg) {
@@ -77,7 +77,7 @@
   }
 
   .proi-accordion-item-control :global(svg path) {
-    stroke: var(--pi-icon);
+    stroke: var(--pi-icon-inverse, #000000);
   }
 
   .proi-accordion-item-control:disabled:hover {
@@ -85,17 +85,17 @@
   }
 
   .proi-accordion-item-control:disabled {
-    color: var(--pi-text-disabled);
+    color: var(--pi-text-disabled, #adadad);
   }
 
   .proi-accordion-item-control:disabled :global(svg path) {
-    stroke: var(--pi-icon-disabled);
+    stroke: var(--pi-icon-disabled, #adadad);
   }
 
   .proi-accordion-item-content {
     font-size: 14px;
     padding: 6px 12px 20px;
-    color: var(--pi-text);
+    color: var(--pi-text, #000000);
   }
 
   .proi-accordion-item-active .proi-accordion-item-control :global(svg) {

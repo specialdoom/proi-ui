@@ -38,6 +38,7 @@ export default defineConfig({
     },
     logoHref: "https://github.com/specialdoom/proi-ui",
     favicon: "favicon.ico",
+    defaultColorScheme: "light",
     colors: {
       gray: {
         50: "#FFFFFF",
@@ -55,16 +56,16 @@ export default defineConfig({
         950: "#000000",
       },
       primary: {
-        50: "#D5ECE7",
-        100: "#D5ECE7",
-        200: "#9DD2C7",
-        300: "#9DD2C7",
-        400: "#73BFB0",
-        500: "#73BFB0",
-        600: "#479A89",
-        700: "#479A89",
-        800: "#357266",
-        900: "#357266",
+        50: "#A8D0F0",
+        100: "#A8D0F0",
+        200: "#85BDEA",
+        300: "#85BDEA",
+        400: "#62AAE4",
+        500: "#62AAE4",
+        600: "#3993DD",
+        700: "#3993DD",
+        800: "#1A6FB6",
+        900: "#1A6FB6",
       }
     }
   }

@@ -1,6 +1,5 @@
 <script lang="ts">
   import CloseIcon from "../icons/CloseIcon.svelte";
-  import Backdrop from "../backdrop/Backdrop.svelte";
   import Button from "../button/Button.svelte";
   import { createEventDispatcher } from "svelte";
   import IconButton from "../button/IconButton.svelte";
@@ -75,13 +74,13 @@
     flex-direction: column;
     max-height: 80%;
     gap: 32px;
-    background: var(--pi-bg-static);
+    background: var(--pi-bg-static, #000000);
     min-width: 400px;
     max-width: 600px;
     padding: 32px;
     border-radius: 8px;
-    box-shadow: var(--pi-dialog-box-shadow);
-    color: var(--pi-text-on-color);
+    box-shadow: var(--pi-box-shadow, rgba(0, 0, 0, 0.16) 0px 1px 4px);
+    color: var(--pi-text-on-color, #000000);
   }
 
   .proi-dialog-header {

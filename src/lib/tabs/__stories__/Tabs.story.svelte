@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
   import Tabs from "../index.js";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 

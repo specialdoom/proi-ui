@@ -4,7 +4,7 @@
   import ToastProvider from "../ToastProvider.svelte";
   import toaster from "../toaster.js";
   import Button from "../../button/Button.svelte";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 

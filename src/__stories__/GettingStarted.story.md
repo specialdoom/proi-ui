@@ -17,47 +17,25 @@ yarn add --save-dev @specialdoom/proi-ui
 
 ---
 
-# Use styling
+# Styling and theming (optional)
 
-Inside your main app file or inside your `global.css` file import `variables.css` file for
-styling.
+Import the `Theme` component from `@specialdoom/proi-ui`:
 
-```css
-@import "@specialdoom/proi-ui/variables.css";
-```
-
-```javascript
-import "@specialdoom/proi-ui/variables.css";
-```
-
----
-
-# Theming (optional)
-
-We allow you to customize our design tokens to satisfy UI diversity.
-
-Customize in `css` file
-
-```css
-@import "@specialdoom/proi-ui/variables.css";
-@import "override-variables.css";
-```
-
-Customize in `js` file
-
-```javascript
-import "@specialdoom/proi-ui/variables.css";
-import "override-variables.css";
-```
-
-# Enjoy and have fun
-
-Basic usage
-
-```svelte
+```html
 <script>
+  import Theme from "@specialdoom/proi-ui/Theme.svelte";
   import Button from "@specialdoom/proi-ui/Button.svelte";
 </script>
 
-<Button>Click me</Button>
+<Theme>
+  <button>Click me</button>
+</Theme>
 ```
+
+Right now there are two default options for theming: `dark` and `light`. If you don't want
+to use theming, you can use the components as they are with the provided fallback
+variables values representing `light` version.
+
+---
+
+# Enjoy and have fun!

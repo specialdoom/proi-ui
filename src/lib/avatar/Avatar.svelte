@@ -10,7 +10,7 @@
 </script>
 
 <span
-  class="proi-avatar data-display {variant}"
+  class="proi-avatar {variant}"
   {style}
 >
   {#if initials !== "" && image === ""}
@@ -29,40 +29,39 @@
     font-size: 18px;
   }
 
-  .data-display.pine {
-    background: var(--pi-pine);
-    color: var(--pi-pine-text);
+  .pine {
+    background: var(--pi-pine, #479a89);
+    color: var(--pi-pine-text, #ffffff);
   }
 
-  .data-display.flame {
-    background: var(--pi-flame);
-    color: var(--pi-flame-text);
+  .flame {
+    background: var(--pi-flame, #e35226);
+    color: var(--pi-flame-text, #ffffff);
   }
 
-  .data-display.neutral {
-    background: var(--pi-neutral);
-    color: var(--pi-neutral-text);
-    border: var(--pi-neutral-border);
+  .neutral {
+    background: var(--pi-neutral, #000000);
+    color: var(--pi-neutral-text, #ffffff);
   }
 
-  .data-display.mikado {
-    background: var(--pi-mikado);
-    color: var(--pi-mikado-text);
+  .mikado {
+    background: var(--pi-mikado, #ffc71f);
+    color: var(--pi-mikado-text, #000000);
   }
 
-  .data-display.tufts {
-    background: var(--pi-tufts);
-    color: var(--pi-tufts-text);
+  .tufts {
+    background: var(--pi-tufts, #1a6fb6);
+    color: var(--pi-tufts-text, #ffffff);
   }
 
-  .data-display.vivid {
-    background: var(--pi-vivid);
-    color: var(--pi-vivid-text);
+  .vivid {
+    background: var(--pi-vivid, #873591);
+    color: var(--pi-vivid-text, #ffffff);
   }
 
-  .data-display.bright {
-    background: var(--pi-inverse);
-    color: var(--pi-inverse-text);
-    border: 2px solid var(--pi-border-inverse);
+  .bright {
+    background: var(--pi-inverse, #ffffff);
+    color: var(--pi-inverse-text, #000000);
+    border: 2px solid var(--pi-border-inverse, #000000);
   }
 </style>

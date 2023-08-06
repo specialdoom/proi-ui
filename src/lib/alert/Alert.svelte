@@ -73,7 +73,7 @@
   }
 
   .proi-alert-description {
-    color: var(--pi-text-on-color);
+    color: var(--pi-text-on-color, #000000);
   }
 
   .proi-alert-title {
@@ -95,22 +95,22 @@
   }
 
   .success {
-    background: var(--pi-success);
-    color: var(--pi-success-text);
+    background: var(--pi-success, #d5ece7);
+    color: var(--pi-success-text, #357266);
   }
 
   .error {
-    background: var(--pi-error);
-    color: var(--pi-error-text);
+    background: var(--pi-error, #ffc1ae);
+    color: var(--pi-error-text, #b53c17);
   }
 
   .info {
-    background: var(--pi-info);
-    color: var(--pi-info-text);
+    background: var(--pi-info, #a8d0f0);
+    color: var(--pi-info-text, #1a6fb6);
   }
 
   .warning {
-    background: var(--pi-warning);
-    color: var(--pi-warning-text);
+    background: var(--pi-warning, #ffe699);
+    color: var(--pi-warning-text, #cd9400);
   }
 </style>

@@ -12,7 +12,7 @@
     withLabelAndDescription,
     withLabelDescriptionAndError
   } from "./form-item.source.js";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 

@@ -4,7 +4,7 @@
   import { capitalizeFirstLetter } from "../../../utils/string.js";
   import Badge from "../Badge.svelte";
   import { defaultSource, variantBadge, withLabel } from "./badge.source.js";
-  import ThemeStory from "../../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 </script>

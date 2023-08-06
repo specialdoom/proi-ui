@@ -4,7 +4,7 @@
   import { capitalizeFirstLetter } from "../../../utils/string.js";
   import Pill from "../Pill.svelte";
   import { defaultSource, variantPill, withLabel } from "./pill.source.js";
-  import ThemeStory from "../../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 </script>

@@ -4,7 +4,7 @@
 </script>
 
 {#if visible}
-  <div
+  <button
     on:click
     on:keydown
     on:keyup
@@ -44,13 +44,16 @@
         />
       </svg>
     {/if}
-  </div>
+  </button>
 {/if}
 
 <style>
-  div {
+  button {
     padding: 0 8px;
     cursor: pointer;
     padding-bottom: 4px;
+    outline: unset;
+    border: unset;
+    background: transparent;
   }
 </style>

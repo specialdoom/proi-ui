@@ -9,7 +9,7 @@
     error,
     withLabel
   } from "./switch.source.js";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 </script>

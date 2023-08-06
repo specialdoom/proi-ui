@@ -1,5 +1,4 @@
 * {
-
     /* extended neutral */
     --n800: #000000;
     --n600: #5C5C5C;
@@ -41,17 +40,4 @@
     --p400: #A568AC;
     --p200: #C39AC8;
     --p0: #E1CDE3;
-
-    /* design tokens */
-    --pi-background: var(--bright);
-    --pi-text: var(--n800);
-
-    /* component tokens */
-    /* Accordion component */
-    --pi-accordion-bg: var(--bright);
-    --pi-accordion-bg-hover: var(--g0);
-    --pi-accordion-color: var(--n800);
-    --pi-accordion-border-color: var(--g400);
-    --pi-accordion-focus-border-color: var(--g600);
-    --pi-accordion-icon-bg: var(--g0);
 }

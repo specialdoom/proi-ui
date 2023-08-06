@@ -3,7 +3,7 @@
   import Accordion from "../Accordion.svelte";
   import AccordionItem from "../AccordionItem.svelte";
   import { multiItemsSource, singleItemSource } from "./accordion.source";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 </script>

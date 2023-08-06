@@ -30,17 +30,17 @@
   .proi-breadcrumb-item.current :global(a),
   .proi-breadcrumb-item.current :global(a:hover),
   .proi-breadcrumb-item.current :global(a:visited) {
-    color: var(--pi-text);
+    color: var(--pi-text, #000000);
     text-decoration: none;
   }
 
   .proi-breadcrumb-item :global(a:visited) {
-    color: var(--pi-link-text);
+    color: var(--pi-link-text, #3993dd);
   }
 
   .proi-breadcrumb-item::after {
     margin-left: 8px;
-    color: var(--pi-divider);
+    color: var(--pi-divider, #5c5c5c);
     content: "/";
   }
 </style>

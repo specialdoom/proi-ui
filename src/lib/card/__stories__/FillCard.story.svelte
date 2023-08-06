@@ -1,16 +1,14 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
   import { dataDisplayVariants } from "../../utils/variants.js";
-  import { capitalizeFirstLetter } from "../../utils/string.js";
   import FillCard from "../FillCard.svelte";
   import {
     closable as closableSource,
     defaultSource,
-    variantFillCard,
-    withLongerTitle
+    variantFillCard
   } from "./fill-card.source.js";
   import type { CardVariant } from "../card.types.js";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 

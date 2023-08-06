@@ -4,11 +4,6 @@
 <ul
   class:proi-accordion={true}
   {...$$restProps}
-  on:click
-  on:focus
-  on:mouseover
-  on:mouseenter
-  on:mouseleave
 >
   <slot />
 </ul>

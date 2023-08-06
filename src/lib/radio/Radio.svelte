@@ -57,38 +57,38 @@
     height: 18px;
     width: 18px;
     border-radius: 50px;
-    border: 2px solid var(--pi-border-inverse);
+    border: 2px solid var(--pi-border-inverse, #000000);
     background: transparent;
   }
 
   .proi-radio-bullet.disabled.checked {
-    background: var(--pi-bg-disabled);
+    background: var(--pi-bg-disabled, #d6d6d6);
   }
 
   .proi-radio-bullet.disabled {
-    background: var(--pi-bg-disabled);
+    background: var(--pi-bg-disabled, #d6d6d6);
     border: unset;
   }
 
   .proi-radio-bullet.error {
-    border: 2px solid var(--pi-border-error);
+    border: 2px solid var(--pi-border-error, #e35226);
   }
 
   .proi-radio-bullet.error.checked {
-    background: var(--pi-bg-error);
+    background: var(--pi-bg-error, #e35226);
   }
 
   .proi-radio-bullet:focus {
-    outline: 2px solid var(--pi-focus);
+    outline: 2px solid var(--pi-focus, #1a6fb6);
     outline-offset: 2px;
   }
 
   .proi-radio-bullet.disabled ~ .proi-radio-label {
-    color: var(--pi-text-disabled);
+    color: var(--pi-text-disabled, #adadad);
   }
 
   .proi-radio-bullet.error ~ .proi-radio-label {
-    color: var(--pi-text-error);
+    color: var(--pi-text-error, #e35226);
   }
 
   .proi-radio-label {
@@ -98,11 +98,11 @@
 
   /* Icon */
   .proi-radio-bullet :global(svg rect) {
-    fill: var(--pi-bg-inverse);
+    fill: var(--pi-bg-inverse, #000000);
   }
 
   .proi-radio-bullet.disabled :global(svg rect),
   .proi-radio-bullet.error :global(svg rect) {
-    fill: var(--pi-radio-bullet-subtle);
+    fill: var(--pi-bg-static, #ffffff);
   }
 </style>

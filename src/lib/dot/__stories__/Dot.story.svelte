@@ -7,7 +7,7 @@
   import Dot from "../Dot.svelte";
   import { defaultSource, variantDot } from "./dot.source.js";
   import type { DotVariant } from "../dot.types";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 

@@ -4,7 +4,7 @@
   import { logEvent } from "histoire/client";
   import { defaultSource, onClickSource, withCustomContent } from "./backdrop.source.js";
   import Badge from "../../tags/badge/Badge.svelte";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 

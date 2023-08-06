@@ -20,21 +20,21 @@
 <style>
   .proi-link {
     white-space: nowrap;
-    color: var(--pi-link-text);
+    color: var(--pi-link-text, #3993dd);
     text-decoration: none;
     font-size: 14px;
   }
 
   .proi-link:focus {
-    outline: 2px solid var(--pi-focus);
+    outline: 2px solid var(--pi-focus, #1a6fb6);
   }
 
   .proi-link:active {
-    color: var(--pi-link-active-text);
+    color: var(--pi-link-active-text, #212121);
   }
 
   .proi-link:visited {
-    color: var(--pi-link-visited-text);
+    color: var(--pi-link-visited-text, #873591);
   }
 
   .proi-link:hover {

@@ -67,9 +67,6 @@
     --pi-bg-disabled: var(--n200);
     --pi-bg-error: var(--r600);
 
-    /** Layer tokens */
-    --pi-layer: var(--n0);
-
     /** Border tokens */
     --pi-border-interactive: var(--b400);
     --pi-border-subtle: var(--n600);
@@ -95,10 +92,10 @@
     --pi-error-02: var(--r800);
     --pi-error-text: var(--r800);
     --pi-info: var(--b0);
-    --pi-info-02: var(--r600);
+    --pi-info-02: var(--b800);
     --pi-info-text: var(--b800);
     --pi-warning: var(--y0);
-    --pi-warning-02: var(--y600);
+    --pi-warning-02: var(--y800);
     --pi-warning-text: var(--y800);
 
     /** Focus tokens */
@@ -128,16 +125,17 @@
     /* Link tokens */
     --pi-link-text: var(--b600);
     --pi-link-visited-text: var(--p600);
-    --pi-link-active-text: var(--b600);
+    --pi-link-active-text: var(--n800);
 
-    /* component tokens */
-    /* Button component */
+    /* Shadow tokens */
+    --pi-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    /* Component tokens */
+    /* Button */
     --pi-button-primary: var(--b600);
     --pi-button-primary-text: var(--n0);
     --pi-button-primary-hover: var(--b800);
     --pi-button-primary-active: var(--b400);
-    --pi-button-primary-disabled: var(--n200);
-    --pi-button-primary-disabled-color: var(--n0);
     --pi-button-outline: inherit;
     --pi-button-outline-text: var(--n800);
     --pi-button-outline-active: var(--n800);
@@ -150,29 +148,6 @@
     --pi-button-danger-text: var(--n0);
     --pi-button-danger-hover: var(--r800);
     --pi-button-danger-active: var(--r400);
-
-    /** Radio component */
-    --pi-radio-bullet-subtle: var(--n0);
-
-    /** Switch component */
-    --pi-switch-bullet: var(--n0);
-    --pi-switch-bullet-checked: var(--n0);
-    --pi-switch-disabled: var(--n400);
-    --pi-switch-bullet-disabled: var(--n400);
-
-    /** Progress component */
-    --pi-progress-complete: var(--g600);
-
-    /* Link tokens */
-    --pi-link-text: var(--b600);
-    --pi-link-visited-text: var(--p600);
-    --pi-link-active-text: var(--b600);
-
-    /** Divider component */
-    --pi-divider: var(--n600);
-
-    /** Dialog component */
-    --pi-dialog-box-shadow: 0px 4px 30px 0px rgba(16, 24, 64, 0.15);
   }
 
   /* dark theme */
@@ -186,9 +161,6 @@
     --pi-bg-inverse: var(--n0);
     --pi-bg-disabled: var(--n600);
     --pi-bg-error: var(--r600);
-
-    /** Layer tokens */
-    --pi-layer: var(--n800);
 
     /** Border tokens */
     --pi-border-interactive: var(--b400);
@@ -215,10 +187,10 @@
     --pi-error-02: var(--r800);
     --pi-error-text: var(--r800);
     --pi-info: var(--b0);
-    --pi-info-02: var(--r600);
+    --pi-info-02: var(--b800);
     --pi-info-text: var(--b800);
     --pi-warning: var(--y0);
-    --pi-warning-02: var(--y600);
+    --pi-warning-02: var(--y800);
     --pi-warning-text: var(--y800);
 
     /** Focus tokens */
@@ -248,10 +220,13 @@
     /* Link tokens */
     --pi-link-text: var(--b600);
     --pi-link-visited-text: var(--p600);
-    --pi-link-active-text: var(--b600);
+    --pi-link-active-text: var(--n800);
 
-    /* component tokens */
-    /* Button component */
+    /* Shadow tokens */
+    --pi-box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 5px;
+
+    /* Component tokens */
+    /* Button */
     --pi-button-primary: var(--b600);
     --pi-button-primary-text: var(--n0);
     --pi-button-primary-hover: var(--b800);
@@ -270,33 +245,12 @@
     --pi-button-danger-text: var(--n0);
     --pi-button-danger-hover: var(--r800);
     --pi-button-danger-active: var(--r400);
-
-    /** Radio component */
-    --pi-radio-bullet-subtle: var(--n0);
-
-    /** Switch component */
-    --pi-switch-bullet: var(--n800);
-    --pi-switch-bullet-checked: var(--n0);
-    --pi-switch-disabled: var(--n400);
-    --pi-switch-bullet-disabled: var(--n400);
-
-    /** Progress component */
-    --pi-progress-complete: var(--g600);
-
-    /* Link tokens */
-    --pi-link-text: var(--b600);
-    --pi-link-visited-text: var(--p600);
-    --pi-link-active-text: var(--b600);
-
-    /** Divider component */
-    --pi-divider: var(--n0);
-
-    /** Dialog component */
-    --pi-dialog-box-shadow: 0px 4px 30px 0px rgba(16, 24, 64, 0.15);
   }
 
   :global(body) {
+    font-family: "Arial", sans-serif;
     background-color: var(--pi-bg);
     color: var(--pi-text);
+    font-size: 14px;
   }
 </style>

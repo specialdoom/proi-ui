@@ -13,7 +13,7 @@
   import { buttonVariants } from "../../utils/variants.js";
   import { capitalizeFirstLetter } from "../../utils/string.js";
   import type { ButtonVariant } from "../button.types";
-  import ThemeStory from "../../histoire/ThemeStory.svelte";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
   let variant: ButtonVariant = "primary";
