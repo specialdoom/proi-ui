@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 4.1.4 (2023-08-06)
+
+
+### 🏭 Refactor
+
+* remove `toaster` provider func and rename `Toast` to `Notification` [#115](https://github.com/specialdoom/proi-ui/issues/115) ([ee9c961](https://github.com/specialdoom/proi-ui/commit/ee9c961ac32ff18e533dbab55aa68ee7313e39db))
+
 ### 4.1.3 (2023-08-06)
 
 ### 🚀 Features
