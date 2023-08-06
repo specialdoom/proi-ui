@@ -30,8 +30,9 @@
     "format": "prettier --write ./src/lib/**/*.{js,svelte,html,ts}",
     "lint": "eslint ./src/lib/**/*.{js,ts,svelte}",
     "prelint": "npm run format",
-    "story:build": "histoire build",
-    "story:preview": "histoire preview",
+    "hst:build": "histoire build",
+    "hst:preview": "histoire preview",
+    "docs:build": "node ./src/tasks/docs.build.js",
     "prepare": "husky install",
     "release": "standard-version",
     "new:component": "node ./src/tasks/components/new.js"

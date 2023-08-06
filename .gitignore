@@ -10,3 +10,4 @@ node_modules
 coverage
 test-results.xml
 .idea
+src/__stories__/CHANGELOG.story.md
