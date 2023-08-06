@@ -10,3 +10,7 @@
 
 `on:click`, `on:focus`, `on:mousedown`, `on:mouseenter`, `on:mouseleave` to close `button`
 element
+
+### `$$restProps`
+
+- forwareded to the container of the `Notification` component

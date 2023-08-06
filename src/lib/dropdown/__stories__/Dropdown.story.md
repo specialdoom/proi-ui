@@ -8,3 +8,7 @@
 | `placeholder` | Placeholder of Dropdown                | `string`                                  | `''`    |
 | `disabled`    | Whether the Dropdown is disabled       | `boolean`                                 | `false` |
 | `error`       | Whether the Dropdown is in error state | `boolean`                                 | `false` |
+
+### `$$restProps`
+
+- forwareded to the container of the `Dropdown` component

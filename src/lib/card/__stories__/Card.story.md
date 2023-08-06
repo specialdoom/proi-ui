@@ -16,4 +16,8 @@
 
 #### Slots
 
-- use `actions` named slot to display actions for the target Card component
+- use `actions` named slot to display actions for the target `Card` component
+
+### `$$restProps`
+
+- forwareded to the container of the `Card` component

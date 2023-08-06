@@ -10,3 +10,7 @@
 | Name      | Description                             | Falback     |
 | --------- | --------------------------------------- | ----------- |
 | `default` | Component to set the Dot component over | no fallback |
+
+### `$$restProps`
+
+- forwareded to the container of the `Dot` component

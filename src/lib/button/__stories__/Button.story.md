@@ -10,4 +10,8 @@
 
 #### Slots
 
-- use `default` slot for Button label
+- use `default` slot for `Button` label
+
+### `$$restProps`
+
+- forwareded to the container of the `Button` component

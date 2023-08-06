@@ -13,3 +13,6 @@
 
 - use `default` slot for the `a` element label
 
+### `$$restProps`
+
+- forwareded to the container of the `Link` component

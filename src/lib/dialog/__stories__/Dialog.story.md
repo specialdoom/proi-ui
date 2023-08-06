@@ -12,3 +12,7 @@
 | ---------- | ---------------------------------------------------------------------------- |
 | `ok`       | Dispatched when user click on `Ok` action                                    |
 | `cancel`   | Dispatched when user click on `Cancel` action or closes the dialog using `X` |
+
+### `$$restProps`
+
+- forwareded to the container of the `Dialog` component

@@ -9,3 +9,7 @@
 ### Accordion Forwarded events
 
 `on:click`, `on:focus`, `on:mouseenter`, `on:mouseover`, `on:mouseleave`
+
+### `$$restProps`
+
+- forwareded to the container of the `AccordionItem` component

@@ -10,3 +10,7 @@
 ### Forwarded events
 
 `on:change`, `on:keydown`
+
+### `$$restProps`
+
+- forwareded to the container of the `TextInput` component
