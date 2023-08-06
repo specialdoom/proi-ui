@@ -1,26 +1,35 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
   import Spinner from "../Spinner.svelte";
-  import { defaultSource, withLabel } from "./spinner.source.js";
+  import { defaultSource, largeSizeSource, mediumSizeSource } from "./spinner.source.js";
+  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 </script>
 
-<Hst.Story
+<ThemeStory
+  {Hst}
   title="Spinner"
   layout={{ type: "grid", width: "50%" }}
 >
   <Hst.Variant
-    title="Default"
+    title="Default (Small)"
     source={defaultSource}
   >
     <Spinner />
   </Hst.Variant>
 
   <Hst.Variant
-    title="With label"
-    source={withLabel}
+    title="Medium"
+    source={mediumSizeSource}
   >
-    <Spinner label="Loading..." />
+    <Spinner size="medium" />
   </Hst.Variant>
-</Hst.Story>
+
+  <Hst.Variant
+    title="Large"
+    source={largeSizeSource}
+  >
+    <Spinner size="large" />
+  </Hst.Variant>
+</ThemeStory>

@@ -1,11 +1,16 @@
 const template = `<script>
   import Spinner from "@specialdoom/proi-ui/Spinner.svelte";
-</script>`;
+</script>
+`;
 
 export const defaultSource = `${template}
 <Spinner />
 `;
 
-export const withLabel = `${template}
-<Spinner label="Loading..." />
+export const mediumSizeSource = `${template}
+<Spinner size="medium" />
+`;
+
+export const largeSizeSource = `${template}
+<Spinner size="large" />
 `;
