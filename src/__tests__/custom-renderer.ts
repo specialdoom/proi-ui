@@ -32,7 +32,6 @@ export function getCustomRenderer() {
   return <TComponent extends SvelteComponentDev>(
     ui: Constructor<TComponent>,
     options: RenderOptions<TComponent> = {} as RenderOptions<TComponent>
-    // @ts-expect-error: to investigate further
   ): RenderResult<TComponent, CustomQueriesOutput> =>
     baseRender(ui as any, options as any, { queries }) as any;
 }

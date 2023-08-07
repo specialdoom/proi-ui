@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
-  import FormItem from "../FormItem.svelte";
-  import TextInput from "../../text-input/TextInput.svelte";
+  import FormItem from "../../FormItem.svelte";
+  import TextInput from "../../../text-input/TextInput.svelte";
   import {
     defaultSource,
     inline,
@@ -11,8 +11,8 @@
     withLabel,
     withLabelAndDescription,
     withLabelDescriptionAndError
-  } from "./form-item.source.js";
-  import ThemeStory from "../../../__stories__/ThemeStory.svelte";
+  } from "./form-item.source";
+  import ThemeStory from "../../../../__stories__/ThemeStory.svelte";
 
   export let Hst: HstType;
 
@@ -23,7 +23,7 @@
 
 <ThemeStory
   {Hst}
-  title="FormItem"
+  title="Form/FormItem"
   layout={{ type: "grid", width: "100%" }}
 >
   <Hst.Variant

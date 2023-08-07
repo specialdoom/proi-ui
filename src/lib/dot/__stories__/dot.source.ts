@@ -1,4 +1,4 @@
-import type { DataDisplayVariant } from "../../utils/types";
+import type { DataDisplayVariant } from "../../utils/types.js";
 
 const template = `<script>
   import Button from "@specialdoom/proi-ui/Button.svelte";

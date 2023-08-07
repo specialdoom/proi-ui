@@ -1,41 +1,28 @@
 <script lang="ts">
-  import InlineFormItem from "./InlineFormItem.svelte";
-
   export let label: string;
   export let description: string = "";
   export let error: string = "";
-  export let inline: boolean = false;
 </script>
 
-{#if inline}
-  <InlineFormItem
+<div
+  class="proi-form-item"
+  {...$$restProps}
+>
+  <span class="proi-label">
     {label}
-    {error}
-    {...$$restProps}
-  >
-    <slot />
-  </InlineFormItem>
-{:else}
-  <div
-    class="proi-form-item"
-    {...$$restProps}
-  >
-    <span class="proi-label">
-      {label}
+  </span>
+  {#if description !== ""}
+    <span class="proi-description">
+      {description}
     </span>
-    {#if description !== ""}
-      <span class="proi-description">
-        {description}
-      </span>
-    {/if}
-    <slot />
-    {#if error !== ""}
-      <span class="proi-error">
-        {error}
-      </span>
-    {/if}
-  </div>
-{/if}
+  {/if}
+  <slot />
+  {#if error !== ""}
+    <span class="proi-error">
+      {error}
+    </span>
+  {/if}
+</div>
 
 <style>
   .proi-form-item {

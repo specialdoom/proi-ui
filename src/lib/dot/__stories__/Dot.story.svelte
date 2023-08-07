@@ -1,14 +1,12 @@
 <script lang="ts">
   import type { Hst as HstType } from "@histoire/plugin-svelte";
   import Button from "../../button/Button.svelte";
-  import { withLabel } from "../../form-item/__stories__/form-item.source";
   import { dataDisplayVariants } from "../../utils/variants.js";
   import { capitalizeFirstLetter } from "../../utils/string.js";
   import Dot from "../Dot.svelte";
-  import { defaultSource, variantDot } from "./dot.source.js";
+  import { defaultSource, withLabel, variantDot } from "./dot.source.js";
   import type { DotVariant } from "../dot.types";
   import ThemeStory from "../../../__stories__/ThemeStory.svelte";
-
   export let Hst: HstType;
 
   let label: string = "";
