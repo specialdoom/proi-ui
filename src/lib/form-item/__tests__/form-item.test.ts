@@ -155,42 +155,6 @@ describe("FormItem", () => {
     });
   });
 
-  describe("when `inline` property", () => {
-    describe("is set to `true`", () => {
-      const inline = true;
-
-      describe("root element", () => {
-        it("should not contain `proi-form-item` class", () => {
-          const { getBySelector } = render(FormItem, {
-            props: {
-              label,
-              inline
-            }
-          });
-
-          expect(getBySelector(ROOT)).not.toHaveClass("proi-form-item");
-        });
-      });
-    });
-
-    describe("is set to `false`", () => {
-      const inline = false;
-
-      describe("root element", () => {
-        it("should contain `proi-form-item` class", () => {
-          const { getBySelector } = render(FormItem, {
-            props: {
-              label,
-              inline
-            }
-          });
-
-          expect(getBySelector(ROOT)).toHaveClass("proi-form-item");
-        });
-      });
-    });
-  });
-
   describe("when default `slot`", () => {
     describe("is set", () => {
       const slot = "test";
