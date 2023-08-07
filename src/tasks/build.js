@@ -1,8 +1,10 @@
 import { promisify } from "node:util";
 import { exec } from "node:child_process";
 import { parseArgs } from "node:util";
+import {cp} from "node:fs";
 
 const execAsync = promisify(exec);
+const cpAsync = promisify(cp);
 
 const options = {
   release: {
@@ -37,8 +39,11 @@ try {
     await execAsync("npm run release -- --prerelease develop --skip.changelog");
   }
 
-  await execAsync("npm exec svelte-package && cp .npmignore dist/");
+  await execAsync("npm exec svelte-package");
   console.log("✅: Package built successfully!");
+
+  await cpAsync("./.npmignore", "./dist/.npmignore");
+  console.log("📋: Copied .npmignore to dist!");
 } catch (e) {
   console.log("📛: ", e.message);
   process.exitCode = 1;
