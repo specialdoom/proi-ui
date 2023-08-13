@@ -28,7 +28,7 @@ Import the `Theme` component from `@specialdoom/proi-ui`:
 </script>
 
 <Theme>
-  <button>Click me</button>
+  <Button>Click me</Button>
 </Theme>
 ```
 
