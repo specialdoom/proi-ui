@@ -4,12 +4,12 @@ const template = `<script>
 </script>`;
 
 export const multiItemsSource = (
-  opened: boolean = false,
+  expanded: boolean = false,
   disabled: boolean = false
 ) => `${template}
 
 <Accordion>
-  <AccordionItem title="First item" ${opened ? "open" : ""}>
+  <AccordionItem title="First item" ${expanded ? "expanded" : ""}>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
     incididunt ut labore et dolore magna aliqua.
   </AccordionItem>

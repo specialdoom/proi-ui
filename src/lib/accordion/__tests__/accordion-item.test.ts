@@ -81,16 +81,16 @@ describe("AccordionItem", () => {
     });
 
     describe("when `click` event is triggered", () => {
-      describe("and `open` property", () => {
+      describe("and `expanded` property", () => {
         describe("is set to `false`", () => {
-          const open = false;
+          const expanded = false;
 
           describe("root element", () => {
             it("should contain `proi-accordion-item-active` class", async () => {
               const { getBySelector } = render(AccordionItem, {
                 props: {
                   title,
-                  open
+                  expanded
                 }
               });
 
@@ -105,7 +105,7 @@ describe("AccordionItem", () => {
               const { getBySelector } = render(AccordionItem, {
                 props: {
                   title,
-                  open
+                  expanded
                 }
               });
 
@@ -117,14 +117,14 @@ describe("AccordionItem", () => {
         });
 
         describe("is set to `true`", () => {
-          const open = true;
+          const expanded = true;
 
           describe("root element", () => {
             it("should not contain `proi-accordion-item-active` class", async () => {
               const { getBySelector } = render(AccordionItem, {
                 props: {
                   title,
-                  open
+                  expanded
                 }
               });
 
@@ -139,7 +139,7 @@ describe("AccordionItem", () => {
               const { getBySelector } = render(AccordionItem, {
                 props: {
                   title,
-                  open
+                  expanded
                 }
               });
 
@@ -207,16 +207,16 @@ describe("AccordionItem", () => {
     });
   });
 
-  describe("when `open` property", () => {
+  describe("when `expanded` property", () => {
     describe("is set to `true`", () => {
-      const open = true;
+      const expanded = true;
 
       describe("root element", () => {
         it("should have `proi-accordion-item-active` class", () => {
           const { getBySelector } = render(AccordionItem, {
             props: {
               title,
-              open
+              expanded
             }
           });
 
@@ -229,7 +229,7 @@ describe("AccordionItem", () => {
           const { getBySelector } = render(AccordionItem, {
             props: {
               title,
-              open
+              expanded
             }
           });
 
@@ -240,7 +240,7 @@ describe("AccordionItem", () => {
           const { getBySelector } = render(AccordionItem, {
             props: {
               title,
-              open
+              expanded
             }
           });
 
@@ -252,14 +252,14 @@ describe("AccordionItem", () => {
     });
 
     describe("is set to `false`", () => {
-      const open = false;
+      const expanded = false;
 
       describe("root element", () => {
         it("should not contain `proi-accordion-item-active` class", () => {
           const { getBySelector } = render(AccordionItem, {
             props: {
               title,
-              open
+              expanded
             }
           });
 
@@ -272,7 +272,7 @@ describe("AccordionItem", () => {
           const { getBySelector } = render(AccordionItem, {
             props: {
               title,
-              open
+              expanded
             }
           });
 

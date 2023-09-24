@@ -2,17 +2,17 @@
   import ArrowRight from "../icons/ArrowRight.svelte";
 
   export let title: string;
-  export let open: boolean = false;
+  export let expanded: boolean = false;
   export let disabled: boolean = false;
 
   function handleClick() {
-    open = !open;
+    expanded = !expanded;
   }
 </script>
 
 <li
   class:proi-accordion-item={true}
-  class:proi-accordion-item-active={open}
+  class:proi-accordion-item-active={expanded}
   class:proi-accordion-item-disabled={disabled}
   {...$$restProps}
 >
@@ -24,7 +24,7 @@
     {title}
     <ArrowRight />
   </button>
-  {#if open}
+  {#if expanded}
     <div class:proi-accordion-item-content={true}>
       <slot />
     </div>
