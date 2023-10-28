@@ -47,13 +47,13 @@
   </Hst.Variant>
 
   <Hst.Variant
-    title="With opened item"
+    title="With expanded item"
     source={multiItemsSource(true)}
   >
     <Accordion>
       <AccordionItem
         title="First item"
-        open
+        expanded
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna aliqua.
